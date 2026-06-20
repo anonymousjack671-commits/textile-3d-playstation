@@ -1,0 +1,769 @@
+[
+  {
+    "id": "duchess-satin",
+    "name": "Duchess Satin",
+    "category": "Satin Family",
+    "weightTag": "HEAVY",
+    "family": "Satin Family",
+    "weaveNotation": "5/1 satin",
+    "construction": "Heavy, tightly woven satin with high lustre face and substantial body. Holds architectural silhouettes.",
+    "gsm": {
+      "min": 200,
+      "max": 350
+    },
+    "uses": [
+      "Bridal gowns",
+      "Ball gowns",
+      "Structured bodices",
+      "Eveningwear"
+    ],
+    "keyProperty": "Stiff, structured, very lustrous — holds architectural silhouettes without boning",
+    "story": "A heavy, tightly woven satin with a high lustre face and substantial body. Unlike drapey charmeuse, Duchess satin holds its shape — it is the fabric of ball gowns and structured bridal silhouettes. The weight allows it to support architectural forms without additional boning or underlining.",
+    "commonFibers": [
+      "Silk",
+      "Polyester",
+      "Silk-Polyester Blend"
+    ],
+    "priceIndia": {
+      "silk": "₹800-2500/m",
+      "polyester": "₹150-450/m"
+    },
+    "washCare": {
+      "temp": "Dry clean",
+      "machine": false,
+      "iron": "Low with press cloth",
+      "dryCleaning": true
+    },
+    "season": [
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Surat",
+      "Varanasi",
+      "Bangalore"
+    ],
+    "finish": [
+      "Calendering",
+      "Stiffening"
+    ],
+    "has3DModel": false,
+    "priority": "high",
+    "alternative": "charmeuse"
+  },
+  {
+    "id": "satin-crepe",
+    "name": "Satin Crepe",
+    "category": "Satin Family",
+    "weightTag": "MEDIUM",
+    "family": "Satin Family",
+    "weaveNotation": "Satin/crepe double face",
+    "construction": "Satin face and crepe back in single cloth. Technically reversible — both faces usable by designer.",
+    "gsm": {
+      "min": 120,
+      "max": 180
+    },
+    "uses": [
+      "Eveningwear",
+      "Blouses",
+      "Reversible garments",
+      "Formal dresses"
+    ],
+    "keyProperty": "Crepe back and satin face — technically reversible, two looks in one",
+    "story": "A double-faced fabric woven with a satin face and a crepe back, making it technically reversible. The crepe back offers a subtler, matte alternative to the lustrous face — designers often use both sides deliberately in the same garment. An exceptionally versatile eveningwear fabric.",
+    "commonFibers": [
+      "Silk",
+      "Polyester",
+      "Acetate"
+    ],
+    "priceIndia": {
+      "silk": "₹600-1800/m",
+      "polyester": "₹100-300/m"
+    },
+    "washCare": {
+      "temp": "Dry clean",
+      "machine": false,
+      "iron": "Low",
+      "dryCleaning": true
+    },
+    "season": [
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Surat",
+      "Varanasi"
+    ],
+    "finish": [
+      "Soft finish"
+    ],
+    "has3DModel": false,
+    "priority": "medium",
+    "alternative": "charmeuse"
+  },
+  {
+    "id": "taffeta",
+    "name": "Taffeta",
+    "category": "Textured / Ribbed",
+    "weightTag": "MEDIUM",
+    "family": "Textured / Ribbed",
+    "weaveNotation": "1/1 plain — high twist",
+    "construction": "Crisp, smooth plain weave with high-twist silk or filament yarn. Characteristic rustle (scroop) from tight weave.",
+    "gsm": {
+      "min": 80,
+      "max": 150
+    },
+    "uses": [
+      "Ball gowns",
+      "Linings",
+      "Ribbons",
+      "Evening bags"
+    ],
+    "keyProperty": "Crisp hand with a characteristic rustling sound ('scroop')",
+    "story": "A crisp, smooth, plain weave fabric with a characteristic rustle known as 'scroop' — produced by the tight weave and finishing process. The name comes from the Persian 'taftah' meaning woven. Taffeta has been the fabric of formal occasion dressing for centuries, from Elizabethan court to contemporary red carpets.",
+    "commonFibers": [
+      "Silk",
+      "Polyester",
+      "Acetate",
+      "Nylon"
+    ],
+    "priceIndia": {
+      "silk": "₹600-2000/m",
+      "polyester": "₹60-200/m",
+      "acetate": "₹150-400/m"
+    },
+    "washCare": {
+      "temp": "Dry clean",
+      "machine": false,
+      "iron": "Low",
+      "dryCleaning": true
+    },
+    "season": [
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Surat",
+      "Varanasi",
+      "Bangalore"
+    ],
+    "finish": [
+      "Calendering",
+      "Stiffening"
+    ],
+    "has3DModel": false,
+    "priority": "medium",
+    "alternative": "dupioni"
+  },
+  {
+    "id": "ottoman",
+    "name": "Ottoman",
+    "category": "Textured / Ribbed",
+    "weightTag": "MEDIUM-HEAVY",
+    "family": "Textured / Ribbed",
+    "weaveNotation": "Weft-rib plain",
+    "construction": "Thick weft yarn with fine warp creates prominent horizontal ribs. Stiff, formal, architectural structure.",
+    "gsm": {
+      "min": 200,
+      "max": 320
+    },
+    "uses": [
+      "Coats",
+      "Structured bodices",
+      "Upholstery",
+      "Formal wear"
+    ],
+    "keyProperty": "Prominent horizontal ribs — stiffer and more architectural than faille",
+    "story": "A heavyweight fabric with prominent horizontal ribs created by weaving with a thick weft and fine warp. Named after the Ottoman Empire, the fabric has a formal, architectural quality used in structured coats, bodices, and upholstery. The ribs are more pronounced than in faille or bengaline.",
+    "commonFibers": [
+      "Silk",
+      "Polyester",
+      "Wool",
+      "Rayon"
+    ],
+    "priceIndia": {
+      "silk": "₹500-1500/m",
+      "polyester": "₹120-350/m"
+    },
+    "washCare": {
+      "temp": "Dry clean",
+      "machine": false,
+      "iron": "Steam press",
+      "dryCleaning": true
+    },
+    "season": [
+      "Autumn/Winter"
+    ],
+    "indiaSourcing": [
+      "Surat",
+      "Varanasi"
+    ],
+    "finish": [
+      "Calendering"
+    ],
+    "has3DModel": false,
+    "priority": "low",
+    "alternative": "faille"
+  },
+  {
+    "id": "faille",
+    "name": "Faille",
+    "category": "Textured / Ribbed",
+    "weightTag": "MEDIUM",
+    "family": "Textured / Ribbed",
+    "weaveNotation": "Weft-rib plain",
+    "construction": "Fine horizontal ribs with gentle lustre. Lighter than ottoman, more structure than taffeta.",
+    "gsm": {
+      "min": 150,
+      "max": 220
+    },
+    "uses": [
+      "Eveningwear",
+      "Formal accessories",
+      "Linings",
+      "Ribbons"
+    ],
+    "keyProperty": "Fine horizontal ribs with gentle lustre — sits between taffeta and ottoman",
+    "story": "A slightly ribbed, soft fabric with fine horizontal ribs and a gentle lustre. Lighter and more fluid than ottoman, faille sits between taffeta and bengaline in structure. Used for eveningwear, accessories, and formal linings where subtle texture is preferred over flat satin.",
+    "commonFibers": [
+      "Silk",
+      "Polyester",
+      "Rayon"
+    ],
+    "priceIndia": {
+      "silk": "₹400-1200/m",
+      "polyester": "₹80-250/m"
+    },
+    "washCare": {
+      "temp": "Dry clean",
+      "machine": false,
+      "iron": "Low",
+      "dryCleaning": true
+    },
+    "season": [
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Surat",
+      "Varanasi"
+    ],
+    "finish": [
+      "Soft finish",
+      "Calendering"
+    ],
+    "has3DModel": false,
+    "priority": "low",
+    "alternative": "taffeta"
+  },
+  {
+    "id": "dupioni",
+    "name": "Dupioni",
+    "category": "Textured / Ribbed",
+    "weightTag": "MEDIUM",
+    "family": "Textured / Ribbed",
+    "weaveNotation": "1/1 plain — slub warp",
+    "construction": "Double-cocoon silk threads create random slub texture — irregular thick-thin variation is inherent, not a defect.",
+    "gsm": {
+      "min": 100,
+      "max": 200
+    },
+    "uses": [
+      "Bridal",
+      "Occasion suiting",
+      "Home furnishings",
+      "Sarees"
+    ],
+    "keyProperty": "Irregular slub texture from double-cocoon silk — luminous and unique",
+    "story": "A crisp, plain weave fabric woven from irregular slub silk — threads reeled from two silkworm cocoons that have nested together, producing the characteristic random thick-thin texture. The luminous, slightly rough surface is unique to dupioni and signals handcraft luxury. Extensively used in bridal and occasion suiting.",
+    "commonFibers": [
+      "Silk",
+      "Silk-Polyester Blend",
+      "Polyester"
+    ],
+    "priceIndia": {
+      "silk": "₹400-1500/m",
+      "blend": "₹150-400/m",
+      "polyester": "₹80-200/m"
+    },
+    "washCare": {
+      "temp": "Dry clean",
+      "machine": false,
+      "iron": "Low with press cloth",
+      "dryCleaning": true
+    },
+    "season": [
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Varanasi",
+      "Bangalore",
+      "Surat"
+    ],
+    "finish": [
+      "Soft finish",
+      "Stiffening"
+    ],
+    "has3DModel": false,
+    "priority": "medium",
+    "alternative": "shantung"
+  },
+  {
+    "id": "shantung",
+    "name": "Shantung",
+    "category": "Textured / Ribbed",
+    "weightTag": "LIGHT-MEDIUM",
+    "family": "Textured / Ribbed",
+    "weaveNotation": "1/1 plain — raw silk",
+    "construction": "Similar to dupioni but finer yarn, lighter weight. Slub texture from undegummed raw silk. More fluid drape.",
+    "gsm": {
+      "min": 80,
+      "max": 150
+    },
+    "uses": [
+      "Summer suiting",
+      "Separates",
+      "Occasion wear",
+      "Blazers"
+    ],
+    "keyProperty": "Similar slub texture to dupioni but lighter and more fluid",
+    "story": "A lightweight plain weave with slub texture similar to dupioni but finer and more fluid. Originally woven in Shandong Province, China, from raw silk that was not degummed to a standard uniformity. Shantung is the lighter, more casual alternative to dupioni — perfect for warm-weather suiting and separates.",
+    "commonFibers": [
+      "Silk",
+      "Polyester"
+    ],
+    "priceIndia": {
+      "silk": "₹350-1200/m",
+      "polyester": "₹70-180/m"
+    },
+    "washCare": {
+      "temp": "Dry clean",
+      "machine": false,
+      "iron": "Low",
+      "dryCleaning": true
+    },
+    "season": [
+      "Spring/Summer"
+    ],
+    "indiaSourcing": [
+      "Varanasi",
+      "Surat",
+      "Bangalore"
+    ],
+    "finish": [
+      "Soft finish"
+    ],
+    "has3DModel": false,
+    "priority": "medium",
+    "alternative": "dupioni"
+  },
+  {
+    "id": "velvet",
+    "name": "Velvet",
+    "category": "Pile / Surface",
+    "weightTag": "MEDIUM-HEAVY",
+    "family": "Pile / Surface",
+    "weaveNotation": "Cut pile weave",
+    "construction": "Supplementary warp pile woven then cut to create short, dense upright fibres. Direction of pile affects colour depth.",
+    "gsm": {
+      "min": 300,
+      "max": 500
+    },
+    "uses": [
+      "Eveningwear",
+      "Upholstery",
+      "Accessories",
+      "Ceremonial dress"
+    ],
+    "keyProperty": "Dense cut pile creates exceptional softness and depth of colour",
+    "story": "A woven fabric with a short, dense cut pile that creates an exceptionally soft surface and rich, depth-of-colour appearance. For centuries reserved for royalty owing to the cost of silk pile weaving. The pile direction affects how colour reads — always cut pattern pieces in the same direction.",
+    "commonFibers": [
+      "Silk",
+      "Polyester",
+      "Cotton",
+      "Rayon/Viscose"
+    ],
+    "priceIndia": {
+      "silk": "₹800-3000/m",
+      "polyester": "₹120-400/m",
+      "cotton": "₹200-600/m"
+    },
+    "washCare": {
+      "temp": "Dry clean",
+      "machine": false,
+      "iron": "Steam only",
+      "dryCleaning": true
+    },
+    "season": [
+      "Autumn/Winter"
+    ],
+    "indiaSourcing": [
+      "Varanasi",
+      "Surat",
+      "Bangalore"
+    ],
+    "finish": [
+      "Pile cutting",
+      "Singeing"
+    ],
+    "has3DModel": false,
+    "priority": "high",
+    "alternative": "corduroy"
+  },
+  {
+    "id": "corduroy",
+    "name": "Corduroy",
+    "category": "Pile / Surface",
+    "weightTag": "MEDIUM-HEAVY",
+    "family": "Pile / Surface",
+    "weaveNotation": "Cut weft pile",
+    "construction": "Parallel cut-pile ribs (wales) running lengthwise. Wale count: 4-wale (wide) to 21-wale (pin cord).",
+    "gsm": {
+      "min": 250,
+      "max": 450
+    },
+    "uses": [
+      "Trousers",
+      "Jackets",
+      "Casual outerwear",
+      "Shirts"
+    ],
+    "keyProperty": "Parallel cut-pile ribs (wales) — wale count determines formality",
+    "story": "A woven fabric with parallel cut-pile ribs called 'wales' running lengthwise. Wale count determines character: fine pin cord (21-wale) is lightweight and formal; wide wale (4-wale) is casual and pronounced. Corduroy became associated with intellectuals and artists in the 20th century and is in the middle of a major menswear revival.",
+    "commonFibers": [
+      "Cotton",
+      "Cotton-Polyester Blend"
+    ],
+    "priceIndia": {
+      "cotton": "₹180-450/m",
+      "blend": "₹120-300/m"
+    },
+    "washCare": {
+      "temp": "30°C gentle",
+      "machine": true,
+      "iron": "Low",
+      "dryCleaning": false
+    },
+    "season": [
+      "Autumn/Winter"
+    ],
+    "indiaSourcing": [
+      "Ahmedabad",
+      "Erode",
+      "Coimbatore"
+    ],
+    "finish": [
+      "Pile cutting",
+      "Singeing",
+      "Soft finish"
+    ],
+    "has3DModel": false,
+    "priority": "medium",
+    "alternative": "velvet"
+  },
+  {
+    "id": "damask",
+    "name": "Damask",
+    "category": "Decorative / Jacquard",
+    "weightTag": "MEDIUM-HEAVY",
+    "family": "Decorative / Jacquard",
+    "weaveNotation": "Jacquard satin/sateen contrast",
+    "construction": "Pattern created by contrasting satin and sateen weave structures on Jacquard loom. Same cloth, both faces identical but reversed.",
+    "gsm": {
+      "min": 200,
+      "max": 400
+    },
+    "uses": [
+      "Home textiles",
+      "Formal wear",
+      "Table linen",
+      "Upholstery"
+    ],
+    "keyProperty": "Self-patterned by contrasting weave structures — reversible",
+    "story": "A reversible figured fabric woven on a Jacquard loom where the pattern is created by contrasting satin and sateen weaves in the same cloth — no embroidery or printing. Named after Damascus, where it was first traded to Europe. The pattern is identical on both sides but with face and back reversed.",
+    "commonFibers": [
+      "Silk",
+      "Cotton",
+      "Linen",
+      "Polyester",
+      "Viscose"
+    ],
+    "priceIndia": {
+      "silk": "₹600-2000/m",
+      "cotton": "₹200-600/m",
+      "polyester": "₹100-350/m"
+    },
+    "washCare": {
+      "temp": "40°C or dry clean",
+      "machine": true,
+      "iron": "Medium with press cloth",
+      "dryCleaning": false
+    },
+    "season": [
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Varanasi",
+      "Surat",
+      "Kolkata"
+    ],
+    "finish": [
+      "Calendering",
+      "Stiffening"
+    ],
+    "has3DModel": false,
+    "priority": "medium",
+    "alternative": "brocade"
+  },
+  {
+    "id": "brocade",
+    "name": "Brocade",
+    "category": "Decorative / Jacquard",
+    "weightTag": "HEAVY",
+    "family": "Decorative / Jacquard",
+    "weaveNotation": "Jacquard with supplementary weft",
+    "construction": "Jacquard loom with supplementary weft threads (often metallic) that create raised, embossed-looking patterns.",
+    "gsm": {
+      "min": 250,
+      "max": 450
+    },
+    "uses": [
+      "Formal garments",
+      "Costumes",
+      "Religious vestments",
+      "Haute couture"
+    ],
+    "keyProperty": "Raised woven pattern with supplementary metallic threads — not reversible",
+    "story": "A Jacquard-woven fabric with a supplementary weft that creates raised, embossed-looking patterns. Metallic threads (gold, silver) are typical. Unlike damask, the pattern is not reversible. Historically woven in Varanasi (Benares) and Lyon, brocade is the fabric of ceremony, religious vestments, and haute couture.",
+    "commonFibers": [
+      "Silk",
+      "Polyester",
+      "Metallic Thread",
+      "Viscose"
+    ],
+    "priceIndia": {
+      "silk": "₹800-4000/m",
+      "polyester": "₹200-800/m"
+    },
+    "washCare": {
+      "temp": "Dry clean only",
+      "machine": false,
+      "iron": "Low with press cloth",
+      "dryCleaning": true
+    },
+    "season": [
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Varanasi",
+      "Surat",
+      "Kolkata"
+    ],
+    "finish": [
+      "Stiffening",
+      "Pressing"
+    ],
+    "has3DModel": false,
+    "priority": "medium",
+    "alternative": "damask"
+  },
+  {
+    "id": "terry-cloth",
+    "name": "Terry Cloth",
+    "category": "Utility Wovens",
+    "weightTag": "HEAVY",
+    "family": "Utility Wovens",
+    "weaveNotation": "Loop pile weave",
+    "construction": "Supplementary pile warp at controlled slack tension creates loops on one or both faces. Loops increase surface area dramatically.",
+    "gsm": {
+      "min": 300,
+      "max": 600
+    },
+    "uses": [
+      "Towels",
+      "Robes",
+      "Beachwear",
+      "Baby products"
+    ],
+    "keyProperty": "Uncut loop pile dramatically increases surface area — most absorbent construction",
+    "story": "A woven fabric with uncut loop pile on one or both sides created by weaving a supplementary pile warp at a controlled slack tension. The loops dramatically increase surface area, making terry cloth the most absorbent textile construction. Velour towelling is terry with the loops sheared on one side for a softer face.",
+    "commonFibers": [
+      "Cotton",
+      "Cotton-Polyester Blend",
+      "Bamboo"
+    ],
+    "priceIndia": {
+      "cotton": "₹150-400/m",
+      "bamboo": "₹300-700/m"
+    },
+    "washCare": {
+      "temp": "60°C",
+      "machine": true,
+      "iron": "None",
+      "dryCleaning": false
+    },
+    "season": [
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Karur",
+      "Erode",
+      "Tirupur"
+    ],
+    "finish": [
+      "Soft finish",
+      "Anti-bacterial"
+    ],
+    "has3DModel": false,
+    "priority": "low",
+    "alternative": null
+  },
+  {
+    "id": "canvas",
+    "name": "Canvas",
+    "category": "Utility Wovens",
+    "weightTag": "HEAVY",
+    "family": "Utility Wovens",
+    "weaveNotation": "1/1 plain — heavy",
+    "construction": "Heavy, tightly woven plain weave from thick cotton or linen yarn. Maximum density for structural integrity.",
+    "gsm": {
+      "min": 300,
+      "max": 600
+    },
+    "uses": [
+      "Bags",
+      "Shoes",
+      "Workwear",
+      "Artist grounds"
+    ],
+    "keyProperty": "Tight plain weave — extremely strong, holds its shape without lining",
+    "story": "A heavy, tightly woven plain weave fabric with exceptional strength and stiffness. Before synthetic materials, canvas was the primary structural fabric for sails, tents, and artist's grounds. The word derives from the Latin 'cannabis' (hemp), the original fibre used before cotton became dominant.",
+    "commonFibers": [
+      "Cotton",
+      "Linen",
+      "Cotton-Polyester Blend",
+      "Synthetic"
+    ],
+    "priceIndia": {
+      "cotton": "₹100-300/m",
+      "linen": "₹200-500/m"
+    },
+    "washCare": {
+      "temp": "60°C",
+      "machine": true,
+      "iron": "Hot",
+      "dryCleaning": false
+    },
+    "season": [
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Ahmedabad",
+      "Surat",
+      "Coimbatore"
+    ],
+    "finish": [
+      "Waxing",
+      "DWR water repellent",
+      "Stiffening"
+    ],
+    "has3DModel": false,
+    "priority": "medium",
+    "alternative": "burlap-jute"
+  },
+  {
+    "id": "burlap-jute",
+    "name": "Burlap / Jute",
+    "category": "Utility Wovens",
+    "weightTag": "HEAVY",
+    "family": "Utility Wovens",
+    "weaveNotation": "1/1 plain — open",
+    "construction": "Coarse, loosely woven from jute or hemp fibres. Open structure with rough texture.",
+    "gsm": {
+      "min": 200,
+      "max": 400
+    },
+    "uses": [
+      "Bags",
+      "Sacking",
+      "Rustic home decor",
+      "Fashion accessories"
+    ],
+    "keyProperty": "Open weave from natural plant fibre — one of the most biodegradable textiles",
+    "story": "A coarse, loosely woven fabric made from jute or hemp fibres — one of the most environmentally low-impact textiles given jute's rapid growth cycle and biodegradability. Originally purely functional (grain sacks, coffee bags), burlap entered fashion and interiors as a deliberate texture in the late 20th century.",
+    "commonFibers": [
+      "Jute",
+      "Hemp",
+      "Flax"
+    ],
+    "priceIndia": {
+      "jute": "₹30-80/m",
+      "hemp": "₹60-150/m"
+    },
+    "washCare": {
+      "temp": "Cold gentle",
+      "machine": false,
+      "iron": "None",
+      "dryCleaning": false
+    },
+    "season": [
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Kolkata",
+      "Siliguri",
+      "Murshidabad"
+    ],
+    "finish": [
+      "Natural unbleached",
+      "Bleaching"
+    ],
+    "has3DModel": false,
+    "priority": "low",
+    "alternative": "canvas"
+  },
+  {
+    "id": "calico",
+    "name": "Calico",
+    "category": "Utility Wovens",
+    "weightTag": "LIGHT",
+    "family": "Utility Wovens",
+    "weaveNotation": "1/1 plain",
+    "construction": "Plain woven cotton in unbleached state. Natural cream-to-tan colour of raw cotton. Minimal processing.",
+    "gsm": {
+      "min": 100,
+      "max": 150
+    },
+    "uses": [
+      "Toiles",
+      "Bags",
+      "Craft projects",
+      "Printing base"
+    ],
+    "keyProperty": "Unbleached plain cotton in its raw, natural cream state",
+    "story": "A plain woven cotton fabric in its most basic, unbleached state — the natural cream-to-tan colour of raw cotton. Like muslin, calico is the fabric of pattern testing and prototyping. The name comes from Calicut (now Kozhikode), India, where it was first traded to Europe in the 11th century.",
+    "commonFibers": [
+      "Cotton"
+    ],
+    "priceIndia": {
+      "cotton": "₹25-70/m"
+    },
+    "washCare": {
+      "temp": "60°C",
+      "machine": true,
+      "iron": "Hot",
+      "dryCleaning": false
+    },
+    "season": [
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Malegaon",
+      "Bhiwandi",
+      "Erode"
+    ],
+    "finish": [
+      "Unbleached natural",
+      "Bleaching"
+    ],
+    "has3DModel": false,
+    "priority": "low",
+    "alternative": "muslin"
+  }
+]

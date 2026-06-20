@@ -1,0 +1,912 @@
+[
+  {
+    "id": "chiffon",
+    "name": "Chiffon",
+    "category": "Plain Weave",
+    "weightTag": "SHEER",
+    "family": "Plain Weave",
+    "weaveNotation": "1/1",
+    "construction": "Highly twisted yarns in both directions create open, sheer structure. Twist creates crinkle and resilience.",
+    "gsm": {
+      "min": 15,
+      "max": 35
+    },
+    "uses": [
+      "Evening wear",
+      "Scarves",
+      "Overlays",
+      "Lingerie"
+    ],
+    "keyProperty": "Floaty, semi-transparent, gossamer drape",
+    "story": "A gossamer-weight plain weave fabric with a soft drape and subtle shimmer. Despite its delicate appearance, chiffon is surprisingly resilient. The open weave creates a floaty, ethereal quality beloved in eveningwear and lingerie.",
+    "commonFibers": [
+      "Silk",
+      "Polyester",
+      "Nylon"
+    ],
+    "priceIndia": {
+      "silk": "₹400-1200/m",
+      "polyester": "₹40-150/m"
+    },
+    "washCare": {
+      "temp": "30°C gentle",
+      "machine": false,
+      "iron": "Low",
+      "dryCleaning": true
+    },
+    "season": [
+      "Spring/Summer"
+    ],
+    "indiaSourcing": [
+      "Surat",
+      "Varanasi"
+    ],
+    "finish": [
+      "Soft finish"
+    ],
+    "has3DModel": false,
+    "priority": "high",
+    "alternative": "georgette"
+  },
+  {
+    "id": "georgette",
+    "name": "Georgette",
+    "category": "Plain Weave",
+    "weightTag": "SHEER",
+    "family": "Plain Weave",
+    "weaveNotation": "1/1",
+    "construction": "Alternating S and Z twist yarns in both warp and weft create characteristic crinkle and spring.",
+    "gsm": {
+      "min": 35,
+      "max": 65
+    },
+    "uses": [
+      "Blouses",
+      "Dresses",
+      "Draped garments",
+      "Sarees"
+    ],
+    "keyProperty": "Crinkled surface, more opaque than chiffon",
+    "story": "A sheer, lightweight plain weave with a characteristic crinkled texture produced by alternating S and Z twist yarns. More opaque and springy than chiffon, georgette drapes beautifully and is a staple of draped blouses and flowy dresses.",
+    "commonFibers": [
+      "Silk",
+      "Polyester",
+      "Viscose"
+    ],
+    "priceIndia": {
+      "silk": "₹500-1500/m",
+      "polyester": "₹60-200/m",
+      "viscose": "₹80-250/m"
+    },
+    "washCare": {
+      "temp": "30°C gentle",
+      "machine": false,
+      "iron": "Low",
+      "dryCleaning": true
+    },
+    "season": [
+      "Spring/Summer"
+    ],
+    "indiaSourcing": [
+      "Surat",
+      "Varanasi",
+      "Kolkata"
+    ],
+    "finish": [
+      "Soft finish",
+      "Anti-crease"
+    ],
+    "has3DModel": false,
+    "priority": "high",
+    "alternative": "chiffon"
+  },
+  {
+    "id": "organza",
+    "name": "Organza",
+    "category": "Plain Weave",
+    "weightTag": "SHEER",
+    "family": "Plain Weave",
+    "weaveNotation": "1/1",
+    "construction": "Tightly twisted yarn woven at high thread count creates crisp, stiff sheer with firm hand.",
+    "gsm": {
+      "min": 30,
+      "max": 50
+    },
+    "uses": [
+      "Bridal",
+      "Structured overlays",
+      "Full skirts",
+      "Statement sleeves"
+    ],
+    "keyProperty": "Crisp, stiff — holds architectural shape",
+    "story": "A sheer, plain woven fabric with a stiff, crisp hand created by tightly twisted yarn. Unlike other sheer fabrics, organza holds its structure, making it ideal for full skirts, overskirts, and statement sleeves in bridal and eveningwear.",
+    "commonFibers": [
+      "Silk",
+      "Polyester",
+      "Nylon"
+    ],
+    "priceIndia": {
+      "silk": "₹600-2000/m",
+      "polyester": "₹50-180/m"
+    },
+    "washCare": {
+      "temp": "30°C gentle",
+      "machine": false,
+      "iron": "Low",
+      "dryCleaning": true
+    },
+    "season": [
+      "Spring/Summer"
+    ],
+    "indiaSourcing": [
+      "Surat",
+      "Varanasi"
+    ],
+    "finish": [
+      "Stiffening",
+      "Calendering"
+    ],
+    "has3DModel": false,
+    "priority": "medium",
+    "alternative": "voile"
+  },
+  {
+    "id": "voile",
+    "name": "Voile",
+    "category": "Plain Weave",
+    "weightTag": "SHEER",
+    "family": "Plain Weave",
+    "weaveNotation": "1/1",
+    "construction": "Open weave, high-twist yarn creates soft sheer with slight crispness. Lower thread count than lawn.",
+    "gsm": {
+      "min": 50,
+      "max": 80
+    },
+    "uses": [
+      "Curtains",
+      "Summer tops",
+      "Layered garments",
+      "Dupattas"
+    ],
+    "keyProperty": "Soft sheer, fluid, slightly crisp hand",
+    "story": "A soft, sheer plain weave with a fine, slightly crisp hand. Lighter and more fluid than organza, voile is used for curtains, summer blouses, and layered garments. The name comes from the French word for 'veil'.",
+    "commonFibers": [
+      "Cotton",
+      "Polyester",
+      "Silk"
+    ],
+    "priceIndia": {
+      "cotton": "₹60-200/m",
+      "blend": "₹30-90/m"
+    },
+    "washCare": {
+      "temp": "30°C gentle",
+      "machine": true,
+      "iron": "Low",
+      "dryCleaning": false
+    },
+    "season": [
+      "Spring/Summer"
+    ],
+    "indiaSourcing": [
+      "Surat",
+      "Jaipur",
+      "Bhilwara"
+    ],
+    "finish": [
+      "Soft finish",
+      "Anti-crease"
+    ],
+    "has3DModel": false,
+    "priority": "low",
+    "alternative": "batiste"
+  },
+  {
+    "id": "batiste",
+    "name": "Batiste",
+    "category": "Plain Weave",
+    "weightTag": "LIGHT",
+    "family": "Plain Weave",
+    "weaveNotation": "1/1",
+    "construction": "Highly combed long-staple fibres, high thread count plain weave. Near-silky surface despite cotton.",
+    "gsm": {
+      "min": 60,
+      "max": 90
+    },
+    "uses": [
+      "Lingerie",
+      "Baby wear",
+      "Handkerchiefs",
+      "Fine blouses"
+    ],
+    "keyProperty": "Extremely fine, soft — almost silk-like despite being cotton",
+    "story": "One of the finest, softest plain weave fabrics, batiste is woven from highly combed, long-staple fibres giving it an almost silky hand despite being cotton. Named after Jean Baptiste, a 13th-century French linen weaver renowned for the fineness of his cloth.",
+    "commonFibers": [
+      "Cotton",
+      "Linen",
+      "Polyester"
+    ],
+    "priceIndia": {
+      "cotton": "₹80-250/m",
+      "linen": "₹150-400/m"
+    },
+    "washCare": {
+      "temp": "30°C gentle",
+      "machine": true,
+      "iron": "Low",
+      "dryCleaning": false
+    },
+    "season": [
+      "Spring/Summer"
+    ],
+    "indiaSourcing": [
+      "Dhariwal",
+      "Malegaon"
+    ],
+    "finish": [
+      "Calendering",
+      "Sanforization"
+    ],
+    "has3DModel": false,
+    "priority": "low",
+    "alternative": "voile"
+  },
+  {
+    "id": "lawn",
+    "name": "Lawn",
+    "category": "Plain Weave",
+    "weightTag": "LIGHT",
+    "family": "Plain Weave",
+    "weaveNotation": "1/1",
+    "construction": "Fine combed yarns at 100s x 80s or finer. High thread count creates smooth, lustrous surface ideal for printing.",
+    "gsm": {
+      "min": 40,
+      "max": 80
+    },
+    "uses": [
+      "Shirts",
+      "Children's wear",
+      "Printed fabrics",
+      "Dupattas"
+    ],
+    "keyProperty": "Crisp finish, takes printed designs exceptionally well",
+    "story": "A lightweight, semi-sheer plain weave with a slightly crisp, cool finish. Lawn takes printed designs exceptionally well owing to its smooth, tight surface. Named after Laon, France, where linen lawn was originally produced in the Middle Ages.",
+    "commonFibers": [
+      "Cotton",
+      "Linen"
+    ],
+    "priceIndia": {
+      "cotton": "₹70-250/m",
+      "luxury": "₹300-600/m"
+    },
+    "washCare": {
+      "temp": "40°C",
+      "machine": true,
+      "iron": "Medium",
+      "dryCleaning": false
+    },
+    "season": [
+      "Spring/Summer"
+    ],
+    "indiaSourcing": [
+      "Dhariwal",
+      "Malegaon",
+      "Bhilwara"
+    ],
+    "finish": [
+      "Soft finish",
+      "Calendering"
+    ],
+    "has3DModel": false,
+    "priority": "medium",
+    "alternative": "poplin"
+  },
+  {
+    "id": "chambray",
+    "name": "Chambray",
+    "category": "Plain Weave",
+    "weightTag": "LIGHT",
+    "family": "Plain Weave",
+    "weaveNotation": "1/1",
+    "construction": "Coloured warp x white weft plain weave gives two-tone denim-like appearance at fraction of denim weight.",
+    "gsm": {
+      "min": 110,
+      "max": 160
+    },
+    "uses": [
+      "Casual shirts",
+      "Summer dresses",
+      "Lightweight workwear"
+    ],
+    "keyProperty": "Looks like denim from a distance but infinitely lighter",
+    "story": "A lightweight plain weave woven with a coloured (often blue) warp and white weft, giving a soft two-tone character that resembles denim from a distance. Infinitely more wearable in heat, chambray is the backbone of relaxed summer shirting.",
+    "commonFibers": [
+      "Cotton",
+      "Cotton-Linen Blend",
+      "Polyester"
+    ],
+    "priceIndia": {
+      "cotton": "₹80-220/m",
+      "blend": "₹60-150/m"
+    },
+    "washCare": {
+      "temp": "40°C",
+      "machine": true,
+      "iron": "Medium",
+      "dryCleaning": false
+    },
+    "season": [
+      "Spring/Summer"
+    ],
+    "indiaSourcing": [
+      "Ahmedabad",
+      "Erode",
+      "Coimbatore"
+    ],
+    "finish": [
+      "Sanforization",
+      "Enzyme wash"
+    ],
+    "has3DModel": false,
+    "priority": "high",
+    "alternative": "denim"
+  },
+  {
+    "id": "seersucker",
+    "name": "Seersucker",
+    "category": "Plain Weave",
+    "weightTag": "LIGHT",
+    "family": "Plain Weave",
+    "weaveNotation": "1/1",
+    "construction": "Alternating slack and tight warp tension creates permanent puckered-flat stripe without ironing.",
+    "gsm": {
+      "min": 120,
+      "max": 180
+    },
+    "uses": [
+      "Summer suits",
+      "Shirts",
+      "Children's wear",
+      "Pyjamas"
+    ],
+    "keyProperty": "Puckered texture lifts fabric off skin — no ironing needed",
+    "story": "A plain weave cotton with alternating puckered and flat stripes created by weaving some warp threads at higher tension. The puckering keeps fabric away from skin for airflow — making it one of the most genuinely breathable warm-weather fabrics. Ironing destroys its character.",
+    "commonFibers": [
+      "Cotton",
+      "Cotton-Polyester Blend"
+    ],
+    "priceIndia": {
+      "cotton": "₹120-280/m",
+      "blend": "₹80-180/m"
+    },
+    "washCare": {
+      "temp": "40°C",
+      "machine": true,
+      "iron": "None",
+      "dryCleaning": false
+    },
+    "season": [
+      "Spring/Summer"
+    ],
+    "indiaSourcing": [
+      "Erode",
+      "Coimbatore",
+      "Tirupur"
+    ],
+    "finish": [
+      "Sanforization"
+    ],
+    "has3DModel": false,
+    "priority": "medium",
+    "alternative": "chambray"
+  },
+  {
+    "id": "oxford-cloth",
+    "name": "Oxford Cloth",
+    "category": "Plain Weave",
+    "weightTag": "MEDIUM",
+    "family": "Plain Weave",
+    "weaveNotation": "2/1 basket variant",
+    "construction": "Basket weave variant: thick weft woven over pairs of warp yarns gives textured surface. Softens with washing.",
+    "gsm": {
+      "min": 150,
+      "max": 250
+    },
+    "uses": [
+      "Dress shirts",
+      "Casual shirting",
+      "OCBD shirts"
+    ],
+    "keyProperty": "Basket weave variant with slight texture — softens with every wash",
+    "story": "A basket weave variant of plain weave using a thicker weft yarn woven over pairs of warp yarns. The result is a slightly textured, durable fabric with a casual appearance that softens beautifully with washing. The OCBD (Oxford Cloth Button-Down) shirt is one of menswear's most enduring classics.",
+    "commonFibers": [
+      "Cotton",
+      "Cotton-Polyester Blend"
+    ],
+    "priceIndia": {
+      "cotton": "₹120-350/m",
+      "blend": "₹80-200/m"
+    },
+    "washCare": {
+      "temp": "40°C",
+      "machine": true,
+      "iron": "Medium",
+      "dryCleaning": false
+    },
+    "season": [
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Ahmedabad",
+      "Coimbatore",
+      "Erode"
+    ],
+    "finish": [
+      "Sanforization",
+      "Easy-care"
+    ],
+    "has3DModel": false,
+    "priority": "high",
+    "alternative": "chambray"
+  },
+  {
+    "id": "muslin",
+    "name": "Muslin",
+    "category": "Plain Weave",
+    "weightTag": "LIGHT",
+    "family": "Plain Weave",
+    "weaveNotation": "1/1",
+    "construction": "Loose, open plain weave from carded cotton. Minimal finishing — unbleached or lightly processed.",
+    "gsm": {
+      "min": 100,
+      "max": 150
+    },
+    "uses": [
+      "Toiles / pattern testing",
+      "Lining",
+      "Baby muslins",
+      "Reusable cloth"
+    ],
+    "keyProperty": "Unbleached, affordable, breathable — the fabric of prototypes",
+    "story": "A loose, plain woven cotton fabric in its simplest, most economical form. In fashion, muslin is primarily the fabric of toiles — prototype garments made to test a pattern before cutting expensive material. The name comes from Mosul, Iraq, where fine cotton weaving was first documented by European traders.",
+    "commonFibers": [
+      "Cotton"
+    ],
+    "priceIndia": {
+      "cotton": "₹30-80/m"
+    },
+    "washCare": {
+      "temp": "60°C",
+      "machine": true,
+      "iron": "Hot",
+      "dryCleaning": false
+    },
+    "season": [
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Malegaon",
+      "Bhiwandi",
+      "Erode"
+    ],
+    "finish": [
+      "Bleaching",
+      "Unbleached natural"
+    ],
+    "has3DModel": false,
+    "priority": "medium",
+    "alternative": "calico"
+  },
+  {
+    "id": "gabardine",
+    "name": "Gabardine",
+    "category": "Twill Weave",
+    "weightTag": "MEDIUM",
+    "family": "Twill Weave",
+    "weaveNotation": "2/2",
+    "construction": "Tightly woven twill with fine diagonal rib on face, smooth back. High thread count, 45° rib angle.",
+    "gsm": {
+      "min": 200,
+      "max": 300
+    },
+    "uses": [
+      "Suits",
+      "Trousers",
+      "Trench coats",
+      "Outerwear"
+    ],
+    "keyProperty": "Fine diagonal rib, wrinkle resistant, clean tailored appearance",
+    "story": "A tightly woven twill fabric with a distinctive fine diagonal rib on the face and a smooth back. Patented by Thomas Burberry in 1879, gabardine is renowned for its wrinkle resistance, durability, and clean tailored appearance. The fabric of choice for the classic trench coat.",
+    "commonFibers": [
+      "Wool",
+      "Cotton",
+      "Polyester",
+      "Wool-Polyester Blend"
+    ],
+    "priceIndia": {
+      "wool": "₹600-2000/m",
+      "cotton": "₹150-400/m",
+      "polyester": "₹100-300/m"
+    },
+    "washCare": {
+      "temp": "30°C",
+      "machine": false,
+      "iron": "Medium with damp cloth",
+      "dryCleaning": true
+    },
+    "season": [
+      "Autumn/Winter",
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Bhilwara",
+      "Ludhiana",
+      "Panipat"
+    ],
+    "finish": [
+      "Pressing",
+      "Milling",
+      "Anti-wrinkle"
+    ],
+    "has3DModel": false,
+    "priority": "high",
+    "alternative": "twill-weave"
+  },
+  {
+    "id": "herringbone",
+    "name": "Herringbone",
+    "category": "Twill Weave",
+    "weightTag": "MEDIUM-HEAVY",
+    "family": "Twill Weave",
+    "weaveNotation": "Broken twill",
+    "construction": "Twill direction reverses at regular intervals creating V-shaped zigzag resembling herring fish bones.",
+    "gsm": {
+      "min": 250,
+      "max": 400
+    },
+    "uses": [
+      "Blazers",
+      "Coats",
+      "Heritage suiting",
+      "Trousers"
+    ],
+    "keyProperty": "V-shaped zigzag pattern — a broken twill that reverses direction",
+    "story": "A broken twill weave producing the distinctive V-shaped zigzag pattern that resembles the bones of a herring fish. The reversal of diagonal direction at regular intervals creates the chevron. A perennial of tailoring, herringbone is associated with British heritage and country clothing.",
+    "commonFibers": [
+      "Wool",
+      "Cotton",
+      "Linen",
+      "Polyester Blend"
+    ],
+    "priceIndia": {
+      "wool": "₹800-2500/m",
+      "cotton": "₹200-500/m",
+      "blend": "₹300-800/m"
+    },
+    "washCare": {
+      "temp": "Dry clean",
+      "machine": false,
+      "iron": "Steam press",
+      "dryCleaning": true
+    },
+    "season": [
+      "Autumn/Winter"
+    ],
+    "indiaSourcing": [
+      "Bhilwara",
+      "Ludhiana",
+      "Amritsar"
+    ],
+    "finish": [
+      "Milling",
+      "Pressing",
+      "Decatizing"
+    ],
+    "has3DModel": false,
+    "priority": "high",
+    "alternative": "tweed"
+  },
+  {
+    "id": "serge",
+    "name": "Serge",
+    "category": "Twill Weave",
+    "weightTag": "MEDIUM",
+    "family": "Twill Weave",
+    "weaveNotation": "2/2",
+    "construction": "Two-up two-down twill producing smooth flat surface on both face and back with refined diagonal rib.",
+    "gsm": {
+      "min": 180,
+      "max": 260
+    },
+    "uses": [
+      "Uniforms",
+      "Suits",
+      "School blazers",
+      "Military wear"
+    ],
+    "keyProperty": "Smooth-faced twill — the technical benchmark for balanced suiting",
+    "story": "A two-up two-down twill with a smooth, flat surface on both the face and back, creating a refined diagonal rib. Historically the fabric of military uniforms and school blazers, serge is less fashionable today but remains the technical standard for a clean, durable suiting twill.",
+    "commonFibers": [
+      "Wool",
+      "Wool Blend",
+      "Polyester"
+    ],
+    "priceIndia": {
+      "wool": "₹500-1500/m",
+      "polyester": "₹120-300/m"
+    },
+    "washCare": {
+      "temp": "Dry clean",
+      "machine": false,
+      "iron": "Steam press",
+      "dryCleaning": true
+    },
+    "season": [
+      "Autumn/Winter",
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Bhilwara",
+      "Ludhiana"
+    ],
+    "finish": [
+      "Pressing",
+      "Singeing"
+    ],
+    "has3DModel": false,
+    "priority": "low",
+    "alternative": "gabardine"
+  },
+  {
+    "id": "cavalry-twill",
+    "name": "Cavalry Twill",
+    "category": "Twill Weave",
+    "weightTag": "HEAVY",
+    "family": "Twill Weave",
+    "weaveNotation": "Double twill 63°",
+    "construction": "Steep double-rib twill at approximately 63 degrees. Dense weave with exceptional abrasion resistance.",
+    "gsm": {
+      "min": 300,
+      "max": 450
+    },
+    "uses": [
+      "Riding trousers",
+      "Heritage outerwear",
+      "Military breeches"
+    ],
+    "keyProperty": "Double diagonal rib at 63° — exceptional abrasion resistance",
+    "story": "A steep double-rib twill with a pronounced cord-like diagonal running at approximately 63 degrees. Originally developed for cavalry officers' riding breeches, the fabric's exceptional abrasion resistance made it standard for equestrian and military use. Now prized in heritage trousers and outerwear.",
+    "commonFibers": [
+      "Wool",
+      "Wool Blend",
+      "Cotton"
+    ],
+    "priceIndia": {
+      "wool": "₹800-2500/m",
+      "cotton": "₹250-600/m"
+    },
+    "washCare": {
+      "temp": "Dry clean",
+      "machine": false,
+      "iron": "Steam press",
+      "dryCleaning": true
+    },
+    "season": [
+      "Autumn/Winter"
+    ],
+    "indiaSourcing": [
+      "Bhilwara",
+      "Ludhiana"
+    ],
+    "finish": [
+      "Pressing",
+      "Milling"
+    ],
+    "has3DModel": false,
+    "priority": "low",
+    "alternative": "gabardine"
+  },
+  {
+    "id": "chino-drill",
+    "name": "Chino / Drill",
+    "category": "Twill Weave",
+    "weightTag": "MEDIUM",
+    "family": "Twill Weave",
+    "weaveNotation": "3/1 twill",
+    "construction": "Tight 3/1 twill in cotton or blend. Resists wear and holds a clean crease. Military-specification construction.",
+    "gsm": {
+      "min": 200,
+      "max": 300
+    },
+    "uses": [
+      "Trousers",
+      "Workwear",
+      "Military uniforms",
+      "Casual trousers"
+    ],
+    "keyProperty": "Military origin — tight twill that resists wear and holds a crease",
+    "story": "A sturdy, tightly woven twill originally supplied to the British and US armies in khaki for tropical uniforms in the 19th century. 'Chino' comes from the Spanish word for Chinese, where the fabric was once sourced. Today it is the standard fabric for smart-casual trousers worldwide.",
+    "commonFibers": [
+      "Cotton",
+      "Cotton-Polyester Blend"
+    ],
+    "priceIndia": {
+      "cotton": "₹120-280/m",
+      "blend": "₹80-180/m"
+    },
+    "washCare": {
+      "temp": "40°C",
+      "machine": true,
+      "iron": "Medium-Hot",
+      "dryCleaning": false
+    },
+    "season": [
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Ahmedabad",
+      "Coimbatore",
+      "Erode"
+    ],
+    "finish": [
+      "Sanforization",
+      "Easy-care"
+    ],
+    "has3DModel": false,
+    "priority": "high",
+    "alternative": "gabardine"
+  },
+  {
+    "id": "hopsack",
+    "name": "Hopsack",
+    "category": "Twill Weave",
+    "weightTag": "MEDIUM",
+    "family": "Twill Weave",
+    "weaveNotation": "Basket twill",
+    "construction": "Loosely woven basket-twill with open, pebbly texture. Breathable but structured enough for tailoring.",
+    "gsm": {
+      "min": 200,
+      "max": 280
+    },
+    "uses": [
+      "Summer blazers",
+      "Casual suiting",
+      "Jackets"
+    ],
+    "keyProperty": "Open basket-twill — structured enough for tailoring, breathable enough for summer",
+    "story": "A loosely woven basket-twill with a pebbly, open texture that provides excellent breathability. Named after the coarse bags used to transport hops in breweries. In tailoring, hopsack is the summer-weight suiting alternative — structured enough for a blazer but open enough for warm weather.",
+    "commonFibers": [
+      "Wool",
+      "Linen",
+      "Cotton",
+      "Polyester"
+    ],
+    "priceIndia": {
+      "wool": "₹500-1500/m",
+      "linen": "₹300-800/m",
+      "polyester": "₹150-350/m"
+    },
+    "washCare": {
+      "temp": "Dry clean",
+      "machine": false,
+      "iron": "Steam press",
+      "dryCleaning": true
+    },
+    "season": [
+      "Spring/Summer"
+    ],
+    "indiaSourcing": [
+      "Bhilwara",
+      "Ludhiana"
+    ],
+    "finish": [
+      "Pressing",
+      "Decatizing"
+    ],
+    "has3DModel": false,
+    "priority": "medium",
+    "alternative": "gabardine"
+  },
+  {
+    "id": "flannel",
+    "name": "Flannel",
+    "category": "Twill Weave",
+    "weightTag": "MEDIUM",
+    "family": "Twill Weave",
+    "weaveNotation": "2/2 or 1/1",
+    "construction": "Loosely woven then mechanically brushed to raise surface fibres into warm nap. Soft, air-trapping structure.",
+    "gsm": {
+      "min": 150,
+      "max": 250
+    },
+    "uses": [
+      "Shirts",
+      "Pyjamas",
+      "Casual suiting",
+      "Bed linen"
+    ],
+    "keyProperty": "Mechanically brushed nap traps air — warm despite its weight",
+    "story": "A soft, loosely woven twill or plain weave fabric that is mechanically brushed after weaving to raise the surface fibres into a fine nap. The nap traps air and provides warmth disproportionate to its weight. Wool flannel is the suiting standard; cotton flannel dominates casual shirts and sleepwear.",
+    "commonFibers": [
+      "Wool",
+      "Cotton",
+      "Cotton-Polyester Blend"
+    ],
+    "priceIndia": {
+      "wool": "₹600-1800/m",
+      "cotton": "₹100-280/m",
+      "blend": "₹80-180/m"
+    },
+    "washCare": {
+      "temp": "30°C gentle",
+      "machine": true,
+      "iron": "Medium with cloth",
+      "dryCleaning": false
+    },
+    "season": [
+      "Autumn/Winter"
+    ],
+    "indiaSourcing": [
+      "Bhilwara",
+      "Ludhiana",
+      "Panipat"
+    ],
+    "finish": [
+      "Brushing/Napping",
+      "Singeing"
+    ],
+    "has3DModel": false,
+    "priority": "high",
+    "alternative": "tweed"
+  },
+  {
+    "id": "charmeuse",
+    "name": "Charmeuse",
+    "category": "Satin Family",
+    "weightTag": "LIGHT",
+    "family": "Satin Family",
+    "weaveNotation": "4/1 or 5/1 satin",
+    "construction": "Warp floats over 4-5 weft threads creating lustrous face. Dull crepe-like back. Exceptional drape.",
+    "gsm": {
+      "min": 60,
+      "max": 100
+    },
+    "uses": [
+      "Lingerie",
+      "Blouses",
+      "Draped eveningwear",
+      "Pyjamas"
+    ],
+    "keyProperty": "One shiny face, one matte back — drapey and form-following",
+    "story": "A lightweight satin-weave fabric with a lustrous face and a dull, crepe-like back created by floating warp threads over four or more weft threads. The drape is exceptional — charmeuse clings and flows simultaneously. Silk charmeuse is the gold standard for luxury lingerie and draped blouses.",
+    "commonFibers": [
+      "Silk",
+      "Polyester"
+    ],
+    "priceIndia": {
+      "silk": "₹600-2000/m",
+      "polyester": "₹80-250/m"
+    },
+    "washCare": {
+      "temp": "30°C gentle",
+      "machine": false,
+      "iron": "Low",
+      "dryCleaning": true
+    },
+    "season": [
+      "All Season"
+    ],
+    "indiaSourcing": [
+      "Surat",
+      "Varanasi",
+      "Bangalore"
+    ],
+    "finish": [
+      "Soft finish",
+      "Heat-set"
+    ],
+    "has3DModel": false,
+    "priority": "high",
+    "alternative": "satin-weave"
+  }
+]

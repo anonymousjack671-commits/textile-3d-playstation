@@ -1,0 +1,2193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Fabric Structures Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0e12;
+    --surface: #16161e;
+    --surface2: #1e1e2a;
+    --border: #2a2a3a;
+    --accent: #c8a96e;
+    --accent2: #7c6dab;
+    --accent3: #5b9bd5;
+    --text: #e8e6f0;
+    --muted: #8884a0;
+    --woven: #c8a96e;
+    --knitted: #7c6dab;
+    --sustainable: #4db87a;
+    --sustainable2: #2d9e5f;
+    --co2-low: #4db87a;
+    --co2-mid: #f0c94e;
+    --co2-high: #e06b5a;
+    --tag-bg: #1e1e2a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #0e0e12 0%, #1a1428 50%, #0e1420 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 36px 40px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,169,110,0.12) 0%, transparent 70%);
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 20%;
+    width: 400px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124,109,171,0.1) 0%, transparent 70%);
+  }
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #c8a96e, #e8d5a8, #7c6dab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+  }
+  .header p {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-top: 6px;
+  }
+  .stats-row {
+    display: flex; gap: 24px; margin-top: 18px; flex-wrap: wrap;
+  }
+  .stat-pill {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .stat-pill span { color: var(--accent); font-weight: 600; }
+
+  /* SEARCH */
+  .search-bar {
+    padding: 20px 40px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    display: flex; gap: 12px; align-items: center;
+  }
+  .search-bar input {
+    flex: 1;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 16px;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border 0.2s;
+  }
+  .search-bar input:focus { border-color: var(--accent); }
+  .search-bar input::placeholder { color: var(--muted); }
+
+  /* MAIN TABS */
+  .main-tabs {
+    display: flex;
+    padding: 0 40px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    gap: 4px;
+  }
+  .main-tab {
+    padding: 14px 28px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    color: var(--muted);
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .main-tab:hover { color: var(--text); }
+  .main-tab.active-woven { color: var(--woven); border-bottom-color: var(--woven); }
+  .main-tab.active-knitted { color: var(--knitted); border-bottom-color: var(--knitted); }
+
+  /* CONTENT */
+  .content { padding: 30px 40px; max-width: 1400px; margin: 0 auto; }
+  .section-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    margin-top: 30px;
+  }
+  .section-label.woven { color: var(--woven); }
+  .section-label.knitted { color: var(--knitted); }
+  .section-sub { color: var(--muted); font-size: 0.85rem; margin-bottom: 20px; }
+
+  /* SUB-CATEGORY FILTER */
+  .sub-filter {
+    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px;
+  }
+  .sub-btn {
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .sub-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .sub-btn.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 600; }
+  .sub-btn.active-k { background: var(--accent2); color: #fff; border-color: var(--accent2); font-weight: 600; }
+
+  /* FABRIC GRID */
+  .fabric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 20px;
+  }
+
+  /* FABRIC CARD */
+  .fabric-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .fabric-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+  .card-header {
+    padding: 18px 20px 14px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 10px;
+  }
+  .card-header-left { flex: 1; }
+  .card-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .card-category {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .card-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .badge-woven { background: rgba(200,169,110,0.15); color: var(--woven); border: 1px solid rgba(200,169,110,0.3); }
+  .badge-knitted { background: rgba(124,109,171,0.15); color: var(--knitted); border: 1px solid rgba(124,109,171,0.3); }
+  .badge-complex { background: rgba(91,155,213,0.15); color: var(--accent3); border: 1px solid rgba(91,155,213,0.3); }
+  .badge-sustainable { background: rgba(77,184,122,0.15); color: var(--sustainable); border: 1px solid rgba(77,184,122,0.3); }
+
+  /* SUSTAINABLE TAB */
+  .main-tab.active-sustainable { color: var(--sustainable); border-bottom-color: var(--sustainable); }
+
+  /* CO2 METER */
+  .co2-section { margin-bottom: 14px; }
+  .co2-compare { display: flex; flex-direction: column; gap: 6px; margin-top: 6px; }
+  .co2-row { display: flex; align-items: center; gap: 8px; }
+  .co2-label { font-size: 0.75rem; color: var(--muted); width: 110px; flex-shrink: 0; }
+  .co2-bar-track { flex: 1; height: 8px; background: rgba(255,255,255,0.05); border-radius: 4px; overflow: hidden; }
+  .co2-bar-fill { height: 100%; border-radius: 4px; transition: width 0.4s; }
+  .co2-fill-low { background: linear-gradient(90deg, #2d9e5f, #4db87a); }
+  .co2-fill-mid { background: linear-gradient(90deg, #c8a96e, #f0c94e); }
+  .co2-fill-high { background: linear-gradient(90deg, #c0392b, #e06b5a); }
+  .co2-value { font-size: 0.75rem; font-weight: 600; width: 70px; text-align: right; flex-shrink: 0; }
+  .co2-value.low { color: var(--co2-low); }
+  .co2-value.mid { color: var(--co2-mid); }
+  .co2-value.high { color: var(--co2-high); }
+
+  /* DECARB SCORE */
+  .decarb-score-wrap { display: flex; align-items: center; gap: 12px; margin-top: 6px; }
+  .decarb-score {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; font-weight: 900;
+    background: linear-gradient(135deg, #4db87a, #2d9e5f);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .decarb-label { font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
+
+  /* COMPAT TAGS */
+  .compat-tag { background: rgba(77,184,122,0.1); border: 1px solid rgba(77,184,122,0.25); color: var(--sustainable); font-size: 0.72rem; padding: 2px 9px; border-radius: 6px; }
+  .compat-tag.woven-tag { background: rgba(200,169,110,0.1); border-color: rgba(200,169,110,0.3); color: var(--woven); }
+  .compat-tag.knitted-tag { background: rgba(124,109,171,0.1); border-color: rgba(124,109,171,0.3); color: var(--knitted); }
+
+  /* CERT BADGE */
+  .cert-badge { display: inline-block; background: rgba(91,155,213,0.12); border: 1px solid rgba(91,155,213,0.3); color: var(--accent3); font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; margin: 2px; }
+
+  /* INDIA FLAG */
+  .india-avail { font-size: 0.78rem; padding: 3px 10px; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; }
+  .india-yes { background: rgba(77,184,122,0.1); border: 1px solid rgba(77,184,122,0.3); color: var(--sustainable); }
+  .india-limited { background: rgba(240,201,78,0.1); border: 1px solid rgba(240,201,78,0.3); color: #f0c94e; }
+  .india-no { background: rgba(224,107,90,0.1); border: 1px solid rgba(224,107,90,0.3); color: var(--co2-high); }
+
+  /* SUSTAINABLE SECTION */
+  .section-label.sustainable { color: var(--sustainable); }
+  .sub-btn.active-s { background: var(--sustainable); color: #000; border-color: var(--sustainable); font-weight: 600; }
+
+  /* IMPACT GRID */
+  .impact-intro {
+    background: linear-gradient(135deg, rgba(77,184,122,0.06), rgba(45,158,95,0.03));
+    border: 1px solid rgba(77,184,122,0.2);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .impact-intro h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--sustainable);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  .impact-stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
+  .impact-stat {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(77,184,122,0.15);
+    border-radius: 8px;
+    padding: 12px 14px;
+    text-align: center;
+  }
+  .impact-stat .num { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: var(--sustainable); }
+  .impact-stat .desc { font-size: 0.75rem; color: var(--muted); margin-top: 2px; line-height: 1.3; }
+
+  /* CARD BODY */
+  .card-body { padding: 16px 20px; }
+  .info-section { margin-bottom: 14px; }
+  .info-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+  .info-value {
+    font-size: 0.88rem;
+    color: var(--text);
+    line-height: 1.55;
+  }
+
+  /* PRICE TABLE */
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin-top: 4px;
+  }
+  .price-table th {
+    text-align: left;
+    padding: 5px 8px;
+    background: var(--surface2);
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .price-table td {
+    padding: 5px 8px;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .price-table tr:nth-child(even) td { background: rgba(255,255,255,0.015); }
+  .fiber-name { color: var(--accent); font-weight: 500; }
+  .price-val { color: #7ecb8b; font-weight: 600; }
+
+  /* TAGS */
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .tag {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.72rem;
+    padding: 2px 9px;
+    border-radius: 6px;
+  }
+  .tag.season { border-color: rgba(94,196,148,0.3); color: #5ec494; }
+  .tag.stretch { border-color: rgba(91,155,213,0.3); color: var(--accent3); }
+  .tag.care { border-color: rgba(200,169,110,0.3); color: var(--accent); }
+
+  /* CARE ICONS */
+  .care-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .care-item {
+    display: flex; align-items: center; gap: 4px;
+    font-size: 0.8rem; color: var(--text);
+  }
+  .care-icon { font-size: 1rem; }
+
+  /* GSM BAR */
+  .gsm-bar-wrap { margin-top: 4px; }
+  .gsm-range-label { font-size: 0.78rem; color: var(--text); margin-bottom: 4px; }
+  .gsm-bar {
+    height: 6px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, rgba(124,109,171,0.2), rgba(200,169,110,0.6));
+    position: relative;
+  }
+  .gsm-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--accent2), var(--accent));
+  }
+
+  /* EXPAND TOGGLE */
+  .expand-btn {
+    width: 100%;
+    background: var(--surface2);
+    border: none;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.78rem;
+    padding: 8px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.2s, color 0.2s;
+  }
+  .expand-btn:hover { background: var(--border); color: var(--text); }
+  .extra-info { display: none; padding: 14px 20px; border-top: 1px solid var(--border); background: rgba(0,0,0,0.2); }
+  .extra-info.open { display: block; }
+
+  /* HIDDEN */
+  .hidden { display: none !important; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .header { padding: 24px 20px; }
+    .header h1 { font-size: 1.8rem; }
+    .content { padding: 20px; }
+    .search-bar { padding: 14px 20px; }
+    .main-tabs { padding: 0 20px; }
+    .fabric-grid { grid-template-columns: 1fr; }
+  }
+
+  /* NO RESULTS */
+  .no-results {
+    text-align: center; padding: 60px 20px; color: var(--muted);
+    font-size: 1rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🧵 Complete Fabric Structures Guide</h1>
+  <p>Construction · GSM · Uses · Wash Care · Price by Fiber Type · Sustainable Fibers & Decarbonisation</p>
+  <div class="stats-row">
+    <div class="stat-pill"><span>35+</span> Woven Structures</div>
+    <div class="stat-pill"><span>20+</span> Knitted Structures</div>
+    <div class="stat-pill"><span>20</span> Sustainable Fibers</div>
+    <div class="stat-pill"><span>6</span> Fiber Types Priced</div>
+    <div class="stat-pill"><span>Full</span> Wash Care Details</div>
+  </div>
+</div>
+
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search any fabric structure or sustainable fiber (e.g. hemp, jersey, velvet...)" oninput="filterFabrics()">
+</div>
+
+<div class="main-tabs">
+  <div class="main-tab active-woven" onclick="switchTab('woven')">🧵 Woven Fabrics</div>
+  <div class="main-tab" onclick="switchTab('knitted')">🧶 Knitted Fabrics</div>
+  <div class="main-tab" onclick="switchTab('sustainable')">🌿 Sustainable Fibers</div>
+</div>
+
+<div class="content">
+
+<!-- =================== WOVEN =================== -->
+<div id="woven-section">
+  <div class="section-label woven">Woven Fabric Structures</div>
+  <div class="section-sub">Interlaced warp & weft yarns • Low to moderate stretch • Structured drape</div>
+  <div class="sub-filter" id="woven-filter">
+    <button class="sub-btn active" onclick="filterWoven('all',this)">All</button>
+    <button class="sub-btn" onclick="filterWoven('basic',this)">Basic Weaves</button>
+    <button class="sub-btn" onclick="filterWoven('derived',this)">Derived Weaves</button>
+    <button class="sub-btn" onclick="filterWoven('complex',this)">Complex Weaves</button>
+    <button class="sub-btn" onclick="filterWoven('pile',this)">Pile Weaves</button>
+  </div>
+  <div class="fabric-grid" id="woven-grid"></div>
+</div>
+
+<!-- =================== KNITTED =================== -->
+<div id="knitted-section" class="hidden">
+  <div class="section-label knitted">Knitted Fabric Structures</div>
+  <div class="section-sub">Interloped yarn loops • High stretch & recovery • Soft drape</div>
+  <div class="sub-filter" id="knitted-filter">
+    <button class="sub-btn active" onclick="filterKnitted('all',this)">All</button>
+    <button class="sub-btn" onclick="filterKnitted('weft',this)">Weft Knit</button>
+    <button class="sub-btn" onclick="filterKnitted('warp',this)">Warp Knit</button>
+  </div>
+  <div class="fabric-grid" id="knitted-grid"></div>
+</div>
+
+<div class="no-results hidden" id="no-results">No fabrics found matching your search 🔍</div>
+
+<!-- =================== SUSTAINABLE =================== -->
+<div id="sustainable-section" class="hidden">
+  <div class="section-label sustainable">🌿 Sustainable Fiber Options</div>
+  <div class="section-sub">Compatible with both Woven & Knitted structures • Carbon footprint comparison • Decarbonisation potential</div>
+
+  <div class="impact-intro">
+    <h3>🌍 Why Sustainable Fibers Matter for Decarbonisation</h3>
+    <div class="info-value">The global textile industry emits ~1.2 billion tonnes of CO₂ equivalent per year — more than aviation and shipping combined. Conventional cotton uses 10,000 litres of water per kg; synthetic fibers release microplastics; and fast fashion sends 92 million tonnes to landfill annually. Switching to sustainable fibers across woven and knitted structures is one of the highest-impact interventions available to brands and manufacturers.</div>
+    <div class="impact-stats">
+      <div class="impact-stat"><div class="num">~8%</div><div class="desc">of global greenhouse gas emissions from fashion</div></div>
+      <div class="impact-stat"><div class="num">93B L</div><div class="desc">water consumed by fashion per year</div></div>
+      <div class="impact-stat"><div class="num">60%</div><div class="desc">CO₂ reduction possible with fiber switching</div></div>
+      <div class="impact-stat"><div class="num">500K T</div><div class="desc">microfiber pollution in oceans per year</div></div>
+      <div class="impact-stat"><div class="num">70%</div><div class="desc">less water with organic vs conventional cotton</div></div>
+      <div class="impact-stat"><div class="num">rPET</div><div class="desc">uses 59% less energy than virgin polyester</div></div>
+    </div>
+  </div>
+
+  <div class="sub-filter" id="sustainable-filter">
+    <button class="sub-btn active-s" onclick="filterSustainable('all',this)">All Fibers</button>
+    <button class="sub-btn" onclick="filterSustainable('natural',this)">Natural Plant</button>
+    <button class="sub-btn" onclick="filterSustainable('recycled',this)">Recycled</button>
+    <button class="sub-btn" onclick="filterSustainable('cellulosic',this)">Cellulosic/MMCF</button>
+    <button class="sub-btn" onclick="filterSustainable('protein',this)">Protein/Animal</button>
+    <button class="sub-btn" onclick="filterSustainable('biobased',this)">Agri-Waste / Bio</button>
+  </div>
+  <div class="fabric-grid" id="sustainable-grid"></div>
+</div>
+
+</div><!-- end content -->
+
+<script>
+// ===================== DATA =====================
+
+const wovenFabrics = [
+  {
+    name: "Plain Weave",
+    category: "Basic Weave",
+    type: "basic",
+    badge: "badge-woven",
+    badgeText: "WOVEN",
+    construction: "Each weft yarn passes alternately over and under each warp yarn. The simplest interlacing pattern; repeat is 2×2. Produced on any loom type. Maximum interlacing points = maximum firmness.",
+    uses: "Shirting, linings, muslin, calico, taffeta, chiffon, organza, georgette, poplin, voile, canvas",
+    gsmMin: 30, gsmMax: 400,
+    gsmDisplay: "30–400 GSM (Chiffon: 30–50 | Voile: 40–70 | Poplin: 100–140 | Canvas: 300–400)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash warm (40°C) for most; cold (30°C) for silk/rayon"},
+      {icon:"🌀", text:"Gentle cycle for delicate versions"},
+      {icon:"♨️", text:"Tumble dry low or air dry flat"},
+      {icon:"🔥", text:"Medium iron; steam press recommended"},
+      {icon:"🚫", text:"No wringing; avoid bleach on dyed variants"}
+    ],
+    prices: [
+      {fiber:"Cotton", range:"₹40–120/m", note:"Shirting/poplin"},
+      {fiber:"Polyester", range:"₹25–80/m", note:"Linings, poplin"},
+      {fiber:"Silk", range:"₹400–1500/m", note:"Taffeta, habotai"},
+      {fiber:"Linen", range:"₹180–500/m", note:"Summer shirting"},
+      {fiber:"Rayon/Viscose", range:"₹60–160/m", note:"Voile, georgette"},
+      {fiber:"Wool", range:"₹350–900/m", note:"Gabardine base"}
+    ],
+    extras: {
+      threadCount: "60×60 to 200×200 threads/inch",
+      width: "44–60 inches standard",
+      stretch: "0–5% (crosswise)",
+      shrinkage: "2–5% (pre-wash recommended)",
+      season: ["All Season"],
+      tradeNames: "Muslin, Calico, Taffeta, Organza, Chiffon, Poplin, Canvas, Duck, Lawn"
+    }
+  },
+  {
+    name: "Twill Weave",
+    category: "Basic Weave",
+    type: "basic",
+    badge: "badge-woven",
+    badgeText: "WOVEN",
+    construction: "Weft passes over 2+ warp yarns then under 1+, with each row offset to create a diagonal rib. Common types: 2/1 twill (denim), 3/1 twill, 2/2 twill (gabardine). Direction: S-twill (left) or Z-twill (right).",
+    uses: "Denim, gabardine, drill, chino, suiting, upholstery, uniform fabric, tweed",
+    gsmMin: 120, gsmMax: 450,
+    gsmDisplay: "120–450 GSM (Chino: 180–220 | Denim: 250–400 | Suiting: 200–300)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash warm (40°C); denim cold wash to preserve color"},
+      {icon:"🔄", text:"Turn inside out for denim to prevent fading"},
+      {icon:"♨️", text:"Tumble dry medium; hang dry for suiting"},
+      {icon:"🔥", text:"Medium-hot iron on reverse; use press cloth for wool"},
+      {icon:"🚫", text:"Avoid bleach; dry clean for high-end wool twill"}
+    ],
+    prices: [
+      {fiber:"Cotton", range:"₹80–220/m", note:"Denim, drill, chino"},
+      {fiber:"Polyester/Cotton", range:"₹60–160/m", note:"Uniform fabric"},
+      {fiber:"Wool", range:"₹500–2000/m", note:"Gabardine, suiting"},
+      {fiber:"Silk", range:"₹600–2000/m", note:"Silk twill scarves"},
+      {fiber:"Linen", range:"₹200–600/m", note:"Summer trousers"},
+      {fiber:"Synthetic blends", range:"₹100–300/m", note:"Stretch twill"}
+    ],
+    extras: {
+      threadCount: "Typically 80×60 to 140×80",
+      width: "44–60 inches",
+      stretch: "5–10% (bias direction)",
+      shrinkage: "3–6%",
+      season: ["Autumn/Winter", "All Season"],
+      tradeNames: "Denim, Gabardine, Drill, Chino, Serge, Cavalry Twill, Tweed"
+    }
+  },
+  {
+    name: "Satin / Sateen Weave",
+    category: "Basic Weave",
+    type: "basic",
+    badge: "badge-woven",
+    badgeText: "WOVEN",
+    construction: "Warp floats over 4+ weft yarns (satin) or weft floats over 4+ warp yarns (sateen). Long floats reflect light uniformly. Minimum interlacing = maximum luster. Common: 4-harness, 5-harness (duchess), 8-harness.",
+    uses: "Evening wear, bridal, linings, lingerie, bedding (sateen), drapery, ties, ribbons",
+    gsmMin: 60, gsmMax: 300,
+    gsmDisplay: "60–300 GSM (Charmeuse: 60–100 | Duchess Satin: 180–250 | Sateen bedding: 120–200)",
+    washCare: [
+      {icon:"🤲", text:"Hand wash cold (25–30°C) or dry clean recommended"},
+      {icon:"🌀", text:"Delicate/silk cycle if machine washing; mesh bag"},
+      {icon:"🪴", text:"Lay flat to dry; avoid wringing"},
+      {icon:"🔥", text:"Low iron on reverse; use damp cloth"},
+      {icon:"🚫", text:"No bleach, no tumble dry for silk satin"}
+    ],
+    prices: [
+      {fiber:"Silk", range:"₹600–3000/m", note:"Charmeuse, duchess"},
+      {fiber:"Polyester", range:"₹80–250/m", note:"Bridal, lining"},
+      {fiber:"Cotton (sateen)", range:"₹150–400/m", note:"Bedding, apparel"},
+      {fiber:"Acetate", range:"₹200–500/m", note:"Lingerie, lining"},
+      {fiber:"Nylon", range:"₹120–300/m", note:"Athletic linings"},
+      {fiber:"Rayon", range:"₹120–350/m", note:"Affordable satin"}
+    ],
+    extras: {
+      threadCount: "200–600 thread count (sateen bedding)",
+      width: "44–58 inches",
+      stretch: "2–5%",
+      shrinkage: "3–8% (silk); 1–2% (polyester)",
+      season: ["Autumn/Winter", "Spring"],
+      tradeNames: "Charmeuse, Duchess Satin, Bridal Satin, Sateen, Baronet Satin"
+    }
+  },
+  {
+    name: "Basket / Matt Weave",
+    category: "Derived — Plain",
+    type: "derived",
+    badge: "badge-woven",
+    badgeText: "WOVEN",
+    construction: "Multiple warp and weft yarns are treated as one unit in plain weave. 2×2 basket (Oxford), 3×3, 4×4. Produces a checkerboard-like surface. Less firm than plain weave; snags more easily.",
+    uses: "Oxford shirting, hopsack suiting, decorative fabric, loose casual shirts, sportswear",
+    gsmMin: 100, gsmMax: 250,
+    gsmDisplay: "100–250 GSM (Oxford shirting: 120–160 | Hopsack suit: 180–240)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash 40°C; cold for blends"},
+      {icon:"♨️", text:"Tumble dry low"},
+      {icon:"🔥", text:"Medium iron"},
+      {icon:"🚫", text:"Avoid snags; do not stretch when wet"}
+    ],
+    prices: [
+      {fiber:"Cotton", range:"₹80–180/m", note:"Oxford shirts"},
+      {fiber:"Polyester/Cotton", range:"₹60–140/m", note:"Casual wear"},
+      {fiber:"Linen", range:"₹200–500/m", note:"Hopsack suiting"},
+      {fiber:"Wool", range:"₹400–1200/m", note:"Hopsack jackets"},
+      {fiber:"Silk", range:"₹500–1500/m", note:"Luxury shirting"},
+      {fiber:"Rayon", range:"₹80–200/m", note:"Dress fabric"}
+    ],
+    extras: {
+      threadCount: "Typically 60×60",
+      width: "44–60 inches",
+      stretch: "3–6%",
+      shrinkage: "4–7%",
+      season: ["Spring/Summer", "All Season"],
+      tradeNames: "Oxford Cloth, Hopsack, Matt Weave, Royal Oxford"
+    }
+  },
+  {
+    name: "Rib Weave",
+    category: "Derived — Plain",
+    type: "derived",
+    badge: "badge-woven",
+    badgeText: "WOVEN",
+    construction: "Variation of plain weave where extra warp or weft yarns create prominent ridges. Warp rib: ribs run lengthwise (thicker weft). Weft rib: ribs run crosswise (thicker warp). Examples: Faille, Bengaline, Grosgrain, Ottoman.",
+    uses: "Ribbons, waistbands, ties, dress fabric, suiting, formal wear, coat trim",
+    gsmMin: 80, gsmMax: 300,
+    gsmDisplay: "80–300 GSM (Grosgrain ribbon: 100–150 | Bengaline suiting: 200–280)",
+    washCare: [
+      {icon:"🤲", text:"Hand wash or gentle cycle 30°C"},
+      {icon:"🪴", text:"Air dry flat; do not twist"},
+      {icon:"🔥", text:"Steam iron on reverse"},
+      {icon:"🚫", text:"Dry clean for structured rib weave garments"}
+    ],
+    prices: [
+      {fiber:"Silk", range:"₹500–2000/m", note:"Faille, bengaline"},
+      {fiber:"Polyester", range:"₹100–300/m", note:"Grosgrain, ottoman"},
+      {fiber:"Cotton", range:"₹80–200/m", note:"Ribbed shirting"},
+      {fiber:"Wool", range:"₹400–1000/m", note:"Suiting fabric"},
+      {fiber:"Rayon", range:"₹120–300/m", note:"Dress fabric"},
+      {fiber:"Acetate", range:"₹200–500/m", note:"Ribbons, linings"}
+    ],
+    extras: {
+      threadCount: "Varies by rib height",
+      width: "44–60 inches",
+      stretch: "3–8% crosswise",
+      shrinkage: "3–5%",
+      season: ["All Season"],
+      tradeNames: "Faille, Bengaline, Grosgrain, Ottoman, Repp"
+    }
+  },
+  {
+    name: "Herringbone Weave",
+    category: "Derived — Twill",
+    type: "derived",
+    badge: "badge-woven",
+    badgeText: "WOVEN",
+    construction: "Broken twill where direction reverses at regular intervals creating a V-shaped zig-zag (like herring fish bones). Built on 2/2 or 3/1 twill base. Can be woven in two colors for high contrast pattern.",
+    uses: "Suits, jackets, overcoats, trousers, blazers, upholstery, scarves",
+    gsmMin: 150, gsmMax: 400,
+    gsmDisplay: "150–400 GSM (Suiting: 200–280 | Overcoating: 300–400)",
+    washCare: [
+      {icon:"🧴", text:"Dry clean recommended for wool herringbone"},
+      {icon:"🌊", text:"Machine wash 30°C for cotton/synthetic versions"},
+      {icon:"🔥", text:"Warm iron with press cloth; steam press"},
+      {icon:"🚫", text:"No wringing; avoid over-washing"}
+    ],
+    prices: [
+      {fiber:"Wool", range:"₹600–2500/m", note:"Suiting, overcoating"},
+      {fiber:"Cotton", range:"₹120–350/m", note:"Casual jackets"},
+      {fiber:"Polyester", range:"₹100–250/m", note:"Budget suiting"},
+      {fiber:"Wool/Poly blend", range:"₹300–1000/m", note:"Mid-range suits"},
+      {fiber:"Linen", range:"₹250–600/m", note:"Summer blazers"},
+      {fiber:"Silk", range:"₹800–2500/m", note:"Luxury suiting"}
+    ],
+    extras: {
+      threadCount: "80–120 threads/inch",
+      width: "56–60 inches (suiting width)",
+      stretch: "5–8%",
+      shrinkage: "3–5%",
+      season: ["Autumn/Winter"],
+      tradeNames: "Herringbone Tweed, Chevron Weave"
+    }
+  },
+  {
+    name: "Dobby Weave",
+    category: "Complex Weave",
+    type: "complex",
+    badge: "badge-complex",
+    badgeText: "COMPLEX",
+    construction: "Requires a dobby attachment on the loom to lift individual harnesses independently. Creates small, repeating geometric patterns (dots, diamonds, geometric florals) woven into the fabric. More complex than plain but simpler than jacquard.",
+    uses: "Dobby shirting, end-on-end fabric, geometric-patterned dress fabric, curtains, table linen",
+    gsmMin: 80, gsmMax: 200,
+    gsmDisplay: "80–200 GSM (Shirting: 100–140 | Dress fabric: 120–180)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash 40°C"},
+      {icon:"♨️", text:"Tumble dry low"},
+      {icon:"🔥", text:"Medium iron"},
+      {icon:"🚫", text:"Gentle on raised dobby patterns to avoid crushing"}
+    ],
+    prices: [
+      {fiber:"Cotton", range:"₹120–300/m", note:"Premium shirting"},
+      {fiber:"Polyester", range:"₹80–180/m", note:"Dress fabric"},
+      {fiber:"Cotton/Polyester", range:"₹100–220/m", note:"Workwear shirting"},
+      {fiber:"Linen", range:"₹250–600/m", note:"Table linen"},
+      {fiber:"Silk", range:"₹700–2000/m", note:"Luxury shirts"},
+      {fiber:"Bamboo", range:"₹200–500/m", note:"Eco shirting"}
+    ],
+    extras: {
+      threadCount: "80–200 threads/inch",
+      width: "44–60 inches",
+      stretch: "2–5%",
+      shrinkage: "2–4%",
+      season: ["All Season"],
+      tradeNames: "Dobby Shirting, End-on-End, Birdseye"
+    }
+  },
+  {
+    name: "Jacquard Weave",
+    category: "Complex Weave",
+    type: "complex",
+    badge: "badge-complex",
+    badgeText: "COMPLEX",
+    construction: "Uses a Jacquard loom mechanism to control each warp thread individually. Enables complex, pictorial or large-scale patterns — florals, tapestry motifs, damask. Pattern is integral to fabric structure, not printed.",
+    uses: "Brocade, damask, tapestry, upholstery, drapery, luxury suiting, ties, evening wear, home furnishing",
+    gsmMin: 150, gsmMax: 600,
+    gsmDisplay: "150–600 GSM (Apparel jacquard: 200–300 | Upholstery: 350–600)",
+    washCare: [
+      {icon:"🧴", text:"Dry clean strongly recommended"},
+      {icon:"🤲", text:"Hand wash only for lighter apparel jacquards (30°C)"},
+      {icon:"🪴", text:"Lay flat to dry; never wring"},
+      {icon:"🔥", text:"Low iron on reverse; use press cloth to protect pattern"},
+      {icon:"🚫", text:"No tumble dry; avoid rubbing pattern"}
+    ],
+    prices: [
+      {fiber:"Silk", range:"₹1000–6000/m", note:"Luxury brocade"},
+      {fiber:"Cotton", range:"₹300–800/m", note:"Damask, upholstery"},
+      {fiber:"Polyester", range:"₹150–400/m", note:"Budget jacquard"},
+      {fiber:"Wool", range:"₹600–2500/m", note:"Tapestry, suiting"},
+      {fiber:"Viscose/Silk blend", range:"₹400–1200/m", note:"Semi-luxury"},
+      {fiber:"Metallic thread", range:"₹800–4000/m", note:"Festive brocade"}
+    ],
+    extras: {
+      threadCount: "Controlled per thread; very high density",
+      width: "44–60 inches",
+      stretch: "1–3%",
+      shrinkage: "2–4%",
+      season: ["All Season", "Festive"],
+      tradeNames: "Brocade, Damask, Lampas, Tapestry"
+    }
+  },
+  {
+    name: "Leno / Gauze Weave",
+    category: "Complex Weave",
+    type: "complex",
+    badge: "badge-complex",
+    badgeText: "COMPLEX",
+    construction: "Pairs of warp yarns (doup and standard) twist around each weft yarn, locking it in place. Creates open, sheer, stable mesh-like structure. Prevents yarn slippage in open weave. Requires special doup attachment.",
+    uses: "Surgical gauze, mosquito nets, curtain sheer fabric, light summer apparel, cheesecloth variants, packaging fabric",
+    gsmMin: 20, gsmMax: 90,
+    gsmDisplay: "20–90 GSM (Medical gauze: 20–40 | Curtain: 50–90)",
+    washCare: [
+      {icon:"🤲", text:"Hand wash cold (25°C)"},
+      {icon:"🌊", text:"Delicate machine cycle in mesh bag"},
+      {icon:"🪴", text:"Air dry; lay flat or hang carefully"},
+      {icon:"🔥", text:"Low iron or no iron; steam gently"},
+      {icon:"🚫", text:"No tumble dry; very fragile structure"}
+    ],
+    prices: [
+      {fiber:"Cotton", range:"₹40–120/m", note:"Gauze, cheesecloth"},
+      {fiber:"Polyester", range:"₹30–100/m", note:"Curtain sheer"},
+      {fiber:"Silk", range:"₹300–900/m", note:"Luxury sheer"},
+      {fiber:"Linen", range:"₹150–400/m", note:"Artisan gauze"},
+      {fiber:"Nylon", range:"₹60–150/m", note:"Mosquito net"},
+      {fiber:"Bamboo", range:"₹120–350/m", note:"Eco-gauze"}
+    ],
+    extras: {
+      threadCount: "Very open: 20–50 threads/inch",
+      width: "44–60 inches",
+      stretch: "4–8%",
+      shrinkage: "5–10%",
+      season: ["Spring/Summer"],
+      tradeNames: "Gauze, Cheesecloth, Leno Sheer, Doup Weave"
+    }
+  },
+  {
+    name: "Crepe Weave",
+    category: "Complex Weave",
+    type: "complex",
+    badge: "badge-complex",
+    badgeText: "COMPLEX",
+    construction: "Irregular/random float arrangement breaks the diagonal of twill to create a pebbled, grainy texture. Can also use high-twist yarns. Different from crepe yarn fabric (though both may be used together). Pattern repeat is irregular.",
+    uses: "Dress fabric, blouses, eveningwear, linings, scarves, suiting lining",
+    gsmMin: 80, gsmMax: 220,
+    gsmDisplay: "80–220 GSM (Crepe blouse: 90–130 | Crepe suiting: 150–220)",
+    washCare: [
+      {icon:"🤲", text:"Hand wash cold or dry clean for silk crepe"},
+      {icon:"🌊", text:"Gentle machine wash 30°C for poly/rayon crepe"},
+      {icon:"🪴", text:"Lay flat to dry; do not wring"},
+      {icon:"🔥", text:"Low iron on reverse; steam from distance"},
+      {icon:"🚫", text:"Avoid pressing flat — preserves pebbled texture"}
+    ],
+    prices: [
+      {fiber:"Silk", range:"₹500–2500/m", note:"Crepe de chine"},
+      {fiber:"Polyester", range:"₹80–200/m", note:"Budget crepe"},
+      {fiber:"Rayon/Viscose", range:"₹120–300/m", note:"Soft crepe"},
+      {fiber:"Wool", range:"₹400–1200/m", note:"Crepe suiting"},
+      {fiber:"Cotton", range:"₹150–350/m", note:"Cotton crepe"},
+      {fiber:"Polyester/Elastane", range:"₹120–280/m", note:"Stretch crepe"}
+    ],
+    extras: {
+      threadCount: "Varies widely",
+      width: "44–58 inches",
+      stretch: "3–8%",
+      shrinkage: "3–6%",
+      season: ["All Season"],
+      tradeNames: "Crepe de Chine, Moss Crepe, Sand Crepe, Canton Crepe"
+    }
+  },
+  {
+    name: "Bedford Cord",
+    category: "Complex Weave",
+    type: "complex",
+    badge: "badge-complex",
+    badgeText: "COMPLEX",
+    construction: "Longitudinal ribs formed by stuffing/wadding threads between face threads. Heavier and sturdier than plain rib weave. The ribs are filled from behind giving a rounded 3D effect. Often woven with cotton or wool.",
+    uses: "Riding breeches, uniform trousers, upholstery, baby clothing, outerwear",
+    gsmMin: 200, gsmMax: 400,
+    gsmDisplay: "200–400 GSM (Apparel: 220–300 | Upholstery: 300–400)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash 40°C"},
+      {icon:"♨️", text:"Tumble dry medium"},
+      {icon:"🔥", text:"Hot iron on cotton; medium on wool blend"},
+      {icon:"🧴", text:"Dry clean for pure wool versions"}
+    ],
+    prices: [
+      {fiber:"Cotton", range:"₹150–350/m", note:"Uniform, baby wear"},
+      {fiber:"Wool", range:"₹500–1500/m", note:"Riding breeches"},
+      {fiber:"Polyester/Cotton", range:"₹120–280/m", note:"Uniform fabric"},
+      {fiber:"Nylon blend", range:"₹180–400/m", note:"Outerwear"},
+      {fiber:"Linen", range:"₹250–600/m", note:"Summer suiting"},
+      {fiber:"Stretch blend", range:"₹200–450/m", note:"Modern trousers"}
+    ],
+    extras: {
+      threadCount: "Typically 80–120 threads/inch",
+      width: "56–60 inches",
+      stretch: "3–6%",
+      shrinkage: "3–5%",
+      season: ["Autumn/Winter"],
+      tradeNames: "Bedford Cord, Rib Cord"
+    }
+  },
+  {
+    name: "Piqué Weave",
+    category: "Complex Weave",
+    type: "complex",
+    badge: "badge-complex",
+    badgeText: "COMPLEX",
+    construction: "Woven piqué uses extra warp threads (stuffer threads) that pad the fabric from behind, creating raised geometric patterns (diamonds, birds-eye, waffle). Different from knit piqué. Dobby or jacquard controlled.",
+    uses: "Polo shirts (cotton piqué), waistcoats, dress shirts, collars, cuffs, upholstery, table linen",
+    gsmMin: 130, gsmMax: 280,
+    gsmDisplay: "130–280 GSM (Polo shirt: 150–200 | Upholstery: 220–280)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash 40°C; 60°C for white cotton piqué"},
+      {icon:"♨️", text:"Tumble dry medium"},
+      {icon:"🔥", text:"Hot iron on cotton; steam to raise texture"},
+      {icon:"🚫", text:"Do not over-iron flat — preserves raised texture"}
+    ],
+    prices: [
+      {fiber:"Cotton", range:"₹120–300/m", note:"Polo shirts, collars"},
+      {fiber:"Cotton/Polyester", range:"₹100–220/m", note:"Sportswear"},
+      {fiber:"Silk", range:"₹600–2000/m", note:"Luxury shirts"},
+      {fiber:"Polyester", range:"₹80–180/m", note:"Budget piqué"},
+      {fiber:"Linen", range:"₹200–500/m", note:"Summer apparel"},
+      {fiber:"Wool", range:"₹400–1200/m", note:"Waistcoats"}
+    ],
+    extras: {
+      threadCount: "100–160 threads/inch",
+      width: "44–60 inches",
+      stretch: "2–5%",
+      shrinkage: "3–6%",
+      season: ["Spring/Summer", "All Season"],
+      tradeNames: "Piqué, Matelassé, Waffle Piqué, Bird's Eye Piqué"
+    }
+  },
+  {
+    name: "Honeycomb Weave",
+    category: "Complex Weave",
+    type: "complex",
+    badge: "badge-complex",
+    badgeText: "COMPLEX",
+    construction: "Cell-like raised texture with deep pits in between, resembling a honeycomb. Formed by long floats on both sides converging at corners. High absorbency due to large surface area. Can be rectilinear or Brighton honeycomb.",
+    uses: "Towels, thermal underwear, cellular blankets, face cloths, dressing gown fabric, upholstery",
+    gsmMin: 150, gsmMax: 350,
+    gsmDisplay: "150–350 GSM (Thermal underwear: 150–200 | Towelling: 250–350)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash 60°C (cotton); 40°C (blends)"},
+      {icon:"♨️", text:"Tumble dry medium-high"},
+      {icon:"🔥", text:"Medium iron; shake before drying to restore texture"},
+      {icon:"🚫", text:"Avoid fabric softener for towel versions — reduces absorbency"}
+    ],
+    prices: [
+      {fiber:"Cotton", range:"₹120–280/m", note:"Towels, thermal"},
+      {fiber:"Cotton/Bamboo", range:"₹200–500/m", note:"Eco towels"},
+      {fiber:"Polyester", range:"₹80–180/m", note:"Budget cellular"},
+      {fiber:"Linen", range:"₹200–500/m", note:"Kitchen towels"},
+      {fiber:"Modal blend", range:"₹180–400/m", note:"Luxury thermal"},
+      {fiber:"Wool", range:"₹350–900/m", note:"Cellular blankets"}
+    ],
+    extras: {
+      threadCount: "60–100 threads/inch",
+      width: "44–60 inches",
+      stretch: "3–6%",
+      shrinkage: "4–8%",
+      season: ["Autumn/Winter", "All Season"],
+      tradeNames: "Honeycomb, Waffle Weave, Cellular Fabric"
+    }
+  },
+  {
+    name: "Double Cloth",
+    category: "Complex Weave",
+    type: "complex",
+    badge: "badge-complex",
+    badgeText: "COMPLEX",
+    construction: "Two separate fabric layers woven simultaneously on the same loom, connected at selvedges or at intervals by binding threads. Can be reversible. Provides warmth through trapped air layer. Can use different colors/fibers on each side.",
+    uses: "Coats, overcoats, blankets, high-end suiting, military fabric, upholstery, reversible garments",
+    gsmMin: 300, gsmMax: 700,
+    gsmDisplay: "300–700 GSM (Coat fabric: 350–500 | Blanket: 400–600)",
+    washCare: [
+      {icon:"🧴", text:"Dry clean recommended for all double cloth"},
+      {icon:"🌊", text:"Hand wash cold only if synthetic; very careful"},
+      {icon:"🪴", text:"Lay flat to dry; never tumble dry"},
+      {icon:"🔥", text:"Press cloth + steam iron; never direct iron"},
+      {icon:"🚫", text:"No machine wash; very heavy when wet"}
+    ],
+    prices: [
+      {fiber:"Wool", range:"₹800–4000/m", note:"High-end coats"},
+      {fiber:"Cashmere", range:"₹3000–15000/m", note:"Luxury overcoats"},
+      {fiber:"Wool/Cashmere", range:"₹1500–6000/m", note:"Premium coats"},
+      {fiber:"Cotton", range:"₹300–700/m", note:"Spring coats"},
+      {fiber:"Polyester", range:"₹200–450/m", note:"Budget coating"},
+      {fiber:"Linen", range:"₹400–1000/m", note:"Summer layering"}
+    ],
+    extras: {
+      threadCount: "Both layers counted separately",
+      width: "56–60 inches",
+      stretch: "1–3%",
+      shrinkage: "2–4%",
+      season: ["Autumn/Winter"],
+      tradeNames: "Double Cloth, Reversible Cloth, Melton Double"
+    }
+  },
+  {
+    name: "Velvet (Pile Weave)",
+    category: "Pile Weave",
+    type: "pile",
+    badge: "badge-woven",
+    badgeText: "PILE",
+    construction: "Extra warp or weft pile yarns woven over wires/rods; when rods are withdrawn (or cut), upright cut loops form the pile. Pile can be cut (velvet) or uncut (velour). Density of pile determines luxuriousness.",
+    uses: "Evening wear, blazers, upholstery, curtains, soft furnishings, fashion garments, vintage aesthetic apparel",
+    gsmMin: 200, gsmMax: 500,
+    gsmDisplay: "200–500 GSM (Apparel velvet: 200–300 | Upholstery: 350–500)",
+    washCare: [
+      {icon:"🧴", text:"Dry clean strongly recommended"},
+      {icon:"🤲", text:"Spot clean only if necessary; cold water"},
+      {icon:"🪴", text:"Hang to dry; never lay flat (crushes pile)"},
+      {icon:"🔥", text:"Never iron directly; steam from reverse or use velvet board"},
+      {icon:"🚫", text:"No tumble dry; avoid compression; store hanging"}
+    ],
+    prices: [
+      {fiber:"Silk", range:"₹800–4000/m", note:"Luxury velvet"},
+      {fiber:"Cotton", range:"₹300–800/m", note:"Fashion velvet"},
+      {fiber:"Polyester", range:"₹100–300/m", note:"Budget velvet"},
+      {fiber:"Rayon/Viscose", range:"₹200–600/m", note:"Affordable velvet"},
+      {fiber:"Mohair", range:"₹1000–4000/m", note:"Upholstery velvet"},
+      {fiber:"Nylon", range:"₹150–350/m", note:"Stretch velvet"}
+    ],
+    extras: {
+      threadCount: "Pile density: 40,000–100,000 tufts per sq inch",
+      width: "44–60 inches",
+      stretch: "3–8% (woven base)",
+      shrinkage: "3–6%",
+      season: ["Autumn/Winter"],
+      tradeNames: "Velvet, Crushed Velvet, Devore Velvet, Panne Velvet"
+    }
+  },
+  {
+    name: "Terry Weave",
+    category: "Pile Weave",
+    type: "pile",
+    badge: "badge-woven",
+    badgeText: "PILE",
+    construction: "Two sets of warp yarns: ground warp (tensioned) and pile warp (slack). Slack pile warp forms uncut loops on one or both sides. Loops created by slack tension mechanism. Loop height controlled by pick spacing. French terry = loops on one side only.",
+    uses: "Bath towels, beach towels, bathrobes, face cloths, kitchen towels, towelling apparel",
+    gsmMin: 300, gsmMax: 700,
+    gsmDisplay: "300–700 GSM (Light towel: 300–400 | Hotel/premium: 500–700)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash 60°C (cotton); 40°C (blends)"},
+      {icon:"♨️", text:"Tumble dry high (cotton) — keeps loops fluffy"},
+      {icon:"🔥", text:"Iron on medium if needed; not usually necessary"},
+      {icon:"🚫", text:"No fabric softener — reduces absorbency; no dryer sheets"}
+    ],
+    prices: [
+      {fiber:"Cotton", range:"₹150–450/m", note:"Standard towelling"},
+      {fiber:"Egyptian/Supima cotton", range:"₹400–1200/m", note:"Luxury towels"},
+      {fiber:"Bamboo/Cotton", range:"₹300–700/m", note:"Eco premium"},
+      {fiber:"Microfiber (poly)", range:"₹80–200/m", note:"Quick-dry towels"},
+      {fiber:"Linen", range:"₹200–500/m", note:"Lightweight towels"},
+      {fiber:"Modal blend", range:"₹250–600/m", note:"Soft robes"}
+    ],
+    extras: {
+      threadCount: "Loops per inch: 8–20",
+      width: "60–72 inches (towelling width)",
+      stretch: "5–10% (pile direction)",
+      shrinkage: "6–10% (cotton terry)",
+      season: ["All Season"],
+      tradeNames: "Terry, Terry Towelling, French Terry, Velour Terry"
+    }
+  },
+  {
+    name: "Corduroy",
+    category: "Pile Weave",
+    type: "pile",
+    badge: "badge-woven",
+    badgeText: "PILE",
+    construction: "Extra weft pile threads woven in floats; cutting these floats creates parallel ribs (wales). Wales per inch determine type: Pinwale (16–21 wpi), standard (11 wpi), wide wale (8 wpi), jumbo (2–4 wpi). Plain or twill base.",
+    uses: "Trousers, jeans, jackets, children's wear, cushions, upholstery, shirts",
+    gsmMin: 200, gsmMax: 450,
+    gsmDisplay: "200–450 GSM (Pinwale: 200–280 | Wide wale: 300–450)",
+    washCare: [
+      {icon:"🔄", text:"Machine wash inside-out, cold (30°C) to preserve wales"},
+      {icon:"🌊", text:"Gentle cycle; wash with similar colors"},
+      {icon:"♨️", text:"Tumble dry low; remove while slightly damp"},
+      {icon:"🔥", text:"Steam iron on reverse; brush wales after washing"},
+      {icon:"🚫", text:"No hot wash; avoid rubbing against itself"}
+    ],
+    prices: [
+      {fiber:"Cotton", range:"₹150–400/m", note:"Standard corduroy"},
+      {fiber:"Cotton/Elastane", range:"₹200–500/m", note:"Stretch cord"},
+      {fiber:"Polyester blend", range:"₹100–250/m", note:"Budget versions"},
+      {fiber:"Needlecord (fine)", range:"₹180–450/m", note:"Children's wear"},
+      {fiber:"Velveteen cord", range:"₹250–600/m", note:"Fashion variants"},
+      {fiber:"Organic cotton", range:"₹250–600/m", note:"Eco corduroy"}
+    ],
+    extras: {
+      threadCount: "Wale count: 2–21 wales per inch",
+      width: "44–60 inches",
+      stretch: "3–8% (crosswise); stretch versions: 10–20%",
+      shrinkage: "4–8%",
+      season: ["Autumn/Winter"],
+      tradeNames: "Corduroy, Needlecord, Pinwale, Jumbo Cord, Velveteenette"
+    }
+  },
+  {
+    name: "Brocade",
+    category: "Complex Weave",
+    type: "complex",
+    badge: "badge-complex",
+    badgeText: "COMPLEX",
+    construction: "Supplementary weft (sometimes warp) threads float over ground fabric to create raised, embossed floral/geometric patterns. Extra threads cut at back between design areas. Jacquard controlled. Often uses metallic, silk or vivid color threads.",
+    uses: "Sarees, lehengas, sherwanis, evening wear, bridal wear, drapery, cushion covers, bags",
+    gsmMin: 200, gsmMax: 500,
+    gsmDisplay: "200–500 GSM (Apparel: 200–350 | Heavy drape: 350–500)",
+    washCare: [
+      {icon:"🧴", text:"Dry clean always recommended"},
+      {icon:"🤲", text:"Hand wash cold ONLY for lightweight cotton brocade"},
+      {icon:"🪴", text:"Lay flat to dry; roll in towel — never wring"},
+      {icon:"🔥", text:"Iron reverse side only; use damp cloth; low heat"},
+      {icon:"🚫", text:"No machine wash; no bleach; no tumble dry"}
+    ],
+    prices: [
+      {fiber:"Silk + metallic", range:"₹800–6000/m", note:"Bridal brocade"},
+      {fiber:"Banarasi silk", range:"₹1500–15000/m", note:"Premium sarees"},
+      {fiber:"Polyester", range:"₹150–400/m", note:"Budget brocade"},
+      {fiber:"Cotton", range:"₹200–500/m", note:"Casual brocade"},
+      {fiber:"Rayon/Viscose", range:"₹150–400/m", note:"Affordable option"},
+      {fiber:"Wool + silk", range:"₹800–3000/m", note:"Luxury furnishings"}
+    ],
+    extras: {
+      threadCount: "High density jacquard controlled",
+      width: "44–54 inches",
+      stretch: "1–3%",
+      shrinkage: "2–4%",
+      season: ["Festive", "Autumn/Winter"],
+      tradeNames: "Brocade, Banarasi, Kinkhab, Zari Brocade, Meenakari"
+    }
+  }
+];
+
+const knittedFabrics = [
+  {
+    name: "Plain Jersey / Single Jersey",
+    category: "Weft Knit — Basic",
+    type: "weft",
+    badge: "badge-knitted",
+    badgeText: "WEFT KNIT",
+    construction: "All needles on one bed knit on every course. Face shows vertical V-shaped loops (technical face); reverse shows horizontal semicircular loops (technical back). Fabric curls at edges. Runs vertically on face; ladders on back. Made on single-bed circular or flat knitting machine.",
+    uses: "T-shirts, casual tops, leggings, base layers, underwear, sportswear, dresses, socks",
+    gsmMin: 120, gsmMax: 220,
+    gsmDisplay: "120–220 GSM (T-shirt: 140–180 | Heavy jersey: 180–220)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash 30–40°C"},
+      {icon:"♨️", text:"Tumble dry low or air dry flat to prevent stretching"},
+      {icon:"🔥", text:"Low iron on reverse; do not over-stretch when wet"},
+      {icon:"🚫", text:"Avoid high heat; can cause shrinkage in cotton jersey"}
+    ],
+    prices: [
+      {fiber:"Cotton", range:"₹80–200/m", note:"T-shirts, casual"},
+      {fiber:"Polyester", range:"₹60–150/m", note:"Sportswear"},
+      {fiber:"Rayon/Viscose", range:"₹100–250/m", note:"Drapy tops"},
+      {fiber:"Cotton/Elastane", range:"₹120–280/m", note:"Stretch jersey"},
+      {fiber:"Bamboo", range:"₹180–450/m", note:"Eco soft jersey"},
+      {fiber:"Modal", range:"₹150–400/m", note:"Luxury feel"}
+    ],
+    extras: {
+      courses: "28–40 courses per inch",
+      wales: "24–36 wales per inch",
+      stretch: "50–100% width; 25–50% length",
+      shrinkage: "5–10% (cotton)",
+      season: ["Spring/Summer", "All Season"],
+      tradeNames: "Single Jersey, Jersey, T-shirt Fabric"
+    }
+  },
+  {
+    name: "Rib Knit",
+    category: "Weft Knit — Basic",
+    type: "weft",
+    badge: "badge-knitted",
+    badgeText: "WEFT KNIT",
+    construction: "Knit and purl stitches alternate in vertical columns (wales). Requires two needle beds. Common: 1×1 rib (alternate K/P), 2×2 rib, 2×1 rib. The knit wales appear on both faces — fabric looks the same on both sides. Very high horizontal elasticity.",
+    uses: "Neckbands, cuffs, waistbands, polo collars, sweater trims, form-fitting tops, athletic wear, ribbed dresses",
+    gsmMin: 150, gsmMax: 350,
+    gsmDisplay: "150–350 GSM (Neckbands: 150–200 | Heavy rib: 250–350)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash 30–40°C; gentle cycle"},
+      {icon:"🪴", text:"Air dry flat — never hang (ribs stretch out permanently)"},
+      {icon:"🔥", text:"Low iron; stretch gently to shape while damp"},
+      {icon:"🚫", text:"No high-heat tumble dry for cotton/wool rib"}
+    ],
+    prices: [
+      {fiber:"Cotton", range:"₹100–250/m", note:"Casualwear"},
+      {fiber:"Cotton/Elastane", range:"₹130–300/m", note:"Form-fitting tops"},
+      {fiber:"Wool", range:"₹400–1200/m", note:"Knitwear"},
+      {fiber:"Acrylic", range:"₹80–180/m", note:"Budget knitwear"},
+      {fiber:"Bamboo/Cotton", range:"₹200–500/m", note:"Eco rib"},
+      {fiber:"Cashmere blend", range:"₹800–3000/m", note:"Luxury knitwear"}
+    ],
+    extras: {
+      courses: "20–32 courses per inch",
+      wales: "20–28 wales per inch (after relaxation)",
+      stretch: "100–200% width",
+      shrinkage: "5–8%",
+      season: ["Autumn/Winter", "All Season"],
+      tradeNames: "1×1 Rib, 2×2 Rib, Ribbing Fabric, Interlock Rib"
+    }
+  },
+  {
+    name: "Interlock Knit",
+    category: "Weft Knit — Basic",
+    type: "weft",
+    badge: "badge-knitted",
+    badgeText: "WEFT KNIT",
+    construction: "Two interlocked rib structures knitted simultaneously on two needle beds, with needles of one bed between needles of other. Both faces show V-loops (knit face). Smooth on both sides. Stable, does not curl. Heavier than jersey.",
+    uses: "Polo shirts, baby wear, quality T-shirts, dresses, nightwear, children's clothing, quality knitwear",
+    gsmMin: 160, gsmMax: 280,
+    gsmDisplay: "160–280 GSM (Baby wear: 160–200 | Premium polo: 200–250)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash 40°C"},
+      {icon:"♨️", text:"Tumble dry medium or air dry flat"},
+      {icon:"🔥", text:"Medium iron; steam friendly"},
+      {icon:"🚫", text:"Avoid over-drying (can become stiff)"}
+    ],
+    prices: [
+      {fiber:"Cotton", range:"₹120–280/m", note:"Baby wear, polo"},
+      {fiber:"Organic cotton", range:"₹200–500/m", note:"Eco premium"},
+      {fiber:"Polyester", range:"₹80–180/m", note:"Activewear"},
+      {fiber:"Cotton/Modal", range:"₹180–450/m", note:"Premium daily wear"},
+      {fiber:"Bamboo", range:"₹220–550/m", note:"Eco luxury"},
+      {fiber:"Wool blend", range:"₹400–1000/m", note:"Merino interlock"}
+    ],
+    extras: {
+      courses: "24–36 courses per inch",
+      wales: "20–32 wales per inch",
+      stretch: "50–80% width; 20–40% length",
+      shrinkage: "4–7%",
+      season: ["All Season"],
+      tradeNames: "Interlock, Double Knit Jersey, Polycotton Interlock"
+    }
+  },
+  {
+    name: "Purl Knit",
+    category: "Weft Knit — Basic",
+    type: "weft",
+    badge: "badge-knitted",
+    badgeText: "WEFT KNIT",
+    construction: "Knit and purl stitches alternate in horizontal rows (courses) instead of vertical columns. Both sides show purl/reverse loops. Greater lengthwise stretch than width. Does not curl. Can be made on flat machines with special needle beds.",
+    uses: "Sweaters, baby wear, casual knitwear, blankets, accessories, textured outerwear",
+    gsmMin: 200, gsmMax: 450,
+    gsmDisplay: "200–450 GSM (Baby knitwear: 200–280 | Heavy sweater: 350–450)",
+    washCare: [
+      {icon:"🤲", text:"Hand wash cold–lukewarm; gentle detergent"},
+      {icon:"🌊", text:"Wool cycle on machine (30°C max for wool)"},
+      {icon:"🪴", text:"Dry flat on towel; reshape while damp"},
+      {icon:"🚫", text:"No tumble dry; no wringing; no hanging"}
+    ],
+    prices: [
+      {fiber:"Wool", range:"₹400–1500/m", note:"Sweaters, knitwear"},
+      {fiber:"Cotton", range:"₹150–350/m", note:"Baby wear"},
+      {fiber:"Acrylic", range:"₹80–200/m", note:"Affordable knitwear"},
+      {fiber:"Cashmere", range:"₹2000–10000/m", note:"Luxury knitwear"},
+      {fiber:"Alpaca blend", range:"₹800–3000/m", note:"Natural fiber knit"},
+      {fiber:"Mohair blend", range:"₹600–2500/m", note:"Fluffy knitwear"}
+    ],
+    extras: {
+      courses: "16–28 per inch",
+      wales: "16–24 per inch",
+      stretch: "30–60% length; 40–80% width",
+      shrinkage: "5–12% (wool can felt if mishandled)",
+      season: ["Autumn/Winter"],
+      tradeNames: "Purl Knit, Links-Links, Moss Knit"
+    }
+  },
+  {
+    name: "Tuck Stitch",
+    category: "Weft Knit — Derivative",
+    type: "weft",
+    badge: "badge-knitted",
+    badgeText: "WEFT KNIT",
+    construction: "Some needles hold loops for one or more courses without knitting (tucking). When the needle eventually knits, the accumulated loops form a raised tuck. Creates textured, open, or patterned effects depending on tuck arrangement. Wider than base fabric.",
+    uses: "Textured tops, polo shirts, athletic polos, eyelet-look casual wear, mesh-effect fabrics",
+    gsmMin: 130, gsmMax: 250,
+    gsmDisplay: "130–250 GSM (Casual top: 140–190 | Polo: 170–220)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash 30–40°C"},
+      {icon:"♨️", text:"Tumble dry low or air dry flat"},
+      {icon:"🔥", text:"Low iron; do not flatten tuck texture"},
+      {icon:"🚫", text:"Avoid stretching tuck loops when wet"}
+    ],
+    prices: [
+      {fiber:"Cotton", range:"₹100–240/m", note:"Casual wear"},
+      {fiber:"Polyester", range:"₹70–160/m", note:"Sportswear"},
+      {fiber:"Cotton/Poly", range:"₹90–200/m", note:"Polos"},
+      {fiber:"Bamboo", range:"₹180–420/m", note:"Eco knits"},
+      {fiber:"Rayon", range:"₹110–250/m", note:"Drapy tuck fabric"},
+      {fiber:"Modal blend", range:"₹150–350/m", note:"Soft tuck"}
+    ],
+    extras: {
+      stretch: "60–100% width",
+      shrinkage: "4–7%",
+      season: ["Spring/Summer", "All Season"],
+      tradeNames: "Tuck Stitch, Pikeet, Eyelet Knit"
+    }
+  },
+  {
+    name: "Fleece / French Terry",
+    category: "Weft Knit — Derivative",
+    type: "weft",
+    badge: "badge-knitted",
+    badgeText: "WEFT KNIT",
+    construction: "Ground jersey + extra loop yarn knitted in. French terry: loops on technical back, smooth on face. Fleece: loops are brushed/napped (raising). Three-thread fleece: ground + loop + tuck thread for stability. Very soft after brushing.",
+    uses: "Sweatshirts, hoodies, tracksuits, joggers, activewear, baby wear, blankets, casual wear",
+    gsmMin: 200, gsmMax: 450,
+    gsmDisplay: "200–450 GSM (Lightweight French terry: 200–280 | Heavy fleece: 300–450)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash 30–40°C (inside out to prevent pilling)"},
+      {icon:"♨️", text:"Tumble dry low-medium; shake to re-fluff"},
+      {icon:"🔥", text:"Low iron on reverse; avoid direct iron on brushed face"},
+      {icon:"🚫", text:"Avoid washing with rough fabrics (velcro, denim) — pilling"}
+    ],
+    prices: [
+      {fiber:"Cotton", range:"₹150–350/m", note:"Hoodies, sweatshirts"},
+      {fiber:"Cotton/Polyester", range:"₹120–280/m", note:"Standard fleece"},
+      {fiber:"Polyester", range:"₹80–200/m", note:"Polar fleece, activewear"},
+      {fiber:"Organic cotton", range:"₹220–500/m", note:"Eco fleece"},
+      {fiber:"Bamboo blend", range:"₹200–480/m", note:"Eco-premium"},
+      {fiber:"Modal/Cotton", range:"₹180–420/m", note:"Luxury fleece"}
+    ],
+    extras: {
+      stretch: "50–90% width",
+      shrinkage: "5–10% (cotton fleece)",
+      season: ["Autumn/Winter"],
+      tradeNames: "French Terry, Sweatshirt Fabric, Polar Fleece, Loopback"
+    }
+  },
+  {
+    name: "Jacquard Weft Knit",
+    category: "Weft Knit — Complex",
+    type: "weft",
+    badge: "badge-knitted",
+    badgeText: "WEFT KNIT",
+    construction: "Uses electronic needle selection on circular or flat machines to create multicolor patterns. Types: single jersey jacquard (floats on back), double jersey jacquard (no floats), blister/blistered jacquard. Pattern knitted in, not printed.",
+    uses: "Patterned sweaters (Fair Isle, intarsia), fashion knitwear, socks, sportswear, accessories",
+    gsmMin: 200, gsmMax: 450,
+    gsmDisplay: "200–450 GSM (Fashion knit: 220–320 | Heavy patterned: 350–450)",
+    washCare: [
+      {icon:"🤲", text:"Hand wash cold for wool/cashmere versions"},
+      {icon:"🌊", text:"Wool cycle 30°C or dry clean"},
+      {icon:"🪴", text:"Dry flat; never wring or hang"},
+      {icon:"🔥", text:"Low steam iron on reverse"},
+      {icon:"🚫", text:"No bleach; no hot wash"}
+    ],
+    prices: [
+      {fiber:"Cotton", range:"₹200–500/m", note:"Fashion knit tops"},
+      {fiber:"Wool", range:"₹500–2500/m", note:"Fair Isle sweaters"},
+      {fiber:"Acrylic", range:"₹100–250/m", note:"Budget knitwear"},
+      {fiber:"Cashmere", range:"₹2000–12000/m", note:"Luxury knitwear"},
+      {fiber:"Merino wool", range:"₹600–2000/m", note:"Premium sportswear"},
+      {fiber:"Cotton/Silk", range:"₹400–1200/m", note:"Luxury fashion"}
+    ],
+    extras: {
+      stretch: "40–80% width",
+      shrinkage: "5–10%",
+      season: ["Autumn/Winter"],
+      tradeNames: "Jacquard Knit, Fair Isle, Intarsia, Blistered Jacquard"
+    }
+  },
+  {
+    name: "Double Knit",
+    category: "Weft Knit — Complex",
+    type: "weft",
+    badge: "badge-knitted",
+    badgeText: "WEFT KNIT",
+    construction: "Two layers of single jersey knitted simultaneously and connected by interlooping. Both faces smooth. Thick, stable, minimal stretch compared to single jersey. Edges do not curl. Often produced on rib or interlock machines with modification.",
+    uses: "Structured dresses, blazers, suiting, coats, professional wear, tailored knit garments",
+    gsmMin: 250, gsmMax: 400,
+    gsmDisplay: "250–400 GSM (Knit suits: 270–350 | Coats: 320–400)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash 30°C gentle; or dry clean"},
+      {icon:"♨️", text:"Air dry flat; tumble dry low only for poly versions"},
+      {icon:"🔥", text:"Medium iron with press cloth"},
+      {icon:"🚫", text:"Avoid aggressive wringing"}
+    ],
+    prices: [
+      {fiber:"Polyester", range:"₹150–350/m", note:"Budget suit knit"},
+      {fiber:"Wool blend", range:"₹500–2000/m", note:"Knit suiting"},
+      {fiber:"Cotton", range:"₹200–450/m", note:"Structured dresses"},
+      {fiber:"Viscose blend", range:"₹180–400/m", note:"Fashion knit"},
+      {fiber:"Nylon", range:"₹200–450/m", note:"Activewear"},
+      {fiber:"Cashmere wool", range:"₹1500–6000/m", note:"Luxury knit coat"}
+    ],
+    extras: {
+      stretch: "30–60% width",
+      shrinkage: "3–6%",
+      season: ["Autumn/Winter", "All Season"],
+      tradeNames: "Double Knit, Punto Roma, Scuba Fabric, Knit Suiting"
+    }
+  },
+  {
+    name: "Tricot (Warp Knit)",
+    category: "Warp Knit — Basic",
+    type: "warp",
+    badge: "badge-knitted",
+    badgeText: "WARP KNIT",
+    construction: "Simplest warp knit. Yarns run lengthwise in a series of zig-zag loops connecting wales. Produced on tricot warp knitting machines. Front bar gives lapping pattern; back bar provides overlap. Run resistant; very stable. Smooth face, crosswise ribs on back.",
+    uses: "Lingerie, underwear, swimwear linings, sportswear, sleepwear, sheer fabrics, lining fabrics",
+    gsmMin: 60, gsmMax: 180,
+    gsmDisplay: "60–180 GSM (Lingerie: 60–100 | Sportswear lining: 80–140)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash 30–40°C; delicate cycle"},
+      {icon:"🌀", text:"Mesh bag recommended for delicate tricot"},
+      {icon:"🪴", text:"Air dry; low tumble dry only for polyester"},
+      {icon:"🔥", text:"Low iron; polyester tricot — very low heat"},
+      {icon:"🚫", text:"No bleach; avoid high heat"}
+    ],
+    prices: [
+      {fiber:"Nylon", range:"₹80–200/m", note:"Lingerie"},
+      {fiber:"Polyester", range:"₹60–160/m", note:"Lining, sportswear"},
+      {fiber:"Nylon/Elastane", range:"₹120–280/m", note:"Stretch lingerie"},
+      {fiber:"Silk", range:"₹400–1200/m", note:"Luxury underwear"},
+      {fiber:"Rayon", range:"₹100–240/m", note:"Soft linings"},
+      {fiber:"Microfiber poly", range:"₹80–200/m", note:"Ultra-soft lingerie"}
+    ],
+    extras: {
+      stretch: "20–50% width; more stable than weft knit",
+      shrinkage: "2–4%",
+      season: ["All Season"],
+      tradeNames: "Tricot, Nylon Tricot, Athletic Mesh, Stitch Bonded"
+    }
+  },
+  {
+    name: "Raschel Knit",
+    category: "Warp Knit — Complex",
+    type: "warp",
+    badge: "badge-knitted",
+    badgeText: "WARP KNIT",
+    construction: "Produced on Raschel machines with many guide bars and latch needles. Wide range of structures from dense to very open/lace. Can incorporate multiple yarn types, thick/thin yarns. Very versatile — from net to heavy fabric.",
+    uses: "Lace fabrics, net curtains, power net (foundation garments), shoe fabric, sports mesh, lingerie, decorative trim",
+    gsmMin: 40, gsmMax: 300,
+    gsmDisplay: "40–300 GSM (Lace: 40–80 | Power net: 100–160 | Raschel blanket: 200–300)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash 30°C in mesh bag"},
+      {icon:"🤲", text:"Hand wash for lace variants"},
+      {icon:"🪴", text:"Air dry flat; lay net/lace on towel"},
+      {icon:"🔥", text:"Very low iron; do not iron lace directly"},
+      {icon:"🚫", text:"No bleach (yellows nylon); no hot wash"}
+    ],
+    prices: [
+      {fiber:"Nylon", range:"₹100–300/m", note:"Lace, power net"},
+      {fiber:"Polyester", range:"₹60–200/m", note:"Raschel blanket, net"},
+      {fiber:"Cotton", range:"₹150–400/m", note:"Decorative lace"},
+      {fiber:"Nylon/Elastane", range:"₹150–400/m", note:"Power net, lingerie"},
+      {fiber:"Metallic thread", range:"₹200–600/m", note:"Festive lace"},
+      {fiber:"Viscose", range:"₹150–350/m", note:"Fashion lace"}
+    ],
+    extras: {
+      stretch: "Varies: net (100%+), power net (50–80%)  ",
+      shrinkage: "2–5%",
+      season: ["All Season"],
+      tradeNames: "Raschel Lace, Power Net, Athletic Mesh, Net Fabric"
+    }
+  },
+  {
+    name: "Milanese Warp Knit",
+    category: "Warp Knit — Complex",
+    type: "warp",
+    badge: "badge-knitted",
+    badgeText: "WARP KNIT",
+    construction: "Two sets of guide bars lapping in opposite diagonal directions across all wales. Creates a diagonal interlacing which produces a very fine, smooth, run-resistant fabric. More costly to produce; run on specialized machines. Known for superior quality.",
+    uses: "Premium lingerie, hosiery, gloves, high-quality linings, luxury knitwear",
+    gsmMin: 60, gsmMax: 150,
+    gsmDisplay: "60–150 GSM (Fine lingerie: 60–100 | Quality lining: 100–150)",
+    washCare: [
+      {icon:"🤲", text:"Hand wash cold–lukewarm"},
+      {icon:"🌀", text:"Delicate machine cycle 30°C in mesh bag"},
+      {icon:"🪴", text:"Air dry flat or hang carefully"},
+      {icon:"🔥", text:"Very low iron or steam from distance"},
+      {icon:"🚫", text:"No tumble dry; no bleach"}
+    ],
+    prices: [
+      {fiber:"Silk", range:"₹500–2000/m", note:"Luxury lingerie"},
+      {fiber:"Nylon", range:"₹150–400/m", note:"Standard Milanese"},
+      {fiber:"Nylon/Silk blend", range:"₹400–1500/m", note:"Premium lingerie"},
+      {fiber:"Microfiber nylon", range:"₹200–500/m", note:"Modern Milanese"},
+      {fiber:"Polyester", range:"₹100–250/m", note:"Budget Milanese"},
+      {fiber:"Cotton", range:"₹150–350/m", note:"Comfort lining"}
+    ],
+    extras: {
+      stretch: "30–60%",
+      shrinkage: "2–3%",
+      season: ["All Season"],
+      tradeNames: "Milanese, High-Quality Warp Knit, Fine Tricot"
+    }
+  },
+  {
+    name: "Warp Knit Velour",
+    category: "Warp Knit — Complex",
+    type: "warp",
+    badge: "badge-knitted",
+    badgeText: "WARP KNIT",
+    construction: "Warp knit base (usually tricot) with loop yarn that is sheared/cut after knitting. Produces short, dense, uniform pile on face. Very stable compared to woven velvet; excellent dimensional stability. Can be made from synthetic fibers efficiently.",
+    uses: "Tracksuits, casual wear, velour robes, upholstery, toy fabric, plush soft furnishings",
+    gsmMin: 180, gsmMax: 400,
+    gsmDisplay: "180–400 GSM (Apparel velour: 200–300 | Upholstery: 300–400)",
+    washCare: [
+      {icon:"🌊", text:"Machine wash 30–40°C; inside out"},
+      {icon:"♨️", text:"Tumble dry low; shake to restore pile"},
+      {icon:"🔥", text:"Do not iron pile; steam from back if needed"},
+      {icon:"🚫", text:"Avoid washing with rough fabrics; avoid fabric softener for function use"}
+    ],
+    prices: [
+      {fiber:"Polyester", range:"₹120–300/m", note:"Tracksuits, robes"},
+      {fiber:"Cotton", range:"₹200–500/m", note:"Luxury velour"},
+      {fiber:"Nylon", range:"₹150–350/m", note:"Athletic velour"},
+      {fiber:"Polyester/Spandex", range:"₹180–400/m", note:"Stretch velour"},
+      {fiber:"Microfiber", range:"₹150–380/m", note:"Ultra-soft velour"},
+      {fiber:"Bamboo blend", range:"₹250–600/m", note:"Eco velour"}
+    ],
+    extras: {
+      stretch: "40–70%",
+      shrinkage: "3–5%",
+      season: ["Autumn/Winter"],
+      tradeNames: "Velour, Velvet Knit, Plush Fabric"
+    }
+  }
+];
+
+// ===================== RENDER =====================
+
+function getGSMPercent(min, max) {
+  const totalMax = 700;
+  return { left: (min/totalMax)*100, width: ((max-min)/totalMax)*100 };
+}
+
+function renderCard(f) {
+  const g = getGSMPercent(f.gsmMin, f.gsmMax);
+  let extrasHtml = '';
+  if (f.extras) {
+    const e = f.extras;
+    extrasHtml = `
+      <div class="extra-info" id="extra-${f.name.replace(/\s+/g,'-')}">
+        <div class="info-section">
+          <div class="info-label">📐 Technical Specs</div>
+          ${e.threadCount ? `<div class="info-value"><strong>Thread Count:</strong> ${e.threadCount}</div>` : ''}
+          ${e.courses ? `<div class="info-value"><strong>Courses:</strong> ${e.courses}</div>` : ''}
+          ${e.wales ? `<div class="info-value"><strong>Wales:</strong> ${e.wales}</div>` : ''}
+          ${e.width ? `<div class="info-value"><strong>Fabric Width:</strong> ${e.width}</div>` : ''}
+        </div>
+        <div class="info-section">
+          <div class="info-label">↔ Stretch & Shrinkage</div>
+          <div class="tags">
+            ${e.stretch ? `<span class="tag stretch">Stretch: ${e.stretch}</span>` : ''}
+            ${e.shrinkage ? `<span class="tag care">Shrinkage: ${e.shrinkage}</span>` : ''}
+          </div>
+        </div>
+        ${e.season ? `
+        <div class="info-section">
+          <div class="info-label">🌦 Season Suitability</div>
+          <div class="tags">${e.season.map(s=>`<span class="tag season">${s}</span>`).join('')}</div>
+        </div>` : ''}
+        ${e.tradeNames ? `
+        <div class="info-section">
+          <div class="info-label">🏷 Trade Names / Variants</div>
+          <div class="info-value" style="color:var(--muted); font-size:0.83rem;">${e.tradeNames}</div>
+        </div>` : ''}
+      </div>`;
+  }
+
+  return `
+  <div class="fabric-card" data-name="${f.name.toLowerCase()}" data-category="${f.category.toLowerCase()}" data-type="${f.type}">
+    <div class="card-header">
+      <div class="card-header-left">
+        <div class="card-name">${f.name}</div>
+        <div class="card-category">${f.category}</div>
+      </div>
+      <span class="card-badge ${f.badge}">${f.badgeText}</span>
+    </div>
+    <div class="card-body">
+
+      <div class="info-section">
+        <div class="info-label">🏗 Construction</div>
+        <div class="info-value">${f.construction}</div>
+      </div>
+
+      <div class="info-section">
+        <div class="info-label">👕 Common Uses</div>
+        <div class="info-value">${f.uses}</div>
+      </div>
+
+      <div class="info-section">
+        <div class="info-label">⚖ GSM Range</div>
+        <div class="gsm-bar-wrap">
+          <div class="gsm-range-label">${f.gsmDisplay}</div>
+          <div class="gsm-bar">
+            <div class="gsm-bar-fill" style="margin-left:${g.left}%; width:${g.width}%; min-width:8px;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-section">
+        <div class="info-label">🧺 Wash Care Instructions</div>
+        <div class="care-row">
+          ${f.washCare.map(w => `<div class="care-item"><span class="care-icon">${w.icon}</span> <span>${w.text}</span></div>`).join('')}
+        </div>
+      </div>
+
+      <div class="info-section">
+        <div class="info-label">💰 Price Range by Fiber Type (India Market)</div>
+        <table class="price-table">
+          <thead><tr><th>Fiber</th><th>Price/Meter</th><th>Application</th></tr></thead>
+          <tbody>
+            ${f.prices.map(p=>`<tr><td class="fiber-name">${p.fiber}</td><td class="price-val">${p.range}</td><td style="color:var(--muted)">${p.note}</td></tr>`).join('')}
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <button class="expand-btn" onclick="toggleExtra('${f.name.replace(/\s+/g,'-')}',this)">▼ Show Technical Details</button>
+    ${extrasHtml}
+  </div>`;
+}
+
+function toggleExtra(id, btn) {
+  const el = document.getElementById('extra-'+id);
+  if(el) {
+    el.classList.toggle('open');
+    btn.textContent = el.classList.contains('open') ? '▲ Hide Technical Details' : '▼ Show Technical Details';
+  }
+}
+
+function renderGrid(containerId, data) {
+  document.getElementById(containerId).innerHTML = data.map(renderCard).join('');
+}
+
+// ===================== TABS =====================
+function switchTab(tab) {
+  const woven = document.getElementById('woven-section');
+  const knitted = document.getElementById('knitted-section');
+  const tabs = document.querySelectorAll('.main-tab');
+  tabs[0].className = 'main-tab';
+  tabs[1].className = 'main-tab';
+  tabs[2].className = 'main-tab';
+  const sus = document.getElementById('sustainable-section');
+  if(tab === 'woven') {
+    woven.classList.remove('hidden');
+    knitted.classList.add('hidden');
+    sus.classList.add('hidden');
+    tabs[0].classList.add('active-woven');
+  } else if(tab === 'knitted') {
+    knitted.classList.remove('hidden');
+    woven.classList.add('hidden');
+    sus.classList.add('hidden');
+    tabs[1].classList.add('active-knitted');
+  } else {
+    sus.classList.remove('hidden');
+    woven.classList.add('hidden');
+    knitted.classList.add('hidden');
+    tabs[2].classList.add('active-sustainable');
+  }
+  document.getElementById('searchInput').value = '';
+  document.getElementById('no-results').classList.add('hidden');
+}
+
+// ===================== FILTER =====================
+function filterWoven(type, btn) {
+  document.querySelectorAll('#woven-filter .sub-btn').forEach(b => b.classList.remove('active','active-k','active-s'));
+  btn.classList.add('active');
+  const cards = document.querySelectorAll('#woven-grid .fabric-card');
+  cards.forEach(c => { c.classList.toggle('hidden', type !== 'all' && c.dataset.type !== type); });
+}
+function filterKnitted(type, btn) {
+  document.querySelectorAll('#knitted-filter .sub-btn').forEach(b => b.classList.remove('active','active-k','active-s'));
+  btn.classList.add('active-k');
+  const cards = document.querySelectorAll('#knitted-grid .fabric-card');
+  cards.forEach(c => { c.classList.toggle('hidden', type !== 'all' && c.dataset.type !== type); });
+}
+function filterSustainable(type, btn) {
+  document.querySelectorAll('#sustainable-filter .sub-btn').forEach(b => b.classList.remove('active','active-k','active-s'));
+  btn.classList.add('active-s');
+  const cards = document.querySelectorAll('#sustainable-grid .fabric-card');
+  cards.forEach(c => { c.classList.toggle('hidden', type !== 'all' && c.dataset.type !== type); });
+}
+
+function filterFabrics() {
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  const allCards = document.querySelectorAll('.fabric-card');
+  let shown = 0;
+  allCards.forEach(c => {
+    const match = !q || c.dataset.name.includes(q) || c.dataset.category.includes(q) || c.textContent.toLowerCase().includes(q);
+    c.classList.toggle('hidden', !match);
+    if(match) shown++;
+  });
+  const noR = document.getElementById('no-results');
+  noR.classList.toggle('hidden', shown > 0 || !q);
+  if(q) {
+    ['woven-section','knitted-section','sustainable-section'].forEach(id => document.getElementById(id).classList.remove('hidden'));
+    document.querySelectorAll('.main-tab').forEach(t => { t.className = 'main-tab'; });
+  }
+}
+
+// ===================== SUSTAINABLE FIBER DATA =====================
+const sustainableFibers = [
+  {
+    name: "Organic Cotton",
+    category: "Natural Plant Fiber",
+    type: "natural",
+    badge: "badge-sustainable", badgeText: "NATURAL",
+    source: "Cotton plant (Gossypium spp.) grown without synthetic pesticides, GMOs, or chemical fertilizers. Certified under GOTS, OCS, or OEKO-TEX.",
+    co2Conventional: { label: "Conventional Cotton", kg: 5.9, pct: 59 },
+    co2Sustainable: { label: "Organic Cotton", kg: 2.0, pct: 20 },
+    waterUse: "~3,000–5,000 L/kg (vs 10,000 L/kg conventional) — up to 70% less",
+    wovenStructures: ["Plain Weave (shirting, voile)", "Twill (denim, drill)", "Dobby", "Jacquard", "Terry Weave", "Corduroy", "Piqué"],
+    knittedStructures: ["Single Jersey (T-shirts)", "Interlock", "Rib Knit", "Fleece/French Terry", "Double Knit"],
+    gsmRange: "100–400 GSM",
+    priceIndia: "₹180–600/m (premium: ₹800+)",
+    decarbPotential: "High — eliminates synthetic fertilizer N₂O emissions (300× CO₂ GWP); promotes soil carbon sequestration via regenerative farming; reduces toxic chemical runoff.",
+    decarbScore: "78/100",
+    certifications: ["GOTS", "OCS", "OEKO-TEX 100", "Fairtrade Cotton", "Regenerative Organic Certified"],
+    indiaAvailability: "yes",
+    indiaNote: "Widely grown in Gujarat, Maharashtra, Andhra Pradesh. Multiple GOTS-certified mills available.",
+    challenges: "Lower yield than conventional (10–20% less); higher land use; premium price barrier for mass market.",
+    additionalBenefits: "Supports biodiversity; safer for farmers; biodegradable end-of-life; compatible with most dyeing processes."
+  },
+  {
+    name: "Recycled Polyester (rPET)",
+    category: "Recycled Synthetic",
+    type: "recycled",
+    badge: "badge-sustainable", badgeText: "RECYCLED",
+    source: "Made from post-consumer PET plastic bottles, ocean plastic, or pre-consumer polyester waste. Mechanically or chemically recycled and re-spun into fiber.",
+    co2Conventional: { label: "Virgin Polyester", kg: 9.52, pct: 95 },
+    co2Sustainable: { label: "rPET", kg: 3.8, pct: 38 },
+    waterUse: "~60% less water than virgin polyester production",
+    wovenStructures: ["Plain Weave (linings, activewear)", "Twill (uniforms)", "Satin (sportswear)", "Jacquard", "Pile/Terry"],
+    knittedStructures: ["Single Jersey (activewear)", "Tricot (lingerie, lining)", "Fleece/French Terry", "Raschel (mesh)", "Warp Knit Velour"],
+    gsmRange: "60–350 GSM",
+    priceIndia: "₹80–280/m",
+    decarbPotential: "Very High — 59% less energy and ~60% less CO₂ vs virgin PET; diverts plastic from landfill/ocean; each tonne of rPET saves ~3–4 barrels of oil.",
+    decarbScore: "82/100",
+    certifications: ["GRS (Global Recycled Standard)", "RCS (Recycled Claim Standard)", "bluesign", "OEKO-TEX"],
+    indiaAvailability: "yes",
+    indiaNote: "Strong rPET ecosystem in Surat, Panipat. Multiple GRS-certified spinners available.",
+    challenges: "Microplastic shedding during wash (use Guppyfriend bag); chemical recycling still scaling; not infinitely recyclable mechanically.",
+    additionalBenefits: "Keeps plastic out of oceans; same performance as virgin poly; growing supply chain infrastructure in India."
+  },
+  {
+    name: "TENCEL™ Lyocell",
+    category: "Cellulosic / MMCF",
+    type: "cellulosic",
+    badge: "badge-sustainable", badgeText: "CELLULOSIC",
+    source: "Wood pulp (FSC-certified eucalyptus or beech) dissolved in closed-loop NMMO solvent system. 99% of solvent recovered and reused. Produced by Lenzing AG.",
+    co2Conventional: { label: "Conventional Viscose", kg: 4.0, pct: 40 },
+    co2Sustainable: { label: "TENCEL Lyocell", kg: 1.5, pct: 15 },
+    waterUse: "~95% less water than cotton; eucalyptus grows on non-arable land with rainwater only",
+    wovenStructures: ["Plain Weave (shirts, dresses)", "Twill (trousers)", "Crepe", "Satin (drapy garments)", "Dobby", "Jacquard"],
+    knittedStructures: ["Single Jersey (premium tees)", "Interlock", "Rib Knit", "Purl Knit", "Fleece (TENCEL Modal blend)"],
+    gsmRange: "80–280 GSM",
+    priceIndia: "₹300–900/m",
+    decarbPotential: "Very High — closed-loop production eliminates solvent emissions; eucalyptus sequesters carbon; biodegradable in soil and marine environments; compostable at end-of-life.",
+    decarbScore: "88/100",
+    certifications: ["FSC", "PEFC", "OEKO-TEX", "EU Ecolabel", "USDA BioPreferred"],
+    indiaAvailability: "limited",
+    indiaNote: "Imported fiber, spun locally in some mills. Available through Lenzing distributors. Growing availability in Surat.",
+    challenges: "Higher cost vs conventional viscose; requires specialized dyeing (reactive or direct dyes preferred); brand awareness still growing.",
+    additionalBenefits: "Excellent moisture management; naturally smooth and breathable; no itchiness; softer than cotton; blends well with cotton, modal, wool."
+  },
+  {
+    name: "Hemp Fiber",
+    category: "Natural Plant Fiber",
+    type: "natural",
+    badge: "badge-sustainable", badgeText: "NATURAL",
+    source: "Bast fiber from Cannabis sativa stalks. Retting (water or dew) separates fibers. Can be mechanically processed (cottonized hemp) or used as coarser bast fiber for industrial/apparel.",
+    co2Conventional: { label: "Conventional Cotton", kg: 5.9, pct: 59 },
+    co2Sustainable: { label: "Hemp", kg: -0.67, pct: 1, carbon: true },
+    waterUse: "~300–500 L/kg — 95% less than cotton; grows without irrigation in most climates",
+    wovenStructures: ["Plain Weave (canvas, bags, shirts)", "Twill (trousers, jackets)", "Basket Weave", "Herringbone (hemp/wool blends)", "Bedford Cord"],
+    knittedStructures: ["Single Jersey (cottonized hemp blends)", "Interlock (blends with cotton)", "Rib Knit (trims)", "Fleece (blends)"],
+    gsmRange: "120–500 GSM",
+    priceIndia: "₹250–700/m",
+    decarbPotential: "Exceptional — hemp is carbon-negative during growth (sequesters ~1.5 tonnes CO₂/tonne fiber); phytoremediation cleans soil; zero pesticide need; deepens topsoil carbon.",
+    decarbScore: "95/100",
+    certifications: ["GOTS (organic hemp)", "OCS", "EU organic regulation"],
+    indiaAvailability: "limited",
+    indiaNote: "Legal cultivation being expanded (Uttarakhand, HP). Import from China/EU currently common. Policy support growing.",
+    challenges: "Regulatory restrictions in India still evolving; coarser hand feel (needs cottonizing for apparel); limited processing infrastructure.",
+    additionalBenefits: "UV resistant; naturally antibacterial; gets softer with each wash; durable (3× stronger than cotton); fast growing (matures in 70–90 days)."
+  },
+  {
+    name: "Linen / Flax",
+    category: "Natural Plant Fiber",
+    type: "natural",
+    badge: "badge-sustainable", badgeText: "NATURAL",
+    source: "Bast fiber from Linum usitatissimum. Retting (field or water), scutching, and hackling extract long line fibers and shorter tow fibers. Europe (Belgium, France) is top quality source.",
+    co2Conventional: { label: "Conventional Cotton", kg: 5.9, pct: 59 },
+    co2Sustainable: { label: "Linen/Flax", kg: 0.9, pct: 9 },
+    waterUse: "~6,400 L/kg (water retting) — but field retting uses rainwater only; no irrigation needed in Europe",
+    wovenStructures: ["Plain Weave (shirting, table linen)", "Twill (trousers)", "Dobby", "Honeycomb (kitchen linen)", "Rib Weave", "Herringbone (linen suits)"],
+    knittedStructures: ["Single Jersey (blends with cotton)", "Interlock (blends)", "Linen/cotton rib knit"],
+    gsmRange: "100–400 GSM",
+    priceIndia: "₹200–700/m",
+    decarbPotential: "High — flax requires no pesticides or irrigation in European climate; biodegradable; entire plant usable (zero waste); long-lasting fabric reduces replacement frequency.",
+    decarbScore: "80/100",
+    certifications: ["MASTERS OF LINEN", "European Flax", "GOTS", "OEKO-TEX"],
+    indiaAvailability: "yes",
+    indiaNote: "Imported from Europe and China. Widely available in fabric markets. India has some processing capacity in West Bengal.",
+    challenges: "Wrinkles easily; currently requires Europe/China sourcing; inconsistent quality in lower grades.",
+    additionalBenefits: "Thermoregulating; hypoallergenic; gets softer with age; naturally pest-resistant; excellent durability."
+  },
+  {
+    name: "ECONYL® Recycled Nylon",
+    category: "Recycled Synthetic",
+    type: "recycled",
+    badge: "badge-sustainable", badgeText: "RECYCLED",
+    source: "Nylon 6 chemically regenerated from ocean plastic, fishing nets (ghost nets), carpet waste, and industrial nylon scrap. Produced by Aquafil (Italy). Chemical recycling restores virgin quality.",
+    co2Conventional: { label: "Virgin Nylon 6", kg: 7.9, pct: 79 },
+    co2Sustainable: { label: "ECONYL®", kg: 3.2, pct: 32 },
+    waterUse: "~80% less water; ~57% less energy than virgin nylon 6",
+    wovenStructures: ["Plain Weave (swimwear lining)", "Satin (lingerie)", "Leno Weave (sheer)"],
+    knittedStructures: ["Tricot (swimwear, lingerie)", "Single Jersey (sportswear)", "Raschel (power net, lace)", "Warp Knit Velour"],
+    gsmRange: "60–220 GSM",
+    priceIndia: "₹400–1200/m",
+    decarbPotential: "Very High — removes ghost fishing nets from oceans (major marine pollutant); each tonne ECONYL saves 6.9 tonnes CO₂eq vs virgin; chemical recycling is infinitely repeatable.",
+    decarbScore: "85/100",
+    certifications: ["GRS", "bluesign", "OEKO-TEX", "SA8000"],
+    indiaAvailability: "limited",
+    indiaNote: "Imported; limited local processing. Available through specialty importers in Mumbai, Surat.",
+    challenges: "Higher cost (3–4× virgin nylon); limited India supply chain; requires GRS certification tracking.",
+    additionalBenefits: "Same performance as virgin nylon (stretch, strength, chlorine resistance); ideal for swimwear; beach-cleaning sourcing provides social co-benefits."
+  },
+  {
+    name: "Modal / ECOVERO™",
+    category: "Cellulosic / MMCF",
+    type: "cellulosic",
+    badge: "badge-sustainable", badgeText: "CELLULOSIC",
+    source: "Modal: cellulose from beech wood, wet-spun for extra softness. ECOVERO™: Lenzing's eco-viscose from sustainably sourced wood (FSC/PEFC) with 50% lower emissions than generic viscose, in partial closed-loop.",
+    co2Conventional: { label: "Conventional Viscose", kg: 4.0, pct: 40 },
+    co2Sustainable: { label: "Modal/ECOVERO™", kg: 2.0, pct: 20 },
+    waterUse: "~10× less water than cotton; beech grows with rainwater only",
+    wovenStructures: ["Plain Weave (blouses, linings)", "Crepe (drapy dresses)", "Satin weave (soft drape)"],
+    knittedStructures: ["Single Jersey (premium tees, loungewear)", "Interlock", "Rib Knit", "Fleece (TENCEL Modal blend)", "Double Knit"],
+    gsmRange: "100–280 GSM",
+    priceIndia: "₹200–600/m",
+    decarbPotential: "High — ECOVERO™ has EU Ecolabel; biodegradable; beech forests are sustainable; partial closed-loop reduces CS₂ solvent emissions significantly vs generic viscose.",
+    decarbScore: "75/100",
+    certifications: ["FSC", "PEFC", "EU Ecolabel (ECOVERO™)", "OEKO-TEX"],
+    indiaAvailability: "yes",
+    indiaNote: "Modal widely available. ECOVERO™ requires Lenzing certification tracking. Available in Surat and major fabric hubs.",
+    challenges: "Generic 'modal' claims unverified; needs supply chain transparency; not as closed-loop as TENCEL lyocell.",
+    additionalBenefits: "Extremely soft (softer than cotton); excellent color retention; resists shrinkage; breathable; blends well with cotton/spandex."
+  },
+  {
+    name: "Bamboo (Mechanically Processed)",
+    category: "Cellulosic / MMCF",
+    type: "cellulosic",
+    badge: "badge-sustainable", badgeText: "CELLULOSIC",
+    source: "Mechanical process: bamboo stalks crushed and enzyme-retting used to extract fibers (bamboo linen). No harsh chemicals. NOTE: 'Bamboo viscose' (chemical) is NOT sustainable — only mechanical bamboo qualifies.",
+    co2Conventional: { label: "Conventional Cotton", kg: 5.9, pct: 59 },
+    co2Sustainable: { label: "Mech. Bamboo", kg: 2.2, pct: 22 },
+    waterUse: "~1,500 L/kg; bamboo grows without irrigation or pesticides",
+    wovenStructures: ["Plain Weave (lightweight shirts)", "Twill (blends)", "Terry Weave (bamboo towels)"],
+    knittedStructures: ["Single Jersey (bamboo tees, baby wear)", "Interlock", "Terry knit (robes)", "Fleece (blends)"],
+    gsmRange: "100–350 GSM",
+    priceIndia: "₹200–600/m",
+    decarbPotential: "High — bamboo sequesters 35% more CO₂ than equivalent trees; fastest growing plant (1m/day); no pesticides; self-regenerates without replanting.",
+    decarbScore: "80/100",
+    certifications: ["OEKO-TEX (verify mechanical process)", "FSC Bamboo", "USDA Organic"],
+    indiaAvailability: "limited",
+    indiaNote: "Bamboo abundant in NE India, Karnataka, Maharashtra. Mechanical processing capacity limited; chemical bamboo viscose much more common — must verify.",
+    challenges: "Mechanical bamboo is coarser than chemical bamboo viscose; supply chain verification critical (greenwashing risk is very high for bamboo claims).",
+    additionalBenefits: "Naturally antibacterial (bamboo kun); thermal regulating; biodegradable; grows on degraded land unsuitable for food crops."
+  },
+  {
+    name: "Recycled Wool",
+    category: "Recycled Protein",
+    type: "recycled",
+    badge: "badge-sustainable", badgeText: "RECYCLED",
+    source: "Post-consumer wool garments and pre-consumer cutting waste sorted by color, shredded (garnetting), re-spun into recycled yarn. Prato (Italy) is historic center. Also from Panipat (India) for blanket grade.",
+    co2Conventional: { label: "Virgin Wool", kg: 27.0, pct: 100 },
+    co2Sustainable: { label: "Recycled Wool", kg: 3.0, pct: 30 },
+    waterUse: "~90% less water than virgin wool (no scouring or dyeing needed for sorted-by-color stock)",
+    wovenStructures: ["Twill (recycled wool suiting)", "Herringbone (blended coats)", "Double Cloth", "Plain Weave (blankets)", "Bedford Cord"],
+    knittedStructures: ["Purl Knit (knitwear)", "Rib Knit (sweaters)", "Jacquard Knit (blended)", "Fleece (blended with rPET)"],
+    gsmRange: "200–600 GSM",
+    priceIndia: "₹400–1500/m",
+    decarbPotential: "Exceptional — 89% lower CO₂ vs virgin wool; eliminates methane from sheep digestion (major GHG); no land use change; Panipat shoddy industry a global leader in circular wool.",
+    decarbScore: "90/100",
+    certifications: ["GRS", "RCS", "STeP by OEKO-TEX", "bluesign"],
+    indiaAvailability: "yes",
+    indiaNote: "Panipat is globally significant recycled textile hub — largest recycled wool/shoddy cluster. Extensive infrastructure for recycled blankets and low-end apparel wool.",
+    challenges: "Shorter fiber length reduces softness and strength (often blended with virgin wool or polyester); limited colors without overdyeing.",
+    additionalBenefits: "Supports circular economy at scale; India's Panipat processes millions of tonnes; supports livelihoods of waste collectors."
+  },
+  {
+    name: "Piñatex® (Pineapple Leaf Fiber)",
+    category: "Agri-Waste / Bio-based",
+    type: "biobased",
+    badge: "badge-sustainable", badgeText: "AGRI-WASTE",
+    source: "Long fibers extracted from pineapple (PALF) leaves — agricultural waste from pineapple farming. Developed by Dr. Carmen Hijosa / Ananas Anam. Leaves are decorticated, degummed, and needle-punched into nonwoven-like sheet.",
+    co2Conventional: { label: "Synthetic Leather", kg: 14.0, pct: 100 },
+    co2Sustainable: { label: "Piñatex®", kg: 2.5, pct: 18 },
+    waterUse: "Minimal — uses crop residue; water footprint carried by pineapple crop (no additional)",
+    wovenStructures: ["Used as surface material bonded to woven backing — not a weave structure itself", "Suitable for accessories: bags, shoes, wallets on woven/nonwoven base"],
+    knittedStructures: ["Backed to knitted substrate for accessories and upholstery applications"],
+    gsmRange: "250–550 GSM (finished product)",
+    priceIndia: "₹1200–3500/m (imported)",
+    decarbPotential: "High — converts pineapple leaf waste (previously burned, releasing CO₂) into material; provides additional income stream for pineapple farmers; displaces carbon-intensive PU/PVC leather.",
+    decarbScore: "83/100",
+    certifications: ["Cradle to Cradle Gold", "PETA-Approved Vegan"],
+    indiaAvailability: "limited",
+    indiaNote: "India is top pineapple producer (Kerala, NE India, WB). Fiber extraction technology being piloted. Currently mostly imported finished product.",
+    challenges: "Currently uses petroleum-based coating for durability (bio-coating versions in development); not yet fully biodegradable; niche supply chain.",
+    additionalBenefits: "Empowers pineapple farming communities; creates zero-waste agriculture; leather-like aesthetics without animal welfare concerns."
+  },
+  {
+    name: "Banana Fiber",
+    category: "Agri-Waste / Bio-based",
+    type: "biobased",
+    badge: "badge-sustainable", badgeText: "AGRI-WASTE",
+    source: "Extracted from the pseudo-stem of banana plants (Musa spp.) after fruit harvest — otherwise waste. India is world's largest banana producer. Fiber extracted by mechanical scraping; long and short fibers separated.",
+    co2Conventional: { label: "Conventional Cotton", kg: 5.9, pct: 59 },
+    co2Sustainable: { label: "Banana Fiber", kg: 1.2, pct: 12 },
+    waterUse: "Near-zero additional water — uses crop residue water footprint only",
+    wovenStructures: ["Plain Weave (bags, sarees, table linen)", "Twill blends", "Traditional handloom (Kela sarees of Tamil Nadu/Karnataka)"],
+    knittedStructures: ["Blended with cotton/linen for knitwear (emerging)", "Coarser grades for industrial knit bags"],
+    gsmRange: "150–400 GSM",
+    priceIndia: "₹300–1000/m (handloom); ₹150–350/m (mill blended)",
+    decarbPotential: "Very High — converts agricultural waste to fiber with near-zero energy; natural biodegradability; supports rural livelihoods; sequesters carbon in soil via improved banana waste management.",
+    decarbScore: "88/100",
+    certifications: ["GOTS (when blended with organic cotton)", "Handloom mark (India)"],
+    indiaAvailability: "yes",
+    indiaNote: "Strong tradition in Tamil Nadu (Kela silk), Karnataka, Kerala, Maharashtra. GI-tagged banana fiber weaving in Theni district. Good scalability.",
+    challenges: "Labor-intensive extraction; coarser handle in pure form; inconsistent fiber quality; limited industrial spinning infrastructure.",
+    additionalBenefits: "Stronger than cotton; naturally lustrous; biodegradable; traditional crafts employment; India has massive raw material surplus."
+  },
+  {
+    name: "SeaCell™ (Seaweed Fiber)",
+    category: "Cellulosic / MMCF",
+    type: "cellulosic",
+    badge: "badge-sustainable", badgeText: "CELLULOSIC",
+    source: "SeaCell™ by SmartFiber AG incorporates seaweed (Ascophyllum nodosum) into Lyocell fibers. Seaweed is sustainably harvested from Norwegian coasts, dried, ground, and integrated into cellulose spinning solution.",
+    co2Conventional: { label: "Conventional Viscose", kg: 4.0, pct: 40 },
+    co2Sustainable: { label: "SeaCell™", kg: 1.8, pct: 18 },
+    waterUse: "~90% less than cotton; seaweed grows without freshwater or fertilizer",
+    wovenStructures: ["Plain Weave (luxury shirting)", "Crepe (blouses, dresses)", "Satin weave blends"],
+    knittedStructures: ["Single Jersey (wellness/activewear)", "Interlock", "Rib Knit (premium loungewear)"],
+    gsmRange: "80–220 GSM",
+    priceIndia: "₹600–2000/m (imported)",
+    decarbPotential: "High — seaweed is fastest carbon-sequestering marine plant; no land/freshwater use; harvesting encourages seaweed ecosystem regeneration; biodegradable fiber.",
+    decarbScore: "85/100",
+    certifications: ["OEKO-TEX 100", "bluesign", "GOTS (when combined with organic fiber)"],
+    indiaAvailability: "no",
+    indiaNote: "Currently imported only. India has potential for seaweed cultivation (Tamil Nadu, Gujarat coastline) but SeaCell™ processing not yet local.",
+    challenges: "Niche, premium product; limited supply; requires import; greenwashing risk if seaweed content is minimal.",
+    additionalBenefits: "Minerals (calcium, magnesium, vitamin E) released slowly onto skin; anti-inflammatory properties claimed; unique wellness positioning for brands."
+  },
+  {
+    name: "Himalayan Nettle Fiber",
+    category: "Natural Plant Fiber",
+    type: "natural",
+    badge: "badge-sustainable", badgeText: "NATURAL",
+    source: "Bast fiber from Girardinia diversifolia (Himalayan giant nettle) — wild-harvested from forests of Nepal, Bhutan, NE India. Bark stripped, retted, and hand-spun. Used for centuries in tribal textiles.",
+    co2Conventional: { label: "Conventional Cotton", kg: 5.9, pct: 59 },
+    co2Sustainable: { label: "Nettle Fiber", kg: 0.6, pct: 6 },
+    waterUse: "Virtually zero additional water — wild-harvested; grows in forests without cultivation",
+    wovenStructures: ["Plain Weave (artisan bags, fabric)", "Twill blends (nettle/cotton)", "Handloom mixed structure fabric"],
+    knittedStructures: ["Blended with wool or cotton for knitwear; emerging experimental use"],
+    gsmRange: "180–450 GSM",
+    priceIndia: "₹500–2000/m (artisan handloom)",
+    decarbPotential: "Exceptional — wild harvest has near-zero carbon footprint; biodegradable; supports forest ecosystem; tribal community livelihood; carbon-negative when forest preservation factored.",
+    decarbScore: "93/100",
+    certifications: ["Handloom Mark (India)", "Fair Trade (some cooperatives)", "Forest-based certification (emerging)"],
+    indiaAvailability: "limited",
+    indiaNote: "Available from Nagaland, Manipur, Uttarakhand tribal cooperatives. Limited to artisan volumes. Strong cultural heritage.",
+    challenges: "Very limited scale; entirely artisan/hand-processed; coarser texture needs blending for mainstream apparel; supply unpredictable.",
+    additionalBenefits: "Stronger than linen; natural sheen; biodegradable; supports indigenous forest communities; zero-cultivation footprint."
+  },
+  {
+    name: "Responsibly Sourced Merino Wool",
+    category: "Protein / Animal Fiber",
+    type: "protein",
+    badge: "badge-sustainable", badgeText: "PROTEIN",
+    source: "Fine wool from Merino sheep reared under RWS (Responsible Wool Standard) or ZQ Merino. No mulesing; pasture-based; regenerative grazing practices. New Zealand, Australia, South America primary sources.",
+    co2Conventional: { label: "Conventional Wool", kg: 27.0, pct: 100 },
+    co2Sustainable: { label: "RWS Merino", kg: 15.0, pct: 55 },
+    waterUse: "Pasture-based requires significant land; regenerative grazing improves soil carbon significantly",
+    wovenStructures: ["Twill (merino suiting)", "Plain Weave (lightweight shirting)", "Herringbone", "Gabardine (merino)", "Double Cloth (overcoating)"],
+    knittedStructures: ["Single Jersey (merino baselayers)", "Rib Knit (sweaters)", "Interlock (performance knitwear)", "Jacquard Knit", "Purl Knit"],
+    gsmRange: "120–400 GSM",
+    priceIndia: "₹800–3500/m",
+    decarbPotential: "Moderate-High — regenerative grazing sequesters soil carbon; naturally biodegradable; long-lasting (20+ years) reduces lifecycle emissions; RWS tackles land degradation and methane via better herd management.",
+    decarbScore: "65/100",
+    certifications: ["RWS (Responsible Wool Standard)", "ZQ Merino", "Woolmark", "GOTS (organic wool)"],
+    indiaAvailability: "yes",
+    indiaNote: "Imported fiber; spun and woven in Ludhiana, Amritsar, Bikaner. RWS-certified wool available through major suppliers.",
+    challenges: "Methane from sheep digestion remains major GHG; high land use; supply chain length (NZ → India adds transport CO₂); mulesing scrutiny.",
+    additionalBenefits: "Natural temperature regulation; moisture wicking; odor resistant (can wear 3+ times before washing); biodegradable; extremely fine (15–18 micron)."
+  },
+  {
+    name: "Soy Silk / Soy Protein Fiber",
+    category: "Agri-Waste / Bio-based",
+    type: "biobased",
+    badge: "badge-sustainable", badgeText: "AGRI-WASTE",
+    source: "Protein extracted from soybean meal (byproduct of tofu/soy oil production). Wet-spun into fiber using PLA-like process. Originally developed in US in 1930s, revived in China in 2000s. Sometimes called 'vegetable cashmere'.",
+    co2Conventional: { label: "Conventional Silk", kg: 97.0, pct: 100 },
+    co2Sustainable: { label: "Soy Silk", kg: 3.5, pct: 4 },
+    waterUse: "Minimal — uses soybean processing byproduct; main water use is soybean crop",
+    wovenStructures: ["Plain Weave (blouses, linings)", "Satin weave (drapy garments)", "Crepe (soft dresses)"],
+    knittedStructures: ["Single Jersey (luxury tees)", "Interlock (premium knitwear)", "Rib Knit (trims)"],
+    gsmRange: "80–220 GSM",
+    priceIndia: "₹400–1200/m",
+    decarbPotential: "High — uses agricultural byproduct that would otherwise be waste; biodegradable; eliminates silkworm farming (ethical + lower CO₂); no land clearing needed beyond soy farming.",
+    decarbScore: "77/100",
+    certifications: ["OEKO-TEX 100", "GOTS (when blended with organic cotton)"],
+    indiaAvailability: "limited",
+    indiaNote: "Limited availability; mostly imported from China. India has large soy production (MP, Maharashtra) — processing potential exists but not yet developed.",
+    challenges: "Often blended with PVA (synthetic binder) for durability — reduces biodegradability; requires transparency on binder content; GMO soy risk.",
+    additionalBenefits: "Natural amino acids beneficial for skin; silky handle; lightweight; excellent color uptake; animal-free silk alternative."
+  },
+  {
+    name: "Lotus Fiber",
+    category: "Natural Plant Fiber",
+    type: "natural",
+    badge: "badge-sustainable", badgeText: "NATURAL",
+    source: "Hand-extracted from lotus (Nelumbo nucifera) stems. Fine filaments pulled from cut stems, twisted into yarn. Originated in Myanmar (Inle Lake). Extremely rare and artisanal. 4,000 stems = 1 meter of fabric.",
+    co2Conventional: { label: "Conventional Silk", kg: 97.0, pct: 100 },
+    co2Sustainable: { label: "Lotus Fiber", kg: 0.8, pct: 1 },
+    waterUse: "Lotus grows in water — zero freshwater consumption; wetland ecosystem benefits",
+    wovenStructures: ["Plain Weave (luxury scarves, shawls)", "Twill blends (premium fashion)", "Tapestry (luxury home textile)"],
+    knittedStructures: ["Blended with silk or cashmere for ultra-premium knitwear (extremely rare)"],
+    gsmRange: "80–180 GSM",
+    priceIndia: "₹8000–40000/m (extremely rare artisan product)",
+    decarbPotential: "Very High (at scale) — zero pesticide; zero synthetic input; lotus purifies water (phytoremediation); preserves wetland ecosystems; supports biodiversity.",
+    decarbScore: "92/100",
+    certifications: ["Handmade certification", "Luxury provenance verification"],
+    indiaAvailability: "limited",
+    indiaNote: "Some lotus cultivation in Manipur, West Bengal. Small-scale artisan processing emerging. Mostly imported from Myanmar. Huge potential given India's lotus production.",
+    challenges: "Extremely labor intensive; tiny supply; very expensive; not scalable for mass market; currently cannot meet industrial demand.",
+    additionalBenefits: "Softer than silk; naturally antibacterial; sacred cultural significance; unique texture; exceptional luxury positioning."
+  },
+  {
+    name: "PLA Fiber (Corn/Sugar Cane)",
+    category: "Agri-Waste / Bio-based",
+    type: "biobased",
+    badge: "badge-sustainable", badgeText: "BIO-BASED",
+    source: "Polylactic acid fiber derived from fermented plant sugars (corn, sugar cane, cassava). NatureWorks Ingeo™ is leading brand. Requires industrial composting to biodegrade (not home compostable in most grades).",
+    co2Conventional: { label: "Virgin Polyester", kg: 9.52, pct: 95 },
+    co2Sustainable: { label: "PLA Fiber", kg: 3.1, pct: 31 },
+    waterUse: "~65% less energy than polyester; derived from renewable annually-harvested crops",
+    wovenStructures: ["Plain Weave (sports linings)", "Satin weave (sport/active)", "Leno (sheer panels)"],
+    knittedStructures: ["Single Jersey (activewear)", "Tricot (linings)", "Single use / performance sportswear"],
+    gsmRange: "60–200 GSM",
+    priceIndia: "₹300–800/m",
+    decarbPotential: "Moderate — bio-based (not fossil-derived); lower carbon in production; BUT requires industrial composting infrastructure (currently limited) to realize end-of-life benefit; risk of competing with food crops.",
+    decarbScore: "62/100",
+    certifications: ["USDA BioPreferred", "Cradle to Cradle", "TÜV OK Compost Industrial"],
+    indiaAvailability: "limited",
+    indiaNote: "India has sugarcane surplus. NatureWorks Ingeo available through imports. Industrial composting infrastructure needed for full benefit.",
+    challenges: "Low melting point limits ironing/processing; NOT home compostable; food vs fiber crop debate; limited collection/composting infrastructure.",
+    additionalBenefits: "No fossil fuel in polymer backbone; naturally UV-resistant; moisture-wicking; biodegradable under right conditions; good for single-use technical applications."
+  },
+  {
+    name: "Orange Fiber (Citrus Waste)",
+    category: "Agri-Waste / Bio-based",
+    type: "biobased",
+    badge: "badge-sustainable", badgeText: "AGRI-WASTE",
+    source: "Cellulose extracted from citrus juice byproduct (orange, lemon peels) — 700,000 tonnes of citrus waste produced in Italy alone per year. Patented process by Orange Fiber srl (Italy). Cellulose dissolved and spun into silky fiber.",
+    co2Conventional: { label: "Conventional Viscose", kg: 4.0, pct: 40 },
+    co2Sustainable: { label: "Orange Fiber", kg: 1.0, pct: 10 },
+    waterUse: "Near-zero additional — uses processing waste; no new water or land needed",
+    wovenStructures: ["Plain Weave (luxury blouses, scarves)", "Satin weave (lingerie, drapy fashion)", "Crepe blends"],
+    knittedStructures: ["Single Jersey (luxury knit tops, blends)", "Interlock (premium)", "Rib Knit (trims)"],
+    gsmRange: "80–180 GSM",
+    priceIndia: "₹1500–5000/m (imported, luxury segment)",
+    decarbPotential: "High — converts food waste into fiber (waste valorisation); no new agricultural land needed; biodegradable; reduces citrus processing waste going to landfill/biogas.",
+    decarbScore: "84/100",
+    certifications: ["OEKO-TEX 100", "GRS (recycled content tracking)"],
+    indiaAvailability: "no",
+    indiaNote: "India is major citrus producer (Maharashtra, Punjab, Nagpur oranges). Domestic Orange Fiber processing doesn't exist yet — high potential for India-specific innovation.",
+    challenges: "Currently very limited supply; premium luxury positioning only; process still scaling; not yet available at commercial volume.",
+    additionalBenefits: "Naturally contains vitamin C and essential oils; silky smooth hand; unique brand story; supports circular citrus economy."
+  },
+  {
+    name: "Recycled Cotton",
+    category: "Recycled Natural",
+    type: "recycled",
+    badge: "badge-sustainable", badgeText: "RECYCLED",
+    source: "Post-industrial (cutting room waste) or post-consumer (worn cotton garments) sorted, shredded by garnet machine into fiber, re-spun into yarn — often blended with virgin cotton or rPET for strength. Major global center: Panipat, India.",
+    co2Conventional: { label: "Conventional Cotton", kg: 5.9, pct: 59 },
+    co2Sustainable: { label: "Recycled Cotton", kg: 0.6, pct: 6 },
+    waterUse: "~90% less water than virgin cotton (no growing, ginning, or fiber processing from scratch)",
+    wovenStructures: ["Plain Weave (denim, canvas, casual)", "Twill (recycled denim jackets)", "Terry Weave (recycled cotton towels)", "Basket Weave"],
+    knittedStructures: ["Single Jersey (recycle T-shirts, yarn blends)", "Fleece/Terry (sweatshirts)", "Rib Knit (blended)"],
+    gsmRange: "150–400 GSM",
+    priceIndia: "₹60–200/m",
+    decarbPotential: "Exceptional — 98% less water; ~80% less CO₂ than virgin cotton; diverts textile waste from landfill; zero land use; Panipat shoddy industry processes 1.5M tonnes/year textiles.",
+    decarbScore: "91/100",
+    certifications: ["GRS", "RCS", "OEKO-TEX", "OCS blended"],
+    indiaAvailability: "yes",
+    indiaNote: "India (Panipat) is global leader in recycled cotton/shoddy processing. Massive infrastructure. Multiple GRS-certified facilities. Also pre-consumer recycling in apparel manufacturing hubs.",
+    challenges: "Shorter fiber length reduces strength; usually needs 20–30% virgin fiber or rPET blend; limited color variety without overdyeing; consumer awareness low.",
+    additionalBenefits: "Extremely cost-competitive; India has world-class infrastructure; supports textile waste circular economy at industrial scale; huge volumes available."
+  },
+  {
+    name: "Jute / Ramie",
+    category: "Natural Plant Fiber",
+    type: "natural",
+    badge: "badge-sustainable", badgeText: "NATURAL",
+    source: "Jute: Corchorus spp. bast fiber, water-retted, predominantly Bangladesh/India (WB). Ramie: Boehmeria nivea, degummed bast fiber from East Asia. Both biodegradable, low-chemical bast fibers.",
+    co2Conventional: { label: "Conventional Cotton", kg: 5.9, pct: 59 },
+    co2Sustainable: { label: "Jute/Ramie", kg: 0.45, pct: 5 },
+    waterUse: "~1,500–3,000 L/kg; grows with natural rainfall; no pesticide or fertilizer needed",
+    wovenStructures: ["Plain Weave (hessian, burlap, bags, upholstery)", "Twill (jute-cotton blends, rugs)", "Rib Weave (jute bags)"],
+    knittedStructures: ["Ramie blended with cotton for rib/jersey knit; jute too coarse for standard knitting"],
+    gsmRange: "200–600 GSM",
+    priceIndia: "₹40–180/m (jute fabric); ₹150–400/m (ramie blends)",
+    decarbPotential: "Very High — jute is carbon-negative during growth (sequesters 1.5 tonnes CO₂/acre); fully biodegradable; no synthetic inputs; leaves replenish soil nutrients.",
+    decarbScore: "89/100",
+    certifications: ["Jute Mark India", "GOTS (organic)", "ISO jute standards"],
+    indiaAvailability: "yes",
+    indiaNote: "India is world's largest jute producer (West Bengal, Bihar, Assam). Very well-developed industry; government mandated jute packaging. Excellent cost-competitiveness.",
+    challenges: "Coarse hand feel limits apparel use; absorbent → prone to mildew if not dried well; mostly industrial use grade; fashion-grade jute blends require investment.",
+    additionalBenefits: "One of cheapest natural fibers; India has complete value chain; government policy support; packaging + home textile crossover reduces fashion-specific pressure."
+  }
+];
+
+// ===================== SUSTAINABLE CARD RENDER =====================
+function renderSustainableCard(f) {
+  const maxCO2 = 100;
+  const convPct = Math.min(f.co2Conventional.pct, 100);
+  const susPct = Math.min(f.co2Sustainable.pct, 100);
+  const convClass = convPct > 60 ? 'co2-fill-high' : convPct > 30 ? 'co2-fill-mid' : 'co2-fill-low';
+  const susClass = susPct > 60 ? 'co2-fill-high' : susPct > 30 ? 'co2-fill-mid' : 'co2-fill-low';
+  const susVal = f.co2Sustainable.carbon ? 'Carbon Negative 🌱' : `${f.co2Sustainable.kg} kg CO₂/kg`;
+  const susValClass = susPct <= 20 ? 'low' : susPct <= 50 ? 'mid' : 'high';
+  const convValClass = convPct > 60 ? 'high' : 'mid';
+  const indiaClass = f.indiaAvailability === 'yes' ? 'india-yes' : f.indiaAvailability === 'limited' ? 'india-limited' : 'india-no';
+  const indiaText = f.indiaAvailability === 'yes' ? '✅ Available in India' : f.indiaAvailability === 'limited' ? '⚠️ Limited in India' : '❌ Import Only';
+
+  return `
+  <div class="fabric-card" data-name="${f.name.toLowerCase()}" data-category="${f.category.toLowerCase()}" data-type="${f.type}">
+    <div class="card-header">
+      <div class="card-header-left">
+        <div class="card-name">${f.name}</div>
+        <div class="card-category">${f.category}</div>
+      </div>
+      <span class="card-badge ${f.badge}">${f.badgeText}</span>
+    </div>
+    <div class="card-body">
+
+      <div class="info-section">
+        <div class="info-label">🌱 Source & Production</div>
+        <div class="info-value">${f.source}</div>
+      </div>
+
+      <div class="co2-section">
+        <div class="info-label">🏭 Carbon Footprint Comparison (kg CO₂eq per kg fiber)</div>
+        <div class="co2-compare">
+          <div class="co2-row">
+            <div class="co2-label">${f.co2Conventional.label}</div>
+            <div class="co2-bar-track"><div class="co2-bar-fill ${convClass}" style="width:${convPct}%"></div></div>
+            <div class="co2-value ${convValClass}">${f.co2Conventional.kg} kg CO₂</div>
+          </div>
+          <div class="co2-row">
+            <div class="co2-label">${f.co2Sustainable.label}</div>
+            <div class="co2-bar-track"><div class="co2-bar-fill ${susClass}" style="width:${Math.max(susPct,2)}%"></div></div>
+            <div class="co2-value ${susValClass}">${susVal}</div>
+          </div>
+        </div>
+        <div style="margin-top:8px; font-size:0.78rem; color:var(--muted);">💧 Water: ${f.waterUse}</div>
+      </div>
+
+      <div class="info-section">
+        <div class="info-label">🧵 Compatible Woven Structures</div>
+        <div class="tags">${f.wovenStructures.map(s=>`<span class="compat-tag woven-tag">${s}</span>`).join('')}</div>
+      </div>
+
+      <div class="info-section">
+        <div class="info-label">🧶 Compatible Knitted Structures</div>
+        <div class="tags">${f.knittedStructures.map(s=>`<span class="compat-tag knitted-tag">${s}</span>`).join('')}</div>
+      </div>
+
+      <div class="info-section" style="display:flex; gap:20px; flex-wrap:wrap; align-items:flex-start;">
+        <div>
+          <div class="info-label">⚖ GSM Range</div>
+          <div class="info-value">${f.gsmRange}</div>
+        </div>
+        <div>
+          <div class="info-label">💰 Price (India)</div>
+          <div class="info-value" style="color:#7ecb8b; font-weight:600;">${f.priceIndia}</div>
+        </div>
+        <div>
+          <div class="info-label">🇮🇳 India Availability</div>
+          <span class="india-avail ${indiaClass}">${indiaText}</span>
+        </div>
+      </div>
+
+      <div class="info-section">
+        <div class="info-label">♻ Decarbonisation Potential</div>
+        <div class="decarb-score-wrap">
+          <div class="decarb-score">${f.decarbScore}</div>
+          <div class="decarb-label">Decarbonisation Impact Score<br><span style="color:var(--muted)">(composite: CO₂ reduction + water + biodegradability + scalability)</span></div>
+        </div>
+        <div class="info-value" style="margin-top:8px;">${f.decarbPotential}</div>
+      </div>
+
+      <div class="info-section">
+        <div class="info-label">🏅 Key Certifications to Look For</div>
+        <div>${f.certifications.map(c=>`<span class="cert-badge">${c}</span>`).join('')}</div>
+      </div>
+
+    </div>
+    <button class="expand-btn" onclick="toggleExtra('sus-${f.name.replace(/[\s®™]+/g,'-')}',this)">▼ Challenges & Additional Benefits</button>
+    <div class="extra-info" id="extra-sus-${f.name.replace(/[\s®™]+/g,'-')}">
+      <div class="info-section">
+        <div class="info-label">⚠️ Challenges & Limitations</div>
+        <div class="info-value">${f.challenges}</div>
+      </div>
+      <div class="info-section">
+        <div class="info-label">✨ Additional Benefits</div>
+        <div class="info-value">${f.additionalBenefits}</div>
+      </div>
+      ${f.indiaNote ? `<div class="info-section">
+        <div class="info-label">🇮🇳 India-Specific Notes</div>
+        <div class="info-value">${f.indiaNote}</div>
+      </div>` : ''}
+    </div>
+  </div>`;
+}
+
+renderGrid('woven-grid', wovenFabrics);
+renderGrid('knitted-grid', knittedFabrics);
+document.getElementById('sustainable-grid').innerHTML = sustainableFibers.map(renderSustainableCard).join('');
+
+
+</script>
+</body>
+</html>
