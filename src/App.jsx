@@ -25,6 +25,7 @@ const BackToTop = () => {
   if (!visible) return null;
   return (
     <button
+      className="back-to-top-btn"
       aria-label="Back to top"
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       style={{
@@ -160,6 +161,14 @@ function App() {
   }, [recentlyViewed]);
 
   const trackViewed = (fabric) => {
+    if (fabric === null) {
+      setSelectedFabric(null);
+      return;
+    }
+    if (selectedFabric && selectedFabric.id === fabric.id) {
+      setSelectedFabric(null);
+      return;
+    }
     setSelectedFabric(fabric);
     setRecentlyViewed(prev => {
       const filtered = prev.filter(f => f.id !== fabric.id);
@@ -199,6 +208,7 @@ function App() {
           <TextileDetail
             fabric={selectedFabric}
             onBack={() => {
+              setSelectedFabric(null);
               const libraryEl = document.getElementById('library');
               if (libraryEl) {
                 const yOffset = -80; // Height of the sticky navbar

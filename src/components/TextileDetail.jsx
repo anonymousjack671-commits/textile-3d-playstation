@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Fabric3DViewer } from './Fabric3DViewer';
-import { MessageCircle, Bookmark, BookmarkCheck, Share2, Sparkles } from 'lucide-react';
+import { MessageCircle, Bookmark, BookmarkCheck, Share2, Sparkles, X } from 'lucide-react';
 import { SupplierSection } from './SupplierSection';
 import { getMatchingMills } from '../data/suppliers';
 
@@ -150,16 +150,50 @@ export const TextileDetail = ({ fabric, onBack, isShortlisted, onToggleShortlist
     <section className="band band-dark" id="details">
       <div className="container">
 
-        {/* Back Button */}
-        {onBack && (
-          <button
-            onClick={onBack}
-            className="btn btn-secondary-dark"
-            style={{ marginBottom: '2rem', height: '42px', fontSize: '0.88rem', padding: '0 1.2rem' }}
-          >
-            ← Back to Library
-          </button>
-        )}
+        {/* Top bar with Back Button and Close Button */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
+          {onBack ? (
+            <button
+              onClick={onBack}
+              className="btn btn-secondary-dark"
+              style={{ height: '42px', fontSize: '0.88rem', padding: '0 1.2rem' }}
+            >
+              ← Back to Library
+            </button>
+          ) : <div />}
+          
+          {onBack && (
+            <button
+              onClick={onBack}
+              title="Close Details / Deselect"
+              style={{
+                background: 'rgba(255, 255, 255, 0.05)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                borderRadius: '50%',
+                width: '42px',
+                height: '42px',
+                color: '#fff',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                transition: 'all 0.2s',
+              }}
+              onMouseOver={e => {
+                e.currentTarget.style.background = 'rgba(224, 107, 90, 0.15)';
+                e.currentTarget.style.borderColor = 'rgba(224, 107, 90, 0.4)';
+                e.currentTarget.style.color = '#e06b5a';
+              }}
+              onMouseOut={e => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.color = '#fff';
+              }}
+            >
+              <X size={20} />
+            </button>
+          )}
+        </div>
 
         {/* Header */}
         <div style={{ marginBottom: '3rem' }}>

@@ -566,10 +566,10 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
             max-height: 75dvh !important;
             border-radius: 16px !important;
           }
-          /* Move toggle button to right side on mobile so it doesn't clash with Back-to-Top */
+          /* Align toggle on left to avoid clashing with Back-to-Top on right */
           #kaal-chat-toggle {
-            left: auto !important;
-            right: 1.25rem !important;
+            left: 1.25rem !important;
+            right: auto !important;
             bottom: 1.25rem !important;
           }
         }

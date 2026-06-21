@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MARKET_INTEL, TIER_COLORS } from '../data/marketIntelligence';
+import { getOfflineDeepDive } from '../data/offlineDeepDive';
 import { TrendingUp, Leaf, DollarSign, MapPin, Award, Loader, Wifi, WifiOff } from 'lucide-react';
 
 const PARDEEP_URL = import.meta.env.VITE_KAAL_URL || 'http://localhost:8369';
@@ -284,7 +285,14 @@ export const MarketIntelligencePanel = ({ garmentName }) => {
           setDeepDive({ brand: brandName, loading: false, data: r.data, error: null });
         } else throw new Error(r.error || 'No data');
       })
-      .catch(e => setDeepDive({ brand: brandName, loading: false, data: null, error: e.message || 'Research failed' }));
+      .catch(e => {
+        const offlineData = getOfflineDeepDive(brandName, garmentName);
+        if (offlineData) {
+          setDeepDive({ brand: brandName, loading: false, data: offlineData, error: null });
+        } else {
+          setDeepDive({ brand: brandName, loading: false, data: null, error: e.message || 'Research failed' });
+        }
+      });
   };
 
   if (!garmentName) return null;

@@ -659,3 +659,45 @@ input::placeholder, textarea::placeholder {
   .hide-mobile  { display: none  !important; }
 }
 
+/* ── Responsive floating controls ─────────────────────────────────────── */
+#kaal-chat-toggle {
+  position: fixed !important;
+  bottom: 2rem !important;
+  left: 2rem !important;
+}
+
+#kaal-chat-panel {
+  position: fixed !important;
+  bottom: 5.5rem !important;
+  left: 2rem !important;
+}
+
+.back-to-top-btn {
+  position: fixed !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
+}
+
+@media (max-width: 768px) {
+  #kaal-chat-toggle {
+    left: 1.5rem !important;
+    right: auto !important;
+    bottom: 1.5rem !important;
+  }
+  
+  .back-to-top-btn {
+    right: 1.5rem !important;
+    left: auto !important;
+    bottom: 1.5rem !important; /* Stacked horizontally on opposite sides */
+  }
+  
+  #kaal-chat-panel {
+    left: 1rem !important;
+    right: 1rem !important;
+    bottom: 5.5rem !important;
+    width: calc(100vw - 2rem) !important;
+    max-width: none !important;
+  }
+}
+
+

@@ -282,15 +282,19 @@ export const LibraryGrid = ({ onSelectFabric, selectedId, userRole, isShortliste
                 transition: 'all 0.2s ease',
               }}
               onClick={() => {
-                onSelectFabric(fabric);
-                // Scroll straight to details with offset to account for sticky navbar
-                setTimeout(() => {
-                  const el = document.getElementById('details');
-                  if (el) {
-                    const y = el.getBoundingClientRect().top + window.pageYOffset - 80;
-                    window.scrollTo({ top: y, behavior: 'smooth' });
-                  }
-                }, 150);
+                if (selectedId === fabric.id) {
+                  onSelectFabric(null);
+                } else {
+                  onSelectFabric(fabric);
+                  // Scroll straight to details with offset to account for sticky navbar
+                  setTimeout(() => {
+                    const el = document.getElementById('details');
+                    if (el) {
+                      const y = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                      window.scrollTo({ top: y, behavior: 'smooth' });
+                    }
+                  }, 150);
+                }
               }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
@@ -334,7 +338,30 @@ export const LibraryGrid = ({ onSelectFabric, selectedId, userRole, isShortliste
                       }
                     </button>
                   )}
-                  <ChevronRight size={18} color={selectedId === fabric.id ? 'var(--color-primary)' : 'var(--color-mute-light)'} />
+                  {selectedId === fabric.id ? (
+                    <button
+                      onClick={e => {
+                        e.stopPropagation();
+                        onSelectFabric(null);
+                      }}
+                      title="Clear Selection"
+                      style={{
+                        background: 'transparent',
+                        border: 'none',
+                        color: 'var(--color-commerce)',
+                        cursor: 'pointer',
+                        padding: '2px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 5,
+                      }}
+                    >
+                      <X size={18} />
+                    </button>
+                  ) : (
+                    <ChevronRight size={18} color="var(--color-mute-light)" />
+                  )}
                 </div>
               </div>
 
@@ -429,7 +456,7 @@ export const LibraryGrid = ({ onSelectFabric, selectedId, userRole, isShortliste
                 paddingTop: '0.75rem',
                 fontFamily: 'Inter, sans-serif',
               }}>
-                {selectedId === fabric.id ? '✓ Showing specs below' : 'View full specs ↓'}
+                {selectedId === fabric.id ? '✓ Selected (Click to deselect)' : 'View full specs ↓'}
               </div>
 
             </div>
