@@ -572,6 +572,14 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
             right: auto !important;
             bottom: 1.25rem !important;
           }
+          .back-to-top-btn {
+            right: 1.25rem !important;
+            left: auto !important;
+            bottom: 1.25rem !important;
+          }
+        }
+        body:has(#kaal-chat-panel) .back-to-top-btn {
+          display: none !important;
         }
 
       `}</style>
