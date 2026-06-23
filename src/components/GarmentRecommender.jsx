@@ -6,11 +6,56 @@ import { allTextiles, sustainableFibers } from '../data/textiles';
 import { garmentTaxonomy } from '../data/garment-taxonomy';
 import { getMatchingGarmentVendors } from '../data/suppliers';
 
-// ── Scoring: tiered multi-field relevance ─────────────────────────────────
-function scoreFabric(fabric, searchTerms) {
+// ── Scoring: structured direct match + tiered text relevance ─────────────
+// Phase 1 — direct fabricId match from taxonomy (highest signal, range 0–30)
+function getDirectScore(fabric, garment) {
+  if (!garment?.fabricIds) return 0;
+  const match = garment.fabricIds.find(f => f.id === fabric.id);
+  if (!match) return 0;
+  // Scale 1–100 suitability score → 0–30 recommender points
+  return Math.round((match.score / 100) * 30);
+}
+
+// Phase 2 — GSM window bonus (0–8 points)
+function getGsmBonus(fabric, garment) {
+  if (!garment?.gsmRange) return 0;
+  const { min, max } = garment.gsmRange;
+  const fMin = fabric.gsm?.min || fabric.gsmMin;
+  const fMax = fabric.gsm?.max || fabric.gsmMax;
+  if (!fMin || !fMax) return 0;
+  // Overlap check
+  const overlapMin = Math.max(fMin, min);
+  const overlapMax = Math.min(fMax, max);
+  if (overlapMax < overlapMin) return 0; // No overlap
+  const overlapRatio = (overlapMax - overlapMin) / (max - min);
+  return Math.round(overlapRatio * 8);
+}
+
+// Phase 3 — stretch compatibility (0–5 points)
+function getStretchBonus(fabric, garment) {
+  if (!garment?.stretchRequired) return 0;
+  const req = garment.stretchRequired;
+  // Determine fabric's stretch level from its data
+  const text = JSON.stringify(fabric).toLowerCase();
+  const hasElastane = text.includes('elastane') || text.includes('spandex') || text.includes('lycra');
+  const isKnit = fabric.badge === 'badge-knitted';
+  const isPerformance = fabric.id === 'performance-knits' || fabric.id === 'warp-knits';
+  const fabricStretch = isPerformance ? 'high' : isKnit ? 'medium' : hasElastane ? 'medium' : 'none';
+
+  const stretchMap = { none: 0, low: 1, medium: 2, high: 3 };
+  const reqLevel = stretchMap[req] || 0;
+  const fabLevel = stretchMap[fabricStretch] || 0;
+
+  if (req === 'none') return fabLevel === 0 ? 5 : 0;
+  if (req === 'high') return fabLevel >= 2 ? 5 : fabLevel === 1 ? 2 : 0;
+  if (req === 'medium') return fabLevel >= 1 ? 5 : 0;
+  return 3; // low requirement — most fabrics pass
+}
+
+// Phase 4 — text relevance (0–16 points, unchanged from v2)
+function scoreTextRelevance(fabric, searchTerms) {
   let score = 0;
 
-  // Build all variant uses text for classic multi-variant fabrics
   const allVariantUses = (fabric.variants || []).flatMap(v =>
     Array.isArray(v.uses) ? v.uses : (v.uses ? [v.uses] : [])
   ).join(' ').toLowerCase();
@@ -36,15 +81,33 @@ function scoreFabric(fabric, searchTerms) {
 
   for (const term of searchTerms) {
     const t = term.toLowerCase();
-    if (fabric.name.toLowerCase() === t)                 score += 8; // exact name
-    else if (fabric.name.toLowerCase().includes(t))      score += 5; // name contains
-    else if (allVariantNames.includes(t))                score += 4; // variant name
-    else if (fabric.category?.toLowerCase().includes(t)) score += 3; // category
-    else if (topUses.toLowerCase().includes(t))          score += 3; // top-level uses
-    else if (allVariantUses.includes(t))                 score += 2; // variant uses
-    else if (haystack.includes(t))                       score += 1; // any other field
+    if (fabric.name.toLowerCase() === t)                 score += 8;
+    else if (fabric.name.toLowerCase().includes(t))      score += 5;
+    else if (allVariantNames.includes(t))                score += 4;
+    else if (fabric.category?.toLowerCase().includes(t)) score += 3;
+    else if (topUses.toLowerCase().includes(t))          score += 3;
+    else if (allVariantUses.includes(t))                 score += 2;
+    else if (haystack.includes(t))                       score += 1;
   }
-  return score;
+  // Cap text score at 16 so it cannot outrank a curated direct match
+  return Math.min(score, 16);
+}
+
+// Combined scoring entry point
+function scoreFabric(fabric, searchTerms, garment) {
+  const textScore   = scoreTextRelevance(fabric, searchTerms);
+  const directScore = getDirectScore(fabric, garment);
+  const gsmBonus    = getGsmBonus(fabric, garment);
+  const stretchBonus = getStretchBonus(fabric, garment);
+  return textScore + directScore + gsmBonus + stretchBonus;
+}
+
+// Confidence label based on final composite score
+function getConfidenceLabel(score) {
+  if (score >= 38) return { label: 'Ideal Match',   color: '#4db87a' };
+  if (score >= 24) return { label: 'Great Match',   color: '#00f2fe' };
+  if (score >= 12) return { label: 'Good Match',    color: '#f5a623' };
+  return               { label: 'Possible Match', color: '#9c8ed5' };
 }
 
 // ── Sustainable swap map ───────────────────────────────────────────────────
@@ -71,7 +134,7 @@ function getGsmLabel(fabric) {
 
 // ── Weight tag colour ──────────────────────────────────────────────────────
 const WEIGHT_COLORS = {
-  SHEER:         { bg: 'rgba(0,112,209,0.1)', color: '#53b1ff', border: 'rgba(0,112,209,0.2)' },
+  SHEER:         { bg: 'rgba(0,242,254,0.1)', color: '#53b1ff', border: 'rgba(0,242,254,0.2)' },
   LIGHT:         { bg: 'rgba(77,184,122,0.1)', color: '#4db87a', border: 'rgba(77,184,122,0.2)' },
   MEDIUM:        { bg: 'rgba(255,206,33,0.1)', color: '#f5a623', border: 'rgba(255,206,33,0.2)'  },
   'LIGHT-MEDIUM':{ bg: 'rgba(222,255,32,0.1)', color: '#deff20', border: 'rgba(222,255,32,0.2)' },
@@ -116,7 +179,7 @@ export const GarmentRecommender = ({ onSelectFabric }) => {
 
     let pool = allTextiles
       .map(fabric => {
-        const score = scoreFabric(fabric, searchTerms);
+        const score = scoreFabric(fabric, searchTerms, selectedGarment);
         return { fabric, score };
       })
       .filter(r => r.score > 0)
@@ -164,7 +227,8 @@ export const GarmentRecommender = ({ onSelectFabric }) => {
       const sustainableSwap = swapId ? sustainableFibers.find(f => f.id === swapId) : null;
       const gsmLabel = getGsmLabel(fabric);
       const topSourcingHub = (fabric.indiaSourcing || fabric.variants?.[0]?.indiaSourcing || [])[0] || null;
-      return { fabric, score, sustainableSwap, gsmLabel, topSourcingHub };
+      const confidence = getConfidenceLabel(score);
+      return { fabric, score, sustainableSwap, gsmLabel, topSourcingHub, confidence };
     });
   }, [selectedGarment, customQuery]);
 
@@ -173,10 +237,10 @@ export const GarmentRecommender = ({ onSelectFabric }) => {
       <div className="container">
         
         {/* Background Radial Glow */}
-        <div style={{ position: 'absolute', top: '0', left: '50%', transform: 'translateX(-50%)', width: '900px', height: '400px', background: 'radial-gradient(ellipse at 50% 0%, rgba(0, 112, 209, 0.12) 0%, transparent 70%)', pointerEvents: 'none', zIndex: 0 }} />
+        <div style={{ position: 'absolute', top: '0', left: '50%', transform: 'translateX(-50%)', width: '900px', height: '400px', background: 'radial-gradient(ellipse at 50% 0%, rgba(0, 242, 254, 0.12) 0%, transparent 70%)', pointerEvents: 'none', zIndex: 0 }} />
 
         <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', marginBottom: '3rem' }}>
-          <div className="section-badge" style={{ color: 'var(--color-primary)', borderColor: 'rgba(0,112,209,0.3)', background: 'rgba(0,112,209,0.08)' }}>
+          <div className="section-badge" style={{ color: 'var(--color-primary)', borderColor: 'rgba(0,242,254,0.3)', background: 'rgba(0,242,254,0.08)' }}>
             👗 Garment Recommender
           </div>
           <h2 className="display-lg" style={{ color: '#fff', marginBottom: '1rem' }}>
@@ -197,7 +261,7 @@ export const GarmentRecommender = ({ onSelectFabric }) => {
                 style={{
                   padding: '0.6rem 1.4rem',
                   borderRadius: 'var(--rounded-full)',
-                  background: activeCategory === tax.category ? 'var(--color-primary)' : 'rgba(255,255,255,0.04)',
+                  background: activeCategory === tax.category ? 'var(--color-primary)' : 'rgba(0, 242, 254, 0.03)',
                   color: '#fff',
                   border: activeCategory === tax.category ? '1px solid transparent' : '1px solid var(--color-hairline-dark)',
                   fontSize: '0.95rem',
@@ -229,7 +293,7 @@ export const GarmentRecommender = ({ onSelectFabric }) => {
                   style={{
                     padding: '0.6rem 1.2rem',
                     borderRadius: 'var(--rounded-md)',
-                    background: selectedGarment?.name === garment.name ? 'rgba(0, 112, 209, 0.15)' : 'rgba(255,255,255,0.02)',
+                    background: selectedGarment?.name === garment.name ? 'rgba(0, 242, 254, 0.15)' : 'rgba(255,255,255,0.02)',
                     color: selectedGarment?.name === garment.name ? 'var(--color-primary)' : 'var(--color-on-dark)',
                     border: `1px solid ${selectedGarment?.name === garment.name ? 'var(--color-primary)' : 'var(--color-hairline-dark)'}`,
                     cursor: 'pointer',
@@ -314,7 +378,7 @@ export const GarmentRecommender = ({ onSelectFabric }) => {
               </div>
             ) : (
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(240px, 100%), 1fr))', gap: '1.25rem' }}>
-                {recommendations.map(({ fabric, gsmLabel, sustainableSwap, topSourcingHub }, idx) => {
+                {recommendations.map(({ fabric, gsmLabel, sustainableSwap, topSourcingHub, confidence }, idx) => {
                   const wtColors = WEIGHT_COLORS[fabric.weightTag] || WEIGHT_COLORS['MEDIUM'];
                   return (
                     <div
@@ -342,13 +406,18 @@ export const GarmentRecommender = ({ onSelectFabric }) => {
                           letterSpacing: '0.08em',
                           textTransform: 'uppercase',
                           fontFamily: 'Inter, sans-serif',
-                          background: fabric.badge === 'badge-woven' ? 'rgba(0,112,209,0.1)' : 'rgba(124,109,171,0.1)',
+                          background: fabric.badge === 'badge-woven' ? 'rgba(0,242,254,0.1)' : 'rgba(124,109,171,0.1)',
                           color: fabric.badge === 'badge-woven' ? 'var(--color-primary)' : '#9c8ed5',
-                          border: `1px solid ${fabric.badge === 'badge-woven' ? 'rgba(0,112,209,0.25)' : 'rgba(124,109,171,0.25)'}`
+                          border: `1px solid ${fabric.badge === 'badge-woven' ? 'rgba(0,242,254,0.25)' : 'rgba(124,109,171,0.25)'}`
                         }}>
                           {fabric.badgeText || 'WOVEN'}
                         </span>
-                        <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center' }}>
+                        <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+                          {confidence && selectedGarment && (
+                            <span style={{ fontSize: '0.62rem', padding: '0.15rem 0.5rem', borderRadius: '9999px', fontWeight: 700, background: `${confidence.color}18`, color: confidence.color, border: `1px solid ${confidence.color}40`, fontFamily: 'Inter, sans-serif', letterSpacing: '0.04em' }}>
+                              {confidence.label}
+                            </span>
+                          )}
                           {fabric.weightTag && (
                             <span style={{ fontSize: '0.65rem', padding: '0.15rem 0.55rem', borderRadius: '9999px', fontWeight: 700, background: wtColors.bg, color: wtColors.color, border: `1px solid ${wtColors.border}`, fontFamily: 'Inter, sans-serif' }}>
                               {fabric.weightTag}
@@ -367,7 +436,7 @@ export const GarmentRecommender = ({ onSelectFabric }) => {
                       </p>
 
                       {/* GSM */}
-                      <div style={{ padding: '0.6rem 0.9rem', borderRadius: 'var(--rounded-md)', background: 'rgba(0, 112, 209, 0.08)', border: '1px solid rgba(0, 112, 209, 0.18)', marginBottom: '0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div style={{ padding: '0.6rem 0.9rem', borderRadius: 'var(--rounded-md)', background: 'rgba(200, 162, 200, 0.08)', border: '1px solid rgba(200, 162, 200, 0.18)', marginBottom: '0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <span style={{ fontSize: '0.75rem', color: 'var(--color-on-dark-mute)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', fontFamily: 'Inter, sans-serif' }}>Weight</span>
                         <span style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--color-primary)', fontFamily: 'Inter, sans-serif' }}>{gsmLabel}</span>
                       </div>
@@ -380,7 +449,7 @@ export const GarmentRecommender = ({ onSelectFabric }) => {
                           </span>
                         )}
                         {topSourcingHub && (
-                          <span style={{ fontSize: '0.72rem', padding: '0.2rem 0.6rem', borderRadius: 'var(--rounded-md)', background: 'rgba(255,255,255,0.04)', border: '1px solid var(--color-hairline-dark)', color: 'var(--color-on-dark-mute)', fontFamily: 'Inter, sans-serif' }}>
+                          <span style={{ fontSize: '0.72rem', padding: '0.2rem 0.6rem', borderRadius: 'var(--rounded-md)', background: 'rgba(0, 242, 254, 0.03)', border: '1px solid var(--color-hairline-dark)', color: 'var(--color-on-dark-mute)', fontFamily: 'Inter, sans-serif' }}>
                             🇮🇳 {topSourcingHub}
                           </span>
                         )}

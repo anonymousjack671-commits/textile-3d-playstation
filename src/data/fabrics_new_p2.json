@@ -362,7 +362,7 @@
     "weaveNotation": "Cut pile weave",
     "construction": "Supplementary warp pile woven then cut to create short, dense upright fibres. Direction of pile affects colour depth.",
     "gsm": {
-      "min": 300,
+      "min": 180,
       "max": 500
     },
     "uses": [
@@ -623,7 +623,7 @@
     "weaveNotation": "1/1 plain — heavy",
     "construction": "Heavy, tightly woven plain weave from thick cotton or linen yarn. Maximum density for structural integrity.",
     "gsm": {
-      "min": 300,
+      "min": 200,
       "max": 600
     },
     "uses": [

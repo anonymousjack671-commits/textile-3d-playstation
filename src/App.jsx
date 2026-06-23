@@ -44,7 +44,7 @@ const BackToTop = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        boxShadow: '0 4px 20px rgba(0, 112, 209, 0.4)',
+        boxShadow: '0 4px 20px rgba(0, 242, 254, 0.4)',
         transition: 'transform 0.2s',
       }}
       onMouseOver={e => e.currentTarget.style.transform = 'scale(1.15)'}

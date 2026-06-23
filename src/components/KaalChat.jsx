@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Loader, Zap, AlertTriangle } from 'lucide-react';
 
-const PARDEEP_URL = import.meta.env.VITE_KAAL_URL || 'http://localhost:8369';
+// VITE_KAAL_URL can override for self-hosted deployments; defaults to Vercel serverless functions
+const PARDEEP_URL = import.meta.env.VITE_KAAL_URL || '/api';
 
 const FABRIC_KB = [
   { keywords: ['kaftan','caftan','flowy dress','beach dress','resort wear'],
@@ -114,7 +115,7 @@ const findAnswer = (query) => {
   return bestScore > 0 ? bestAnswer : null;
 };
 
-const KAAL_INTRO_DEFAULT = `🌿 **KAAL Fabric Intelligence** online.\n\nAsk me anything about:\n- Fabric structures & weave types\n- GSM weight ranges\n- Fiber properties & sustainability\n- Testing standards (AATCC, ISO, ASTM)\n- Garment-to-fabric recommendations\n- India sourcing hubs & pricing\n\nIf my bridge server is running, I\'ll answer via your KAAL engine.`;
+const KAAL_INTRO_DEFAULT = `🌿 **KAAL Fabric Intelligence** online.\n\nAsk me anything about:\n- Fabric structures & weave types\n- GSM weight ranges\n- Fiber properties & sustainability\n- Testing standards (AATCC, ISO, ASTM)\n- Garment-to-fabric recommendations\n- India sourcing hubs & pricing\n\nPowered by Gemini AI — always online, no setup required.`;
 
 const KAAL_ROLE_INTROS = {
   buyer:
@@ -298,7 +299,7 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
       } else {
         setMessages(m => [...m, {
           role: 'assistant',
-          text: `I don't have a specific answer for "${userMsg}" in my offline knowledge base.\n\nTry asking about: fabric types, GSM weights, cotton, polyester, wool, linen, jersey, twill, satin, testing standards, or India sourcing hubs.\n\n🔌 Start your KAAL bridge server for full AI capabilities.`,
+          text: `I don't have a specific answer for "${userMsg}" in my offline knowledge base.\n\nTry asking about: fabric types, GSM weights, cotton, polyester, wool, linen, jersey, twill, satin, testing standards, or India sourcing hubs.`,
           ts: Date.now(),
           source: 'kb'
         }]);
@@ -308,7 +309,7 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
       setMessages(m => [...m, {
         role: 'assistant',
         text: isNetwork
-          ? `⚠️ KAAL server is offline.\n\nTo enable live AI answers, start the KAAL bridge server and refresh the page.\n\nIn the meantime, I'm answering from my built-in fabric knowledge base.`
+          ? `⚠️ AI service temporarily unavailable. Retrying automatically.\n\nIn the meantime, I'm answering from my built-in fabric knowledge base.`
           : `⚠️ Error: ${err.message}`,
         ts: Date.now(), source: 'error'
       }]);

@@ -99,10 +99,10 @@ export const fabricSuppliers = [
     description: 'India\'s leading worsted wool weaving mill, producing suiting, coating and tweed fabrics for premium menswear and outerwear brands.',
   },
   {
-    id: 'mill-bareilly-silk',
+    id: 'mill-varanasi-silk',
     type: 'mill',
     tier: 'standard',
-    name: 'Bareilly Silk & Sheers',
+    name: 'Varanasi Silk & Sheers',
     location: 'Varanasi, Uttar Pradesh',
     logo: '🪡',
     specialties: ['Silk', 'Chiffon & Georgette', 'Organza & Voile'],

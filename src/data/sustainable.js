@@ -85,7 +85,7 @@ export const sustainableFibers = [
     indiaAvailability: "limited",
     indiaNote: "Legal cultivation being expanded (Uttarakhand, HP). Import from China/EU currently common. Policy support growing.",
     challenges: "Regulatory restrictions in India still evolving; coarser hand feel (needs cottonizing for apparel); limited processing infrastructure.",
-    additionalBenefits: "UV resistant; naturally antibacterial; gets softer with each wash; durable (3× stronger than cotton); fast growing (matures in 70–90 days)."
+    additionalBenefits: "UV resistant; naturally antibacterial; gets softer with each wash; durable (up to 2× stronger than cotton); fast growing (matures in 70–90 days)."
   },
   {
     id: 'linen-flax',

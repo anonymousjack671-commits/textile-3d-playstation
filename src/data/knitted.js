@@ -64,7 +64,7 @@ export const knittedFabrics = [
       stretch: "100–200% width",
       shrinkage: "5–8%",
       season: ["Autumn/Winter", "All Season"],
-      tradeNames: "1×1 Rib, 2×2 Rib, Ribbing Fabric, Interlock Rib"
+      tradeNames: "1×1 Rib, 2×2 Rib, Milano Rib, Ribbing Fabric"
     }
   },
   {
@@ -294,7 +294,7 @@ export const knittedFabrics = [
       stretch: "20–50% width; more stable than weft knit",
       shrinkage: "2–4%",
       season: ["All Season"],
-      tradeNames: "Tricot, Nylon Tricot, Athletic Mesh, Stitch Bonded"
+      tradeNames: "Tricot, Nylon Tricot, Athletic Mesh, Warp Knit Lining"
     }
   },
   {

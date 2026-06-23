@@ -1,40 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
-  /* ── PlayStation Brand & Accent Tokens ───────────────────────── */
-  --color-primary: #0070d1;
-  --color-primary-pressed: #0064b7;
-  --color-primary-active: #004d8d;
-  --color-commerce: #d53b00;
-  --color-commerce-pressed: #aa2f00;
-  --color-marathon-yellow: #deff20;
+  /* ── Cyber-Tech Brand & Accent Tokens ────────────────────────── */
+  --color-primary: #00f2fe;
+  --color-primary-pressed: #00c6ff;
+  --color-primary-active: #0088cc;
+  --color-commerce: #ff007f;
+  --color-commerce-pressed: #cc0066;
+  --color-marathon-yellow: #a259ff;
 
-  /* ── PlayStation Canvas & Surface Modes ──────────────────────── */
-  --color-canvas-dark: #000000;
-  --color-surface-dark-elevated: #121314;
-  --color-surface-dark-card: #181818;
-  --color-canvas-light: #ffffff;
-  --color-surface-soft: #f3f3f3;
-  --color-surface-card: #f5f7fa;
-  --color-surface-filter: rgba(245, 247, 250, 0.3);
-  --color-hairline-light: #f3f3f3;
-  --color-hairline-dark: rgba(229, 229, 229, 0.2);
+  /* ── Deep-Tech Canvas & Surface Modes ───────────────────────── */
+  --color-canvas-dark: #050814;
+  --color-surface-dark-elevated: #090e24;
+  --color-surface-dark-card: #0b132b;
+  --color-canvas-light: #0d1117;
+  --color-surface-soft: #111827;
+  --color-surface-card: #0f1729;
+  --color-surface-filter: rgba(11, 19, 43, 0.6);
+  --color-hairline-light: rgba(0, 242, 254, 0.08);
+  --color-hairline-dark: rgba(0, 242, 254, 0.12);
 
-  /* ── PlayStation Ink & Text ──────────────────────────────────── */
-  --color-ink: #000000;
-  --color-ink-deep: #121314;
-  --color-ink-elevated: #181818;
-  --color-body-light: rgba(0, 0, 0, 0.6);
-  --color-mute-light: #6b6b6b;
-  --color-ash-light: #cccccc;
-  --color-on-dark: #ffffff;
-  --color-body-dark: rgba(255, 255, 255, 0.7);
-  --color-on-dark-mute: #cccccc;
-  --color-mute-dark: rgba(229, 229, 229, 0.55);
-  --color-on-primary: #ffffff;
+  /* ── Ink & Text ─────────────────────────────────────────────── */
+  --color-ink: #e2e8f0;
+  --color-ink-deep: #cbd5e1;
+  --color-ink-elevated: #94a3b8;
+  --color-body-light: rgba(226, 232, 240, 0.7);
+  --color-mute-light: #64748b;
+  --color-ash-light: rgba(0, 242, 254, 0.2);
+  --color-on-dark: #f0f4f8;
+  --color-body-dark: rgba(240, 244, 248, 0.65);
+  --color-on-dark-mute: #94a3b8;
+  --color-mute-dark: rgba(148, 163, 184, 0.55);
+  --color-on-primary: #050814;
   --color-on-commerce: #ffffff;
 
-  /* ── PlayStation Spacing ─────────────────────────────────────── */
+  /* ── Spacing ────────────────────────────────────────────────── */
   --spacing-xxs: 4px;
   --spacing-xs: 8px;
   --spacing-sm: 12px;
@@ -44,14 +44,14 @@
   --spacing-xxl: 48px;
   --spacing-section: 96px;
 
-  /* ── PlayStation Radii ───────────────────────────────────────── */
+  /* ── Radii ──────────────────────────────────────────────────── */
   --rounded-none: 0px;
-  --rounded-sm: 4px;
-  --rounded-md: 8px;
+  --rounded-sm: 6px;
+  --rounded-md: 10px;
   --rounded-lg: 16px;
   --rounded-full: 9999px;
 
-  /* ── Legacy Variable Mappings (Redirect to PlayStation Tokens) ── */
+  /* ── Legacy Variable Mappings ───────────────────────────────── */
   --bg-dark: var(--color-canvas-dark);
   --surface: var(--color-surface-dark-elevated);
   --surface2: var(--color-surface-dark-card);
@@ -65,16 +65,16 @@
   --accent2: var(--accent-secondary);
   --accent3: var(--accent-tertiary);
 
-  --woven: var(--color-primary);
-  --knitted: #7c6dab;
-  --sustainable: #4db87a;
-  --co2-low: #4db87a;
-  --co2-mid: #f0c94e;
-  --co2-high: #e06b5a;
+  --woven: #00f2fe;
+  --knitted: #a259ff;
+  --sustainable: #00e676;
+  --co2-low: #00e676;
+  --co2-mid: #ffab00;
+  --co2-high: #ff5252;
 
-  --glass-bg: rgba(18, 19, 20, 0.75);
-  --glass-border: var(--color-hairline-dark);
-  --glass-highlight: rgba(0, 112, 209, 0.15);
+  --glass-bg: rgba(9, 14, 36, 0.78);
+  --glass-border: rgba(0, 242, 254, 0.12);
+  --glass-highlight: rgba(0, 242, 254, 0.08);
   --border: var(--glass-border);
   --text: var(--text-main);
 
@@ -90,8 +90,10 @@
   --text-small: 0.88rem;
   --text-xs: 0.75rem;
 
-  --shadow-glow: 0 4px 20px rgba(0, 112, 209, 0.1);
-  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-glow: 0 0 20px rgba(0, 242, 254, 0.15);
+  --shadow-glow-purple: 0 0 20px rgba(162, 89, 255, 0.12);
+  --shadow-glow-magenta: 0 0 20px rgba(255, 0, 127, 0.12);
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ── Reset ──────────────────────────────────────────────────────────── */
@@ -106,7 +108,7 @@ html {
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--bg-dark);
   color: var(--text-main);
   min-height: 100vh;
@@ -115,10 +117,10 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  line-height: 1.25;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 /* ── Layout ─────────────────────────────────────────────────────────── */
@@ -157,56 +159,57 @@ section {
   gap: 0.4rem;
   padding: 0.4rem 1rem;
   border-radius: 9999px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-family: 'DM Sans', sans-serif;
-  background: rgba(200,169,110,0.06);
-  border: 1px solid rgba(200,169,110,0.15);
-  color: var(--accent-primary);
+  font-family: 'JetBrains Mono', monospace;
+  background: rgba(0, 242, 254, 0.06);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  color: var(--color-primary);
   margin-bottom: 1.5rem;
 }
 
 /* ── Accent Line (under section headings) ──────────────────────────── */
 .accent-line {
-  width: 40px;
+  width: 60px;
   height: 2px;
-  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  background: linear-gradient(90deg, var(--color-primary), var(--color-marathon-yellow));
   margin: 0 auto 3rem auto;
   border-radius: 2px;
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.3);
 }
 
 /* ── Glassmorphism ──────────────────────────────────────────────────── */
 .glass-panel {
   background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(24px) saturate(1.2);
+  -webkit-backdrop-filter: blur(24px) saturate(1.2);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), var(--shadow-glow);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), var(--shadow-glow);
 }
 
 .glass-card {
-  background: rgba(19, 25, 41, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
+  background: rgba(11, 19, 43, 0.8);
+  backdrop-filter: blur(16px) saturate(1.1);
+  -webkit-backdrop-filter: blur(16px) saturate(1.1);
+  border: 1px solid rgba(0, 242, 254, 0.08);
   border-radius: var(--radius-lg);
   transition: var(--transition);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   overflow: hidden;
 }
 
 .glass-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(200, 169, 110, 0.2);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(200, 169, 110, 0.08), var(--shadow-glow);
+  border-color: rgba(0, 242, 254, 0.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(0, 242, 254, 0.1), var(--shadow-glow);
 }
 
 .product-card {
   background-color: var(--color-surface-card);
-  border: 1px solid var(--color-hairline-light);
+  border: 1px solid rgba(0, 242, 254, 0.06);
   border-radius: var(--rounded-md);
   padding: 24px;
   transition: var(--transition);
@@ -214,13 +217,13 @@ section {
 
 .product-card:hover {
   transform: translateY(-4px);
-  border-color: var(--color-primary);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08), 0 0 15px rgba(0, 112, 209, 0.15);
+  border-color: rgba(0, 242, 254, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 242, 254, 0.1);
 }
 
 .product-card-dark {
   background-color: var(--color-surface-dark-card);
-  border: 1px solid var(--color-hairline-dark);
+  border: 1px solid rgba(0, 242, 254, 0.08);
   border-radius: var(--rounded-md);
   padding: 24px;
   transition: var(--transition);
@@ -228,8 +231,8 @@ section {
 
 .product-card-dark:hover {
   transform: translateY(-4px);
-  border-color: var(--color-primary);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 112, 209, 0.25);
+  border-color: rgba(0, 242, 254, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 242, 254, 0.15);
 }
 
 /* ── Screen-reader only (accessibility) ─────────────────────────────── */
@@ -248,42 +251,42 @@ section {
 /* ── Typography Classes (PlayStation Spec) ────────────────────────── */
 .display-xl {
   font-size: 54px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  line-height: 1.25;
-  letter-spacing: -0.1px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
 }
 
 .display-lg {
   font-size: 44px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  line-height: 1.25;
-  letter-spacing: 0.1px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.3px;
 }
 
 .display-md {
   font-size: 35px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  line-height: 1.25;
-  letter-spacing: 0px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
 }
 
 .heading-xl {
   font-size: 28px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  line-height: 1.25;
-  letter-spacing: 0.1px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.1px;
 }
 
 .heading-lg {
   font-size: 22px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  line-height: 1.25;
-  letter-spacing: 0.1px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0px;
 }
 
 .heading-md {
@@ -335,7 +338,7 @@ section {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--color-primary) 0%, #53b1ff 100%);
+  background: linear-gradient(135deg, #00f2fe 0%, #a259ff 50%, #ff007f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -457,34 +460,34 @@ section {
 .btn-ghost {
   background: transparent;
   color: var(--text-main);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 242, 254, 0.2);
   box-shadow: none;
 }
 
 .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(200, 169, 110, 0.4);
-  color: var(--accent-primary);
-  box-shadow: 0 4px 20px rgba(200, 169, 110, 0.1);
+  background: rgba(0, 242, 254, 0.06);
+  border-color: rgba(0, 242, 254, 0.4);
+  color: var(--color-primary);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.15);
 }
 
 .btn-outline:hover {
-  background: rgba(200, 169, 110, 0.08);
-  border-color: rgba(200, 169, 110, 0.4);
-  color: var(--accent-primary);
-  box-shadow: 0 4px 20px rgba(200, 169, 110, 0.1);
+  background: rgba(0, 242, 254, 0.06);
+  border-color: rgba(0, 242, 254, 0.4);
+  color: var(--color-primary);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.15);
 }
 
 .btn-active {
-  background: linear-gradient(135deg, var(--accent-primary), #b39255);
-  color: #000;
+  background: linear-gradient(135deg, #00f2fe, #a259ff);
+  color: #050814;
   border-color: transparent;
-  box-shadow: 0 4px 20px rgba(200, 169, 110, 0.35);
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.35);
 }
 
 .btn-active:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(200, 169, 110, 0.45);
+  box-shadow: 0 0 35px rgba(0, 242, 254, 0.5);
 }
 
 /* ── Badges ─────────────────────────────────────────────────────────── */
@@ -502,10 +505,10 @@ section {
   white-space: nowrap;
 }
 
-.badge-woven      { color: var(--woven);      border-color: rgba(200,169,110,0.3); background: rgba(200,169,110,0.08); }
-.badge-knitted    { color: var(--knitted);    border-color: rgba(124,109,171,0.3); background: rgba(124,109,171,0.08); }
-.badge-sustainable { color: var(--sustainable); border-color: rgba(77,184,122,0.3); background: rgba(77,184,122,0.08); }
-.badge-complex    { color: #f0c94e;           border-color: rgba(240,201,78,0.3);  background: rgba(240,201,78,0.08); }
+.badge-woven      { color: var(--woven);      border-color: rgba(0,242,254,0.3);   background: rgba(0,242,254,0.06); }
+.badge-knitted    { color: var(--knitted);    border-color: rgba(162,89,255,0.3);  background: rgba(162,89,255,0.06); }
+.badge-sustainable { color: var(--sustainable); border-color: rgba(0,230,118,0.3);  background: rgba(0,230,118,0.06); }
+.badge-complex    { color: #ffab00;           border-color: rgba(255,171,0,0.3);   background: rgba(255,171,0,0.06); }
 
 /* ── Progress Bar ───────────────────────────────────────────────────── */
 .progress-bar-bg {
@@ -517,17 +520,18 @@ section {
 }
 
 .progress-bar-fill {
-  background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
+  background: linear-gradient(90deg, #00f2fe, #a259ff);
   height: 100%;
   border-radius: 4px;
   transition: width 0.8s ease;
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
 }
 
 /* ── Scrollbar ──────────────────────────────────────────────────────── */
 ::-webkit-scrollbar       { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(200,169,110,0.25); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(200,169,110,0.45); }
+::-webkit-scrollbar-thumb { background: rgba(0,242,254,0.2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,242,254,0.4); }
 
 /* ── Animations ─────────────────────────────────────────────────────── */
 @keyframes fadeInUp {
@@ -555,7 +559,7 @@ section {
 
 /* ── Form inputs ────────────────────────────────────────────────────── */
 input, textarea, select {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   background: var(--surface2);
   color: var(--text-main);
   border: 1px solid var(--glass-border);
@@ -648,7 +652,7 @@ input::placeholder, textarea::placeholder {
   .stats-bar-mobile > div:nth-child(2) { border-right: none !important; }
   .stats-bar-mobile > div:nth-child(1),
   .stats-bar-mobile > div:nth-child(2) {
-    border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+    border-bottom: 1px solid rgba(0,242,254,0.06) !important;
   }
 }
 

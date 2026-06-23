@@ -47,7 +47,7 @@ export const Navbar = ({ shortlistCount = 0, onOpenShortlist, userRole }) => {
         backdropFilter: 'blur(20px)',
         WebkitBackdropFilter: 'blur(20px)',
         borderBottom: '1px solid var(--color-hairline-dark)',
-        background: scrolled ? 'rgba(0, 0, 0, 0.95)' : 'rgba(0, 0, 0, 0.8)',
+        background: scrolled ? 'rgba(5, 8, 20, 0.95)' : 'rgba(5, 8, 20, 0.85)',
         transition: 'background 0.3s ease'
       }}>
         <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'relative' }}>
@@ -55,7 +55,7 @@ export const Navbar = ({ shortlistCount = 0, onOpenShortlist, userRole }) => {
           <a href="#main-content" style={{ textDecoration: 'none', color: 'inherit', flexShrink: 0 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
               <Layers size={26} color="var(--color-primary)" />
-              <span style={{ fontSize: '1.25rem', fontFamily: 'Roboto, sans-serif', fontWeight: 500, letterSpacing: '-0.02em', color: '#fff' }}>
+              <span style={{ fontSize: '1.25rem', fontFamily: 'Space Grotesk, sans-serif', fontWeight: 700, letterSpacing: '-0.02em', color: 'var(--color-on-dark)' }}>
                 Textile<span style={{ color: 'var(--color-primary)' }}>3D</span>
               </span>
             </div>
@@ -79,7 +79,7 @@ export const Navbar = ({ shortlistCount = 0, onOpenShortlist, userRole }) => {
                     transition: 'color 0.2s',
                     padding: '0.4rem 0.75rem',
                     borderRadius: 'var(--rounded-md)',
-                    background: isActive ? 'rgba(0, 112, 209, 0.08)' : 'transparent',
+                    background: isActive ? 'rgba(0, 242, 254, 0.08)' : 'transparent',
                   }}
                   onMouseOver={e => { if (!isActive) e.currentTarget.style.color = '#fff'; }}
                   onMouseOut={e => { if (!isActive) e.currentTarget.style.color = 'var(--color-body-dark)'; }}
@@ -99,9 +99,9 @@ export const Navbar = ({ shortlistCount = 0, onOpenShortlist, userRole }) => {
               style={{
                 display: 'flex', alignItems: 'center', gap: '0.4rem',
                 padding: '0.45rem 1rem', borderRadius: 'var(--rounded-full)',
-                background: shortlistCount > 0 ? 'rgba(0, 112, 209, 0.1)' : 'transparent',
+                background: shortlistCount > 0 ? 'rgba(0, 242, 254, 0.08)' : 'transparent',
                 border: '1px solid',
-                borderColor: shortlistCount > 0 ? 'rgba(0, 112, 209, 0.35)' : 'var(--color-hairline-dark)',
+                borderColor: shortlistCount > 0 ? 'rgba(0, 242, 254, 0.25)' : 'var(--color-hairline-dark)',
                 color: shortlistCount > 0 ? 'var(--color-primary)' : 'var(--color-body-dark)',
                 cursor: 'pointer', fontWeight: 600, fontSize: '0.85rem',
                 transition: 'all 0.2s',
@@ -116,7 +116,7 @@ export const Navbar = ({ shortlistCount = 0, onOpenShortlist, userRole }) => {
                 <span style={{
                   position: 'absolute', top: '-6px', right: '-6px',
                   minWidth: '18px', height: '18px', borderRadius: '50%',
-                  background: 'var(--color-primary)', color: '#fff',
+                  background: 'var(--color-primary)', color: '#050814',
                   fontSize: '0.65rem', fontWeight: 800,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   padding: '0 4px',
@@ -138,8 +138,8 @@ export const Navbar = ({ shortlistCount = 0, onOpenShortlist, userRole }) => {
                 gap: '0.4rem',
                 padding: '0.5rem 1.1rem',
                 borderRadius: 'var(--rounded-full)',
-                background: 'rgba(0, 112, 209, 0.12)',
-                border: '1px solid rgba(0, 112, 209, 0.35)',
+                background: 'rgba(0, 242, 254, 0.06)',
+                border: '1px solid rgba(0, 242, 254, 0.2)',
                 color: 'var(--color-primary)',
                 fontFamily: 'Inter, sans-serif',
                 fontWeight: 600,
@@ -149,12 +149,12 @@ export const Navbar = ({ shortlistCount = 0, onOpenShortlist, userRole }) => {
                 letterSpacing: '0.02em',
               }}
               onMouseOver={e => {
-                e.currentTarget.style.background = 'rgba(0, 112, 209, 0.22)';
+                e.currentTarget.style.background = 'rgba(0, 242, 254, 0.15)';
                 e.currentTarget.style.borderColor = 'var(--color-primary)';
               }}
               onMouseOut={e => {
-                e.currentTarget.style.background = 'rgba(0, 112, 209, 0.12)';
-                e.currentTarget.style.borderColor = 'rgba(0, 112, 209, 0.35)';
+                e.currentTarget.style.background = 'rgba(0, 242, 254, 0.06)';
+                e.currentTarget.style.borderColor = 'rgba(0, 242, 254, 0.2)';
               }}
               aria-label="Open AI Chat"
             >
@@ -191,7 +191,7 @@ export const Navbar = ({ shortlistCount = 0, onOpenShortlist, userRole }) => {
           right: 0,
           bottom: 0,
           zIndex: 49,
-          background: 'rgba(0,0,0,0.5)',
+          background: 'rgba(5,8,20,0.6)',
           backdropFilter: 'blur(4px)',
         }} onClick={() => setMobileOpen(false)}>
           <div style={{
@@ -220,7 +220,7 @@ export const Navbar = ({ shortlistCount = 0, onOpenShortlist, userRole }) => {
                   fontSize: '1.2rem',
                   padding: '1rem',
                   borderRadius: 'var(--rounded-md)',
-                  background: activeSection === link.href.replace('#','') ? 'rgba(0, 112, 209, 0.1)' : 'transparent',
+                  background: activeSection === link.href.replace('#','') ? 'rgba(0, 242, 254, 0.08)' : 'transparent',
                   display: 'block',
                   transition: 'all 0.2s'
                 }}
@@ -234,8 +234,8 @@ export const Navbar = ({ shortlistCount = 0, onOpenShortlist, userRole }) => {
               style={{
                 display: 'flex', alignItems: 'center', gap: '0.5rem',
                 marginTop: '0.5rem', padding: '1rem', borderRadius: 'var(--rounded-md)',
-                background: shortlistCount > 0 ? 'rgba(0, 112, 209, 0.1)' : 'rgba(255,255,255,0.03)',
-                border: `1px solid ${shortlistCount > 0 ? 'rgba(0, 112, 209, 0.3)' : 'var(--color-hairline-dark)'}`,
+                background: shortlistCount > 0 ? 'rgba(0, 242, 254, 0.08)' : 'rgba(0, 242, 254, 0.03)',
+                border: `1px solid ${shortlistCount > 0 ? 'rgba(0, 242, 254, 0.2)' : 'var(--color-hairline-dark)'}`,
                 color: shortlistCount > 0 ? 'var(--color-primary)' : 'var(--color-on-dark-mute)',
                 fontFamily: 'Inter, sans-serif',
                 fontWeight: 700, fontSize: '1.1rem', cursor: 'pointer', width: '100%',
@@ -263,8 +263,8 @@ export const Navbar = ({ shortlistCount = 0, onOpenShortlist, userRole }) => {
                 marginTop: '1rem',
                 padding: '1rem',
                 borderRadius: 'var(--rounded-md)',
-                background: 'rgba(0, 112, 209, 0.1)',
-                border: '1px solid rgba(0, 112, 209, 0.3)',
+                background: 'rgba(0, 242, 254, 0.06)',
+                border: '1px solid rgba(0, 242, 254, 0.2)',
                 color: 'var(--color-primary)',
                 fontFamily: 'Inter, sans-serif',
                 fontWeight: 700,

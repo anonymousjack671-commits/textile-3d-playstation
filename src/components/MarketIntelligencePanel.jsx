@@ -3,7 +3,8 @@ import { MARKET_INTEL, TIER_COLORS } from '../data/marketIntelligence';
 import { getOfflineDeepDive } from '../data/offlineDeepDive';
 import { TrendingUp, Leaf, DollarSign, MapPin, Award, Loader, Wifi, WifiOff } from 'lucide-react';
 
-const PARDEEP_URL = import.meta.env.VITE_KAAL_URL || 'http://localhost:8369';
+// VITE_KAAL_URL can override for self-hosted deployments; defaults to Vercel serverless functions
+const PARDEEP_URL = import.meta.env.VITE_KAAL_URL || '/api';
 const tierOrder = ['budget', 'mid', 'premium'];
 
 // Complete map of ALL garment taxonomy names
@@ -217,7 +218,7 @@ export const MarketIntelligencePanel = ({ garmentName }) => {
     setLoadingMsg('Researching UK market…');
 
     const slowTimer = setTimeout(() =>
-      setLoadingMsg('Querying Gemini AI for live brand data… (15–30s first load, instant after)'), 8000);
+      setLoadingMsg('Querying Gemini 2.5 Flash for live brand data… (3–8s)'), 4000);
 
     fetch(`${PARDEEP_URL}/research`, {
       method: 'POST',
@@ -245,15 +246,36 @@ export const MarketIntelligencePanel = ({ garmentName }) => {
       })
       .catch(() => {
         clearTimeout(slowTimer);
-        const offline = getOfflineData(garmentName);
-        if (offline) {
-          setData(offline);
-          setSource('offline');
-        } else {
-          setError('Live research timed out. Using offline data instead.');
-        }
-      })
-      .finally(() => setLoading(false));
+        // ── Tier 2: Try the Vercel /api/market-intelligence endpoint ──────────
+        fetch(`/api/market-intelligence?garment=${encodeURIComponent(garmentName)}`, {
+          signal: AbortSignal.timeout(8000),
+        })
+          .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+          .then(apiRes => {
+            if (apiRes?.data) {
+              const normalized = {
+                ...apiRes.data,
+                brands: (apiRes.data.brands || []).map(b => ({ ...b, tier: normalizeTier(b.tier) })),
+              };
+              setCached(cacheKey, normalized);
+              setData(normalized);
+              setSource('api');
+            } else {
+              throw new Error('No data in API response');
+            }
+          })
+          .catch(() => {
+            // ── Tier 3: Static offline data ──────────────────────────────────
+            const offline = getOfflineData(garmentName);
+            if (offline) {
+              setData(offline);
+              setSource('offline');
+            } else {
+              setError('Live research timed out. Using offline data instead.');
+            }
+          })
+          .finally(() => setLoading(false));
+      });
   }, [garmentName]);
 
 
@@ -350,7 +372,7 @@ export const MarketIntelligencePanel = ({ garmentName }) => {
         <div style={{ padding: '1.5rem', borderRadius: '12px', background: 'rgba(224,107,90,0.08)', border: '1px solid rgba(224,107,90,0.2)', marginTop: '1rem' }}>
           <p style={{ margin: 0, color: '#e06b5a', fontSize: '0.9rem' }}>⚠️ {error}</p>
           <p style={{ margin: '0.5rem 0 0', color: 'var(--text-muted)', fontSize: '0.82rem' }}>
-            The KAAL bridge server is not running. Start it to enable live AI-powered market research.
+            Add GEMINI_API_KEY to your Vercel environment variables to enable live AI-powered market research.
           </p>
         </div>
       )}

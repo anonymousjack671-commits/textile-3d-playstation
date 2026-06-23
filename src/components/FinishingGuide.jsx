@@ -3,7 +3,7 @@ import { FINISHING_PROCESSES } from '../data/textiles';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const CATEGORY_COLORS = {
-  CHEMICAL:   { color: 'var(--color-primary)', bg: 'rgba(0, 112, 209, 0.08)',  border: 'rgba(0, 112, 209, 0.25)'  },
+  CHEMICAL:   { color: 'var(--color-primary)', bg: 'rgba(0, 242, 254, 0.08)',  border: 'rgba(0, 242, 254, 0.25)'  },
   MECHANICAL: { color: '#7c6dab', bg: 'rgba(124, 109, 171, 0.08)', border: 'rgba(124, 109, 171, 0.25)' },
   THERMAL:    { color: 'var(--color-commerce)', bg: 'rgba(213, 59, 0, 0.08)',  border: 'rgba(213, 59, 0, 0.25)'  },
   BIOLOGICAL: { color: '#4db87a', bg: 'rgba(77, 184, 122, 0.08)',  border: 'rgba(77, 184, 122, 0.25)'  },
@@ -26,7 +26,7 @@ export const FinishingGuide = () => {
     <section id="finishing-guide" className="band band-light" style={{ position: 'relative' }}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <div className="section-badge" style={{ color: 'var(--color-primary)', borderColor: 'rgba(0, 112, 209, 0.3)', background: 'rgba(0, 112, 209, 0.08)' }}>
+          <div className="section-badge" style={{ color: 'var(--color-primary)', borderColor: 'rgba(0, 242, 254, 0.3)', background: 'rgba(0, 242, 254, 0.08)' }}>
             ✨ Finishing Guide
           </div>
           <h2 className="display-lg" style={{ color: 'var(--color-ink)', marginBottom: '1rem' }}>
@@ -126,7 +126,7 @@ export const FinishingGuide = () => {
                     </div>
 
                     {process.testToVerify && (
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.75rem 1rem', borderRadius: 'var(--rounded-md)', background: 'rgba(0, 112, 209, 0.05)', border: '1px solid rgba(0, 112, 209, 0.2)' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.75rem 1rem', borderRadius: 'var(--rounded-md)', background: 'rgba(0, 242, 254, 0.05)', border: '1px solid rgba(0, 242, 254, 0.2)' }}>
                         <span style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--color-primary)', textTransform: 'uppercase', letterSpacing: '0.05em', flexShrink: 0, fontFamily: 'Inter, sans-serif' }}>Verifiable by:</span>
                         <span style={{ fontSize: '0.88rem', color: 'var(--color-link-light)', fontFamily: 'Inter, sans-serif' }}>
                           {Array.isArray(process.testToVerify) ? process.testToVerify.join(' · ') : process.testToVerify}

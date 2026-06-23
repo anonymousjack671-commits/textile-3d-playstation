@@ -8,8 +8,8 @@
     "weaveNotation": "1/1",
     "construction": "Highly twisted yarns in both directions create open, sheer structure. Twist creates crinkle and resilience.",
     "gsm": {
-      "min": 15,
-      "max": 35
+      "min": 25,
+      "max": 75
     },
     "uses": [
       "Evening wear",
@@ -159,7 +159,7 @@
     "weaveNotation": "1/1",
     "construction": "Open weave, high-twist yarn creates soft sheer with slight crispness. Lower thread count than lawn.",
     "gsm": {
-      "min": 50,
+      "min": 35,
       "max": 80
     },
     "uses": [
@@ -458,7 +458,7 @@
     "weaveNotation": "1/1",
     "construction": "Loose, open plain weave from carded cotton. Minimal finishing — unbleached or lightly processed.",
     "gsm": {
-      "min": 100,
+      "min": 40,
       "max": 150
     },
     "uses": [
@@ -516,7 +516,7 @@
       "Outerwear"
     ],
     "keyProperty": "Fine diagonal rib, wrinkle resistant, clean tailored appearance",
-    "story": "A tightly woven twill fabric with a distinctive fine diagonal rib on the face and a smooth back. Patented by Thomas Burberry in 1879, gabardine is renowned for its wrinkle resistance, durability, and clean tailored appearance. The fabric of choice for the classic trench coat.",
+    "story": "A tightly woven twill fabric with a distinctive fine diagonal rib on the face and a smooth back. Invented by Thomas Burberry in 1879 and patented in 1888, gabardine is renowned for its wrinkle resistance, durability, and clean tailored appearance. The fabric of choice for the classic trench coat.",
     "commonFibers": [
       "Wool",
       "Cotton",
@@ -759,11 +759,11 @@
   {
     "id": "hopsack",
     "name": "Hopsack",
-    "category": "Twill Weave",
+    "category": "Plain Weave",
     "weightTag": "MEDIUM",
-    "family": "Twill Weave",
-    "weaveNotation": "Basket twill",
-    "construction": "Loosely woven basket-twill with open, pebbly texture. Breathable but structured enough for tailoring.",
+    "family": "Plain Weave",
+    "weaveNotation": "2×2 basket (plain weave family)",
+    "construction": "Loosely woven basket weave with open, pebbly texture. Breathable but structured enough for tailoring.",
     "gsm": {
       "min": 200,
       "max": 280
@@ -773,7 +773,7 @@
       "Casual suiting",
       "Jackets"
     ],
-    "keyProperty": "Open basket-twill — structured enough for tailoring, breathable enough for summer",
+    "keyProperty": "Open basket weave — structured enough for tailoring, breathable enough for summer",
     "story": "A loosely woven basket-twill with a pebbly, open texture that provides excellent breathability. Named after the coarse bags used to transport hops in breweries. In tailoring, hopsack is the summer-weight suiting alternative — structured enough for a blazer but open enough for warm weather.",
     "commonFibers": [
       "Wool",

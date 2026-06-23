@@ -19,9 +19,9 @@ const ROLE_CONTENT = {
       { icon: '🤖', label: 'Ask Kaal AI',            desc: 'Tell Kaal what you need — get matched in seconds',      action: 'chat' },
     ],
     color: 'var(--color-primary)',
-    hex: '#0070d1',
-    bg: 'rgba(0, 112, 209, 0.12)',
-    border: 'rgba(0, 112, 209, 0.35)',
+    hex: '#00f2fe',
+    bg: 'rgba(0, 242, 254, 0.08)',
+    border: 'rgba(0, 242, 254, 0.25)',
   },
   designer: {
     tagline: 'Explore textures, drape and structure to bring your vision to life.',
@@ -32,9 +32,9 @@ const ROLE_CONTENT = {
       { icon: '👗', label: 'Garment Recommender',    desc: 'Match fabric properties to your design intent',         href: '#garment-recommender' },
     ],
     color: 'var(--color-marathon-yellow)',
-    hex: '#deff20',
-    bg: 'rgba(222, 255, 32, 0.1)',
-    border: 'rgba(222, 255, 32, 0.3)',
+    hex: '#a259ff',
+    bg: 'rgba(162, 89, 255, 0.08)',
+    border: 'rgba(162, 89, 255, 0.25)',
   },
   sourcing: {
     tagline: 'Streamline supplier selection with specs, pricing & compliance data.',
@@ -45,9 +45,9 @@ const ROLE_CONTENT = {
       { icon: '🤖', label: 'Ask Kaal AI',            desc: 'Get spec insights & supplier guidance instantly',       action: 'chat' },
     ],
     color: 'var(--color-primary)',
-    hex: '#0070d1',
-    bg: 'rgba(0, 112, 209, 0.12)',
-    border: 'rgba(0, 112, 209, 0.35)',
+    hex: '#00f2fe',
+    bg: 'rgba(0, 242, 254, 0.08)',
+    border: 'rgba(0, 242, 254, 0.25)',
   },
   technologist: {
     tagline: 'Deep-dive into construction, testing standards & technical specifications.',
@@ -58,9 +58,9 @@ const ROLE_CONTENT = {
       { icon: '⚗️', label: 'Finishing Guide',        desc: 'Chemical & mechanical finishing processes explained',   href: '#finishing-guide' },
     ],
     color: 'var(--color-commerce)',
-    hex: '#d53b00',
-    bg: 'rgba(213, 59, 0, 0.12)',
-    border: 'rgba(213, 59, 0, 0.35)',
+    hex: '#ff007f',
+    bg: 'rgba(255, 0, 127, 0.08)',
+    border: 'rgba(255, 0, 127, 0.25)',
   },
 };
 
@@ -120,9 +120,9 @@ const ToolkitCard = ({ roleKey, onClear }) => {
         {content.tools.map(tool =>
           tool.action ? (
             <button key={tool.label} onClick={() => handleToolClick(tool)}
-              style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.3rem', padding: '0.85rem 1rem', borderRadius: 'var(--rounded-md)', background: 'rgba(255,255,255,0.04)', border: '1px solid var(--color-hairline-dark)', cursor: 'pointer', textAlign: 'left', transition: 'all 0.2s', color: 'inherit' }}
+              style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.3rem', padding: '0.85rem 1rem', borderRadius: 'var(--rounded-md)', background: 'rgba(0, 242, 254, 0.03)', border: '1px solid var(--color-hairline-dark)', cursor: 'pointer', textAlign: 'left', transition: 'all 0.2s', color: 'inherit' }}
               onMouseOver={e => { e.currentTarget.style.borderColor = content.hex; e.currentTarget.style.background = content.bg; }}
-              onMouseOut={e => { e.currentTarget.style.borderColor = 'var(--color-hairline-dark)'; e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; }}
+              onMouseOut={e => { e.currentTarget.style.borderColor = 'var(--color-hairline-dark)'; e.currentTarget.style.background = 'rgba(0, 242, 254, 0.03)'; }}
             >
               <span style={{ fontSize: '1.1rem' }}>{tool.icon}</span>
               <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-on-dark)', fontFamily: 'Inter, sans-serif' }}>{tool.label}</span>
@@ -130,9 +130,9 @@ const ToolkitCard = ({ roleKey, onClear }) => {
             </button>
           ) : (
             <a key={tool.label} href={tool.href}
-              style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.3rem', padding: '0.85rem 1rem', borderRadius: 'var(--rounded-md)', background: 'rgba(255,255,255,0.04)', border: '1px solid var(--color-hairline-dark)', textDecoration: 'none', transition: 'all 0.2s' }}
+              style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.3rem', padding: '0.85rem 1rem', borderRadius: 'var(--rounded-md)', background: 'rgba(0, 242, 254, 0.03)', border: '1px solid var(--color-hairline-dark)', textDecoration: 'none', transition: 'all 0.2s' }}
               onMouseOver={e => { e.currentTarget.style.borderColor = content.hex; e.currentTarget.style.background = content.bg; }}
-              onMouseOut={e => { e.currentTarget.style.borderColor = 'var(--color-hairline-dark)'; e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; }}
+              onMouseOut={e => { e.currentTarget.style.borderColor = 'var(--color-hairline-dark)'; e.currentTarget.style.background = 'rgba(0, 242, 254, 0.03)'; }}
             >
               <span style={{ fontSize: '1.1rem' }}>{tool.icon}</span>
               <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-on-dark)', fontFamily: 'Inter, sans-serif' }}>{tool.label}</span>
@@ -150,11 +150,17 @@ export const Hero = ({ userRole, onRoleSelect }) => {
   return (
     <section className="band band-dark" style={{ padding: '7rem 0 5rem 0', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
 
-      {/* PlayStation Blue Radial Glow */}
+      {/* Cyber-Tech Radial Glow */}
       <div style={{
         position: 'absolute', top: '0', left: '50%', transform: 'translateX(-50%)',
         width: '800px', height: '500px',
-        background: 'radial-gradient(ellipse at 50% 0%, rgba(0, 112, 209, 0.22) 0%, transparent 70%)',
+        background: 'radial-gradient(ellipse at 50% 0%, rgba(0, 242, 254, 0.15) 0%, transparent 70%)',
+        pointerEvents: 'none', zIndex: 0,
+      }} />
+      <div style={{
+        position: 'absolute', top: '0', left: '60%', transform: 'translateX(-50%)',
+        width: '800px', height: '500px',
+        background: 'radial-gradient(ellipse at 50% 0%, rgba(162, 89, 255, 0.1) 0%, transparent 70%)',
         pointerEvents: 'none', zIndex: 0,
       }} />
 
@@ -164,8 +170,8 @@ export const Hero = ({ userRole, onRoleSelect }) => {
         <div className="section-badge" style={{
           marginBottom: '2.5rem',
           color: 'var(--color-primary)',
-          borderColor: 'rgba(0, 112, 209, 0.3)',
-          background: 'rgba(0, 112, 209, 0.08)'
+          borderColor: 'rgba(0, 242, 254, 0.2)',
+          background: 'rgba(0, 242, 254, 0.06)'
         }}>
           <Zap size={12} />
           Built for Textile Professionals
@@ -175,10 +181,10 @@ export const Hero = ({ userRole, onRoleSelect }) => {
         <h1 className="display-xl" style={{
           margin: '0 auto 1.75rem auto',
           maxWidth: '820px',
-          color: '#fff'
+          color: 'var(--color-on-dark)'
         }}>
           Find the Right Fabric.<br />
-          <span className="text-gradient">Play Has No Limits.</span>
+          <span className='text-gradient'>Powered by Intelligence.</span>
         </h1>
 
         {/* Subtitle */}
@@ -214,8 +220,8 @@ export const Hero = ({ userRole, onRoleSelect }) => {
                   fontSize: '0.88rem',
                   fontWeight: isActive ? 700 : 500,
                   fontFamily: 'Inter, sans-serif',
-                  border: `1px solid ${isActive ? rc.hex : 'rgba(255,255,255,0.12)'}`,
-                  background: isActive ? rc.bg : 'rgba(255,255,255,0.04)',
+                  border: `1px solid ${isActive ? rc.hex : 'rgba(0, 242, 254, 0.1)'}`,
+                  background: isActive ? rc.bg : 'rgba(0, 242, 254, 0.04)',
                   color: isActive ? '#fff' : 'var(--color-on-dark)',
                   cursor: 'pointer',
                   transition: 'all 0.2s ease',
@@ -229,8 +235,8 @@ export const Hero = ({ userRole, onRoleSelect }) => {
                 }}
                 onMouseOut={e => {
                   if (!isActive) {
-                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)';
-                    e.currentTarget.style.background = 'rgba(255,255,255,0.04)';
+                    e.currentTarget.style.borderColor = 'rgba(0, 242, 254, 0.1)';
+                    e.currentTarget.style.background = 'rgba(0, 242, 254, 0.04)';
                   }
                 }}
               >
@@ -288,8 +294,8 @@ export const Hero = ({ userRole, onRoleSelect }) => {
                 {stat.icon}
               </div>
               <div style={{
-                fontFamily: 'Roboto, sans-serif',
-                fontSize: '1.6rem', fontWeight: 300,
+                fontFamily: 'Space Grotesk, sans-serif',
+                fontSize: '1.6rem', fontWeight: 700,
                 color: '#fff',
                 lineHeight: 1.1, marginBottom: '0.3rem',
               }}>

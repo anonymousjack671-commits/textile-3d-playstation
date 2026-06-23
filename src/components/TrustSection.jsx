@@ -44,7 +44,7 @@ const TRUST_BADGES = [
 
 const FEATURES = [
   { icon: <Zap size={20} color="var(--color-primary)" />, title: 'Instant AI Matching', desc: 'Type your brief in plain English. Get ranked fabric matches in seconds — no forms, no dropdowns.' },
-  { icon: <Globe size={20} color="var(--color-primary)" />,  title: 'Live Market Intelligence', desc: 'Real brand comparisons, upgrade paths and pricing powered by Gemini AI when your KAAL server is running.' },
+  { icon: <Globe size={20} color="var(--color-primary)" />,  title: 'Live Market Intelligence', desc: 'Real brand comparisons, upgrade paths and pricing — powered by Gemini AI, always online via serverless cloud.' },
   { icon: <BookOpen size={20} color="var(--color-marathon-yellow)" />, title: 'Deep Technical Library', desc: 'Full construction specs, testing standards, GSM ranges and 3D weave visualisations — all in one place.' },
   { icon: <Shield size={20} color="var(--color-commerce)" />,       title: 'Compliance Ready',   desc: 'GOTS, OEKO-TEX, GRS, BCI, RWS — certification requirements documented for every fabric type.' },
 ];
@@ -65,7 +65,7 @@ export const TrustSection = () => {
           <div className="section-badge">
             <Shield size={12} style={{ marginRight: '0.4rem' }} /> Trusted by Textile Professionals
           </div>
-          <h2 className="display-md" style={{ fontWeight: 300, maxWidth: '800px', margin: '0 auto 1.5rem auto' }}>
+          <h2 className="display-md" style={{ fontWeight: 700, maxWidth: '800px', margin: '0 auto 1.5rem auto' }}>
             Built for the Industry. Loved by the People in It.
           </h2>
           <p className="body-md text-muted" style={{ maxWidth: '600px', margin: '0 auto' }}>
@@ -82,7 +82,7 @@ export const TrustSection = () => {
         }}>
           {STATS.map(s => (
             <div key={s.value} className="product-card-dark" style={{ textAlign: 'center', padding: '2rem 1.5rem' }}>
-              <div className="display-md" style={{ fontWeight: 500, color: 'var(--color-primary)', fontFamily: 'Roboto, sans-serif', lineHeight: 1, marginBottom: '0.5rem' }}>{s.value}</div>
+              <div className="display-md" style={{ fontWeight: 500, color: 'var(--color-primary)', fontFamily: 'Space Grotesk, sans-serif', lineHeight: 1, marginBottom: '0.5rem' }}>{s.value}</div>
               <div className="body-strong" style={{ color: 'var(--color-on-dark)', fontSize: '1rem', margin: '0.5rem 0 0.25rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{s.label}</div>
               <div className="caption-md text-muted">{s.sub}</div>
             </div>

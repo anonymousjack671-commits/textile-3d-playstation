@@ -70,7 +70,7 @@ export const RecentlyViewed = ({ fabrics, onSelect }) => {
                 transition: 'var(--transition)', color: 'inherit',
                 display: 'flex', flexDirection: 'column', gap: '0.4rem',
               }}
-              onMouseOver={e => { e.currentTarget.style.borderColor = 'var(--color-primary)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(0, 112, 209, 0.15)'; }}
+              onMouseOver={e => { e.currentTarget.style.borderColor = 'var(--color-primary)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(0, 242, 254, 0.15)'; }}
               onMouseOut={e => { e.currentTarget.style.borderColor = 'var(--color-hairline-dark)'; e.currentTarget.style.boxShadow = 'none'; }}
             >
               <span className={`badge ${fabric.badge}`} style={{ fontSize: '0.55rem', marginBottom: '0.2rem', display: 'inline-block' }}>

@@ -26,7 +26,7 @@ const StickyBar = ({ fabric, isShortlisted, onToggleShortlist, onRequestSample }
   }}>
     <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap' }}>
       <div style={{ minWidth: 0 }}>
-        <p style={{ margin: 0, fontWeight: 700, fontSize: '1.1rem', color: '#fff', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', fontFamily: 'Roboto, sans-serif' }}>
+        <p style={{ margin: 0, fontWeight: 700, fontSize: '1.1rem', color: '#fff', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', fontFamily: 'Space Grotesk, sans-serif' }}>
           {fabric.name}
         </p>
         <p style={{ margin: 0, fontSize: '0.78rem', color: 'var(--color-on-dark-mute)', fontFamily: 'Inter, sans-serif' }}>{fabric.category}</p>
@@ -39,7 +39,7 @@ const StickyBar = ({ fabric, isShortlisted, onToggleShortlist, onRequestSample }
             style={{
               height: '42px', fontSize: '0.88rem', padding: '0 1.2rem',
               borderColor: isShortlisted ? 'var(--color-primary)' : 'var(--color-hairline-dark)',
-              background: isShortlisted ? 'rgba(0, 112, 209, 0.12)' : 'transparent',
+              background: isShortlisted ? 'rgba(0, 242, 254, 0.12)' : 'transparent',
               color: isShortlisted ? 'var(--color-primary)' : '#fff',
             }}
           >
@@ -228,7 +228,7 @@ export const TextileDetail = ({ fabric, onBack, isShortlisted, onToggleShortlist
 
           {/* Key property badge */}
           {fabric.keyProperty && (
-            <div style={{ marginTop: '1rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 1rem', borderRadius: 'var(--rounded-full)', background: 'rgba(0, 112, 209, 0.1)', border: '1px solid rgba(0, 112, 209, 0.25)' }}>
+            <div style={{ marginTop: '1rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.4rem 1rem', borderRadius: 'var(--rounded-full)', background: 'rgba(0, 242, 254, 0.1)', border: '1px solid rgba(0, 242, 254, 0.25)' }}>
               <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-primary)', textTransform: 'uppercase', letterSpacing: '0.06em', fontFamily: 'Inter, sans-serif' }}>Key Property</span>
               <span style={{ fontSize: '0.9rem', color: '#fff', fontFamily: 'Inter, sans-serif' }}>{fabric.keyProperty}</span>
             </div>
@@ -253,7 +253,7 @@ export const TextileDetail = ({ fabric, onBack, isShortlisted, onToggleShortlist
                 {Object.entries(fabric.priceIndia).slice(0, 3).map(([tier, price]) => (
                   <div key={tier} style={{
                     padding: '0.4rem 0.85rem', borderRadius: 'var(--rounded-md)',
-                    background: 'rgba(0, 112, 209, 0.07)', border: '1px solid rgba(0, 112, 209, 0.2)',
+                    background: 'rgba(0, 242, 254, 0.07)', border: '1px solid rgba(0, 242, 254, 0.2)',
                     display: 'flex', flexDirection: 'column', alignItems: 'center',
                     fontFamily: 'Inter, sans-serif'
                   }}>
@@ -292,11 +292,11 @@ export const TextileDetail = ({ fabric, onBack, isShortlisted, onToggleShortlist
               className="btn"
               style={{
                 height: '42px', fontSize: '0.88rem', padding: '0 1.2rem',
-                background: 'rgba(0, 112, 209, 0.12)', border: '1px solid rgba(0, 112, 209, 0.35)',
+                background: 'rgba(0, 242, 254, 0.12)', border: '1px solid rgba(0, 242, 254, 0.35)',
                 color: 'var(--color-primary)',
               }}
-              onMouseOver={e => { e.currentTarget.style.background = 'rgba(0, 112, 209, 0.2)'; }}
-              onMouseOut={e => { e.currentTarget.style.background = 'rgba(0, 112, 209, 0.12)'; }}
+              onMouseOver={e => { e.currentTarget.style.background = 'rgba(0, 242, 254, 0.2)'; }}
+              onMouseOut={e => { e.currentTarget.style.background = 'rgba(0, 242, 254, 0.12)'; }}
             >
               <Sparkles size={15} /> Ask Kaal AI
             </button>
@@ -307,7 +307,7 @@ export const TextileDetail = ({ fabric, onBack, isShortlisted, onToggleShortlist
             <div style={{ marginTop: '0.75rem', display: 'flex', gap: '0.4rem', flexWrap: 'wrap', alignItems: 'center' }}>
               <span style={{ fontSize: '0.75rem', color: 'var(--color-on-dark-mute)', fontWeight: 600, fontFamily: 'Inter, sans-serif' }}>🇮🇳 Sourcing:</span>
               {fabric.indiaSourcing.map((s, i) => (
-                <span key={i} style={{ fontSize: '0.78rem', padding: '0.2rem 0.6rem', borderRadius: 'var(--rounded-md)', background: 'rgba(0, 112, 209, 0.08)', border: '1px solid rgba(0, 112, 209, 0.2)', color: 'var(--color-primary)', fontFamily: 'Inter, sans-serif' }}>{s}</span>
+                <span key={i} style={{ fontSize: '0.78rem', padding: '0.2rem 0.6rem', borderRadius: 'var(--rounded-md)', background: 'rgba(0, 242, 254, 0.08)', border: '1px solid rgba(0, 242, 254, 0.2)', color: 'var(--color-primary)', fontFamily: 'Inter, sans-serif' }}>{s}</span>
               ))}
             </div>
           )}
@@ -825,7 +825,7 @@ export const TextileDetail = ({ fabric, onBack, isShortlisted, onToggleShortlist
                         cursor: 'pointer', border: '1px solid',
                         fontFamily: 'Inter, sans-serif',
                         borderColor: sampleType === type ? 'var(--color-primary)' : 'var(--color-hairline-dark)',
-                        background: sampleType === type ? 'rgba(0, 112, 209, 0.12)' : 'transparent',
+                        background: sampleType === type ? 'rgba(0, 242, 254, 0.12)' : 'transparent',
                         color: sampleType === type ? '#fff' : 'var(--color-on-dark-mute)',
                         transition: 'all 0.2s',
                       }}

@@ -96,12 +96,12 @@ export const LibraryGrid = ({ onSelectFabric, selectedId, userRole, isShortliste
         {/* Header — adapts to user role */}
         <div style={{ marginBottom: '3rem', textAlign: 'center' }}>
           {userRole && (
-            <div className="section-badge" style={{ marginBottom: '0.75rem', color: 'var(--color-primary)', borderColor: 'rgba(0, 112, 209, 0.3)', background: 'rgba(0, 112, 209, 0.08)' }}>
+            <div className="section-badge" style={{ marginBottom: '0.75rem', color: 'var(--color-primary)', borderColor: 'rgba(0, 242, 254, 0.3)', background: 'rgba(0, 242, 254, 0.08)' }}>
               {ROLES.find(r => r.key === userRole)?.emoji} Personalised for you
             </div>
           )}
           {!userRole && (
-            <div className="section-badge" style={{ color: 'var(--color-primary)', borderColor: 'rgba(0, 112, 209, 0.3)', background: 'rgba(0, 112, 209, 0.08)' }}>
+            <div className="section-badge" style={{ color: 'var(--color-primary)', borderColor: 'rgba(0, 242, 254, 0.3)', background: 'rgba(0, 242, 254, 0.08)' }}>
               🗂️ Fabric Library
             </div>
           )}
@@ -204,7 +204,7 @@ export const LibraryGrid = ({ onSelectFabric, selectedId, userRole, isShortliste
                   fontWeight: 600,
                   border: '1px solid',
                   borderColor: quickFilter === qf.label ? 'var(--color-primary)' : 'var(--color-ash-light)',
-                  background: quickFilter === qf.label ? 'rgba(0, 112, 209, 0.08)' : 'transparent',
+                  background: quickFilter === qf.label ? 'rgba(0, 242, 254, 0.08)' : 'transparent',
                   color: quickFilter === qf.label ? 'var(--color-primary)' : 'var(--color-mute-light)',
                   cursor: 'pointer',
                   transition: 'all 0.2s',
@@ -220,7 +220,7 @@ export const LibraryGrid = ({ onSelectFabric, selectedId, userRole, isShortliste
             <div style={{
               display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               padding: '0.65rem 1.25rem', borderRadius: 'var(--rounded-md)',
-              background: 'rgba(0, 112, 209, 0.08)', border: '1px solid rgba(0, 112, 209, 0.2)',
+              background: 'rgba(0, 242, 254, 0.08)', border: '1px solid rgba(0, 242, 254, 0.2)',
               flexWrap: 'wrap', gap: '0.5rem',
             }}>
               <span style={{ fontSize: '0.85rem', color: 'var(--color-primary)', fontFamily: 'Inter, sans-serif' }}>
@@ -306,9 +306,9 @@ export const LibraryGrid = ({ onSelectFabric, selectedId, userRole, isShortliste
                   letterSpacing: '0.08em',
                   textTransform: 'uppercase',
                   fontFamily: 'Inter, sans-serif',
-                  background: fabric.badge === 'badge-woven' ? 'rgba(0,112,209,0.1)' : 'rgba(124,109,171,0.1)',
+                  background: fabric.badge === 'badge-woven' ? 'rgba(0,242,254,0.1)' : 'rgba(124,109,171,0.1)',
                   color: fabric.badge === 'badge-woven' ? 'var(--color-primary)' : '#7c6dab',
-                  border: `1px solid ${fabric.badge === 'badge-woven' ? 'rgba(0,112,209,0.25)' : 'rgba(124,109,171,0.25)'}`
+                  border: `1px solid ${fabric.badge === 'badge-woven' ? 'rgba(0,242,254,0.25)' : 'rgba(124,109,171,0.25)'}`
                 }}>
                   {fabric.badgeText}
                 </span>
@@ -323,7 +323,7 @@ export const LibraryGrid = ({ onSelectFabric, selectedId, userRole, isShortliste
                         padding: '0.3rem 0.75rem', borderRadius: 'var(--rounded-full)',
                         border: '1px solid',
                         borderColor: isShortlisted?.(fabric.id) ? 'var(--color-primary)' : 'var(--color-ash-light)',
-                        background: isShortlisted?.(fabric.id) ? 'rgba(0, 112, 209, 0.08)' : 'transparent',
+                        background: isShortlisted?.(fabric.id) ? 'rgba(0, 242, 254, 0.08)' : 'transparent',
                         color: isShortlisted?.(fabric.id) ? 'var(--color-primary)' : 'var(--color-mute-light)',
                         cursor: 'pointer', fontSize: '0.75rem', fontWeight: 600,
                         fontFamily: 'Inter, sans-serif',
@@ -436,7 +436,7 @@ export const LibraryGrid = ({ onSelectFabric, selectedId, userRole, isShortliste
                     <span style={{ fontSize: '0.65rem', padding: '0.15rem 0.5rem', borderRadius: 'var(--rounded-sm)', background: 'rgba(124,109,171,0.15)', color: '#7c6dab', border: '1px solid rgba(124,109,171,0.25)', fontWeight: 700, fontFamily: 'Inter, sans-serif' }}>3D Soon</span>
                   )}
                   {fabric.weightTag && (
-                    <span style={{ fontSize: '0.68rem', padding: '0.15rem 0.5rem', borderRadius: 'var(--rounded-sm)', background: 'rgba(0,112,209,0.1)', color: 'var(--color-primary)', border: '1px solid rgba(0,112,209,0.2)', fontWeight: 700, fontFamily: 'Inter, sans-serif' }}>{fabric.weightTag}</span>
+                    <span style={{ fontSize: '0.68rem', padding: '0.15rem 0.5rem', borderRadius: 'var(--rounded-sm)', background: 'rgba(0,242,254,0.1)', color: 'var(--color-primary)', border: '1px solid rgba(0,242,254,0.2)', fontWeight: 700, fontFamily: 'Inter, sans-serif' }}>{fabric.weightTag}</span>
                   )}
                   {fabric.decarbScore && (
                     <span style={{ fontSize: '0.85rem', color: 'var(--sustainable)', fontWeight: 600, fontFamily: 'Inter, sans-serif' }}>♻ {fabric.decarbScore}</span>

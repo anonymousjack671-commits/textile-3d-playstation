@@ -68,16 +68,25 @@ const VISUAL_3D_MAP = {
   'hemp':                    { ...PLAIN_WEAVE_3D, warpColor: '#d7ccc8', weftColor: '#bcaaa4' },
 };
 
-// ── Helper: convert ₹ prices to $ (approx ₹83 = $1) ──────────────────────
-const convertToUSD = (str) => {
+// ── Helper: convert ₹ prices to $ ─────────────────────────────────────────
+// Static rate used at import/build time. For a live rate in the UI,
+// use src/hooks/useExchangeRate.js which calls /api/exchange-rate.
+const STATIC_INR_PER_USD = 85; // Approximate mid-2026; update if rate shifts >5%
+
+const convertToUSD = (str, rate = STATIC_INR_PER_USD) => {
   if (typeof str !== 'string') return str;
   return str.replace(/₹([\d,]+(?:[-–][\d,]+)?)(\/\w+)?/g, (_, price, unit) => {
     const parts = price.split(/[-–]/);
-    const toUSD = (p) => '$' + (parseInt(p.replace(/,/g, '')) / 83).toFixed(1);
+    const toUSD = (p) => '$' + (parseInt(p.replace(/,/g, '')) / rate).toFixed(1);
     const converted = parts.map(toUSD).join('–');
     return converted + (unit || '');
   });
 };
+
+// Export factory so components can create a converter with the live rate:
+// import { makeUSDConverter } from './textiles';
+// const convert = makeUSDConverter(liveRate);
+export const makeUSDConverter = (rate) => (str) => convertToUSD(str, rate);
 
 const convertFabricPrices = (fabric) => {
   if (!fabric) return fabric;
