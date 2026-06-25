@@ -1,5 +1,5 @@
 // Offline deep-dive intelligence database & generator for UK retail brands
-// Enables fully functional "Deep Dive" drawer when the local KAAL server is offline.
+// Enables fully functional "Deep Dive" drawer when the local TEXAI server is offline.
 
 const BRAND_PROFILES = {
   primark: {

@@ -3,7 +3,7 @@
 // Route: GET /api/health
 //
 // Always returns 200. Replaces the localhost:8369/health check
-// so KaalChat's serverStatus is always 'online'.
+// so TexaiChat's serverStatus is always 'online'.
 // ============================================================
 
 export default function handler(req, res) {

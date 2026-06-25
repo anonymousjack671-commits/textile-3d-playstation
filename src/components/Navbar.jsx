@@ -129,7 +129,7 @@ export const Navbar = ({ shortlistCount = 0, onOpenShortlist, userRole }) => {
             {/* AI Chat CTA — always visible in nav */}
             <button
               onClick={() => {
-                const chatBtn = document.getElementById('kaal-chat-toggle');
+                const chatBtn = document.getElementById('texai-chat-toggle');
                 if (chatBtn) chatBtn.click();
               }}
               style={{
@@ -159,7 +159,7 @@ export const Navbar = ({ shortlistCount = 0, onOpenShortlist, userRole }) => {
               aria-label="Open AI Chat"
             >
               <Sparkles size={14} />
-              Ask Kaal AI
+              Ask TEXAI
             </button>
           </div>
 
@@ -253,7 +253,7 @@ export const Navbar = ({ shortlistCount = 0, onOpenShortlist, userRole }) => {
             <button
               onClick={() => {
                 setMobileOpen(false);
-                const chatBtn = document.getElementById('kaal-chat-toggle');
+                const chatBtn = document.getElementById('texai-chat-toggle');
                 if (chatBtn) chatBtn.click();
               }}
               style={{
@@ -273,7 +273,7 @@ export const Navbar = ({ shortlistCount = 0, onOpenShortlist, userRole }) => {
                 width: '100%',
               }}
             >
-              <Sparkles size={18} /> Ask Kaal AI
+              <Sparkles size={18} /> Ask TEXAI
             </button>
           </div>
         </div>

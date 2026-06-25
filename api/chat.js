@@ -1,5 +1,5 @@
 // ============================================================
-// Vercel Serverless Function — KAAL Chat (Fabric AI)
+// Vercel Serverless Function — TEXAI Chat (Fabric AI)
 // Route: POST /api/chat
 // Body: { message: string }
 // Returns: { response: string, engine: string }
@@ -9,7 +9,7 @@
 // Get free key: https://aistudio.google.com/app/apikey
 // ============================================================
 
-const SYSTEM_PROMPT = `You are KAAL, an expert AI assistant for the Textile3D platform — a B2B fabric intelligence tool used by Indian garment manufacturers and exporters who sell to UK and EU retailers.
+const SYSTEM_PROMPT = `You are TEXAI, an expert AI assistant for the Textile3D platform — a B2B fabric intelligence tool used by Indian garment manufacturers and exporters who sell to UK and EU retailers.
 
 Your expertise covers:
 - Fabric structures: woven (plain, twill, satin, pile), knitted (weft/warp), nonwoven
@@ -79,7 +79,7 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ response: text, engine: 'gemini-2.0-flash' });
   } catch (err) {
-    console.error('[kaal-chat] Gemini error:', err.message);
+    console.error('[texai-chat] Gemini error:', err.message);
     return res.status(200).json({
       response: `⚠️ AI unavailable: ${err.message}. Please try again in a moment.`,
       engine: 'error',

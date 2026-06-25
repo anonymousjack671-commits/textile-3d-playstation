@@ -29,9 +29,9 @@ const STEPS = [
   {
     icon: <MessageCircle size={32} color="var(--sustainable)" />,
     emoji: '🤖',
-    title: 'Ask Kaal AI Anything',
-    desc: 'Kaal is your textile intelligence assistant. Ask about GSM, certifications, supplier hubs, testing standards — or just describe a garment and get fabric recommendations.',
-    cta: 'Open Kaal Chat',
+    title: 'Ask TEXAI Anything',
+    desc: 'TEXAI is your textile intelligence assistant. Ask about GSM, certifications, supplier hubs, testing standards — or just describe a garment and get fabric recommendations.',
+    cta: 'Open TEXAI Chat',
     action: 'chat',
     color: 'var(--sustainable)',
     bg: 'rgba(77,184,122,0.06)',
@@ -69,7 +69,7 @@ export const OnboardingModal = ({ userRole }) => {
     if (s.action === 'chat') {
       dismiss();
       setTimeout(() => {
-        const btn = document.getElementById('kaal-chat-toggle');
+        const btn = document.getElementById('texai-chat-toggle');
         if (btn) btn.click();
       }, 350);
     } else {

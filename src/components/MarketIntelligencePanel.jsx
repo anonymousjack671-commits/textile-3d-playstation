@@ -3,8 +3,8 @@ import { MARKET_INTEL, TIER_COLORS } from '../data/marketIntelligence';
 import { getOfflineDeepDive } from '../data/offlineDeepDive';
 import { TrendingUp, Leaf, DollarSign, MapPin, Award, Loader, Wifi, WifiOff } from 'lucide-react';
 
-// VITE_KAAL_URL can override for self-hosted deployments; defaults to Vercel serverless functions
-const PARDEEP_URL = import.meta.env.VITE_KAAL_URL || '/api';
+// VITE_TEXAI_URL can override for self-hosted deployments; defaults to Vercel serverless functions
+const PARDEEP_URL = import.meta.env.VITE_TEXAI_URL || '/api';
 const tierOrder = ['budget', 'mid', 'premium'];
 
 // Complete map of ALL garment taxonomy names
@@ -171,7 +171,7 @@ const getOfflineData = (garmentName) => {
 
 
 // Client-side cache in sessionStorage — instant on repeat selections
-const CACHE_PREFIX = 'kaal_research_';
+const CACHE_PREFIX = 'texai_research_';
 const normalizeTier = (t = '') => {
   const s = t.toLowerCase().replace(/[\s_]/g, '-');
   if (['budget','value','low','entry'].includes(s)) return 'budget';

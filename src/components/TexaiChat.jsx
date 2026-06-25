@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Loader, Zap, AlertTriangle } from 'lucide-react';
 
-// VITE_KAAL_URL can override for self-hosted deployments; defaults to Vercel serverless functions
-const PARDEEP_URL = import.meta.env.VITE_KAAL_URL || '/api';
+// VITE_TEXAI_URL can override for self-hosted deployments; defaults to Vercel serverless functions
+const PARDEEP_URL = import.meta.env.VITE_TEXAI_URL || '/api';
 
 const FABRIC_KB = [
   { keywords: ['kaftan','caftan','flowy dress','beach dress','resort wear'],
@@ -115,17 +115,17 @@ const findAnswer = (query) => {
   return bestScore > 0 ? bestAnswer : null;
 };
 
-const KAAL_INTRO_DEFAULT = `🌿 **KAAL Fabric Intelligence** online.\n\nAsk me anything about:\n- Fabric structures & weave types\n- GSM weight ranges\n- Fiber properties & sustainability\n- Testing standards (AATCC, ISO, ASTM)\n- Garment-to-fabric recommendations\n- India sourcing hubs & pricing\n\nPowered by Gemini AI — always online, no setup required.`;
+const TEXAI_INTRO_DEFAULT = `🌿 **TEXAI Fabric Intelligence** online.\n\nAsk me anything about:\n- Fabric structures & weave types\n- GSM weight ranges\n- Fiber properties & sustainability\n- Testing standards (AATCC, ISO, ASTM)\n- Garment-to-fabric recommendations\n- India sourcing hubs & pricing\n\nPowered by Gemini AI — always online, no setup required.`;
 
-const KAAL_ROLE_INTROS = {
+const TEXAI_ROLE_INTROS = {
   buyer:
-    `🛍️ **Welcome, Buyer!**\n\nI'm Kaal — your fabric intelligence assistant.\n\nI can help you with:\n- Finding the right fabric for your product brief\n- Price ranges from India & Pakistan hubs\n- MOQ guidance and weight recommendations\n- Comparing fabric options quickly\n\nWhat are you sourcing today?`,
+    `🛍️ **Welcome, Buyer!**\n\nI'm TEXAI — your fabric intelligence assistant.\n\nI can help you with:\n- Finding the right fabric for your product brief\n- Price ranges from India & Pakistan hubs\n- MOQ guidance and weight recommendations\n- Comparing fabric options quickly\n\nWhat are you sourcing today?`,
   designer:
-    `🎨 **Welcome, Designer!**\n\nI'm Kaal — your creative fabric guide.\n\nI can help you with:\n- Matching fabric feel & drape to your design\n- Understanding weave structures & textures\n- Fabric choices by garment type & occasion\n- Finishes that transform fabric appearance\n\nWhat are you designing?`,
+    `🎨 **Welcome, Designer!**\n\nI'm TEXAI — your creative fabric guide.\n\nI can help you with:\n- Matching fabric feel & drape to your design\n- Understanding weave structures & textures\n- Fabric choices by garment type & occasion\n- Finishes that transform fabric appearance\n\nWhat are you designing?`,
   sourcing:
-    `🔗 **Welcome, Sourcing Manager!**\n\nI'm Kaal — your technical sourcing assistant.\n\nI can help you with:\n- Full fabric specs for supplier briefing\n- India vs Pakistan pricing comparisons\n- Testing & compliance requirements\n- Tech pack fabric recommendations\n\nWhat do you need to source?`,
+    `🔗 **Welcome, Sourcing Manager!**\n\nI'm TEXAI — your technical sourcing assistant.\n\nI can help you with:\n- Full fabric specs for supplier briefing\n- India vs Pakistan pricing comparisons\n- Testing & compliance requirements\n- Tech pack fabric recommendations\n\nWhat do you need to source?`,
   technologist:
-    `🔬 **Welcome, Textile Technologist!**\n\nI'm Kaal — your technical reference engine.\n\nI can help you with:\n- Weave construction & yarn count data\n- ISO, AATCC & ASTM testing standards\n- Fibre properties & blend performance\n- GSM ranges by fabric type & application\n\nWhat technical data do you need?`,
+    `🔬 **Welcome, Textile Technologist!**\n\nI'm TEXAI — your technical reference engine.\n\nI can help you with:\n- Weave construction & yarn count data\n- ISO, AATCC & ASTM testing standards\n- Fibre properties & blend performance\n- GSM ranges by fabric type & application\n\nWhat technical data do you need?`,
 };
 
 // ── Lightweight markdown renderer ───────────────────────────────────────────
@@ -216,8 +216,8 @@ const getContextualSuggestions = (userRole, fabric) => {
   return roleSuggestions[userRole] || [`What fabric for T-shirts?`, 'Brand comparison for dresses?', 'Best sustainable fabric?', 'GSM for denim?'];
 };
 
-export const KaalChat = ({ userRole, selectedFabric }) => {
-  const intro = userRole ? KAAL_ROLE_INTROS[userRole] : KAAL_INTRO_DEFAULT;
+export const TexaiChat = ({ userRole, selectedFabric }) => {
+  const intro = userRole ? TEXAI_ROLE_INTROS[userRole] : TEXAI_INTRO_DEFAULT;
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([
     { role: 'assistant', text: intro, ts: Date.now() }
@@ -233,7 +233,7 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
   useEffect(() => {
     setMessages(prev => {
       if (prev.length === 1 && prev[0].role === 'assistant') {
-        const newIntro = userRole ? KAAL_ROLE_INTROS[userRole] : KAAL_INTRO_DEFAULT;
+        const newIntro = userRole ? TEXAI_ROLE_INTROS[userRole] : TEXAI_INTRO_DEFAULT;
         return [{ role: 'assistant', text: newIntro, ts: Date.now() }];
       }
       return prev;
@@ -271,7 +271,7 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
     setLoading(true);
 
     try {
-      // Try KAAL server first
+      // Try TEXAI server first
       if (serverStatus === 'online') {
         const res = await fetch(`${PARDEEP_URL}/chat`, {
           method: 'POST',
@@ -283,8 +283,8 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
           const data = await res.json();
           const reply = data.response || '';
           // Use engine field from server to set correct source label
-          const engineMap = { gemini: 'gemini', kaal_llm: 'kaal', offline_kb: 'kb' };
-          const source = engineMap[data.engine] || (reply.startsWith('KAAL is running') ? 'kb' : 'gemini');
+          const engineMap = { gemini: 'gemini', texai_llm: 'texai', offline_kb: 'kb' };
+          const source = engineMap[data.engine] || (reply.startsWith('TEXAI is running') ? 'kb' : 'gemini');
           setMessages(m => [...m, { role: 'assistant', text: reply || 'No response.', ts: Date.now(), source }]);
           setLoading(false);
           return;
@@ -322,13 +322,13 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
   };
 
   const statusColors = { online: '#4db87a', offline: '#e06b5a', unknown: '#f0c94e' };
-  const statusLabels = { online: 'KAAL Online', offline: 'Offline Mode', unknown: 'Checking...' };
+  const statusLabels = { online: 'TEXAI Online', offline: 'Offline Mode', unknown: 'Checking...' };
 
   return (
     <>
       {/* Floating Chat Button */}
       <button
-        id="kaal-chat-toggle"
+        id="texai-chat-toggle"
         aria-label="Open AI Fabric Assistant"
         onClick={() => setOpen(o => !o)}
         style={{
@@ -374,7 +374,7 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
 
       {/* Chat Panel */}
       {open && (
-        <div id="kaal-chat-panel" style={{
+        <div id="texai-chat-panel" style={{
           position: 'fixed',
           bottom: '5.5rem',
           left: '2rem',
@@ -390,7 +390,7 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
           borderRadius: '20px',
           boxShadow: '0 20px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(124,109,171,0.1)',
           overflow: 'hidden',
-          animation: 'kaalSlideUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+          animation: 'texaiSlideUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
         }}>
           {/* Header */}
           <div style={{
@@ -405,7 +405,7 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
               <Zap size={18} color="#fff" />
             </div>
             <div style={{ flexGrow: 1 }}>
-              <p style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--text-main)', margin: 0 }}>KAAL Fabric AI</p>
+              <p style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--text-main)', margin: 0 }}>TEXAI Fabric AI</p>
               <p style={{ fontSize: '0.75rem', margin: 0, color: statusColors[serverStatus], display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
                 <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: statusColors[serverStatus], display: 'inline-block' }} />
                 {statusLabels[serverStatus]}
@@ -451,8 +451,8 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
                   {msg.source === 'gemini' && (
                     <p style={{ fontSize: '0.7rem', color: '#4db87a', marginTop: '0.4rem', marginBottom: 0 }}>✨ Gemini · Live research</p>
                   )}
-                  {msg.source === 'kaal' && (
-                    <p style={{ fontSize: '0.7rem', color: '#7c6dab', marginTop: '0.4rem', marginBottom: 0 }}>⚡ KAAL Engine</p>
+                  {msg.source === 'texai' && (
+                    <p style={{ fontSize: '0.7rem', color: '#7c6dab', marginTop: '0.4rem', marginBottom: 0 }}>⚡ TEXAI Engine</p>
                   )}
                 </div>
               </div>
@@ -495,9 +495,9 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
 
           {/* Input */}
           <div style={{ padding: '0.75rem 1rem', borderTop: '1px solid rgba(255,255,255,0.05)', display: 'flex', gap: '0.5rem', alignItems: 'flex-end' }}>
-            <label htmlFor="kaal-chat-input" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden' }}>Chat message</label>
+            <label htmlFor="texai-chat-input" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden' }}>Chat message</label>
             <textarea
-              id="kaal-chat-input"
+              id="texai-chat-input"
               ref={inputRef}
               value={input}
               onChange={e => setInput(e.target.value)}
@@ -549,7 +549,7 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
       )}
 
       <style>{`
-        @keyframes kaalSlideUp {
+        @keyframes texaiSlideUp {
           from { opacity: 0; transform: translateY(20px) scale(0.95); }
           to   { opacity: 1; transform: translateY(0) scale(1); }
         }
@@ -559,7 +559,7 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
         }
         @media (max-width: 480px) {
           /* Chat panel — full width on mobile */
-          #kaal-chat-panel {
+          #texai-chat-panel {
             left: 0.5rem !important;
             right: 0.5rem !important;
             bottom: 5rem !important;
@@ -568,7 +568,7 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
             border-radius: 16px !important;
           }
           /* Align toggle on left to avoid clashing with Back-to-Top on right */
-          #kaal-chat-toggle {
+          #texai-chat-toggle {
             left: 1.25rem !important;
             right: auto !important;
             bottom: 1.25rem !important;
@@ -579,7 +579,7 @@ export const KaalChat = ({ userRole, selectedFabric }) => {
             bottom: 1.25rem !important;
           }
         }
-        body:has(#kaal-chat-panel) .back-to-top-btn {
+        body:has(#texai-chat-panel) .back-to-top-btn {
           display: none !important;
         }
 

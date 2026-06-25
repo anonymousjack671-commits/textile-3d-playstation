@@ -16,7 +16,7 @@ const ROLE_CONTENT = {
       { icon: '🗂️', label: 'Textile Library',       desc: 'Browse 200+ fabrics filtered by GSM, weight & type',   href: '#library' },
       { icon: '📈', label: 'Market Intelligence',    desc: 'Live indicative pricing from India & Pakistan hubs',    href: '#library' },
       { icon: '👗', label: 'Garment Recommender',    desc: 'Find the right fabric matched to your product brief',   href: '#garment-recommender' },
-      { icon: '🤖', label: 'Ask Kaal AI',            desc: 'Tell Kaal what you need — get matched in seconds',      action: 'chat' },
+      { icon: '🤖', label: 'Ask TEXAI',            desc: 'Tell TEXAI what you need — get matched in seconds',      action: 'chat' },
     ],
     color: 'var(--color-primary)',
     hex: '#00f2fe',
@@ -42,7 +42,7 @@ const ROLE_CONTENT = {
       { icon: '📋', label: 'Full Tech Specs',         desc: 'GSM ranges, construction details & yarn counts',        href: '#library' },
       { icon: '📈', label: 'Market Intelligence',    desc: 'Compare India vs Pakistan pricing & lead times',        href: '#library' },
       { icon: '🧪', label: 'Testing Standards',      desc: 'Check compliance requirements before sampling',         href: '#testing-guide' },
-      { icon: '🤖', label: 'Ask Kaal AI',            desc: 'Get spec insights & supplier guidance instantly',       action: 'chat' },
+      { icon: '🤖', label: 'Ask TEXAI',            desc: 'Get spec insights & supplier guidance instantly',       action: 'chat' },
     ],
     color: 'var(--color-primary)',
     hex: '#00f2fe',
@@ -78,7 +78,7 @@ const ToolkitCard = ({ roleKey, onClear }) => {
 
   const handleToolClick = (tool) => {
     if (tool.action === 'chat') {
-      const chatBtn = document.getElementById('kaal-chat-toggle');
+      const chatBtn = document.getElementById('texai-chat-toggle');
       if (chatBtn) chatBtn.click();
     }
   };

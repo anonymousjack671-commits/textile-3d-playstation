@@ -1,5 +1,5 @@
 // ============================================================
-// Vercel Serverless Function — KAAL Market Research
+// Vercel Serverless Function — TEXAI Market Research
 // Route: POST /api/research
 // Body: { category: string }
 // Returns: { data: { summary, brands[], upgrade{} }, model_label }
@@ -140,7 +140,7 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ data: parsed, model_label: 'Gemini 2.5 Flash' });
   } catch (err) {
-    console.error('[kaal-research] Error:', err.message);
+    console.error('[texai-research] Error:', err.message);
     return res.status(500).json({ error: err.message });
   }
 }

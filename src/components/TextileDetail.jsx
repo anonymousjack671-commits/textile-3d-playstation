@@ -283,10 +283,10 @@ export const TextileDetail = ({ fabric, onBack, isShortlisted, onToggleShortlist
               <MessageCircle size={17} /> Enquire on WhatsApp
             </button>
 
-            {/* Ask Kaal AI about this fabric */}
+            {/* Ask TEXAI about this fabric */}
             <button
               onClick={() => {
-                const chatBtn = document.getElementById('kaal-chat-toggle');
+                const chatBtn = document.getElementById('texai-chat-toggle');
                 if (chatBtn) chatBtn.click();
               }}
               className="btn"
@@ -298,7 +298,7 @@ export const TextileDetail = ({ fabric, onBack, isShortlisted, onToggleShortlist
               onMouseOver={e => { e.currentTarget.style.background = 'rgba(0, 242, 254, 0.2)'; }}
               onMouseOut={e => { e.currentTarget.style.background = 'rgba(0, 242, 254, 0.12)'; }}
             >
-              <Sparkles size={15} /> Ask Kaal AI
+              <Sparkles size={15} /> Ask TEXAI
             </button>
           </div>
 

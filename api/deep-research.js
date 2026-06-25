@@ -1,5 +1,5 @@
 // ============================================================
-// Vercel Serverless Function — KAAL Deep Research (Brand Deep Dive)
+// Vercel Serverless Function — TEXAI Deep Research (Brand Deep Dive)
 // Route: POST /api/deep-research
 // Body: { brand: string, category: string }
 // Returns: { data: { overviewStance, sustainability, sourcingInsight, upgradeAdvice, vendors[], coo } }
@@ -119,7 +119,7 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ data: parsed, model_label: 'Gemini 2.5 Flash' });
   } catch (err) {
-    console.error('[kaal-deep-research] Error:', err.message);
+    console.error('[texai-deep-research] Error:', err.message);
     return res.status(500).json({ error: err.message });
   }
 }

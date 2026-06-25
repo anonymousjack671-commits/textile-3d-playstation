@@ -7,7 +7,7 @@ import { GarmentRecommender } from './components/GarmentRecommender';
 import { FiberGuide } from './components/FiberGuide';
 import { FinishingGuide } from './components/FinishingGuide';
 import { TestingGuide } from './components/TestingGuide';
-import { KaalChat } from './components/KaalChat';
+import { TexaiChat } from './components/TexaiChat';
 import { ShortlistPanel } from './components/ShortlistPanel';
 import { TrustSection } from './components/TrustSection';
 import { OnboardingModal } from './components/OnboardingModal';
@@ -250,7 +250,7 @@ function App() {
         <RecentlyViewed fabrics={recentlyViewed} onSelect={trackViewed} />
       </main>
       <Footer />
-      <KaalChat userRole={userRole} selectedFabric={selectedFabric} />
+      <TexaiChat userRole={userRole} selectedFabric={selectedFabric} />
       <ShortlistPanel
         open={shortlistOpen}
         onClose={() => setShortlistOpen(false)}
