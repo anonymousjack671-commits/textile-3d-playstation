@@ -342,14 +342,14 @@ export const MarketIntelligencePanel = ({ garmentName }) => {
             display: 'flex', alignItems: 'center', gap: '0.35rem',
             fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.06em',
             textTransform: 'uppercase',
-            color: source === 'live' ? '#4db87a' : '#f0c94e',
+            color: source === 'live' ? '#4db87a' : source === 'api' ? '#7c6dab' : '#f0c94e',
             padding: '0.3rem 0.7rem',
             borderRadius: '9999px',
-            border: `1px solid ${source === 'live' ? 'rgba(77,184,122,0.3)' : 'rgba(240,201,78,0.3)'}`,
-            background: source === 'live' ? 'rgba(77,184,122,0.08)' : 'rgba(240,201,78,0.08)',
+            border: `1px solid ${source === 'live' ? 'rgba(77,184,122,0.3)' : source === 'api' ? 'rgba(124,109,171,0.3)' : 'rgba(240,201,78,0.3)'}`,
+            background: source === 'live' ? 'rgba(77,184,122,0.08)' : source === 'api' ? 'rgba(124,109,171,0.08)' : 'rgba(240,201,78,0.08)',
           }}>
-            {source === 'live' ? <Wifi size={11} /> : <WifiOff size={11} />}
-            {source === 'live' ? `Live · ${modelLabel}` : 'Offline Fallback'}
+            {source === 'live' ? <Wifi size={11} /> : source === 'api' ? <Wifi size={11} /> : <WifiOff size={11} />}
+            {source === 'live' ? `Live · ${modelLabel}` : source === 'api' ? 'Verified Market Data' : 'Offline Fallback'}
           </span>
         )}
       </div>
