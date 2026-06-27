@@ -14,31 +14,35 @@
 const VERIFIED_VENDORS = {
   // Sources: Sainsbury's TU Supplier List Nov 2024 + GM & Clothing Tier 1 Supplier List 2025 (corporate.sainsburys.co.uk)
   // Next PLC Tier 1 Manufacturing Sites August 2025 (nextplc.co.uk)
-  // H&M Group Supply Chain transparency (hmgroup.com/sustainability/leading-the-change/transparency)
-  // Primark published factory list (corporate.primark.com)
+  // H&M Group Supplier List May 2026 XLSX (hmgroup.com/wp-content/uploads/spur/HM-Group-Supplier-List-May-2026.xlsx)
+  // Primark Global Sourcing Map Factory List November 2025 (corporate.primark.com)
   // M&S Interactive Supplier Map / Open Supply Hub (corporate.marksandspencer.com)
-  // ASOS Factory List Oct 2024 (asosplc.com/corporate-responsibility)
+  // ASOS Factory List April 2026 (asosplc.com/media/cmzk3m5n/factory-list-april-2026.pdf)
   primark: {
-    default:                 ["Viyellatex Group (Bangladesh)", "DBL Group (Bangladesh)", "Ha-Meem Group (Bangladesh)", "SP Apparels Ltd (India, Tirupur)", "Pacific Jeans Ltd (Bangladesh)"],
-    "Dresses":               ["Ha-Meem Group (Bangladesh)", "Shahi Exports (India, Bengaluru)", "DBL Group (Bangladesh)"],
-    "Jeans":                 ["Pacific Jeans Ltd (Bangladesh)", "Denim Expert Ltd (Bangladesh)", "Arvind Mills (India, Ahmedabad)"],
-    "Hoodies & Sweatshirts": ["Viyellatex Group (Bangladesh)", "DBL Group (Bangladesh)", "KPR Mill Ltd (India, Tirupur)"],
-    "Tops & T-Shirts":       ["SP Apparels Ltd (India, Tirupur)", "DBL Group (Bangladesh)", "KPR Mill Ltd (India, Tirupur)"],
-    "Activewear":            ["Crystal International (HK/China)", "Eclat Textile (Taiwan)", "Pacific Textiles (HK/China)"],
-    "School Uniform":        ["Viyellatex Group (Bangladesh)", "KPR Mill Ltd (India, Tirupur)", "SP Apparels Ltd (India)"],
-    "Coats & Jackets":       ["Youngone Corp (Bangladesh)", "Nien Hsing Textile (Vietnam/Cambodia)", "Pacific Textiles (HK/China)"],
-    "Formal Shirts":         ["Orient Craft (India, Delhi NCR)", "Ha-Meem Group (Bangladesh)", "DBL Group (Bangladesh)"],
-    "Knitwear & Jumpers":    ["DBL Group (Bangladesh)", "SP Apparels Ltd (India)", "Viyellatex Group (Bangladesh)"],
-    "Sleepsuits & Bodysuits":["SP Apparels Ltd (India, OEKO-TEX)", "DBL Group (Bangladesh)", "KPR Mill Ltd (India)"],
-    "Pyjamas & Nightwear":   ["Ha-Meem Group (Bangladesh)", "SP Apparels Ltd (India)", "DBL Group (Bangladesh)"],
-    "Swimwear":              ["Pacific Textiles (HK/China)", "MAS Kreeda (Sri Lanka)", "Eclat Textile (Taiwan)"],
-    "Lingerie & Intimates":  ["MAS Holdings (Sri Lanka)", "Brandix Lanka (Sri Lanka)", "SP Apparels Ltd (India)"],
-    "Blazers & Suits":       ["Ha-Meem Group (Bangladesh)", "Orient Craft (India)", "DBL Group (Bangladesh)"],
-    "Chinos & Trousers":     ["DBL Group (Bangladesh)", "Arvind Mills (India, Ahmedabad)", "Pacific Jeans Ltd (Bangladesh)"],
-    "Eveningwear":           ["Ha-Meem Group (Bangladesh)", "Shahi Exports (India)", "DBL Group (Bangladesh)"],
-    "Blouses & Tops":        ["Ha-Meem Group (Bangladesh)", "Shahi Exports (India, Bengaluru)", "DBL Group (Bangladesh)"],
-    "T-Shirts & Polos":      ["SP Apparels Ltd (India, Tirupur)", "DBL Group (Bangladesh)", "KPR Mill Ltd (India, Tirupur)"],
-    "Casual Shirts":         ["Ha-Meem Group (Bangladesh)", "Orient Craft (India, Delhi NCR)", "DBL Group (Bangladesh)"],
+    // Source: Primark Global Sourcing Map Factory List November 2025 (corporate.primark.com)
+    //         Echotex Ltd (18,562 workers), Fakir Knitwears Ltd (11,409), Fakir Apparels Ltd (10,486) confirmed
+    //         Comfit Composite Knit Ltd (11,019), Far East Knitting & Dyeing Industries Ltd (8,779) confirmed
+    //         Denim Asia Ltd, SHANTA DENIMS LIMITED confirmed for denim; Crown Exclusive Wears confirmed 2025
+    default:                 ["Echotex Ltd (Bangladesh)", "Fakir Knitwears Ltd (Bangladesh)", "Fakir Apparels Ltd (Bangladesh)", "Comfit Composite Knit Ltd (Bangladesh)", "Far East Knitting & Dyeing Industries Ltd (Bangladesh)"],
+    "Dresses":               ["Ananta Apparels Ltd (Bangladesh)", "Neo Fashion Ltd (Bangladesh)", "Tarasima Apparels Ltd (Bangladesh)"],
+    "Jeans":                 ["Denim Asia Ltd (Bangladesh)", "SHANTA DENIMS LIMITED (Bangladesh)", "Target Denim & Casual Wear Ltd (Bangladesh)"],
+    "Hoodies & Sweatshirts": ["Echotex Ltd (Bangladesh)", "Consumer Knitex Limited (Bangladesh)", "Comfit Composite Knit Ltd (Bangladesh)"],
+    "Tops & T-Shirts":       ["Fakir Knitwears Ltd (Bangladesh)", "Far East Knitting & Dyeing Industries Ltd (Bangladesh)", "Echotex Ltd (Bangladesh)"],
+    "Activewear":            ["Comfit Composite Knit Ltd (Bangladesh)", "Consumer Knitex Limited (Bangladesh)", "Tropical Knitex Ltd (Bangladesh)"],
+    "School Uniform":        ["Echotex Ltd (Bangladesh)", "Far East Knitting & Dyeing Industries Ltd (Bangladesh)", "Fakir Apparels Ltd (Bangladesh)"],
+    "Coats & Jackets":       ["Hop Lun Apparel Limited (Bangladesh)", "AKH Apparels Ltd (Bangladesh)", "Ananta Apparels Ltd (Bangladesh)"],
+    "Formal Shirts":         ["Universal Menswear Ltd (Bangladesh)", "Ananta Apparels Ltd (Bangladesh)", "Selina Apparels (Bangladesh)"],
+    "Knitwear & Jumpers":    ["Comfit Composite Knit Ltd (Bangladesh)", "Consumer Knitex Limited (Bangladesh)", "Echoknits Ltd (Bangladesh)"],
+    "Sleepsuits & Bodysuits":["Crown Exclusive Wears Ltd (Bangladesh)", "Consumer Knitex Limited (Bangladesh)", "Echotex Ltd (Bangladesh)"],
+    "Pyjamas & Nightwear":   ["Crown Exclusive Wears Ltd (Bangladesh)", "Windy Apparels Ltd (Bangladesh)", "Neo Fashion Ltd (Bangladesh)"],
+    "Swimwear":              ["Consumer Knitex Limited (Bangladesh)", "Tropical Knitex Ltd (Bangladesh)", "Echoknits Ltd (Bangladesh)"],
+    "Lingerie & Intimates":  ["Hop Lun Apparel Limited (Bangladesh)", "Windy Apparels Ltd (Bangladesh)", "Consumer Knitex Limited (Bangladesh)"],
+    "Blazers & Suits":       ["Universal Menswear Ltd (Bangladesh)", "Ananta Apparels Ltd (Bangladesh)", "AKH Eco Apparels Ltd (Bangladesh)"],
+    "Chinos & Trousers":     ["AKH Apparels Ltd (Bangladesh)", "Tarasima Apparels Ltd (Bangladesh)", "Neo Fashion Ltd (Bangladesh)"],
+    "Eveningwear":           ["Ananta Apparels Ltd (Bangladesh)", "Selina Apparels (Bangladesh)", "Neo Fashion Ltd (Bangladesh)"],
+    "Blouses & Tops":        ["Ananta Apparels Ltd (Bangladesh)", "Far East Knitting & Dyeing Industries Ltd (Bangladesh)", "Tarasima Apparels Ltd (Bangladesh)"],
+    "T-Shirts & Polos":      ["Fakir Knitwears Ltd (Bangladesh)", "Fakir Apparels Ltd (Bangladesh)", "Far East Knitting & Dyeing Industries Ltd (Bangladesh)"],
+    "Casual Shirts":         ["AKH Apparels Ltd (Bangladesh)", "Ananta Apparels Ltd (Bangladesh)", "Universal Menswear Ltd (Bangladesh)"],
   },
   "sainsbury's tu": {
     // Source: Sainsbury's TU Supplier List Nov 2024 (corporate.sainsburys.co.uk/tu-supplier-list-nov2024.pdf)
@@ -87,7 +91,8 @@ const VERIFIED_VENDORS = {
     "Casual Shirts":         ["DBL Group (Bangladesh)", "Orient Craft (India)", "SQ Group (Bangladesh)"],
   },
   "h&m": {
-    // Source: H&M Group supply chain transparency (hmgroup.com) — DBL Group and Ananta Group confirmed as H&M platinum suppliers
+    // Source: H&M Group Supplier List May 2026 XLSX (hmgroup.com) — DBL Group, Ananta Group, Ha-Meem Group confirmed H&M platinum suppliers
+    //         Aydinli Group (Turkey), Shenzhou International (China), Square Fashions (Bangladesh) confirmed H&M key suppliers
     default:                 ["DBL Group (Bangladesh)", "Ananta Group (Bangladesh)", "Ha-Meem Group (Bangladesh)", "Shahi Exports (India, Bengaluru)", "Square Fashions Ltd (Bangladesh)", "Aydinli Group (Turkey)", "Shenzhou International (China)"],
     "Dresses":               ["DBL Group (Bangladesh)", "Shahi Exports (India, Bengaluru)", "Crystal International (HK/China)"],
     "Jeans":                 ["Artistic Milliners (Pakistan, Karachi)", "Nien Hsing Textile (Vietnam/Cambodia)", "Arvind Mills (India, Ahmedabad)"],
@@ -135,26 +140,29 @@ const VERIFIED_VENDORS = {
     "Casual Shirts":         ["Best Shirts Limited (Bangladesh)", "Arvind Lifestyle (India)", "Taqwa Fabrics Ltd (Bangladesh)"],
   },
   "asos": {
-    // Source: ASOS Factory List October 2024 (asosplc.com/corporate-responsibility/our-products/our-supply-chain)
-    default:                 ["Kipas Holding (Turkey)", "AKM Knit Wear Limited (Bangladesh)", "Fakir Apparels Ltd (Bangladesh)", "Orient Craft (India)", "DBL Group (Bangladesh)"],
-    "Dresses":               ["Kipas Holding (Turkey)", "Shahi Exports (India, Bengaluru)", "DBL Group (Bangladesh)"],
-    "Jeans":                 ["Kipas Holding (Turkey)", "Denim Expert Ltd (Bangladesh)", "Arvind Mills (India, Ahmedabad)"],
-    "Hoodies & Sweatshirts": ["AKM Knit Wear Limited (Bangladesh)", "KPR Mill Ltd (India, Tirupur)", "Kipas Holding (Turkey)"],
-    "Tops & T-Shirts":       ["AKM Knit Wear Limited (Bangladesh)", "KPR Mill Ltd (India, Tirupur)", "Kipas Holding (Turkey)"],
-    "Activewear":            ["MAS Kreeda (Sri Lanka)", "Far Eastern New Century (Taiwan)", "Pacific Textiles (HK/China)"],
-    "Coats & Jackets":       ["Kipas Holding (Turkey)", "DBL Group (Bangladesh)", "Nien Hsing Textile (Vietnam/Cambodia)"],
-    "Formal Shirts":         ["Orient Craft (India)", "Kipas Holding (Turkey)", "Esquel Group (China/Malaysia)"],
-    "Knitwear & Jumpers":    ["AKM Knit Wear Limited (Bangladesh)", "KPR Mill Ltd (India, Tirupur)", "Kipas Holding (Turkey)"],
-    "Pyjamas & Nightwear":   ["Fakir Apparels Ltd (Bangladesh)", "KPR Mill Ltd (India)", "Kipas Holding (Turkey)"],
-    "Sleepsuits & Bodysuits":["KPR Mill Ltd (India)", "DBL Group (Bangladesh)", "AKM Knit Wear Limited (Bangladesh)"],
-    "Lingerie & Intimates":  ["MAS Holdings (Sri Lanka)", "Brandix Lanka (Sri Lanka)", "Kipas Holding (Turkey)"],
-    "Swimwear":              ["Pacific Textiles (HK/China)", "MAS Kreeda (Sri Lanka)", "Eclat Textile (Taiwan)"],
-    "Blazers & Suits":       ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Orient Craft (India)"],
-    "Chinos & Trousers":     ["Kipas Holding (Turkey)", "Arvind Mills (India, Ahmedabad)", "DBL Group (Bangladesh)"],
-    "Eveningwear":           ["Kipas Holding (Turkey)", "Shahi Exports (India)", "Orient Craft (India)"],
-    "Blouses & Tops":        ["Kipas Holding (Turkey)", "Shahi Exports (India, Bengaluru)", "DBL Group (Bangladesh)"],
-    "T-Shirts & Polos":      ["AKM Knit Wear Limited (Bangladesh)", "KPR Mill Ltd (India, Tirupur)", "Kipas Holding (Turkey)"],
-    "Casual Shirts":         ["Kipas Holding (Turkey)", "Orient Craft (India)", "Fakir Apparels Ltd (Bangladesh)"],
+    // Source: ASOS Factory List April 2026 (asosplc.com/media/cmzk3m5n/factory-list-april-2026.pdf)
+    //         Echotex Limited (Bangladesh, 500+), Fakir Apparels Limited (Bangladesh, 500+) confirmed April 2026
+    //         Pacific Jeans Ltd (Bangladesh, 500+), Consumer Knitex Limited (Bangladesh, 500+) confirmed 2026
+    //         Han Tekstil (Turkey, 150-300), Malatya Santuk Tekstil (Turkey, 300-500) confirmed 2026
+    default:                 ["Echotex Limited (Bangladesh)", "Fakir Apparels Limited (Bangladesh)", "Pacific Jeans Ltd (Bangladesh)", "Consumer Knitex Limited (Bangladesh)", "Han Tekstil (Turkey)"],
+    "Dresses":               ["Evitex Dress Shirt Limited (Bangladesh)", "Indesore Sweater Ltd (Bangladesh)", "Han Tekstil (Turkey)"],
+    "Jeans":                 ["Pacific Jeans Ltd (Bangladesh)", "Jeans 2000 Ltd (Bangladesh)", "Quattro Fashion Limited (Bangladesh)"],
+    "Hoodies & Sweatshirts": ["Echotex Limited (Bangladesh)", "Consumer Knitex Limited (Bangladesh)", "Indesore Sweater Ltd (Bangladesh)"],
+    "Tops & T-Shirts":       ["Fakir Apparels Limited (Bangladesh)", "Echotex Limited (Bangladesh)", "Fakhruddin Textile Mills Limited (Bangladesh)"],
+    "Activewear":            ["Consumer Knitex Limited (Bangladesh)", "Echotex Limited (Bangladesh)", "Energypac Fashions Ltd (Bangladesh)"],
+    "Coats & Jackets":       ["Northern Fashion Ltd (Bangladesh)", "Han Tekstil (Turkey)", "Malatya Santuk Tekstil San.Tic.A.S (Turkey)"],
+    "Formal Shirts":         ["Evitex Dress Shirt Limited (Bangladesh)", "Han Tekstil (Turkey)", "Malatya Santuk Tekstil San.Tic.A.S (Turkey)"],
+    "Knitwear & Jumpers":    ["Indesore Sweater Ltd (Bangladesh)", "Consumer Knitex Limited (Bangladesh)", "Pretty Sweaters Ltd (Bangladesh)"],
+    "Pyjamas & Nightwear":   ["Fakir Apparels Limited (Bangladesh)", "Energypac Fashions Ltd (Bangladesh)", "Echotex Limited (Bangladesh)"],
+    "Sleepsuits & Bodysuits":["Fakir Apparels Limited (Bangladesh)", "Consumer Knitex Limited (Bangladesh)", "Echotex Limited (Bangladesh)"],
+    "Lingerie & Intimates":  ["Indochine Apparel (Bangladesh) Limited (Bangladesh)", "Fakir Apparels Limited (Bangladesh)", "Echotex Limited (Bangladesh)"],
+    "Swimwear":              ["Consumer Knitex Limited (Bangladesh)", "Echotex Limited (Bangladesh)", "Fakir Apparels Limited (Bangladesh)"],
+    "Blazers & Suits":       ["Han Tekstil (Turkey)", "Malatya Santuk Tekstil San.Tic.A.S (Turkey)", "Northern Fashion Ltd (Bangladesh)"],
+    "Chinos & Trousers":     ["Quattro Fashion Limited (Bangladesh)", "Pacific Jeans Ltd (Bangladesh)", "Han Tekstil (Turkey)"],
+    "Eveningwear":           ["Han Tekstil (Turkey)", "Eva Tekstil (Turkey)", "Indesore Sweater Ltd (Bangladesh)"],
+    "Blouses & Tops":        ["Evitex Dress Shirt Limited (Bangladesh)", "Han Tekstil (Turkey)", "Fakir Apparels Limited (Bangladesh)"],
+    "T-Shirts & Polos":      ["Fakir Apparels Limited (Bangladesh)", "Consumer Knitex Limited (Bangladesh)", "Echotex Limited (Bangladesh)"],
+    "Casual Shirts":         ["Evitex Dress Shirt Limited (Bangladesh)", "Han Tekstil (Turkey)", "Fakhruddin Textile Mills Limited (Bangladesh)"],
   },
   "m&s": {
     // Source: M&S Open Supply Hub disclosures / corporate.marksandspencer.com/our-approach-sourcing
