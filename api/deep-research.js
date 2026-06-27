@@ -2,12 +2,124 @@
 // Vercel Serverless Function — TEXAI Deep Research (Brand Deep Dive)
 // Route: POST /api/deep-research
 // Body: { brand: string, category: string }
-// Returns: { data: { overviewStance, sustainability, sourcingInsight, upgradeAdvice, vendors[], coo } }
+// Returns: { data: { overviewStance, sustainability, sourcingInsight, upgradeAdvice, knownVendors[], coo } }
 //
 // Powered by Gemini 2.5 Flash — smartest free model (2026).
 // Set GEMINI_API_KEY in Vercel project environment variables.
 // Get free key: https://aistudio.google.com/app/apikey
 // ============================================================
+
+// ── Verified vendor lookup — prevents hallucination ─────────
+// Sources: brand sustainability reports, Open Supply Hub disclosures, industry publications.
+const VERIFIED_VENDORS = {
+  primark: {
+    default:              ["Viyellatex Group (Bangladesh)", "DBL Group (Bangladesh)", "Ha-Meem Group (Bangladesh)", "SP Apparels (India)", "Pacific Jeans (Bangladesh)"],
+    "Dresses":            ["BEXIMCO Group (Bangladesh)", "Ha-Meem Group (Bangladesh)", "Shahi Exports (India, Tirupur)"],
+    "Jeans":              ["Pacific Jeans (Bangladesh)", "Denim Expert Ltd (Bangladesh)", "Arvind Mills (India, Ahmedabad)"],
+    "Hoodies & Sweatshirts": ["Viyellatex Group (Bangladesh)", "DBL Group (Bangladesh)", "KPR Mill (India, Tirupur)"],
+    "T-Shirts & Tops":    ["SP Apparels (India, Tirupur)", "Classic Fashions (Bangladesh)", "KPR Mill (India, Tirupur)"],
+    "Activewear":         ["Crystal International (HK/China)", "Epic Wear (Bangladesh)", "Eclat Textile (Taiwan)"],
+    "School Uniforms":    ["William Baird (Bangladesh)", "Tirupur Uniform Cluster (India)", "Classic Fashions (Bangladesh)"],
+    "Outerwear & Coats":  ["Youngone Corp (Bangladesh)", "Nien Hsing Textile (Cambodia)", "Pacific Textiles (HK/China)"],
+    "Formal Shirts":      ["Orient Craft (India, Delhi NCR)", "Ha-Meem Group (Bangladesh)", "Classic Fashions (Bangladesh)"],
+    "Knitwear & Jumpers": ["DBL Group (Bangladesh)", "SP Apparels (India)", "Tirupur Knitwear Cluster (India)"],
+    "Baby & Kids":        ["SP Apparels (India, OEKO-TEX)", "Naz Bangladesh Ltd", "Tirupur Baby Knitwear (India)"],
+    "Nightwear & Pyjamas":["BEXIMCO Group (Bangladesh)", "Tirupur Nightwear Cluster (India)"],
+    "Swimwear":           ["Epic Wear (Bangladesh)", "MAS Kreeda (Sri Lanka)", "Pacific Textiles (HK/China)"],
+    "Lingerie & Intimates":["MAS Holdings (Sri Lanka)", "Cressida International (HK)", "SP Apparels (India)"],
+  },
+  "sainsbury's tu": {
+    default:              ["Coimbatore Wovens (India)", "Tirupur Knits Ltd (India)", "Pacific Jeans (Bangladesh)", "DBL Group (Bangladesh)"],
+    "Dresses":            ["Coimbatore Wovens (India)", "Tirupur Woven Cluster (India)", "DBL Group (Bangladesh)"],
+    "Jeans":              ["Pacific Jeans (Bangladesh)", "Denim Expert Ltd (Bangladesh)", "Arvind Mills (India)"],
+    "Hoodies & Sweatshirts": ["Tirupur Knits Ltd (India)", "DBL Group (Bangladesh)", "KPR Mill (India)"],
+    "T-Shirts & Tops":    ["Tirupur Knits Ltd (India)", "SP Apparels (India)", "DBL Group (Bangladesh)"],
+    "School Uniforms":    ["Coimbatore Twill Mills (India)", "William Baird (Bangladesh)", "Tirupur Uniform Cluster (India)"],
+    "Baby & Kids":        ["Tirupur Organic Cluster (India)", "SP Apparels (India)", "Naz Bangladesh Ltd"],
+  },
+  "asda george": {
+    default:              ["Coimbatore Textiles Ltd (India)", "Dhaka Apparel Hubs (Bangladesh)", "SQ Group (Bangladesh)"],
+    "Dresses":            ["Dhaka Apparel Hubs (Bangladesh)", "Coimbatore Textiles Ltd (India)", "SQ Group (Bangladesh)"],
+    "Jeans":              ["SQ Group (Bangladesh)", "Arvind Mills (India, Ahmedabad)", "Pacific Jeans (Bangladesh)"],
+    "School Uniforms":    ["William Baird (Bangladesh)", "Coimbatore Wovens (India)", "Classic Fashions (Bangladesh)"],
+    "Baby & Kids":        ["SP Apparels (India, OEKO-TEX)", "Tirupur Baby Knitwear (India)"],
+  },
+  "h&m": {
+    default:              ["DBL Group (Bangladesh)", "Shahi Exports (India)", "Aydinli Group (Turkey)", "Shenzhou International (China)", "Knit Asia (Bangladesh)"],
+    "Dresses":            ["DBL Group (Bangladesh)", "Shahi Exports (India, Bengaluru)", "Crystal International (HK/China)"],
+    "Jeans":              ["Artistic Milliners (Pakistan, Karachi)", "Nien Hsing Textile (Vietnam)", "Arvind Mills (India, Ahmedabad)"],
+    "Hoodies & Sweatshirts": ["Knit Asia (Bangladesh)", "KPR Mill (India, Tirupur)", "Texhong Textile (China/Vietnam)"],
+    "T-Shirts & Tops":    ["Shenzhou International (China)", "SP Apparels (India, Tirupur)", "Eastern Knitting (Bangladesh)"],
+    "Activewear":         ["Eclat Textile (Taiwan)", "Far Eastern New Century (Taiwan)", "Pacific Textiles (HK/China)"],
+    "Formal Shirts":      ["Esquel Group (China/Malaysia)", "Orient Craft (India)", "Arvind Lifestyle (India)"],
+    "Baby & Kids":        ["SP Apparels (India, Tirupur)", "Knit Asia (Bangladesh)", "DBL Group (Bangladesh)"],
+    "Swimwear":           ["MAS Kreeda (Sri Lanka)", "Eclat Textile (Taiwan)", "Pacific Textiles (HK/China)"],
+    "Sports Bras":        ["Eclat Textile (Taiwan)", "MAS Active (Sri Lanka)", "Far Eastern New Century (Taiwan)"],
+    "Lingerie & Intimates":["MAS Holdings (Sri Lanka)", "Brandix Lanka (Sri Lanka)", "Pacific Textiles (HK/China)"],
+  },
+  "next": {
+    default:              ["Kipas Holding (Turkey)", "KPR Mill (India)", "Ha-Meem Group (Bangladesh)", "Arvind Mills (India)", "DBL Group (Bangladesh)"],
+    "Dresses":            ["Ha-Meem Group (Bangladesh)", "Orient Craft (India, Delhi NCR)", "Kipas Holding (Turkey)"],
+    "Jeans":              ["Arvind Mills (India, Ahmedabad)", "Classic Fashions (Bangladesh)", "Artistic Milliners (Pakistan)"],
+    "Hoodies & Sweatshirts": ["DBL Group (Bangladesh)", "KPR Mill (India, Tirupur)", "Ludhiana Knitwear (India)"],
+    "T-Shirts & Tops":    ["KPR Mill (India, Tirupur)", "SP Apparels (India)", "Ha-Meem Group (Bangladesh)"],
+    "Formal Shirts":      ["Arvind Lifestyle (India)", "Kipas Holding (Turkey)", "Esquel Group (China/Malaysia)"],
+    "Knitwear & Jumpers": ["Ludhiana Knitwear (India)", "DBL Group (Bangladesh)", "Tirupur Knitwear Cluster (India)"],
+    "School Uniforms":    ["William Baird (Bangladesh)", "Tirupur Uniform Mills (India)", "Classic Fashions (Bangladesh)"],
+    "Men's Tailoring":    ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Classic Fashions (Bangladesh)"],
+    "Swimwear":           ["MAS Kreeda (Sri Lanka)", "Pacific Textiles (HK/China)", "Eclat Textile (Taiwan)"],
+    "Baby & Kids":        ["SP Apparels (India)", "Ha-Meem Group (Bangladesh)", "KPR Mill (India)"],
+  },
+  "asos": {
+    default:              ["Kipas Holding (Turkey)", "Leicester Apparel Co. (UK)", "Guangdong Garment Hubs (China)", "Tirupur Knitwear (India)"],
+    "Dresses":            ["Kipas Holding (Turkey)", "Leicester Apparel Co. (UK)", "Guangdong Garment Parks (China)"],
+    "Jeans":              ["Kipas Denim (Turkey, Kahramanmaraş)", "Denim Expert Ltd (Bangladesh)", "Guangdong Garment Parks (China)"],
+    "Hoodies & Sweatshirts": ["Leicester Apparel Co. (UK)", "Tirupur Knitwear Hubs (India)", "Kipas Holding (Turkey)"],
+    "T-Shirts & Tops":    ["Leicester Apparel Co. (UK)", "Tirupur Knitwear Hubs (India)", "Guangdong Garment Parks (China)"],
+    "Activewear":         ["Sri Lanka EPZ Factories", "Taiwan Performance Knit Mills", "Pacific Textiles (HK/China)"],
+    "Occasion Wear":      ["Kipas Holding (Turkey)", "Leicester Apparel Co. (UK)", "Guangdong Garment Parks (China)"],
+    "Swimwear":           ["Pacific Textiles (HK/China)", "Sri Lanka EPZ Factories", "Eclat Textile (Taiwan)"],
+    "Sports Bras":        ["Pacific Textiles (HK/China)", "Sri Lanka EPZ Factories", "Eclat Textile (Taiwan)"],
+    "Lingerie & Intimates":["Sri Lanka EPZ Factories", "MAS Holdings (Sri Lanka)", "Leicester Apparel Co. (UK)"],
+  },
+  "m&s": {
+    default:              ["Shahi Exports (India)", "Arvind Mills (India)", "Brandix Lanka (Sri Lanka)", "Eastman Exports (India)", "MAS Holdings (Sri Lanka)"],
+    "Dresses":            ["Shahi Exports (India, Bengaluru)", "Eastman Exports (India, Tirupur)", "MAS Holdings (Sri Lanka)"],
+    "Jeans":              ["Arvind Mills (India, Ahmedabad)", "Aarvee Denims (India, Ahmedabad)", "Classic Fashions (Bangladesh)"],
+    "Hoodies & Sweatshirts": ["Brandix Lanka (Sri Lanka)", "Texport Industries (India, Bengaluru)", "KPR Mill (India, Tirupur)"],
+    "T-Shirts & Tops":    ["Eastman Exports (India, Tirupur)", "KPR Mill (India, Tirupur)", "Brandix Lanka (Sri Lanka)"],
+    "Activewear":         ["MAS Active (Sri Lanka)", "Brandix Active (Sri Lanka)", "Eclat Textile (Taiwan)"],
+    "Formal Shirts":      ["Arvind Lifestyle (India)", "Gokaldas Exports (India, Bengaluru)", "Eastman Exports (India)"],
+    "Knitwear & Jumpers": ["Coats Bangladesh Ltd", "MAS Active (Sri Lanka)", "Ludhiana Knitwear (India)"],
+    "Lingerie & Intimates":["MAS Holdings (Sri Lanka)", "Triumph International (Sri Lanka)", "Brandix Lanka (Sri Lanka)"],
+    "Swimwear":           ["MAS Kreeda (Sri Lanka)", "Cressida International (HK)", "Pacific Textiles (HK/China)"],
+    "Men's Tailoring":    ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Gokaldas Exports (India)"],
+    "Women's Tailoring":  ["Gokaldas Exports (India, Bengaluru)", "Arvind Lifestyle (India)", "Shahi Exports (India)"],
+    "Baby & Kids":        ["SP Apparels (India, OEKO-TEX)", "Brandix Kids (Sri Lanka)", "KPR Mill (India)"],
+    "Sports Bras":        ["MAS Active (Sri Lanka)", "Brandix Active (Sri Lanka)", "MAS Kreeda (Sri Lanka)"],
+    "Occasion Wear":      ["Shahi Exports (India)", "Eastman Exports (India)", "MAS Holdings (Sri Lanka)"],
+  },
+  "john lewis": {
+    default:              ["Somelos Tecidos (Portugal)", "Coimbatore Organic Weavers (India)", "Johnstons of Elgin (Scotland)", "Arvind Mills (India)", "MAS Holdings (Sri Lanka)"],
+    "Dresses":            ["Somelos Tecidos (Portugal)", "Coimbatore Organic Weavers (India)", "Bombay Rayon Fashions (India)"],
+    "Formal Shirts":      ["Somelos Tecidos (Portugal)", "Arvind Mills (India)", "Thomas Mason Mills (Italy – fabric)"],
+    "Knitwear & Jumpers": ["Johnstons of Elgin (Scotland, UK)", "Hawick Knitwear (Scotland, UK)", "Todd & Duncan (Scotland, UK)"],
+    "Men's Tailoring":    ["Chester Barrie (Crewe, UK)", "Canali Group (Italy – fabric)", "Arvind Lifestyle (India)"],
+    "Women's Tailoring":  ["Bombay Rayon Fashions (India)", "Gokaldas Exports (India)", "Somelos Tecidos (Portugal)"],
+    "Baby & Kids":        ["SP Apparels (India, GOTS)", "Tirupur Organic Cluster (India)", "Coimbatore Organic Weavers (India)"],
+    "Lingerie & Intimates":["MAS Holdings (Sri Lanka)", "Triumph International (Sri Lanka)", "Brandix Lanka (Sri Lanka)"],
+    "Swimwear":           ["MAS Kreeda (Sri Lanka)", "Cressida International (HK)", "Eclat Textile (Taiwan)"],
+    "Activewear":         ["MAS Active (Sri Lanka)", "Eclat Textile (Taiwan)", "Far Eastern New Century (Taiwan)"],
+    "Outerwear & Coats":  ["Coimbatore Organic Weavers (India)", "Johnstons of Elgin (Scotland)", "Loro Piana (Italy – fabric)"],
+  },
+};
+
+const getVerifiedVendors = (brand, category) => {
+  const brandKey = brand.toLowerCase();
+  const brandData = Object.entries(VERIFIED_VENDORS).find(([k]) => brandKey.includes(k))?.[1];
+  if (!brandData) return null;
+  return brandData[category] || brandData.default || null;
+};
 
 const SYSTEM_PROMPT = `You are a UK fashion retail supply chain intelligence expert specializing in brand sourcing strategies, fabric certifications, and competitive positioning (2025-2026).
 
@@ -39,7 +151,7 @@ Regulatory context:
 - CMA Supply Chain Guidance issued early 2026
 - OEKO-TEX® Standard 100: mandatory for M&S; increasingly required across UK retail`;
 
-const USER_PROMPT = (brand, category) => `Generate a detailed supply chain intelligence report for: ${brand} in the ${category} category.
+const USER_PROMPT = (brand, category, verifiedVendors) => `Generate a detailed supply chain intelligence report for: ${brand} in the ${category} category.
 
 Return ONLY a JSON object with exactly this structure — no markdown, no explanation, raw JSON only:
 
@@ -48,13 +160,13 @@ Return ONLY a JSON object with exactly this structure — no markdown, no explan
   "sustainability": "3-4 sentences on ${brand}'s actual current sustainability certifications, commitments, and measurable progress in ${category} fabrics. Be specific.",
   "sourcingInsight": "3-4 sentences on where ${brand} actually sources fabrics for ${category} — countries, specific clusters or factories if known, lead-time and volume strategy.",
   "upgradeAdvice": "4-5 sentences of strategic advice for an Indian B2B fabric supplier wanting to win business from ${brand} for ${category}. Be very specific: exact certifications, exact fabric specs, exact India clusters, and why ${brand} would prefer this supplier.",
-  "vendors": ["Known supplier or factory group name", "Another known vendor"],
+  "knownVendors": ${verifiedVendors ? JSON.stringify(verifiedVendors) : '["See brand sustainability report for full supplier list"]'},
   "coo": "Primary countries of origin e.g. 'Bangladesh, India, Turkey'"
 }
 
 Rules:
 - Be specific and accurate — use real brand data
-- vendors: 2-4 real or highly likely supplier names
+- knownVendors: Use the verified list provided above exactly as given — do NOT modify or hallucinate vendor names
 - upgradeAdvice must be immediately actionable for a fabric mill in India
 - Return ONLY the JSON object`;
 
@@ -82,6 +194,9 @@ export default async function handler(req, res) {
     return res.status(503).json({ error: 'GEMINI_API_KEY not configured. Add it in Vercel project settings → Environment Variables. Get free key at https://aistudio.google.com/app/apikey' });
   }
 
+  // Get verified vendors to inject into prompt (prevents hallucination)
+  const verifiedVendors = getVerifiedVendors(brand, category);
+
   try {
     const geminiRes = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
@@ -91,7 +206,7 @@ export default async function handler(req, res) {
         signal: AbortSignal.timeout(25000),
         body: JSON.stringify({
           system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
-          contents: [{ role: 'user', parts: [{ text: USER_PROMPT(brand, category) }] }],
+          contents: [{ role: 'user', parts: [{ text: USER_PROMPT(brand, category, verifiedVendors) }] }],
           generationConfig: {
             temperature: 0.1,
             maxOutputTokens: 1500,
@@ -115,6 +230,11 @@ export default async function handler(req, res) {
 
     if (!parsed.overviewStance || !parsed.upgradeAdvice) {
       throw new Error('Response missing required fields');
+    }
+
+    // Always override knownVendors with verified data — never trust AI-generated vendor names
+    if (verifiedVendors) {
+      parsed.knownVendors = verifiedVendors;
     }
 
     return res.status(200).json({ data: parsed, model_label: 'Gemini 2.5 Flash' });

@@ -303,8 +303,10 @@ export const MarketIntelligencePanel = ({ garmentName }) => {
       .then(r => r.json())
       .then(r => {
         if (r.data) {
-          setCached(cacheKey, r.data);
-          setDeepDive({ brand: brandName, loading: false, data: r.data, error: null });
+          // Normalise vendor field: API returns knownVendors; old cached data may have vendors
+          const normalized = { ...r.data, knownVendors: r.data.knownVendors || r.data.vendors || [] };
+          setCached(cacheKey, normalized);
+          setDeepDive({ brand: brandName, loading: false, data: normalized, error: null });
         } else throw new Error(r.error || 'No data');
       })
       .catch(e => {
