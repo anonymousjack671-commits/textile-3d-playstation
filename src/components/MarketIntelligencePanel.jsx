@@ -402,10 +402,10 @@ export const MarketIntelligencePanel = ({ garmentName }) => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {[...(data.brands || [])].sort((a, b) => tierOrder.indexOf(a.tier) - tierOrder.indexOf(b.tier)).map((brand, i) => {
                 const t = TIER_COLORS[brand.tier] || TIER_COLORS.mid;
-                // Support both new fabrics[] array and legacy fabric string
+                // Support both fabrics[] (strings) and legacy fabric string
                 const fabricList = brand.fabrics?.length
                   ? brand.fabrics
-                  : brand.fabric ? [{ name: brand.fabric, gsm: brand.gsm, usage: '' }] : [];
+                  : brand.fabric ? [brand.fabric] : [];
                 const isOpen = deepDive?.brand === brand.name;
                 return (
                   <div key={i} style={{ borderRadius: '14px', overflow: 'hidden', border: `1px solid ${t.border}`, background: t.bg }}>
@@ -419,15 +419,31 @@ export const MarketIntelligencePanel = ({ garmentName }) => {
                         {brand.cert && <p style={{ margin: '0.3rem 0 0', fontSize: '0.7rem', color: 'var(--text-muted)' }}>{brand.cert}</p>}
                       </div>
                       {/* All fabrics list */}
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem', flex: '1 1 200px', minWidth: 0 }}>
-                        {fabricList.map((f, fi) => (
-                          <div key={fi} style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
-                            <span style={{ fontSize: '0.82rem', color: 'var(--text-main)', fontWeight: 500 }}>{f.name}</span>
-                            {f.gsm && <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>{f.gsm} GSM</span>}
-                            {f.usage && <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>· {f.usage}</span>}
-                          </div>
-                        ))}
-                        {brand.coo && <p style={{ margin: '0.4rem 0 0', fontSize: '0.72rem', color: 'var(--text-muted)' }}>🌍 COO: {brand.coo}</p>}
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', flex: '1 1 200px', minWidth: 0 }}>
+                        {fabricList.map((f, fi) => {
+                          // f is a string like "100% BCI Cotton Jersey (tees)"
+                          // Split on last ( to extract usage label
+                          const usageMatch = typeof f === 'string' ? f.match(/^(.+?)\s*\(([^)]+)\)\s*$/) : null;
+                          const fabricName = usageMatch ? usageMatch[1] : (typeof f === 'string' ? f : f.name || '');
+                          const usageLabel = usageMatch ? usageMatch[2] : (typeof f === 'object' ? f.usage : null);
+                          return (
+                            <div key={fi} style={{ display: 'flex', alignItems: 'baseline', gap: '0.4rem', flexWrap: 'wrap' }}>
+                              <span style={{ fontSize: '0.75rem', color: 'var(--accent-primary)', flexShrink: 0 }}>›</span>
+                              <span style={{ fontSize: '0.82rem', color: 'var(--text-main)', fontWeight: 500 }}>{fabricName}</span>
+                              {usageLabel && (
+                                <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)', fontStyle: 'italic', background: 'rgba(255,255,255,0.04)', padding: '0.05rem 0.4rem', borderRadius: '6px' }}>
+                                  {usageLabel}
+                                </span>
+                              )}
+                            </div>
+                          );
+                        })}
+                        {brand.gsm && (
+                          <p style={{ margin: '0.35rem 0 0', fontSize: '0.7rem', color: 'var(--text-muted)' }}>
+                            ⚖️ {brand.gsm} GSM
+                          </p>
+                        )}
+                        {brand.coo && <p style={{ margin: '0.25rem 0 0', fontSize: '0.72rem', color: 'var(--text-muted)' }}>🌍 COO: {brand.coo}</p>}
                       </div>
                       {/* Deep dive button + tier dot */}
                       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '0.5rem', flexShrink: 0, marginLeft: 'auto' }}>

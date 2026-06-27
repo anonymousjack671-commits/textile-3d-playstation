@@ -17,13 +17,13 @@ const MARKET_DATA = {
     'Dresses': {
       summary: 'Viscose and ECOVERO™ dominate mid-market. TENCEL™ Lyocell now standard at premium. Primark shifting to responsibly sourced cotton via own Primark Cotton Project (57% certified as of 2025, target 100% by 2027).',
       brands: [
-        { name: 'Primark', tier: 'budget', fabric: '100% Cotton Jersey / Standard Viscose', cert: 'Primark Cotton Project', gsm: '90–130', icon: '🟠' },
-        { name: "Sainsbury's TU", tier: 'budget', fabric: '100% Viscose or Cotton-Viscose blend', cert: 'BCI Cotton', gsm: '90–130', icon: '🟠' },
-        { name: 'H&M', tier: 'mid', fabric: 'LENZING™ ECOVERO™ Viscose Challis', cert: 'FSC®', gsm: '80–120', icon: '🟡' },
-        { name: 'Next', tier: 'mid', fabric: 'Viscose Challis / Jersey blend', cert: 'BCI', gsm: '90–130', icon: '🟡' },
-        { name: 'ASOS', tier: 'mid', fabric: 'LENZING™ ECOVERO™ / TENCEL™ Modal', cert: 'FSC® / GRS', gsm: '100–140', icon: '🟡' },
-        { name: 'M&S', tier: 'premium', fabric: 'TENCEL™ Lyocell / Crepe', cert: 'FSC® / OEKO-TEX®', gsm: '110–160', icon: '🟢' },
-        { name: 'John Lewis', tier: 'premium', fabric: 'TENCEL™ Lyocell or Silk blend', cert: 'GOTS / OEKO-TEX®', gsm: '100–150', icon: '🟢' },
+        { name: 'Primark', tier: 'budget', fabrics: ['100% Cotton Jersey (casual/jersey styles)', 'Standard Viscose Challis (printed dresses)', '100% Polyester Georgette (occasionwear)'], cert: 'Primark Cotton Project', gsm: '90–150', icon: '🟠' },
+        { name: "Sainsbury's TU", tier: 'budget', fabrics: ['100% Viscose Challis (daywear)', 'Cotton-Viscose 55/45 blend (jersey dresses)', 'BCI Cotton Jersey (casual)'], cert: 'BCI Cotton', gsm: '90–140', icon: '🟠' },
+        { name: 'H&M', tier: 'mid', fabrics: ['LENZING™ ECOVERO™ Viscose Challis (printed)', 'OCS Organic Cotton Jersey (basics)', 'rPET Woven (transitional styles)'], cert: 'FSC® / OCS', gsm: '80–140', icon: '🟡' },
+        { name: 'Next', tier: 'mid', fabrics: ['Viscose Challis BCI (daywear)', 'Cotton-Viscose Jersey blend (jersey dresses)', 'Crepe de Chine (occasionwear)'], cert: 'BCI', gsm: '90–140', icon: '🟡' },
+        { name: 'ASOS', tier: 'mid', fabrics: ['LENZING™ ECOVERO™ Viscose (Responsible Edit)', 'TENCEL™ Modal blend (occasion)', 'GRS rPET Satin (formal)'], cert: 'FSC® / GRS', gsm: '100–160', icon: '🟡' },
+        { name: 'M&S', tier: 'premium', fabrics: ['TENCEL™ Lyocell Crepe (OEKO-TEX® certified)', 'OCS Organic Cotton Jersey (everyday)', 'Acetate-Viscose blend (occasionwear)'], cert: 'FSC® / OEKO-TEX®', gsm: '110–180', icon: '🟢' },
+        { name: 'John Lewis', tier: 'premium', fabrics: ['TENCEL™ Lyocell or Silk blend (occasionwear)', 'GOTS Organic Cotton Jersey (casual)', 'Linen-Viscose blend (summer)'], cert: 'GOTS / OEKO-TEX®', gsm: '100–160', icon: '🟢' },
       ],
       upgrade: {
         from: 'Standard Viscose / Polyester (unverified)',
@@ -40,11 +40,11 @@ const MARKET_DATA = {
     'Blouses & Tops': {
       summary: 'Cotton-poly blends at budget. Organic cotton and TENCEL™ at mid-premium. Linen blends growing.',
       brands: [
-        { name: 'Primark', tier: 'budget', fabric: '100% Polyester or Cotton-Poly 60/40', cert: 'Primark Cotton Project', gsm: '100–140', icon: '🟠' },
-        { name: "Sainsbury's TU", tier: 'budget', fabric: '100% Cotton / Viscose', cert: 'BCI', gsm: '110–150', icon: '🟠' },
-        { name: 'Next', tier: 'mid', fabric: '100% Cotton / Linen blend', cert: 'BCI', gsm: '110–150', icon: '🟡' },
-        { name: 'ASOS', tier: 'mid', fabric: 'ECOVERO™ Viscose / Cotton-Linen', cert: 'FSC® / BCI', gsm: '100–140', icon: '🟡' },
-        { name: 'M&S', tier: 'premium', fabric: 'Cotton-TENCEL™ Lyocell blend / Silk', cert: 'FSC® / OEKO-TEX®', gsm: '110–160', icon: '🟢' },
+        { name: 'Primark', tier: 'budget', fabrics: ['100% Polyester (fashion blouses)', 'Cotton-Poly 60/40 (basics)', 'Primark Cotton Project Cotton (essentials)'], cert: 'Primark Cotton Project', gsm: '100–140', icon: '🟠' },
+        { name: "Sainsbury's TU", tier: 'budget', fabrics: ['100% BCI Cotton (basics)', 'Viscose Challis (printed blouses)'], cert: 'BCI', gsm: '110–150', icon: '🟠' },
+        { name: 'Next', tier: 'mid', fabrics: ['100% BCI Cotton (plain)', 'Cotton-Linen blend (summer)', 'Viscose Georgette (occasionwear)'], cert: 'BCI', gsm: '100–160', icon: '🟡' },
+        { name: 'ASOS', tier: 'mid', fabrics: ['ECOVERO™ Viscose (responsible edit)', 'Cotton-Linen blend (casual)', 'TENCEL™ Modal (premium)'], cert: 'FSC® / BCI', gsm: '100–140', icon: '🟡' },
+        { name: 'M&S', tier: 'premium', fabrics: ['Cotton-TENCEL™ Lyocell blend (everyday)', 'Silk (occasionwear)', 'Linen-TENCEL™ blend (summer)'], cert: 'FSC® / OEKO-TEX®', gsm: '110–160', icon: '🟢' },
       ],
       upgrade: {
         from: 'Standard Cotton Poplin or Polyester blouse',
@@ -61,12 +61,12 @@ const MARKET_DATA = {
     'Tops & T-Shirts': {
       summary: 'All tiers use 100% cotton. Upgrade battleground is GSM, yarn quality and certification.',
       brands: [
-        { name: 'Primark', tier: 'budget', fabric: '100% Cotton Carded', cert: 'Primark Cotton Project', gsm: '150–170', icon: '🟠' },
-        { name: "Sainsbury's TU", tier: 'budget', fabric: '100% BCI Cotton', cert: 'BCI', gsm: '160–180', icon: '🟠' },
-        { name: 'Next', tier: 'mid', fabric: '100% Cotton Combed / 60-40 Marl', cert: 'BCI', gsm: '160–190', icon: '🟡' },
-        { name: 'ASOS', tier: 'mid', fabric: 'Cotton or rPET blend (Responsible Edit)', cert: 'GRS / BCI', gsm: '160–200', icon: '🟡' },
-        { name: 'M&S', tier: 'premium', fabric: '100% Combed Cotton BCI / Cotton-Modal', cert: 'BCI / OEKO-TEX®', gsm: '170–210', icon: '🟢' },
-        { name: '& Other Stories', tier: 'premium', fabric: '100% GOTS Organic Cotton', cert: 'GOTS', gsm: '160–200', icon: '🟢' },
+        { name: 'Primark', tier: 'budget', fabrics: ['100% Carded Cotton Jersey (tees)', 'Cotton-Poly 60/40 (long-sleeves)', 'Primark Cotton Project Cotton (essentials)'], cert: 'Primark Cotton Project', gsm: '150–170', icon: '🟠' },
+        { name: "Sainsbury's TU", tier: 'budget', fabrics: ['100% BCI Cotton Single Jersey (tees)', 'Cotton-Modal blend (premium basics)'], cert: 'BCI', gsm: '160–180', icon: '🟠' },
+        { name: 'Next', tier: 'mid', fabrics: ['100% Combed Cotton Ring-Spun (standard)', '60/40 Cotton-Poly Marl (heather tees)', 'BCI Cotton Slub Jersey (fashion)'], cert: 'BCI', gsm: '160–190', icon: '🟡' },
+        { name: 'ASOS', tier: 'mid', fabrics: ['BCI Cotton (standard)', 'rPET blend (Responsible Edit)', 'Organic Cotton (conscious range)'], cert: 'GRS / BCI', gsm: '160–200', icon: '🟡' },
+        { name: 'M&S', tier: 'premium', fabrics: ['100% Combed BCI Cotton (standard)', 'Cotton-Modal blend (premium)', 'GOTS Organic Cotton (premium range)'], cert: 'BCI / OEKO-TEX®', gsm: '170–210', icon: '🟢' },
+        { name: '& Other Stories', tier: 'premium', fabrics: ['100% GOTS Organic Cotton Jersey (tees)', 'Cotton-TENCEL™ Lyocell blend (performance)'], cert: 'GOTS', gsm: '160–200', icon: '🟢' },
       ],
       upgrade: {
         from: '160 GSM BCI Carded Cotton (standard T-shirt)',
@@ -83,11 +83,11 @@ const MARKET_DATA = {
     'T-Shirts & Polos': {
       summary: 'All tiers use 100% cotton. GSM and certification separate budget from premium.',
       brands: [
-        { name: 'Primark', tier: 'budget', fabric: '100% Cotton Carded', cert: 'Primark Cotton Project', gsm: '150–170', icon: '🟠' },
-        { name: "Sainsbury's TU", tier: 'budget', fabric: '100% BCI Cotton', cert: 'BCI', gsm: '160–180', icon: '🟠' },
-        { name: 'Next', tier: 'mid', fabric: 'Combed Cotton 100%', cert: 'BCI', gsm: '160–190', icon: '🟡' },
-        { name: 'ASOS', tier: 'mid', fabric: 'Cotton or rPET blend', cert: 'GRS / BCI', gsm: '160–200', icon: '🟡' },
-        { name: 'M&S', tier: 'premium', fabric: 'Combed Cotton / Cotton-Modal', cert: 'BCI / OEKO-TEX®', gsm: '170–210', icon: '🟢' },
+        { name: 'Primark', tier: 'budget', fabrics: ['100% Carded Cotton Jersey (tees)', 'Pique Cotton (polos)', 'Primark Cotton Project Cotton (essentials)'], cert: 'Primark Cotton Project', gsm: '150–180', icon: '🟠' },
+        { name: "Sainsbury's TU", tier: 'budget', fabrics: ['100% BCI Cotton Jersey (tees)', 'Pique BCI Cotton (polos)'], cert: 'BCI', gsm: '160–200', icon: '🟠' },
+        { name: 'Next', tier: 'mid', fabrics: ['100% Combed BCI Cotton (tees)', 'Pique BCI Cotton (polos)', 'Cotton-Poly blend (sport polos)'], cert: 'BCI', gsm: '160–190', icon: '🟡' },
+        { name: 'ASOS', tier: 'mid', fabrics: ['BCI Cotton (standard)', 'rPET Pique (eco polos)', 'Organic Cotton (conscious range)'], cert: 'GRS / BCI', gsm: '160–200', icon: '🟡' },
+        { name: 'M&S', tier: 'premium', fabrics: ['Combed BCI Cotton Jersey (tees)', 'Cotton-Modal blend (premium)', 'Egyptian Cotton Pique (luxury polos)'], cert: 'BCI / OEKO-TEX®', gsm: '170–210', icon: '🟢' },
       ],
       upgrade: {
         from: '160 GSM BCI Carded Cotton',
@@ -104,11 +104,11 @@ const MARKET_DATA = {
     'Formal Shirts': {
       summary: 'Premium cotton qualities with high thread count. Non-iron finish is minimum mid-market expectation.',
       brands: [
-        { name: 'Primark', tier: 'budget', fabric: '65% Poly / 35% Cotton TC Poplin', cert: 'Primark Cotton Project', gsm: '110–130', icon: '🟠' },
-        { name: "Sainsbury's TU", tier: 'budget', fabric: '60% Cotton / 40% Poly Poplin', cert: 'BCI', gsm: '120–140', icon: '🟠' },
-        { name: 'Next', tier: 'mid', fabric: 'BCI Cotton 100% Ring Spun, Non-Iron', cert: 'BCI', gsm: '115–135', icon: '🟡' },
-        { name: 'M&S', tier: 'premium', fabric: '100% Non-Iron Cotton Fine Twill (60s–80s)', cert: 'BCI / OEKO-TEX®', gsm: '100–130', icon: '🟢' },
-        { name: 'Charles Tyrwhitt', tier: 'premium', fabric: '2-ply 100% Cotton Twill / Oxford', cert: 'Planet Mark', gsm: '90–120', icon: '🟢' },
+        { name: 'Primark', tier: 'budget', fabrics: ['65% Poly / 35% Cotton TC Poplin (easy care)', 'Cotton-Poly Oxford (casual)', 'Primark Cotton Project Poplin (core)'], cert: 'Primark Cotton Project', gsm: '110–140', icon: '🟠' },
+        { name: "Sainsbury's TU", tier: 'budget', fabrics: ['60% BCI Cotton / 40% Poly Poplin (standard)', 'BCI Cotton Twill (smart casual)'], cert: 'BCI', gsm: '120–140', icon: '🟠' },
+        { name: 'Next', tier: 'mid', fabrics: ['100% BCI Cotton Non-Iron Poplin (standard)', '100% BCI Cotton Oxford (casual-smart)', 'Cotton-Linen blend (summer range)'], cert: 'BCI', gsm: '110–140', icon: '🟡' },
+        { name: 'M&S', tier: 'premium', fabrics: ['100% Non-Iron Cotton Fine Twill 60s–80s (formal)', '2-ply BCI Cotton Poplin (premium)', 'Cotton-Modal blend (comfort)'], cert: 'BCI / OEKO-TEX®', gsm: '100–130', icon: '🟢' },
+        { name: 'Charles Tyrwhitt', tier: 'premium', fabrics: ['2-ply 100% Cotton Twill (formal)', '2-ply Cotton Oxford (casual)', 'Sea Island Cotton (luxury)'], cert: 'Planet Mark', gsm: '90–120', icon: '🟢' },
       ],
       upgrade: {
         from: '65/35 Poly-Cotton Poplin (easy-care)',
@@ -125,11 +125,11 @@ const MARKET_DATA = {
     'Casual Shirts': {
       summary: 'Chambray and linen dominate casual. Organic cotton being adopted at mid market.',
       brands: [
-        { name: 'Primark', tier: 'budget', fabric: 'Cotton Chambray / Oxford', cert: 'Primark Cotton Project', gsm: '120–160', icon: '🟠' },
-        { name: "Sainsbury's TU", tier: 'budget', fabric: '100% BCI Cotton Chambray', cert: 'BCI', gsm: '130–170', icon: '🟠' },
-        { name: 'Next', tier: 'mid', fabric: 'BCI Cotton / Linen-Cotton blend', cert: 'BCI', gsm: '130–170', icon: '🟡' },
-        { name: 'M&S', tier: 'premium', fabric: 'OCS Cotton / Linen blend', cert: 'OCS / OEKO-TEX®', gsm: '130–165', icon: '🟢' },
-        { name: 'John Lewis / Reiss', tier: 'premium', fabric: 'Linen or Cotton-Linen Chambray', cert: 'OEKO-TEX®', gsm: '140–180', icon: '🟢' },
+        { name: 'Primark', tier: 'budget', fabrics: ['Cotton Chambray (casual)', 'Cotton Oxford (smart casual)', 'Cotton Poplin (formal casual)'], cert: 'Primark Cotton Project', gsm: '120–160', icon: '🟠' },
+        { name: "Sainsbury's TU", tier: 'budget', fabrics: ['100% BCI Cotton Chambray (casual)', 'BCI Cotton Oxford (smart casual)'], cert: 'BCI', gsm: '130–170', icon: '🟠' },
+        { name: 'Next', tier: 'mid', fabrics: ['BCI Cotton Chambray (casual)', 'Linen-Cotton blend (summer)', 'BCI Cotton Oxford (smart)'], cert: 'BCI', gsm: '130–170', icon: '🟡' },
+        { name: 'M&S', tier: 'premium', fabrics: ['OCS Organic Cotton Poplin (formal casual)', 'Linen blend (summer)', 'Cotton-TENCEL™ Lyocell blend (premium)'], cert: 'OCS / OEKO-TEX®', gsm: '130–165', icon: '🟢' },
+        { name: 'John Lewis / Reiss', tier: 'premium', fabrics: ['100% European Linen (luxury summer)', 'Cotton-Linen Chambray (smart casual)', 'Italian Cotton-Silk blend (luxury)'], cert: 'OEKO-TEX®', gsm: '130–180', icon: '🟢' },
       ],
       upgrade: {
         from: 'Standard BCI Cotton Chambray',
@@ -146,10 +146,10 @@ const MARKET_DATA = {
     'Blazers & Suits': {
       summary: 'Wool-blend the standard at mid. Linen-blend suit growing in summer range. Sustainable wool certifications (RWS, ZQ) increasingly demanded.',
       brands: [
-        { name: 'Next', tier: 'mid', fabric: '55% Wool / 45% Poly Gabardine', cert: 'RWS (in progress)', gsm: '220–300', icon: '🟡' },
-        { name: 'ASOS', tier: 'mid', fabric: 'Poly-Wool blend 50/50 / Boucle', cert: 'None', gsm: '200–280', icon: '🟡' },
-        { name: 'M&S', tier: 'premium', fabric: '100% Wool Gabardine (Merino / Zegna)', cert: 'RWS wool', gsm: '240–320', icon: '🟢' },
-        { name: 'John Lewis / Ted Baker', tier: 'premium', fabric: 'Italian Wool blend / Linen', cert: 'OEKO-TEX®', gsm: '200–280', icon: '🟢' },
+        { name: 'Next', tier: 'mid', fabrics: ['55% Wool / 45% Poly Gabardine (formal)', 'Linen-Cotton blend (summer suit)', 'rPET-Wool blend (sustainable range)'], cert: 'RWS (in progress)', gsm: '220–300', icon: '🟡' },
+        { name: 'ASOS', tier: 'mid', fabrics: ['Poly-Wool 50/50 blend (standard)', 'Boucle knit (fashion)', 'rPET suiting (sustainable range)'], cert: 'None', gsm: '200–280', icon: '🟡' },
+        { name: 'M&S', tier: 'premium', fabrics: ['100% Wool Gabardine Merino (formal)', 'Wool-Cashmere blend (luxury)', 'Linen-Wool blend (summer)'], cert: 'RWS wool', gsm: '240–320', icon: '🟢' },
+        { name: 'John Lewis', tier: 'premium', fabrics: ['Italian Wool blend (tailored)', 'Linen-Wool Hopsack (summer)', 'Cashmere-Wool blend (luxury)'], cert: 'OEKO-TEX®', gsm: '200–280', icon: '🟢' },
       ],
       upgrade: {
         from: '100% Polyester suiting (unlined)',
@@ -166,10 +166,10 @@ const MARKET_DATA = {
     'Hoodies & Sweatshirts': {
       summary: 'French terry is standard across all tiers. rPET fleece growing rapidly at mid-market. 400 GSM benchmark for "premium heavyweight".',
       brands: [
-        { name: 'Primark', tier: 'budget', fabric: '50/50 Cotton-Polyester French Terry', cert: 'Primark Cotton Project', gsm: '280–320', icon: '🟠' },
-        { name: 'Next', tier: 'mid', fabric: '60% Cotton / 40% Poly Loopback', cert: 'BCI', gsm: '320–380', icon: '🟡' },
-        { name: 'ASOS', tier: 'mid', fabric: 'Recycled Polyester / OCS Cotton French Terry', cert: 'GRS / OCS', gsm: '300–380', icon: '🟡' },
-        { name: 'M&S', tier: 'premium', fabric: '100% OCS Organic Cotton French Terry', cert: 'OCS / OEKO-TEX®', gsm: '340–420', icon: '🟢' },
+        { name: 'Primark', tier: 'budget', fabrics: ['50/50 Cotton-Poly French Terry (standard hoodies)', 'Polar Fleece 100% Polyester (winter)', 'Primark Cotton Brushed Terry (essential)'], cert: 'Primark Cotton Project', gsm: '280–340', icon: '🟠' },
+        { name: 'Next', tier: 'mid', fabrics: ['60% Cotton / 40% Poly Loopback (standard)', '80% Cotton / 20% Poly French Terry (premium line)', 'BCI Cotton Brushed Fleece (winter)'], cert: 'BCI', gsm: '320–380', icon: '🟡' },
+        { name: 'ASOS', tier: 'mid', fabrics: ['GRS rPET / OCS Cotton French Terry (eco range)', 'OCS Cotton-Poly Loopback (standard)', 'GOTS Organic Cotton Fleece (responsible edit)'], cert: 'GRS / OCS', gsm: '300–380', icon: '🟡' },
+        { name: 'M&S', tier: 'premium', fabrics: ['100% OCS Organic Cotton French Terry (premium)', 'GOTS Organic Cotton Loopback (luxury)', 'Cotton-Modal blend (lightweight)'], cert: 'OCS / OEKO-TEX®', gsm: '340–420', icon: '🟢' },
       ],
       upgrade: {
         from: '50/50 Cotton-Poly French Terry (280 GSM)',
@@ -186,11 +186,11 @@ const MARKET_DATA = {
     'Jeans': {
       summary: 'Stretch denim standard at all tiers. Sustainable denim credentials (BCI, waterless dyeing, recycled cotton) now table stakes at mid.',
       brands: [
-        { name: 'Primark', tier: 'budget', fabric: '99% Cotton / 1% Elastane Denim', cert: 'Primark Cotton Project', gsm: '300–380', icon: '🟠' },
-        { name: "Sainsbury's TU", tier: 'budget', fabric: 'BCI Cotton Denim + Elastane', cert: 'BCI', gsm: '300–380', icon: '🟠' },
-        { name: 'Next', tier: 'mid', fabric: '98% Cotton / 2% Elastane Ring-Spun BCI', cert: 'BCI', gsm: '320–400', icon: '🟡' },
-        { name: 'ASOS', tier: 'mid', fabric: 'BCI Stretch Denim / Recycled Cotton (Circular Edit)', cert: 'GRS / BCI', gsm: '300–400', icon: '🟡' },
-        { name: 'M&S', tier: 'premium', fabric: 'REPREVE® rPET / BCI Cotton Stretch Denim', cert: 'GRS / BCI', gsm: '340–420', icon: '🟢' },
+        { name: 'Primark', tier: 'budget', fabrics: ['99% Cotton / 1% Elastane 3/1 Twill Denim (standard)', 'Stretch Denim 98/2 (skinny fits)', 'OE Cotton Denim (rigid)'], cert: 'Primark Cotton Project', gsm: '300–380', icon: '🟠' },
+        { name: "Sainsbury's TU", tier: 'budget', fabrics: ['BCI Cotton Denim + 1% Elastane (standard)', 'BCI Cotton + REPREVE® rPET Stretch Denim (eco)'], cert: 'BCI', gsm: '300–380', icon: '🟠' },
+        { name: 'Next', tier: 'mid', fabrics: ['98% BCI Ring-Spun Cotton / 2% Elastane (standard)', 'BCI Cotton Non-Stretch (rigid)', 'BCI Cotton Bull Denim (heavyweight)'], cert: 'BCI', gsm: '320–400', icon: '🟡' },
+        { name: 'ASOS', tier: 'mid', fabrics: ['BCI Stretch Denim 98/2 (standard)', 'Recycled Cotton Denim (Circular Edit)', 'rPET-Cotton blend Denim (eco range)'], cert: 'GRS / BCI', gsm: '300–400', icon: '🟡' },
+        { name: 'M&S', tier: 'premium', fabrics: ['REPREVE® rPET / BCI Cotton Stretch Denim (flagship)', 'BCI Organic Cotton Selvedge (premium)', 'TENCEL™-Cotton blend Denim (sustainable)'], cert: 'GRS / BCI', gsm: '340–420', icon: '🟢' },
       ],
       upgrade: {
         from: 'Standard BCI Cotton Denim 3/1 Twill',
@@ -207,10 +207,10 @@ const MARKET_DATA = {
     'Activewear': {
       summary: 'rPET almost universal at mid-premium. Nylon-elastane remains performance standard. ECONYL growing in swimwear/activewear crossover.',
       brands: [
-        { name: 'Primark', tier: 'budget', fabric: '87% Polyester / 13% Elastane', cert: 'BCI Cotton (main range)', gsm: '160–200', icon: '🟠' },
-        { name: 'Next', tier: 'mid', fabric: 'rPET / Nylon blend performance knit', cert: 'GRS', gsm: '160–220', icon: '🟡' },
-        { name: 'ASOS', tier: 'mid', fabric: 'GRS rPET Performance Jersey', cert: 'GRS', gsm: '160–220', icon: '🟡' },
-        { name: 'M&S', tier: 'premium', fabric: 'GRS rPET 4-way stretch performance knit', cert: 'GRS / OEKO-TEX®', gsm: '170–240', icon: '🟢' },
+        { name: 'Primark', tier: 'budget', fabrics: ['87% Virgin Polyester / 13% Elastane (standard)', 'Cotton-Poly blend (yoga/casual)', 'rPET transitioning range (eco)'], cert: 'BCI Cotton (main range)', gsm: '160–200', icon: '🟠' },
+        { name: 'Next', tier: 'mid', fabrics: ['rPET / Nylon performance knit (activewear)', 'GRS rPET Jersey (casual)', 'Nylon-Elastane (leggings)'], cert: 'GRS', gsm: '160–220', icon: '🟡' },
+        { name: 'ASOS', tier: 'mid', fabrics: ['GRS rPET Performance Jersey (tops)', 'rPET-Nylon blend (leggings)', 'ECOVERO™ blend (yoga range)'], cert: 'GRS', gsm: '160–220', icon: '🟡' },
+        { name: 'M&S', tier: 'premium', fabrics: ['GRS rPET 4-way stretch knit (premium)', 'ECONYL® Nylon (performance)', 'OEKO-TEX® rPET Compression fabric (sport)'], cert: 'GRS / OEKO-TEX®', gsm: '170–240', icon: '🟢' },
       ],
       upgrade: {
         from: 'Virgin Polyester/Elastane performance knit',
@@ -227,9 +227,9 @@ const MARKET_DATA = {
     'Swimwear': {
       summary: 'ECONYL® (regenerated nylon) now standard at mid-premium. Chlorine-resistance required. UV50+ increasingly expected.',
       brands: [
-        { name: 'Primark', tier: 'budget', fabric: '80% Nylon / 20% Elastane', cert: 'None stated', gsm: '180–220', icon: '🟠' },
-        { name: 'Next', tier: 'mid', fabric: 'ECONYL® Nylon / Elastane blend', cert: 'GRS', gsm: '180–240', icon: '🟡' },
-        { name: 'M&S', tier: 'premium', fabric: 'ECONYL® Regenerated Nylon + Lycra®', cert: 'GRS / Aquafil certified', gsm: '180–240', icon: '🟢' },
+        { name: 'Primark', tier: 'budget', fabrics: ['80% Virgin Nylon / 20% Elastane (standard)', '80% Polyester / 20% Elastane (budget)'], cert: 'None stated', gsm: '180–220', icon: '🟠' },
+        { name: 'Next', tier: 'mid', fabrics: ['ECONYL® Regenerated Nylon / Elastane (main range)', 'Chlorine-resistant Polyester-Elastane (basics)'], cert: 'GRS', gsm: '180–240', icon: '🟡' },
+        { name: 'M&S', tier: 'premium', fabrics: ['ECONYL® Regenerated Nylon + Lycra® (premium swimwear)', 'OEKO-TEX® Nylon-Elastane (certified range)', 'UV50+ rPET-Elastane (sport swim)'], cert: 'GRS / Aquafil certified', gsm: '180–240', icon: '🟢' },
       ],
       upgrade: {
         from: 'Virgin Nylon / Elastane',
@@ -246,10 +246,10 @@ const MARKET_DATA = {
     'Eveningwear': {
       summary: 'Polyester satin at budget. Stretch-crepe at mid. Pure silk or sustainable silk alternatives at premium.',
       brands: [
-        { name: 'Primark', tier: 'budget', fabric: '100% Polyester Satin / Chiffon', cert: 'None', gsm: '90–130', icon: '🟠' },
-        { name: 'ASOS', tier: 'mid', fabric: 'Recycled Polyester Satin / ECOVERO™ Crepe', cert: 'GRS / FSC®', gsm: '100–180', icon: '🟡' },
-        { name: 'M&S', tier: 'premium', fabric: 'Acetate Satin / Silk-blend Charmeuse', cert: 'OEKO-TEX®', gsm: '100–160', icon: '🟢' },
-        { name: 'REISS / Coast', tier: 'premium', fabric: 'Stretch Crepe / Duchess Satin', cert: 'OEKO-TEX®', gsm: '120–220', icon: '🟢' },
+        { name: 'Primark', tier: 'budget', fabrics: ['100% Polyester Satin (formal)', 'Polyester Chiffon (layered styles)', 'Poly-Georgette (draped evening)'], cert: 'None', gsm: '90–130', icon: '🟠' },
+        { name: 'ASOS', tier: 'mid', fabrics: ['GRS rPET Satin (responsible edit)', 'ECOVERO™ Crepe (sustainable range)', 'Stretch-Velvet Poly (party)'], cert: 'GRS / FSC®', gsm: '100–180', icon: '🟡' },
+        { name: 'M&S', tier: 'premium', fabrics: ['Acetate Satin (cocktail dresses)', 'Silk-blend Charmeuse (eveningwear)', 'TENCEL™-Silk Crepe (eco premium)'], cert: 'OEKO-TEX®', gsm: '100–160', icon: '🟢' },
+        { name: 'Reiss', tier: 'premium', fabrics: ['Stretch Crepe (structured eveningwear)', 'Duchess Satin (formal gowns)', 'Jersey-Crepe blend (smart casual)'], cert: 'OEKO-TEX®', gsm: '120–220', icon: '🟢' },
       ],
       upgrade: {
         from: 'Standard Polyester Satin (unverified)',
@@ -266,10 +266,10 @@ const MARKET_DATA = {
     'Coats & Jackets': {
       summary: 'Recycled wool now mainstream at M&S and John Lewis. rPET shell fabric standard in mid-market outerwear.',
       brands: [
-        { name: 'Primark', tier: 'budget', fabric: 'Poly-Cotton Twill or 100% Polyester Shell', cert: 'BCI', gsm: '220–320', icon: '🟠' },
-        { name: 'Next', tier: 'mid', fabric: 'Wool-blend overcoat / rPET shell jacket', cert: 'RWS (target 50% by 2025) / GRS', gsm: '280–420', icon: '🟡' },
-        { name: 'M&S', tier: 'premium', fabric: 'Recycled Wool-blend or 100% RWS Wool', cert: 'RWS / OEKO-TEX®', gsm: '320–500', icon: '🟢' },
-        { name: 'John Lewis / Reiss', tier: 'premium', fabric: '100% Wool Melton / Italian Cashmere Blend', cert: 'RWS / OEKO-TEX®', gsm: '400–700', icon: '🟢' },
+        { name: 'Primark', tier: 'budget', fabrics: ['Poly-Cotton Twill (raincoats)', '100% Polyester Shell (casual jackets)', 'Poly-fill Puffer (winter)'], cert: 'BCI', gsm: '220–320', icon: '🟠' },
+        { name: 'Next', tier: 'mid', fabrics: ['Wool-blend overcoat (classic coat)', 'GRS rPET Shell (outdoor jacket)', 'Wool-Poly Gabardine (trench)'], cert: 'RWS (target 50% by 2025) / GRS', gsm: '280–420', icon: '🟡' },
+        { name: 'M&S', tier: 'premium', fabrics: ['RWS Recycled Wool-blend (eco coat)', '100% RWS Wool Melton (classic)', 'Down-proof rPET Shell (puffer)'], cert: 'RWS / OEKO-TEX®', gsm: '320–500', icon: '🟢' },
+        { name: 'John Lewis', tier: 'premium', fabrics: ['100% Wool Melton (premium overcoat)', 'Italian Cashmere-Wool blend (luxury)', 'Technical Shell + Down (performance)'], cert: 'RWS / OEKO-TEX®', gsm: '400–700', icon: '🟢' },
       ],
       upgrade: {
         from: 'Standard Virgin Poly Shell or Unverified Wool blend',
@@ -286,9 +286,9 @@ const MARKET_DATA = {
     'Chinos & Trousers': {
       summary: 'BCI cotton standard. Stretch chino (with 2% elastane) now expected across all tiers.',
       brands: [
-        { name: 'Primark', tier: 'budget', fabric: '98% Cotton / 2% Elastane Twill', cert: 'Primark Cotton Project', gsm: '220–280', icon: '🟠' },
-        { name: 'Next', tier: 'mid', fabric: '98% BCI Cotton / 2% Elastane Chino Drill', cert: 'BCI', gsm: '240–300', icon: '🟡' },
-        { name: 'M&S', tier: 'premium', fabric: '100% OCS Cotton Chino or Linen blend', cert: 'OCS / OEKO-TEX®', gsm: '240–300', icon: '🟢' },
+        { name: 'Primark', tier: 'budget', fabrics: ['98% Cotton / 2% Elastane Chino Twill (standard)', '100% Cotton Canvas (cargo)', 'Cotton-Poly Twill (school/workwear)'], cert: 'Primark Cotton Project', gsm: '220–280', icon: '🟠' },
+        { name: 'Next', tier: 'mid', fabrics: ['98% BCI Cotton / 2% Elastane Drill (standard chino)', 'BCI Cotton Twill (tailored trouser)', 'Linen-Cotton blend (summer trouser)'], cert: 'BCI', gsm: '240–300', icon: '🟡' },
+        { name: 'M&S', tier: 'premium', fabrics: ['100% OCS Organic Cotton Chino (premium)', 'Linen-Cotton blend (summer)', 'TENCEL™-Cotton Twill (sustainable)'], cert: 'OCS / OEKO-TEX®', gsm: '240–300', icon: '🟢' },
       ],
       upgrade: {
         from: 'Standard 100% Cotton Chino Drill',
@@ -305,11 +305,11 @@ const MARKET_DATA = {
     'School Uniform': {
       summary: 'UK school uniform dominated by supermarkets. OEKO-TEX Standard 100 mandatory for all children\'s garments.',
       brands: [
-        { name: 'Asda George', tier: 'budget', fabric: '65% Polyester / 35% Cotton Twill', cert: 'OEKO-TEX 100', gsm: '160–200', icon: '🔴' },
-        { name: "Sainsbury's TU", tier: 'budget', fabric: '65% Poly / 35% Cotton Twill', cert: 'OEKO-TEX 100 + BCI', gsm: '160–195', icon: '🔴' },
-        { name: 'Next', tier: 'mid', fabric: 'Stain-resist 65/35 Poly-Cotton', cert: 'OEKO-TEX 100', gsm: '170–200', icon: '🟡' },
-        { name: 'M&S', tier: 'mid', fabric: 'Teflon-coated Poly-Cotton Twill', cert: 'OEKO-TEX 100', gsm: '175–210', icon: '🟡' },
-        { name: 'John Lewis', tier: 'premium', fabric: 'BCI Cotton-rich Twill + Teflon', cert: 'OEKO-TEX 100 + BCI', gsm: '180–220', icon: '🟢' },
+        { name: 'Asda George', tier: 'budget', fabrics: ['65% Polyester / 35% Cotton Twill (trousers/skirts)', 'Cotton Pique (polo shirts)', 'Poly-Cotton Jersey (PE)'], cert: 'OEKO-TEX 100', gsm: '160–200', icon: '🔴' },
+        { name: "Sainsbury's TU", tier: 'budget', fabrics: ['65% Poly / 35% BCI Cotton Twill (uniform)', 'BCI Cotton Pique (polos)'], cert: 'OEKO-TEX 100 + BCI', gsm: '160–195', icon: '🔴' },
+        { name: 'Next', tier: 'mid', fabrics: ['Stain-resist 65/35 Poly-Cotton Twill (trousers)', 'Cotton Pique + Teflon (polos)', 'Poly-Cotton Jersey (sweatshirts)'], cert: 'OEKO-TEX 100', gsm: '170–200', icon: '🟡' },
+        { name: 'M&S', tier: 'mid', fabrics: ['Teflon-coated Poly-Cotton Twill (trousers)', 'Cotton-Poly Jersey (sweatshirts)', 'Cotton Pique + Teflon (polos)'], cert: 'OEKO-TEX 100', gsm: '175–210', icon: '🟡' },
+        { name: 'John Lewis', tier: 'premium', fabrics: ['BCI Cotton-rich Twill + Teflon (trousers)', 'GOTS Cotton Pique (polos)', 'BCI Cotton Jersey (sweatshirts)'], cert: 'OEKO-TEX 100 + BCI', gsm: '180–220', icon: '🟢' },
       ],
       upgrade: {
         from: '65/35 Standard Poly-Cotton (uncertified)',
@@ -326,11 +326,11 @@ const MARKET_DATA = {
     'Sleepsuits & Bodysuits': {
       summary: 'GOTS organic cotton is expected standard at mid-premium. OEKO-TEX non-negotiable for UK baby retail.',
       brands: [
-        { name: 'Primark', tier: 'budget', fabric: '100% Cotton Interlock', cert: 'OEKO-TEX 100', gsm: '160–200', icon: '🟠' },
-        { name: "Sainsbury's TU", tier: 'budget', fabric: '100% Cotton Interlock', cert: 'OEKO-TEX 100 + BCI', gsm: '160–200', icon: '🟠' },
-        { name: 'Next', tier: 'mid', fabric: '100% Cotton Interlock (non-mulesed wool trim)', cert: 'OEKO-TEX 100 + BCI', gsm: '165–210', icon: '🟡' },
-        { name: 'M&S', tier: 'premium', fabric: 'GOTS Organic Cotton Interlock', cert: 'GOTS + OEKO-TEX 100', gsm: '170–215', icon: '🟢' },
-        { name: 'John Lewis / Polarn O. Pyret', tier: 'premium', fabric: '100% GOTS Organic Cotton', cert: 'GOTS', gsm: '170–220', icon: '🟢' },
+        { name: 'Primark', tier: 'budget', fabrics: ['100% Cotton Interlock (standard)', 'Cotton-Modal blend (premium basics)', 'Primark Cotton Project Jersey (essentials)'], cert: 'OEKO-TEX 100', gsm: '160–200', icon: '🟠' },
+        { name: "Sainsbury's TU", tier: 'budget', fabrics: ['100% BCI Cotton Interlock (standard)', 'Cotton-Modal blend (soft range)'], cert: 'OEKO-TEX 100 + BCI', gsm: '160–200', icon: '🟠' },
+        { name: 'Next', tier: 'mid', fabrics: ['100% BCI Cotton Interlock (standard sleepsuits)', 'OCS Cotton Jersey (essentials)', 'Cotton-Bamboo blend (comfort range)'], cert: 'OEKO-TEX 100 + BCI', gsm: '165–210', icon: '🟡' },
+        { name: 'M&S', tier: 'premium', fabrics: ['GOTS Organic Cotton Interlock (standard)', 'OCS Cotton-Modal blend (premium)', 'Organic Cotton Velour (winter)'], cert: 'GOTS + OEKO-TEX 100', gsm: '170–215', icon: '🟢' },
+        { name: 'John Lewis', tier: 'premium', fabrics: ['100% GOTS Organic Cotton Interlock (standard)', 'GOTS Cotton-Bamboo blend (premium)', 'Organic Cotton Velour (winter)'], cert: 'GOTS', gsm: '170–220', icon: '🟢' },
       ],
       upgrade: {
         from: 'Standard Cotton Interlock OEKO-TEX 100',
@@ -347,9 +347,9 @@ const MARKET_DATA = {
     'Pyjamas & Nightwear': {
       summary: 'Cotton flannel for winter, jersey for all-season. Sustainable cotton certifications growing.',
       brands: [
-        { name: 'Primark', tier: 'budget', fabric: '100% Cotton Jersey / Flannel', cert: 'Primark Cotton Project', gsm: '150–250', icon: '🟠' },
-        { name: 'Next', tier: 'mid', fabric: '100% Cotton Flannel / Jersey', cert: 'BCI', gsm: '160–280', icon: '🟡' },
-        { name: 'M&S', tier: 'premium', fabric: 'OCS Cotton Brushed Cotton / Satin PJ', cert: 'OCS / OEKO-TEX®', gsm: '150–260', icon: '🟢' },
+        { name: 'Primark', tier: 'budget', fabrics: ['100% Cotton Jersey (all-season)', 'Cotton Flannel (winter)', 'Cotton-Poly blend (budget range)'], cert: 'Primark Cotton Project', gsm: '150–250', icon: '🟠' },
+        { name: 'Next', tier: 'mid', fabrics: ['100% BCI Cotton Flannel (winter)', 'BCI Cotton Jersey (summer)', 'Satin Weave Cotton (luxury PJs)'], cert: 'BCI', gsm: '160–280', icon: '🟡' },
+        { name: 'M&S', tier: 'premium', fabrics: ['OCS Organic Cotton Brushed Cotton (winter)', 'Cotton Satin (luxury PJs)', 'GOTS Cotton Modal (premium soft)'], cert: 'OCS / OEKO-TEX®', gsm: '150–260', icon: '🟢' },
       ],
       upgrade: {
         from: 'Standard BCI Cotton Jersey/Flannel PJ',
