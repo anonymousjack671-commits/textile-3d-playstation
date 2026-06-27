@@ -12,8 +12,8 @@
 // ── Verified vendor lookup — prevents hallucination ─────────
 // Sources: brand sustainability reports, Open Supply Hub disclosures, industry publications.
 const VERIFIED_VENDORS = {
-  // Sources: Sainsbury's TU Supplier List Nov 2024 (corporate.sainsburys.co.uk)
-  // Next PLC Tier 1 Supplier List August 2024 (nextplc.co.uk)  
+  // Sources: Sainsbury's TU Supplier List Nov 2024 + GM & Clothing Tier 1 Supplier List 2025 (corporate.sainsburys.co.uk)
+  // Next PLC Tier 1 Manufacturing Sites August 2025 (nextplc.co.uk)
   // H&M Group Supply Chain transparency (hmgroup.com/sustainability/leading-the-change/transparency)
   // Primark published factory list (corporate.primark.com)
   // M&S Interactive Supplier Map / Open Supply Hub (corporate.marksandspencer.com)
@@ -41,26 +41,28 @@ const VERIFIED_VENDORS = {
     "Casual Shirts":         ["Ha-Meem Group (Bangladesh)", "Orient Craft (India, Delhi NCR)", "DBL Group (Bangladesh)"],
   },
   "sainsbury's tu": {
-    // Source: Sainsbury's TU Supplier List November 2024 (official PDF, corporate.sainsburys.co.uk)
-    default:                 ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "Tefron Europe SRL (Romania)", "DATSA TEXTIL SRL (Romania)", "FB DIS TICARET AS (Turkey)", "Taneks Giyim Tekstil (Turkey)"],
+    // Source: Sainsbury's TU Supplier List Nov 2024 (corporate.sainsburys.co.uk/tu-supplier-list-nov2024.pdf)
+    //         Sainsbury's GM & Clothing Tier 1 Supplier List 2025 (corporate.sainsburys.co.uk — gm-and-clothing-tier-1-supplier-list-2025.pdf)
+    //         Echotex Ltd (Bangladesh) confirmed on 2025 list (13,416 workers); Crown Exclusive Wears confirmed 2025
+    default:                 ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "Echotex Ltd (Bangladesh)", "DATSA TEXTIL SRL (Romania)", "FB DIS TICARET AS (Turkey)", "Taneks Giyim Tekstil (Turkey)"],
     "Dresses":               ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "DATSA TEXTIL SRL (Romania)", "FB DIS TICARET AS (Turkey)"],
     "Jeans":                 ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "DATSA TEXTIL SRL (Romania)", "Taneks Giyim Tekstil (Turkey)"],
-    "Hoodies & Sweatshirts": ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "Taneks Giyim Tekstil (Turkey)", "FB DIS TICARET AS (Turkey)"],
-    "Tops & T-Shirts":       ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "Taneks Giyim Tekstil (Turkey)", "DATSA TEXTIL SRL (Romania)"],
+    "Hoodies & Sweatshirts": ["Echotex Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "Taneks Giyim Tekstil (Turkey)"],
+    "Tops & T-Shirts":       ["Echotex Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "DATSA TEXTIL SRL (Romania)"],
     "Activewear":            ["Tefron Europe SRL (Romania)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "FB DIS TICARET AS (Turkey)"],
-    "School Uniform":        ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "FB DIS TICARET AS (Turkey)", "Taneks Giyim Tekstil (Turkey)"],
+    "School Uniform":        ["Echotex Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "FB DIS TICARET AS (Turkey)"],
     "Coats & Jackets":       ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "FB DIS TICARET AS (Turkey)", "DATSA TEXTIL SRL (Romania)"],
     "Formal Shirts":         ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "DATSA TEXTIL SRL (Romania)", "Taneks Giyim Tekstil (Turkey)"],
     "Knitwear & Jumpers":    ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "Taneks Giyim Tekstil (Turkey)", "DATSA TEXTIL SRL (Romania)"],
     "Pyjamas & Nightwear":   ["Tefron Europe SRL (Romania)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "Taneks Giyim Tekstil (Turkey)"],
     "Swimwear":              ["Tefron Europe SRL (Romania)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "FB DIS TICARET AS (Turkey)"],
-    "Sleepsuits & Bodysuits":["Tefron Europe SRL (Romania)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "DATSA TEXTIL SRL (Romania)"],
+    "Sleepsuits & Bodysuits":["Tefron Europe SRL (Romania)", "Echotex Ltd (Bangladesh)", "DATSA TEXTIL SRL (Romania)"],
     "Lingerie & Intimates":  ["Tefron Europe SRL (Romania)", "DATSA TEXTIL SRL (Romania)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)"],
     "Blazers & Suits":       ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "FB DIS TICARET AS (Turkey)", "DATSA TEXTIL SRL (Romania)"],
     "Chinos & Trousers":     ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "FB DIS TICARET AS (Turkey)", "DATSA TEXTIL SRL (Romania)"],
     "Eveningwear":           ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "DATSA TEXTIL SRL (Romania)", "FB DIS TICARET AS (Turkey)"],
     "Blouses & Tops":        ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "DATSA TEXTIL SRL (Romania)", "Taneks Giyim Tekstil (Turkey)"],
-    "T-Shirts & Polos":      ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "Taneks Giyim Tekstil (Turkey)", "DATSA TEXTIL SRL (Romania)"],
+    "T-Shirts & Polos":      ["Echotex Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "Taneks Giyim Tekstil (Turkey)"],
     "Casual Shirts":         ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "DATSA TEXTIL SRL (Romania)", "Taneks Giyim Tekstil (Turkey)"],
   },
   "asda george": {
@@ -108,27 +110,29 @@ const VERIFIED_VENDORS = {
     "Casual Shirts":         ["Esquel Group (China/Malaysia)", "Orient Craft (India)", "DBL Group (Bangladesh)"],
   },
   "next": {
-    // Source: Next PLC Tier 1 Manufacturing Sites August 2024 (nextplc.co.uk)
-    default:                 ["Ananta Apparels Ltd (Bangladesh)", "Square Fashions Ltd (Bangladesh)", "Tusuka Trousers & Jeans Ltd (Bangladesh)", "Utah Fashions Ltd (Bangladesh)", "Fakir Apparels Ltd (Bangladesh)", "Echotex Ltd (Bangladesh)", "AKM Knit Wear Limited (Bangladesh)"],
-    "Dresses":               ["Ananta Apparels Ltd (Bangladesh)", "Abanti Colour Tex Ltd (Bangladesh)", "Shahi Exports (India, Bengaluru)"],
+    // Source: Next PLC Tier 1 Manufacturing Sites August 2025 (nextplc.co.uk — T1 2025.pdf)
+    //         Taqwa Fabrics Ltd, Liz Fashion Industry Ltd, Sm Knitwear Ltd confirmed on 2025 list
+    //         Utah Fashions, Square Fashions, Tusuka, AKM Knit Wear, Echotex, Ananta Garments all re-confirmed 2025
+    default:                 ["Taqwa Fabrics Ltd (Bangladesh)", "Ananta Apparels Ltd (Bangladesh)", "Echotex Ltd (Bangladesh)", "AKM Knit Wear Limited (Bangladesh)", "Square Fashions Ltd (Bangladesh)", "Utah Fashions Ltd (Bangladesh)", "Tusuka Trousers & Jeans Ltd (Bangladesh)"],
+    "Dresses":               ["Ananta Apparels Ltd (Bangladesh)", "Liz Fashion Industry Ltd (Bangladesh)", "Shahi Exports (India, Bengaluru)"],
     "Jeans":                 ["Tusuka Trousers & Jeans Ltd (Bangladesh)", "Arvind Mills (India, Ahmedabad)", "Artistic Milliners (Pakistan)"],
-    "Hoodies & Sweatshirts": ["AKM Knit Wear Limited (Bangladesh)", "KPR Mill Ltd (India, Tirupur)", "Echotex Ltd (Bangladesh)"],
-    "Tops & T-Shirts":       ["KPR Mill Ltd (India, Tirupur)", "SP Apparels Ltd (India)", "Ananta Apparels Ltd (Bangladesh)"],
+    "Hoodies & Sweatshirts": ["Taqwa Fabrics Ltd (Bangladesh)", "AKM Knit Wear Limited (Bangladesh)", "Echotex Ltd (Bangladesh)"],
+    "Tops & T-Shirts":       ["Taqwa Fabrics Ltd (Bangladesh)", "Echotex Ltd (Bangladesh)", "Ananta Apparels Ltd (Bangladesh)"],
     "Activewear":            ["Eclat Textile (Taiwan)", "Pacific Textiles (HK/China)", "MAS Kreeda (Sri Lanka)"],
-    "School Uniform":        ["Fakir Apparels Ltd (Bangladesh)", "SP Apparels Ltd (India)", "Echotex Ltd (Bangladesh)"],
+    "School Uniform":        ["Echotex Ltd (Bangladesh)", "AKM Knit Wear Limited (Bangladesh)", "Taqwa Fabrics Ltd (Bangladesh)"],
     "Coats & Jackets":       ["Youngone Corp (Bangladesh)", "Kipas Holding (Turkey)", "Nien Hsing Textile (Vietnam/Cambodia)"],
     "Formal Shirts":         ["Best Shirts Limited (Bangladesh)", "Arvind Lifestyle (India)", "Kipas Holding (Turkey)"],
     "Knitwear & Jumpers":    ["AKM Knit Wear Limited (Bangladesh)", "Echotex Ltd (Bangladesh)", "KPR Mill Ltd (India)"],
-    "Pyjamas & Nightwear":   ["KPR Mill Ltd (India)", "Ananta Apparels Ltd (Bangladesh)", "SP Apparels Ltd (India)"],
-    "Sleepsuits & Bodysuits":["SP Apparels Ltd (India)", "Ananta Apparels Ltd (Bangladesh)", "KPR Mill Ltd (India)"],
+    "Pyjamas & Nightwear":   ["KPR Mill Ltd (India)", "Ananta Apparels Ltd (Bangladesh)", "Taqwa Fabrics Ltd (Bangladesh)"],
+    "Sleepsuits & Bodysuits":["SP Apparels Ltd (India)", "Ananta Apparels Ltd (Bangladesh)", "Taqwa Fabrics Ltd (Bangladesh)"],
     "Lingerie & Intimates":  ["MAS Holdings (Sri Lanka)", "Brandix Lanka (Sri Lanka)", "Z & Z Intimates Ltd (Bangladesh)"],
     "Swimwear":              ["MAS Kreeda (Sri Lanka)", "Pacific Textiles (HK/China)", "Eclat Textile (Taiwan)"],
     "Blazers & Suits":       ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Ananta Apparels Ltd (Bangladesh)"],
-    "Chinos & Trousers":     ["Arvind Mills (India, Ahmedabad)", "Utah Fashions Ltd (Bangladesh)", "Kipas Holding (Turkey)"],
-    "Eveningwear":           ["Ananta Apparels Ltd (Bangladesh)", "Shahi Exports (India)", "Kipas Holding (Turkey)"],
-    "Blouses & Tops":        ["Ananta Apparels Ltd (Bangladesh)", "Shahi Exports (India, Bengaluru)", "Kipas Holding (Turkey)"],
-    "T-Shirts & Polos":      ["KPR Mill Ltd (India, Tirupur)", "SP Apparels Ltd (India)", "Echotex Ltd (Bangladesh)"],
-    "Casual Shirts":         ["Best Shirts Limited (Bangladesh)", "Arvind Lifestyle (India)", "Kipas Holding (Turkey)"],
+    "Chinos & Trousers":     ["Arvind Mills (India, Ahmedabad)", "Utah Fashions Ltd (Bangladesh)", "Liz Fashion Industry Ltd (Bangladesh)"],
+    "Eveningwear":           ["Liz Fashion Industry Ltd (Bangladesh)", "Shahi Exports (India)", "Ananta Apparels Ltd (Bangladesh)"],
+    "Blouses & Tops":        ["Ananta Apparels Ltd (Bangladesh)", "Shahi Exports (India, Bengaluru)", "Taqwa Fabrics Ltd (Bangladesh)"],
+    "T-Shirts & Polos":      ["Taqwa Fabrics Ltd (Bangladesh)", "Echotex Ltd (Bangladesh)", "AKM Knit Wear Limited (Bangladesh)"],
+    "Casual Shirts":         ["Best Shirts Limited (Bangladesh)", "Arvind Lifestyle (India)", "Taqwa Fabrics Ltd (Bangladesh)"],
   },
   "asos": {
     // Source: ASOS Factory List October 2024 (asosplc.com/corporate-responsibility/our-products/our-supply-chain)
