@@ -281,9 +281,25 @@ export const TexaiChat = ({ userRole, selectedFabric }) => {
         });
         if (res.ok) {
           const data = await res.json();
+
+          // Quota exceeded — silently fall through to offline KB, no scary error shown
+          if (data.engine === 'quota_exceeded') {
+            const answer = findAnswer(userMsg);
+            setMessages(m => [...m, {
+              role: 'assistant',
+              text: answer
+                ? `${answer}\n\n*📚 Offline knowledge base — AI quota temporarily reached*`
+                : `📚 **Offline mode** — AI is temporarily at capacity.\n\nI can still help with fabric fundamentals. Try asking about specific fabrics, GSM ranges, certifications (GOTS, OCS, GRS), or India sourcing hubs like Tirupur or Surat.`,
+              ts: Date.now(),
+              source: 'kb'
+            }]);
+            setLoading(false);
+            return;
+          }
+
+          // Normal AI response
           const reply = data.response || '';
-          // Use engine field from server to set correct source label
-          const engineMap = { gemini: 'gemini', texai_llm: 'texai', offline_kb: 'kb' };
+          const engineMap = { 'gemini-2.0-flash': 'gemini', texai_llm: 'texai', offline_kb: 'kb' };
           const source = engineMap[data.engine] || (reply.startsWith('TEXAI is running') ? 'kb' : 'gemini');
           setMessages(m => [...m, { role: 'assistant', text: reply || 'No response.', ts: Date.now(), source }]);
           setLoading(false);
@@ -292,27 +308,38 @@ export const TexaiChat = ({ userRole, selectedFabric }) => {
       }
 
       // Offline fallback — built-in fabric knowledge
-      await new Promise(r => setTimeout(r, 600)); // Simulate thinking
+      await new Promise(r => setTimeout(r, 600));
       const answer = findAnswer(userMsg);
       if (answer) {
         setMessages(m => [...m, { role: 'assistant', text: answer, ts: Date.now(), source: 'kb' }]);
       } else {
         setMessages(m => [...m, {
           role: 'assistant',
-          text: `I don't have a specific answer for "${userMsg}" in my offline knowledge base.\n\nTry asking about: fabric types, GSM weights, cotton, polyester, wool, linen, jersey, twill, satin, testing standards, or India sourcing hubs.`,
+          text: `📚 Answering from built-in knowledge base.\n\nI can help with: fabric types, GSM weights, cotton/polyester/wool/viscose properties, testing standards (AATCC, ISO, ASTM), certifications (GOTS, OCS, GRS, BCI), and India sourcing hubs.`,
           ts: Date.now(),
           source: 'kb'
         }]);
       }
     } catch (err) {
       const isNetwork = err instanceof TypeError || err.message?.includes('fetch');
-      setMessages(m => [...m, {
-        role: 'assistant',
-        text: isNetwork
-          ? `⚠️ AI service temporarily unavailable. Retrying automatically.\n\nIn the meantime, I'm answering from my built-in fabric knowledge base.`
-          : `⚠️ Error: ${err.message}`,
-        ts: Date.now(), source: 'error'
-      }]);
+      if (isNetwork) {
+        // Network error — quietly use offline KB
+        const answer = findAnswer(userMsg);
+        setMessages(m => [...m, {
+          role: 'assistant',
+          text: answer
+            ? `${answer}\n\n*📚 Offline mode — no connection to AI server*`
+            : `📚 **Offline mode** — no connection to AI server.\n\nI can still help with fabric fundamentals from my built-in knowledge base.`,
+          ts: Date.now(),
+          source: 'kb'
+        }]);
+      } else {
+        setMessages(m => [...m, {
+          role: 'assistant',
+          text: `⚠️ Unexpected error. Please try again.`,
+          ts: Date.now(), source: 'error'
+        }]);
+      }
     }
     setLoading(false);
   };

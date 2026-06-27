@@ -70,6 +70,14 @@ export default async function handler(req, res) {
 
     if (!geminiRes.ok) {
       const err = await geminiRes.text();
+      // 429 = quota exceeded — return a clean flag so the client can fall back to offline KB
+      if (geminiRes.status === 429) {
+        console.warn('[texai-chat] Gemini quota exceeded (429)');
+        return res.status(200).json({
+          response: 'quota_exceeded',
+          engine: 'quota_exceeded',
+        });
+      }
       throw new Error(`Gemini API error: ${geminiRes.status} — ${err.slice(0, 200)}`);
     }
 
@@ -80,9 +88,11 @@ export default async function handler(req, res) {
     return res.status(200).json({ response: text, engine: 'gemini-2.0-flash' });
   } catch (err) {
     console.error('[texai-chat] Gemini error:', err.message);
+    // Return quota_exceeded for any unhandled error so client falls back gracefully
+    const isQuota = err.message?.includes('429') || err.message?.includes('quota');
     return res.status(200).json({
-      response: `⚠️ AI unavailable: ${err.message}. Please try again in a moment.`,
-      engine: 'error',
+      response: isQuota ? 'quota_exceeded' : `⚠️ AI temporarily unavailable. Please try again in a moment.`,
+      engine: isQuota ? 'quota_exceeded' : 'error',
     });
   }
 }

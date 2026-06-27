@@ -186,37 +186,37 @@ const BRAND_PROFILES = {
     coo: "Bangladesh, Turkey, China, India, UK"
   },
   ms: {
-    overviewStance: "M&S is the benchmark for UK mid-to-premium retail. Sourcing is characterized by strict quality standards, combed BCI/Organic cotton, TENCEL™ Modal, and high wool content in tailoring.",
-    sustainability: "Guided by the Plan A sustainability program. OEKO-TEX Standard 100 is a mandatory requirement across all textile lines. Targeting 100% recycled polyester by 2026.",
-    sourcingInsight: "Works with premium, vertically-integrated manufacturers in India (Tirupur, Ahmedabad), Bangladesh, and Sri Lanka, demanding strict social and chemical compliance. Joined the Bangladesh Employment Insurance Scheme (EIS) in 2024/25.",
-    upgradeAdvice: "To match or beat M&S, focus on GOTS organic cotton and closed-loop TENCEL™ Lyocell. Use high-performance natural blends (like cotton-silk or linen-TENCEL) to capture their premium demographic.",
-    // Source: M&S does NOT publish a downloadable factory list PDF.
-    //         M&S discloses suppliers via the Open Supply Hub interactive map (opensupplyhub.org/lists/marksandspencer)
-    //         and corporate.marksandspencer.com/our-approach-sourcing — no static PDF available as of 2025-2026.
-    //         Vendor data sourced from OS Hub public disclosures, M&S Plan A reports, and industry CSR databases.
-    vendors: ["Shahi Exports (India, Bengaluru)", "Brandix Lanka (Sri Lanka)", "MAS Holdings (Sri Lanka)", "Beximco (Bangladesh)", "Eastman Exports (India, Tirupur)", "Arvind Mills (India, Ahmedabad)"],
+    overviewStance: "M&S is the benchmark for UK mid-to-premium retail. Bangladesh is the largest sourcing hub (~35%), followed by India (~25%), Sri Lanka (~20%), Turkey (~10%), and Pakistan (~8%). Sourcing is defined by long-term factory partnerships — 70%+ of suppliers have worked with M&S for over 7 years.",
+    sustainability: "Guided by Plan A. OEKO-TEX Standard 100 is mandatory across all textile lines. Targeting 100% recycled polyester by 2026. Signatory to the International Accord for Health and Safety in the Textile and Garment Industry (Bangladesh + Pakistan). Joined Bangladesh Employment Insurance Scheme (EIS) 2024/25.",
+    sourcingInsight: "Tier 1 supply base live on Open Supply Hub (contributor ID 10061). Scraped June 2026 — 1,853 total facilities disclosed. Top verified suppliers by cross-contributor count: Zaber & Zubair Fabrics (Bangladesh), Energypac Fashions (Bangladesh), Shahi Exports (India, Bengaluru), MAS Intimates Thurulie (Sri Lanka), Brandix Lanka (Sri Lanka), Artistic Milliners (Pakistan), Kipas Tekstil (Turkey). India clusters: Bengaluru wovens, Tirupur knitwear, Ahmedabad denim.",
+    upgradeAdvice: "To match or beat M&S, focus on GOTS organic cotton and closed-loop TENCEL™ Lyocell. Use high-performance natural blends (cotton-silk or linen-TENCEL) to capture their premium demographic. Strong in Bengaluru woven garments, Tirupur knitwear, and Sri Lanka intimate apparel.",
+    // Source: Open Supply Hub (opensupplyhub.org), Contributor ID 10061 — LIVE SCRAPED June 2026
+    //         1,853 total facilities. Top 472 visible sorted by # contributors (most cross-verified).
+    //         Full structured dataset: src/data/msSuppliers2026.js
+    //         M&S does NOT publish a static downloadable PDF factory list.
+    vendors: ["Zaber & Zubair Fabrics Ltd (Bangladesh, Gazipur)", "Energypac Fashions Ltd (Bangladesh, Gazipur)", "Shahi Exports Pvt Ltd (India, Bengaluru)", "MAS Holdings — MAS Intimates Thurulie (Sri Lanka)", "Brandix Lanka Limited (Sri Lanka)", "Artistic Milliners Pvt Ltd (Pakistan, Karachi)"],
     vendorsByCategory: {
-      "Dresses":                ["Shahi Exports (India, Bengaluru)", "Eastman Exports (India, Tirupur)", "MAS Holdings (Sri Lanka)"],
-      "Jeans":                  ["Arvind Mills (India, Ahmedabad)", "Beximco (Bangladesh)", "Aarvee Denims (India, Ahmedabad)"],
-      "Hoodies & Sweatshirts":  ["Brandix Lanka (Sri Lanka)", "Texport Industries (India, Bengaluru)", "KPR Mill Ltd (India, Tirupur)"],
-      "Tops & T-Shirts":        ["Eastman Exports (India, Tirupur)", "KPR Mill Ltd (India, Tirupur)", "Brandix Lanka (Sri Lanka)"],
-      "Activewear":             ["MAS Active (Sri Lanka)", "Brandix Lanka (Sri Lanka)", "Eclat Textile (Taiwan)"],
-      "School Uniform":         ["Eastman Exports (India)", "Brandix Lanka (Sri Lanka)", "Beximco (Bangladesh)"],
-      "Coats & Jackets":        ["Brandix Lanka (Sri Lanka)", "Youngone Corp (Bangladesh)", "Texport Industries (India)"],
-      "Formal Shirts":          ["Arvind Lifestyle (India)", "Gokaldas Exports (India, Bengaluru)", "Eastman Exports (India)"],
-      "Knitwear & Jumpers":     ["MAS Active (Sri Lanka)", "Brandix Lanka (Sri Lanka)", "Eastman Exports (India, Tirupur)"],
-      "Pyjamas & Nightwear":    ["Brandix Lanka (Sri Lanka)", "MAS Holdings (Sri Lanka)", "Eastman Exports (India)"],
-      "Sleepsuits & Bodysuits": ["SP Apparels Ltd (India, OEKO-TEX)", "Brandix Lanka (Sri Lanka)", "KPR Mill Ltd (India)"],
-      "Lingerie & Intimates":   ["MAS Holdings (Sri Lanka)", "Triumph International (Sri Lanka)", "Brandix Lanka (Sri Lanka)"],
-      "Swimwear":               ["MAS Kreeda (Sri Lanka)", "Pacific Textiles (HK/China)", "Eclat Textile (Taiwan)"],
-      "Blazers & Suits":        ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Gokaldas Exports (India)"],
-      "Chinos & Trousers":      ["Arvind Mills (India)", "Brandix Lanka (Sri Lanka)", "Eastman Exports (India)"],
-      "Eveningwear":            ["Shahi Exports (India)", "Eastman Exports (India)", "MAS Holdings (Sri Lanka)"],
-      "Blouses & Tops":         ["Shahi Exports (India, Bengaluru)", "Eastman Exports (India, Tirupur)", "MAS Holdings (Sri Lanka)"],
-      "T-Shirts & Polos":       ["Eastman Exports (India, Tirupur)", "KPR Mill Ltd (India, Tirupur)", "Brandix Lanka (Sri Lanka)"],
-      "Casual Shirts":          ["Arvind Lifestyle (India)", "Gokaldas Exports (India, Bengaluru)", "Eastman Exports (India)"],
+      "Dresses":                ["Shahi Exports Pvt Ltd (India, Bengaluru)", "Texport Industries Pvt Ltd (India, Bengaluru)", "Gokaldas Exports Ltd (India, Bengaluru)"],
+      "Jeans":                  ["Artistic Milliners Pvt Ltd (Pakistan, Karachi)", "Arvind Limited — Denim Division (India, Ahmedabad)", "Pacific Jeans Cambodia (Cambodia, Phnom Penh)"],
+      "Hoodies & Sweatshirts":  ["Energypac Fashions Ltd (Bangladesh, Gazipur)", "Dekko Knitwears Ltd (Bangladesh, Dhaka)", "KPR Mill Limited Unit II (India, Tirupur)"],
+      "Tops & T-Shirts":        ["KPR Mill Limited Unit II (India, Tirupur)", "Classic Polo Limited (India, Tirupur)", "Energypac Fashions Ltd (Bangladesh, Gazipur)"],
+      "Activewear":             ["MAS Active Trading Pvt Ltd (Sri Lanka)", "MAS Kreeda Pvt Ltd (Sri Lanka)", "Hirdaramani Apparel (Sri Lanka)"],
+      "School Uniform":         ["Zaber & Zubair Fabrics Ltd (Bangladesh, Gazipur)", "Energypac Fashions Ltd (Bangladesh)", "KPR Mill Limited Unit II (India, Tirupur)"],
+      "Coats & Jackets":        ["Youngone Cambodia Mfg. Co. Ltd. (Cambodia, Phnom Penh SEZ)", "Dewhirst Cambodia Co Ltd (Cambodia, Phnom Penh)", "Gokaldas Exports Ltd (India, Bengaluru)"],
+      "Formal Shirts":          ["Gul Ahmed Textile Mills (Pakistan, Karachi)", "Orient Craft Limited (India, Gurgaon)", "Aditya Birla Fashion — Madura (India, Bengaluru)"],
+      "Knitwear & Jumpers":     ["Dekko Knitwears Ltd (Bangladesh, Dhaka)", "Epyllion Knitwears Limited (Bangladesh, Narayanganj)", "KPR Mill Limited Unit II (India, Tirupur)"],
+      "Pyjamas & Nightwear":    ["SP Apparels Ltd (India, Tirupur)", "Hela Intimates Lanka Pvt Ltd (Sri Lanka)", "Brandix Lanka Limited (Sri Lanka)"],
+      "Sleepsuits & Bodysuits": ["SP Apparels Ltd (India, Tirupur)", "First Steps Babywear Lanka Pvt Ltd (Sri Lanka)", "Brandix Lanka Limited (Sri Lanka)"],
+      "Lingerie & Intimates":   ["MAS Holdings — MAS Intimates Thurulie (Sri Lanka)", "Hela Intimates Lanka Pvt Ltd (Sri Lanka)", "Slimline Pvt Ltd (Sri Lanka)"],
+      "Swimwear":               ["MAS Kreeda Pvt Ltd (Sri Lanka)", "MAS Active Trading Pvt Ltd (Sri Lanka)", "Hirdaramani Apparel (Sri Lanka)"],
+      "Blazers & Suits":        ["Kipas Tekstil (Turkey, Kahramanmaras)", "Aydinli Group (Turkey, Istanbul)", "Gokaldas Exports Ltd (India, Bengaluru)"],
+      "Chinos & Trousers":      ["Nishat Chunian Ltd — Dyeing & Printing Division (Pakistan, Lahore)", "Artistic Milliners Pvt Ltd (Pakistan, Karachi)", "Arvind Limited — Denim Division (India, Ahmedabad)"],
+      "Eveningwear":            ["Shahi Exports Pvt Ltd (India, Bengaluru)", "Texport Industries Pvt Ltd (India, Bengaluru)", "Gokaldas Exports Ltd (India, Bengaluru)"],
+      "Blouses & Tops":         ["Shahi Exports Pvt Ltd (India, Bengaluru)", "Texport Industries Pvt Ltd (India, Bengaluru)", "Brandix Lanka Limited (Sri Lanka)"],
+      "T-Shirts & Polos":       ["KPR Mill Limited Unit II (India, Tirupur)", "Classic Polo Limited (India, Tirupur)", "Energypac Fashions Ltd (Bangladesh, Gazipur)"],
+      "Casual Shirts":          ["Gul Ahmed Textile Mills (Pakistan, Karachi)", "Sapphire Textile Mills (Pakistan, Lahore)", "Orient Craft Limited (India, Gurgaon)"],
     },
-    coo: "India, Bangladesh, Sri Lanka, Turkey"
+    coo: "Bangladesh, India, Sri Lanka, Turkey, Pakistan, Cambodia, Vietnam, Morocco, Ethiopia"
   },
   johnlewis: {
     overviewStance: "John Lewis is a premium UK department store. Sourcing prioritizes quality across multiple tiers including Bangladesh knitwear, Pakistan cotton fabrics, Sri Lanka intimate apparel, and Indian garment manufacturing.",
