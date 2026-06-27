@@ -138,11 +138,18 @@ export default async function handler(req, res) {
     }
 
     const geminiData = await geminiRes.json();
-    const rawText = geminiData?.candidates?.[0]?.content?.parts?.[0]?.text;
-    if (!rawText) throw new Error('Empty response from Gemini');
+    const candidate = geminiData?.candidates?.[0];
+    const finishReason = candidate?.finishReason;
+    const rawText = candidate?.content?.parts?.[0]?.text;
+    if (!rawText) throw new Error(`Empty response from Gemini (finishReason: ${finishReason}, promptFeedback: ${JSON.stringify(geminiData?.promptFeedback).slice(0,100)})`);
 
-    const jsonStr = extractJSON(rawText);
-    const parsed = JSON.parse(jsonStr);
+    let parsed;
+    try {
+      const jsonStr = extractJSON(rawText);
+      parsed = JSON.parse(jsonStr);
+    } catch (parseErr) {
+      throw new Error(`JSON parse failed [${parseErr.message}]. Raw start: ${rawText.slice(0, 200)}`);
+    }
 
     if (!parsed.summary || !Array.isArray(parsed.brands) || !parsed.upgrade) {
       throw new Error('Response missing required fields');
