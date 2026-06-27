@@ -114,6 +114,44 @@ const VERIFIED_VENDORS = {
   },
 };
 
+  "charles tyrwhitt": {
+    default:              ["Orient Craft (India, Delhi NCR)", "Gokaldas Exports (India, Bengaluru)", "Esquel Group (China/Malaysia)", "Arvind Lifestyle (India)"],
+    "Formal Shirts":      ["Orient Craft (India, Delhi NCR)", "Gokaldas Exports (India, Bengaluru)", "Esquel Group (China/Malaysia)"],
+    "Casual Trousers":    ["Arvind Lifestyle (India)", "Kipas Holding (Turkey)", "Guangdong Suit Cluster (China)"],
+    "Knitwear & Jumpers": ["Ludhiana Premium Knitwear (India)", "Coimbatore Organic Weavers (India)", "Guangdong Knitwear Mills (China)"],
+    "Men's Tailoring":    ["Arvind Lifestyle (India)", "Guangdong Suit Cluster (China)", "Kipas Holding (Turkey)"],
+    "Occasion Wear":      ["Orient Craft (India, Delhi NCR)", "Gokaldas Exports (India)", "Esquel Group (China/Malaysia)"],
+    "T-Shirts & Tops":    ["Orient Craft (India)", "Tirupur Premium Knitwear (India)", "Coimbatore Organic Weavers (India)"],
+    "Outerwear & Coats":  ["Arvind Lifestyle (India)", "Guangdong Suit Cluster (China)", "Kipas Holding (Turkey)"],
+  },
+  "reiss": {
+    default:              ["Kipas Holding (Turkey)", "Shahi Exports (India, Bengaluru)", "Orient Craft (India)", "Arvind Lifestyle (India)"],
+    "Dresses":            ["Kipas Holding (Turkey)", "Shahi Exports (India, Bengaluru)", "Orient Craft (India)"],
+    "Jeans":              ["Arvind Mills (India, Ahmedabad)", "Kipas Denim (Turkey)", "Classic Fashions (Bangladesh)"],
+    "Formal Shirts":      ["Arvind Lifestyle (India)", "Kipas Holding (Turkey)", "Orient Craft (India)"],
+    "Knitwear & Jumpers": ["Ludhiana Knitwear (India)", "Kipas Holding (Turkey)", "Tirupur Premium Knitwear (India)"],
+    "Men's Tailoring":    ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Guangdong Suit Cluster (China)"],
+    "Women's Tailoring":  ["Kipas Holding (Turkey)", "Shahi Exports (India)", "Orient Craft (India)"],
+    "Occasion Wear":      ["Kipas Holding (Turkey)", "Shahi Exports (India)", "Orient Craft (India)"],
+    "Outerwear & Coats":  ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Youngone Corp (Bangladesh)"],
+    "Casual Trousers":    ["Arvind Mills (India)", "Kipas Holding (Turkey)", "Classic Fashions (Bangladesh)"],
+    "T-Shirts & Tops":    ["Tirupur Premium Knitwear (India)", "Kipas Holding (Turkey)", "KPR Mill (India)"],
+  },
+  "ted baker": {
+    default:              ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Orient Craft (India)", "Shahi Exports (India)"],
+    "Dresses":            ["Kipas Holding (Turkey)", "Shahi Exports (India)", "Orient Craft (India)"],
+    "Formal Shirts":      ["Orient Craft (India, Delhi NCR)", "Esquel Group (China/Malaysia)", "Kipas Holding (Turkey)"],
+    "Knitwear & Jumpers": ["Ludhiana Knitwear (India)", "Kipas Holding (Turkey)", "Tirupur Premium Knitwear (India)"],
+    "Men's Tailoring":    ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Guangdong Suit Cluster (China)"],
+    "Women's Tailoring":  ["Kipas Holding (Turkey)", "Shahi Exports (India)", "Orient Craft (India)"],
+    "Occasion Wear":      ["Shahi Exports (India)", "Kipas Holding (Turkey)", "Orient Craft (India)"],
+    "Outerwear & Coats":  ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Youngone Corp (Bangladesh)"],
+    "Casual Trousers":    ["Arvind Lifestyle (India)", "Kipas Holding (Turkey)", "Classic Fashions (Bangladesh)"],
+    "Jeans":              ["Arvind Mills (India, Ahmedabad)", "Kipas Denim (Turkey)", "Artistic Milliners (Pakistan)"],
+    "T-Shirts & Tops":    ["Tirupur Premium Knitwear (India)", "Kipas Holding (Turkey)", "KPR Mill (India)"],
+  },
+};
+
 const getVerifiedVendors = (brand, category) => {
   const brandKey = brand.toLowerCase();
   const brandData = Object.entries(VERIFIED_VENDORS).find(([k]) => brandKey.includes(k))?.[1];

@@ -216,6 +216,63 @@ const BRAND_PROFILES = {
     },
     coo: "India, Portugal, Turkey, Italy, Scotland (UK)"
   },
+  charlesTyrwhitt: {
+    overviewStance: "Charles Tyrwhitt is a premium British shirt brand known for 2-ply Egyptian cotton poplin and non-iron finishes. Sourcing prioritizes high-count combed cotton poplin, Oxford weaves, and twill constructions from established premium mills.",
+    sustainability: "Holds Planet Mark certification (5th consecutive year, 2025). Transitioning to BCI and OCS cotton across core shirt lines. Non-iron finishes are OEKO-TEX® Standard 100 certified to eliminate formaldehyde concerns.",
+    sourcingInsight: "Primary sourcing from India (Delhi NCR, Jaipur) for cotton poplin and twill shirting, with supplementary production in China and Portugal for premium weaves. Long-term mill partnerships preferred over spot buying.",
+    upgradeAdvice: "To win Charles Tyrwhitt business, supply 2-ply 100s-count Egyptian or Giza cotton poplin with OEKO-TEX® Standard 100 certification and a non-iron finish. Delhi NCR and Jaipur shirting clusters are well-positioned; Planet Mark and BCI cotton certification will satisfy their sustainability audit requirements.",
+    vendors: ["Orient Craft (India, Delhi NCR)", "Gokaldas Exports (India, Bengaluru)", "Esquel Group (China/Malaysia)", "Arvind Lifestyle (India)"],
+    vendorsByCategory: {
+      "Formal Shirts":        ["Orient Craft (India, Delhi NCR)", "Gokaldas Exports (India, Bengaluru)", "Esquel Group (China/Malaysia)"],
+      "Casual Trousers":      ["Arvind Lifestyle (India)", "Kipas Holding (Turkey)", "Guangdong Suit Cluster (China)"],
+      "Knitwear & Jumpers":   ["Ludhiana Premium Knitwear (India)", "Coimbatore Organic Weavers (India)", "Guangdong Knitwear Mills (China)"],
+      "Men's Tailoring":      ["Arvind Lifestyle (India)", "Guangdong Suit Cluster (China)", "Kipas Holding (Turkey)"],
+      "T-Shirts & Tops":      ["Orient Craft (India)", "Tirupur Premium Knitwear (India)", "Coimbatore Organic Weavers (India)"],
+      "Occasion Wear":        ["Orient Craft (India, Delhi NCR)", "Gokaldas Exports (India)", "Esquel Group (China/Malaysia)"],
+      "Outerwear & Coats":    ["Arvind Lifestyle (India)", "Guangdong Suit Cluster (China)", "Kipas Holding (Turkey)"],
+    },
+    coo: "India, China, Portugal"
+  },
+  reiss: {
+    overviewStance: "Reiss is a premium British fashion brand (majority-owned by Next Plc since 2021). Sourcing leans on Next's established supply chain relationships while maintaining a higher design premium. Key fabrics include Italian-sourced wool blends, OEKO-TEX® certified viscose, and premium cotton poplin.",
+    sustainability: "OEKO-TEX® certified basics. Benefits from Next's sustainability infrastructure: BCI cotton targets, RWS wool commitments (50% by 2025), and Reach chemical compliance across all lines. Under Next ownership, supply chain auditing has significantly improved.",
+    sourcingInsight: "Leverages Next's supply chain hubs: Turkey (Kipas Holding) for quick-turn wovens, India for cotton and jersey, with Italian fabric sourcing for premium tailoring lines. Smaller batch sizes than Next mainline allow premium mill access.",
+    upgradeAdvice: "To supply Reiss, offer OEKO-TEX® certified premium wovens — Italian-style wool-viscose blends or TENCEL™ Lyocell crepe. Being approved in Next's supplier network is a strong gateway since Reiss uses the same factories at premium specs. Tirupur premium knitwear and Surat luxury viscose clusters are best entry points.",
+    vendors: ["Kipas Holding (Turkey)", "Shahi Exports (India, Bengaluru)", "Orient Craft (India)", "Arvind Lifestyle (India)"],
+    vendorsByCategory: {
+      "Dresses":              ["Kipas Holding (Turkey)", "Shahi Exports (India, Bengaluru)", "Orient Craft (India)"],
+      "Jeans":                ["Arvind Mills (India, Ahmedabad)", "Kipas Denim (Turkey)", "Classic Fashions (Bangladesh)"],
+      "Formal Shirts":        ["Arvind Lifestyle (India)", "Kipas Holding (Turkey)", "Orient Craft (India)"],
+      "Knitwear & Jumpers":   ["Ludhiana Knitwear (India)", "Kipas Holding (Turkey)", "Tirupur Premium Knitwear (India)"],
+      "Men's Tailoring":      ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Guangdong Suit Cluster (China)"],
+      "Women's Tailoring":    ["Kipas Holding (Turkey)", "Shahi Exports (India)", "Orient Craft (India)"],
+      "Occasion Wear":        ["Kipas Holding (Turkey)", "Shahi Exports (India)", "Orient Craft (India)"],
+      "Outerwear & Coats":    ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Youngone Corp (Bangladesh)"],
+      "Casual Trousers":      ["Arvind Mills (India)", "Kipas Holding (Turkey)", "Classic Fashions (Bangladesh)"],
+      "T-Shirts & Tops":      ["Tirupur Premium Knitwear (India)", "Kipas Holding (Turkey)", "KPR Mill (India)"],
+    },
+    coo: "Turkey, India, Italy, China"
+  },
+  tedBaker: {
+    overviewStance: "Ted Baker is a British luxury lifestyle brand, acquired by Authentic Brands Group (ABG) in 2024 following administration. The brand now operates on a licensed model with ABG managing IP while retail partners handle sourcing. Fabrics include premium wool blends, FSC® viscose, and OEKO-TEX® certified cotton.",
+    sustainability: "OEKO-TEX® certification maintained across core lines. FSC® viscose (including TENCEL™) used for dresses and blouses. Pre-ABG acquisition supply chain had advanced BCI cotton and GRS recycled polyester commitments; licensing model continuation is being confirmed.",
+    sourcingInsight: "Historically sourced from Turkey (wovens, tailoring), India (knitwear, jersey), and Portugal (premium shirts). Under ABG licensing, existing factory relationships are largely maintained with licensee retailers managing procurement directly.",
+    upgradeAdvice: "Ted Baker's ABG licensing model means winning a licensee retailer (such as Next or a department store buyer) is the entry point. Offer premium OEKO-TEX® certified wovens and TENCEL™ Lyocell dresses with FSC® certification. Turkish and Indian mills with strong woven suiting and premium jersey capabilities are best positioned.",
+    vendors: ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Orient Craft (India)", "Shahi Exports (India)"],
+    vendorsByCategory: {
+      "Dresses":              ["Kipas Holding (Turkey)", "Shahi Exports (India)", "Orient Craft (India)"],
+      "Formal Shirts":        ["Orient Craft (India, Delhi NCR)", "Esquel Group (China/Malaysia)", "Kipas Holding (Turkey)"],
+      "Knitwear & Jumpers":   ["Ludhiana Knitwear (India)", "Kipas Holding (Turkey)", "Tirupur Premium Knitwear (India)"],
+      "Men's Tailoring":      ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Guangdong Suit Cluster (China)"],
+      "Women's Tailoring":    ["Kipas Holding (Turkey)", "Shahi Exports (India)", "Orient Craft (India)"],
+      "Occasion Wear":        ["Shahi Exports (India)", "Kipas Holding (Turkey)", "Orient Craft (India)"],
+      "Outerwear & Coats":    ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Youngone Corp (Bangladesh)"],
+      "Casual Trousers":      ["Arvind Lifestyle (India)", "Kipas Holding (Turkey)", "Classic Fashions (Bangladesh)"],
+      "Jeans":                ["Arvind Mills (India, Ahmedabad)", "Kipas Denim (Turkey)", "Artistic Milliners (Pakistan)"],
+      "T-Shirts & Tops":      ["Tirupur Premium Knitwear (India)", "Kipas Holding (Turkey)", "KPR Mill (India)"],
+    },
+    coo: "Turkey, India, Portugal, China"
+  },
   default: {
     overviewStance: "This brand occupies a specialized niche in the UK market, balancing design aesthetics with consumer expectations around fabric quality and durability.",
     sustainability: "Meets baseline UK Reach and chemical safety regulations, with growing adoption of BCI cotton and recycled polyester to satisfy sustainability targets.",
@@ -231,6 +288,9 @@ const getBrandProfile = (brandName) => {
   if (name.includes("sainsbury") || name.includes("tu")) return BRAND_PROFILES.sainsburys;
   if (name.includes("asda") || name.includes("george")) return BRAND_PROFILES.asda;
   if (name.includes("primark")) return BRAND_PROFILES.primark;
+  if (name.includes("charles tyrwhitt") || name.includes("tyrwhitt")) return BRAND_PROFILES.charlesTyrwhitt;
+  if (name.includes("ted baker")) return BRAND_PROFILES.tedBaker;
+  if (name.includes("reiss")) return BRAND_PROFILES.reiss;
   if (name.includes("next")) return BRAND_PROFILES.next;
   if (name.includes("m&s") || name.includes("marks")) return BRAND_PROFILES.ms;
   if (name.includes("john lewis")) return BRAND_PROFILES.johnlewis;
