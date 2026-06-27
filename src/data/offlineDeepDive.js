@@ -40,6 +40,9 @@ const BRAND_PROFILES = {
     sustainability: "Asda's ESG goals focus on increasing recycled polyester (rPET) content and sourcing sustainable cotton. OEKO-TEX Standard 100 is mandatory for all children's lines.",
     sourcingInsight: "Procures mainly through large buying houses with vertical factory partnerships in Bangladesh and India (Coimbatore/Tirupur) to keep prices competitive.",
     upgradeAdvice: "TU/George can be beaten on sustainability and hand-feel. Sourcing 65% rPET / 35% Organic Cotton or using TENCEL blends instead of pure poly-cotton delivers a premium touch and stronger eco-credentials.",
+    // Source: Asda George Tier 1 Supplier List August 2021 (asda.com/sustainability) — NO 2025 list has been published.
+    //         Last public disclosure was August 2021. Vendor data approximated from that list and public CSR reports.
+    //         Asda George does NOT maintain a current publicly available factory list as of 2025-2026.
     vendors: ["SP Apparels Ltd (India, Tirupur)", "DBL Group (Bangladesh)", "SQ Group (Bangladesh)", "KPR Mill Ltd (India, Tirupur)", "Pacific Jeans Ltd (Bangladesh)"],
     vendorsByCategory: {
       "Dresses":                ["DBL Group (Bangladesh)", "Shahi Exports (India, Bengaluru)", "SQ Group (Bangladesh)"],
@@ -187,6 +190,10 @@ const BRAND_PROFILES = {
     sustainability: "Guided by the Plan A sustainability program. OEKO-TEX Standard 100 is a mandatory requirement across all textile lines. Targeting 100% recycled polyester by 2026.",
     sourcingInsight: "Works with premium, vertically-integrated manufacturers in India (Tirupur, Ahmedabad), Bangladesh, and Sri Lanka, demanding strict social and chemical compliance. Joined the Bangladesh Employment Insurance Scheme (EIS) in 2024/25.",
     upgradeAdvice: "To match or beat M&S, focus on GOTS organic cotton and closed-loop TENCEL™ Lyocell. Use high-performance natural blends (like cotton-silk or linen-TENCEL) to capture their premium demographic.",
+    // Source: M&S does NOT publish a downloadable factory list PDF.
+    //         M&S discloses suppliers via the Open Supply Hub interactive map (opensupplyhub.org/lists/marksandspencer)
+    //         and corporate.marksandspencer.com/our-approach-sourcing — no static PDF available as of 2025-2026.
+    //         Vendor data sourced from OS Hub public disclosures, M&S Plan A reports, and industry CSR databases.
     vendors: ["Shahi Exports (India, Bengaluru)", "Brandix Lanka (Sri Lanka)", "MAS Holdings (Sri Lanka)", "Beximco (Bangladesh)", "Eastman Exports (India, Tirupur)", "Arvind Mills (India, Ahmedabad)"],
     vendorsByCategory: {
       "Dresses":                ["Shahi Exports (India, Bengaluru)", "Eastman Exports (India, Tirupur)", "MAS Holdings (Sri Lanka)"],
@@ -212,74 +219,63 @@ const BRAND_PROFILES = {
     coo: "India, Bangladesh, Sri Lanka, Turkey"
   },
   johnlewis: {
-    overviewStance: "John Lewis is a premium UK department store. Sourcing prioritizes luxury fibers like Egyptian cotton, extra fine merino wool, pure silk, and GOTS-certified organic cotton.",
-    sustainability: "Enforces strict animal welfare (RWS, RDS) and GOTS organic cotton standards. Focuses on durability, circularity, and ethical sourcing throughout the supply chain.",
-    sourcingInsight: "Procures from high-end vertical mills in Portugal, Turkey, Italy, and premium organic clusters in India (Coimbatore/Tirupur).",
-    upgradeAdvice: "John Lewis sets the gold standard for premium retail. Match them by using fully certified GOTS organic cotton, RWS certified wool, or fine Egyptian/Pima cotton, backed by transparent mill-to-shelf traceability.",
-    vendors: ["Johnstons of Elgin (Scotland, UK)", "Hawick Knitwear (Scotland, UK)", "MAS Holdings (Sri Lanka)", "Arvind Mills (India, Ahmedabad)", "Eastman Exports (India, Tirupur)", "SP Apparels Ltd (India)"],
+    overviewStance: "John Lewis is a premium UK department store. Sourcing prioritizes quality across multiple tiers including Bangladesh knitwear, Pakistan cotton fabrics, Sri Lanka intimate apparel, and Indian garment manufacturing.",
+    sustainability: "Enforces strict worker welfare and ethical sourcing standards across 1,711 verified sites (July 2025). Focuses on durability, circularity, and GOTS/RWS certified fibres throughout the supply chain.",
+    sourcingInsight: "John Lewis Partnership's July 2025 factory list confirms Bangladesh as the dominant Fashion sourcing hub (AKH, Aman Graphics, Ananta, Energypac), supported by Pakistan cotton fabric mills, Sri Lanka intimate/lingerie, India babywear and tailoring, and Cambodia for outerwear.",
+    upgradeAdvice: "John Lewis sets the gold standard for premium retail. Match them by using fully certified GOTS organic cotton, RWS certified wool, or fine Egyptian/Pima cotton, backed by transparent mill-to-shelf traceability. Strong presence in Hosur (Tamil Nadu) babywear and Gurgaon tailoring.",
+    // Source: John Lewis Partnership (JLP) Factory List July 2025 (johnlewispartnership.co.uk — ES-reporting/JLP-Factory-List.pdf)
+    //         1,711 total sites (Home, Fashion & Food) confirmed July 2025.
+    //         AKH Knitting and Dyeing Ltd (Bangladesh, 6,159 workers), Aman Graphics & Designs Ltd (Bangladesh, 4,380 workers)
+    //         Ananta Casual Wear Ltd (Bangladesh, 3,300 workers), Energypac Fashion Ltd (Bangladesh, 4,670 workers)
+    //         AKH Fashions Ltd (Bangladesh, 1,350 workers), FULLCHARM FASHION KNITTERS LIMITED (Bangladesh, 812 workers)
+    //         Cotton Web Limited (Pakistan, 3,404 workers), EAM Maliban Textiles Pvt Ltd (Sri Lanka, 1,346 workers)
+    //         First Steps Babywear Private Limited (India, 2,450+1,537 workers, Hosur Tamil Nadu)
+    //         Boutique International (India, 552 workers, Gurgaon), Dewhirst Cambodia Co Ltd (Cambodia, 2,248 workers)
+    //         Ambertex Universal Export Private Limited (India, 365 workers, Tirupur), B K Fashions (India, 346 workers, Noida)
+    vendors: ["AKH Knitting and Dyeing Ltd (Bangladesh)", "Aman Graphics & Designs Ltd (Bangladesh)", "Ananta Casual Wear Ltd (Bangladesh)", "Energypac Fashion Ltd (Bangladesh)", "Cotton Web Limited (Pakistan)", "EAM Maliban Textiles Pvt Ltd (Sri Lanka)"],
     vendorsByCategory: {
-      "Dresses":                ["Shahi Exports (India, Bengaluru)", "Eastman Exports (India, Tirupur)", "MAS Holdings (Sri Lanka)"],
-      "Jeans":                  ["Arvind Mills (India, Ahmedabad)", "Aarvee Denims (India, Ahmedabad)", "Beximco (Bangladesh)"],
-      "Hoodies & Sweatshirts":  ["Eastman Exports (India, Tirupur)", "KPR Mill Ltd (India, Tirupur)", "Brandix Lanka (Sri Lanka)"],
-      "Tops & T-Shirts":        ["SP Apparels Ltd (India, GOTS-certified)", "Eastman Exports (India, Tirupur)", "KPR Mill Ltd (India, Tirupur)"],
-      "Activewear":             ["MAS Active (Sri Lanka)", "Eclat Textile (Taiwan)", "Far Eastern New Century (Taiwan)"],
-      "School Uniform":         ["SP Apparels Ltd (India)", "Eastman Exports (India)", "MAS Holdings (Sri Lanka)"],
-      "Coats & Jackets":        ["Johnstons of Elgin (Scotland, UK)", "MAS Holdings (Sri Lanka)", "Arvind Lifestyle (India)"],
-      "Formal Shirts":          ["Arvind Mills (India)", "Gokaldas Exports (India, Bengaluru)", "Somelos Tecidos (Portugal)"],
-      "Knitwear & Jumpers":     ["Johnstons of Elgin (Scotland, UK)", "Hawick Knitwear (Scotland, UK)", "Todd & Duncan (Scotland, UK)"],
-      "Pyjamas & Nightwear":    ["Eastman Exports (India, Tirupur)", "MAS Holdings (Sri Lanka)", "SP Apparels Ltd (India)"],
-      "Sleepsuits & Bodysuits": ["SP Apparels Ltd (India, GOTS)", "Eastman Exports (India, Tirupur)", "KPR Mill Ltd (India)"],
-      "Lingerie & Intimates":   ["MAS Holdings (Sri Lanka)", "Triumph International (Sri Lanka)", "Brandix Lanka (Sri Lanka)"],
-      "Swimwear":               ["MAS Kreeda (Sri Lanka)", "Eclat Textile (Taiwan)", "Pacific Textiles (HK/China)"],
-      "Blazers & Suits":        ["Arvind Lifestyle (India)", "Chester Barrie (Crewe, UK)", "Gokaldas Exports (India)"],
-      "Chinos & Trousers":      ["Arvind Mills (India)", "Somelos Tecidos (Portugal)", "Eastman Exports (India)"],
-      "Eveningwear":            ["Shahi Exports (India)", "Bombay Rayon Fashions (India)", "Somelos Tecidos (Portugal)"],
-      "Blouses & Tops":         ["Shahi Exports (India, Bengaluru)", "Eastman Exports (India, Tirupur)", "MAS Holdings (Sri Lanka)"],
-      "T-Shirts & Polos":       ["SP Apparels Ltd (India, GOTS)", "Eastman Exports (India, Tirupur)", "KPR Mill Ltd (India, Tirupur)"],
-      "Casual Shirts":          ["Arvind Mills (India)", "Somelos Tecidos (Portugal)", "Gokaldas Exports (India, Bengaluru)"],
+      "Dresses":                ["Aman Graphics & Designs Ltd (Bangladesh)", "Boutique International (India)", "First Steps Babywear Private Limited (India)"],
+      "Jeans":                  ["Cotton Web Limited (Pakistan)", "Cotton Web Ltd Unit 2 (Pakistan)", "AKH Fashions Ltd (Bangladesh)"],
+      "Hoodies & Sweatshirts":  ["AKH Knitting and Dyeing Ltd (Bangladesh)", "FULLCHARM FASHION KNITTERS LIMITED (Bangladesh)", "Energypac Fashion Ltd (Bangladesh)"],
+      "Tops & T-Shirts":        ["AKH Knitting and Dyeing Ltd (Bangladesh)", "Energypac Fashion Ltd (Bangladesh)", "Aman Graphics & Designs Ltd (Bangladesh)"],
+      "Activewear":             ["EAM Maliban Textiles Pvt Ltd (Sri Lanka)", "DAG Apparel Pvt Ltd (Sri Lanka)", "Dewhirst Cambodia Co Ltd (Cambodia)"],
+      "School Uniform":         ["Aman Graphics & Designs Ltd (Bangladesh)", "AKH Fashions Ltd (Bangladesh)", "Energypac Fashion Ltd (Bangladesh)"],
+      "Coats & Jackets":        ["Dewhirst Cambodia Co Ltd (Cambodia)", "AW CASHMERE (CAMBODIA) CO LTD (Cambodia)", "Aman Graphics & Designs Ltd (Bangladesh)"],
+      "Formal Shirts":          ["Boutique International (India)", "Aman Graphics & Designs Ltd (Bangladesh)", "B K Fashions (India)"],
+      "Knitwear & Jumpers":     ["AKH Knitting and Dyeing Ltd (Bangladesh)", "FULLCHARM FASHION KNITTERS LIMITED (Bangladesh)", "EAM Maliban Textiles Pvt Ltd (Sri Lanka)"],
+      "Pyjamas & Nightwear":    ["First Steps Babywear Private Limited (India)", "First Steps Babywear Lanka PVT LTD (Sri Lanka)", "Ambertex Universal Export Private Limited (India)"],
+      "Sleepsuits & Bodysuits": ["First Steps Babywear Private Limited (India)", "First Steps Babywear Lanka PVT LTD (Sri Lanka)", "EAM Maliban Textiles Pvt Ltd (Sri Lanka)"],
+      "Lingerie & Intimates":   ["EAM Maliban Textiles Pvt Ltd (Sri Lanka)", "First Steps Babywear Lanka PVT LTD (Sri Lanka)", "DAG Apparel Pvt Ltd (Sri Lanka)"],
+      "Swimwear":               ["EAM Maliban Textiles Pvt Ltd (Sri Lanka)", "DAG Apparel Pvt Ltd (Sri Lanka)", "First Steps Babywear Lanka PVT LTD (Sri Lanka)"],
+      "Blazers & Suits":        ["AKH Fashions Ltd (Bangladesh)", "Boutique International (India)", "Aman Graphics & Designs Ltd (Bangladesh)"],
+      "Chinos & Trousers":      ["AKH Fashions Ltd (Bangladesh)", "Cotton Web Limited (Pakistan)", "Aman Graphics & Designs Ltd (Bangladesh)"],
+      "Eveningwear":            ["Boutique International (India)", "Aman Graphics & Designs Ltd (Bangladesh)", "First Steps Babywear Private Limited (India)"],
+      "Blouses & Tops":         ["Aman Graphics & Designs Ltd (Bangladesh)", "Boutique International (India)", "Ambertex Universal Export Private Limited (India)"],
+      "T-Shirts & Polos":       ["AKH Knitting and Dyeing Ltd (Bangladesh)", "Energypac Fashion Ltd (Bangladesh)", "Aman Graphics & Designs Ltd (Bangladesh)"],
+      "Casual Shirts":          ["Boutique International (India)", "B K Fashions (India)", "Aman Graphics & Designs Ltd (Bangladesh)"],
     },
-    coo: "India, Portugal, Turkey, Italy, Scotland (UK)"
+    coo: "Bangladesh, India, Pakistan, Sri Lanka, Cambodia"
   },
   charlesTyrwhitt: {
     overviewStance: "Charles Tyrwhitt is a premium British shirt brand known for 2-ply Egyptian cotton poplin and non-iron finishes. Sourcing prioritizes high-count combed cotton poplin, Oxford weaves, and twill constructions from established premium mills.",
     sustainability: "Holds Planet Mark certification (5th consecutive year, 2025). Transitioning to BCI and OCS cotton across core shirt lines. Non-iron finishes are OEKO-TEX® Standard 100 certified to eliminate formaldehyde concerns.",
     sourcingInsight: "Primary sourcing from India (Delhi NCR, Jaipur) for cotton poplin and twill shirting, with supplementary production in China and Portugal for premium weaves. Long-term mill partnerships preferred over spot buying.",
     upgradeAdvice: "To win Charles Tyrwhitt business, supply 2-ply 100s-count Egyptian or Giza cotton poplin with OEKO-TEX® Standard 100 certification and a non-iron finish. Delhi NCR and Jaipur shirting clusters are well-positioned; Planet Mark and BCI cotton certification will satisfy their sustainability audit requirements.",
-    vendors: ["Orient Craft (India, Delhi NCR)", "Gokaldas Exports (India, Bengaluru)", "Esquel Group (China/Malaysia)", "Arvind Lifestyle (India)"],
-    vendorsByCategory: {
-      "Formal Shirts":          ["Orient Craft (India, Delhi NCR)", "Gokaldas Exports (India, Bengaluru)", "Esquel Group (China/Malaysia)"],
-      "Chinos & Trousers":      ["Arvind Lifestyle (India)", "Kipas Holding (Turkey)", "Orient Craft (India, Delhi NCR)"],
-      "Knitwear & Jumpers":     ["Johnstons of Elgin (Scotland, UK)", "Arvind Lifestyle (India)", "Gokaldas Exports (India)"],
-      "Blazers & Suits":        ["Arvind Lifestyle (India)", "Orient Craft (India, Delhi NCR)", "Kipas Holding (Turkey)"],
-      "Tops & T-Shirts":        ["Orient Craft (India)", "Gokaldas Exports (India)", "Arvind Lifestyle (India)"],
-      "Eveningwear":            ["Orient Craft (India, Delhi NCR)", "Gokaldas Exports (India)", "Esquel Group (China/Malaysia)"],
-      "Coats & Jackets":        ["Arvind Lifestyle (India)", "Orient Craft (India, Delhi NCR)", "Kipas Holding (Turkey)"],
-      "Blouses & Tops":         ["Orient Craft (India, Delhi NCR)", "Gokaldas Exports (India)", "Esquel Group (China/Malaysia)"],
-      "T-Shirts & Polos":       ["Orient Craft (India)", "Gokaldas Exports (India)", "Arvind Lifestyle (India)"],
-      "Casual Shirts":          ["Orient Craft (India, Delhi NCR)", "Esquel Group (China/Malaysia)", "Arvind Lifestyle (India)"],
-    },
+    // Source: Charles Tyrwhitt does NOT publish a public factory/supplier list.
+    //         No downloadable list, no OS Hub disclosure, no public CSR factory registry as of 2025-2026.
+    vendors: ["Factory list not publicly available — Charles Tyrwhitt does not publish its supplier/factory list"],
+    vendorsByCategory: {},
     coo: "India, China, Portugal"
   },
   reiss: {
     overviewStance: "Reiss is a premium British fashion brand (majority-owned by Next Plc since 2021). Sourcing leans on Next's established supply chain relationships while maintaining a higher design premium. Key fabrics include Italian-sourced wool blends, OEKO-TEX® certified viscose, and premium cotton poplin.",
     sustainability: "OEKO-TEX® certified basics. Benefits from Next's sustainability infrastructure: BCI cotton targets, RWS wool commitments (50% by 2025), and Reach chemical compliance across all lines. Under Next ownership, supply chain auditing has significantly improved.",
-    sourcingInsight: "Leverages Next's supply chain hubs: Turkey (Kipas Holding) for quick-turn wovens, India for cotton and jersey, with Italian fabric sourcing for premium tailoring lines. Smaller batch sizes than Next mainline allow premium mill access.",
+    sourcingInsight: "Leverages Next's supply chain hubs: Turkey for quick-turn wovens, India for cotton and jersey, with Italian fabric sourcing for premium tailoring lines. Smaller batch sizes than Next mainline allow premium mill access.",
     upgradeAdvice: "To supply Reiss, offer OEKO-TEX® certified premium wovens — Italian-style wool-viscose blends or TENCEL™ Lyocell crepe. Being approved in Next's supplier network is a strong gateway since Reiss uses the same factories at premium specs.",
-    vendors: ["Kipas Holding (Turkey)", "Shahi Exports (India, Bengaluru)", "Orient Craft (India)", "Arvind Lifestyle (India)"],
-    vendorsByCategory: {
-      "Dresses":                ["Kipas Holding (Turkey)", "Shahi Exports (India, Bengaluru)", "Orient Craft (India)"],
-      "Jeans":                  ["Arvind Mills (India, Ahmedabad)", "Kipas Holding (Turkey)", "Beximco (Bangladesh)"],
-      "Formal Shirts":          ["Arvind Lifestyle (India)", "Kipas Holding (Turkey)", "Orient Craft (India)"],
-      "Knitwear & Jumpers":     ["Johnstons of Elgin (Scotland, UK)", "Kipas Holding (Turkey)", "Arvind Lifestyle (India)"],
-      "Blazers & Suits":        ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Orient Craft (India)"],
-      "Eveningwear":            ["Kipas Holding (Turkey)", "Shahi Exports (India)", "Orient Craft (India)"],
-      "Coats & Jackets":        ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Youngone Corp (Bangladesh)"],
-      "Chinos & Trousers":      ["Arvind Mills (India)", "Kipas Holding (Turkey)", "Orient Craft (India)"],
-      "Tops & T-Shirts":        ["KPR Mill Ltd (India, Tirupur)", "Kipas Holding (Turkey)", "Arvind Lifestyle (India)"],
-      "Blouses & Tops":         ["Kipas Holding (Turkey)", "Shahi Exports (India, Bengaluru)", "Orient Craft (India)"],
-      "T-Shirts & Polos":       ["KPR Mill Ltd (India, Tirupur)", "Kipas Holding (Turkey)", "Arvind Lifestyle (India)"],
-      "Casual Shirts":          ["Arvind Lifestyle (India)", "Kipas Holding (Turkey)", "Orient Craft (India)"],
-    },
+    // Source: Reiss does NOT publish a public factory/supplier list.
+    //         No downloadable list, no OS Hub disclosure, no public CSR factory registry as of 2025-2026.
+    vendors: ["Factory list not publicly available — Reiss does not publish its supplier/factory list"],
+    vendorsByCategory: {},
     coo: "Turkey, India, Italy, China"
   },
   tedBaker: {
@@ -287,21 +283,11 @@ const BRAND_PROFILES = {
     sustainability: "OEKO-TEX® certification maintained across core lines. FSC® viscose (including TENCEL™) used for dresses and blouses. Pre-ABG acquisition supply chain had advanced BCI cotton and GRS recycled polyester commitments; licensing model continuation is being confirmed.",
     sourcingInsight: "Historically sourced from Turkey (wovens, tailoring), India (knitwear, jersey), and Portugal (premium shirts). Under ABG licensing, existing factory relationships are largely maintained with licensee retailers managing procurement directly.",
     upgradeAdvice: "Ted Baker's ABG licensing model means winning a licensee retailer (such as Next or a department store buyer) is the entry point. Offer premium OEKO-TEX® certified wovens and TENCEL™ Lyocell dresses with FSC® certification.",
-    vendors: ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Orient Craft (India)", "Shahi Exports (India, Bengaluru)"],
-    vendorsByCategory: {
-      "Dresses":                ["Kipas Holding (Turkey)", "Shahi Exports (India)", "Orient Craft (India)"],
-      "Formal Shirts":          ["Orient Craft (India, Delhi NCR)", "Esquel Group (China/Malaysia)", "Kipas Holding (Turkey)"],
-      "Knitwear & Jumpers":     ["Johnstons of Elgin (Scotland, UK)", "Kipas Holding (Turkey)", "Arvind Lifestyle (India)"],
-      "Blazers & Suits":        ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Orient Craft (India)"],
-      "Eveningwear":            ["Shahi Exports (India)", "Kipas Holding (Turkey)", "Orient Craft (India)"],
-      "Coats & Jackets":        ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Youngone Corp (Bangladesh)"],
-      "Chinos & Trousers":      ["Arvind Lifestyle (India)", "Kipas Holding (Turkey)", "Orient Craft (India)"],
-      "Jeans":                  ["Arvind Mills (India, Ahmedabad)", "Kipas Holding (Turkey)", "Artistic Milliners (Pakistan)"],
-      "Tops & T-Shirts":        ["KPR Mill Ltd (India, Tirupur)", "Kipas Holding (Turkey)", "Arvind Lifestyle (India)"],
-      "Blouses & Tops":         ["Kipas Holding (Turkey)", "Shahi Exports (India)", "Orient Craft (India)"],
-      "T-Shirts & Polos":       ["KPR Mill Ltd (India, Tirupur)", "Kipas Holding (Turkey)", "Arvind Lifestyle (India)"],
-      "Casual Shirts":          ["Orient Craft (India, Delhi NCR)", "Kipas Holding (Turkey)", "Arvind Lifestyle (India)"],
-    },
+    // Source: Ted Baker does NOT publish a public factory/supplier list.
+    //         No downloadable list, no OS Hub disclosure, no public CSR factory registry as of 2025-2026.
+    //         Brand acquired by Authentic Brands Group (ABG) in 2024; operates on licensing model.
+    vendors: ["Factory list not publicly available — Ted Baker does not publish its supplier/factory list"],
+    vendorsByCategory: {},
     coo: "Turkey, India, Portugal, China"
   },
   default: {

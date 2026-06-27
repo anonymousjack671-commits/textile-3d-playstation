@@ -70,6 +70,9 @@ const VERIFIED_VENDORS = {
     "Casual Shirts":         ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "DATSA TEXTIL SRL (Romania)", "Taneks Giyim Tekstil (Turkey)"],
   },
   "asda george": {
+    // Source: Asda George Tier 1 Supplier List August 2021 (asda.com/sustainability) — NO 2025 list has been published.
+    //         Last public disclosure was August 2021. Vendor data approximated from that list and public CSR reports.
+    //         Asda George does NOT maintain a current publicly available factory list as of 2025-2026.
     default:                 ["SP Apparels Ltd (India, Tirupur)", "DBL Group (Bangladesh)", "SQ Group (Bangladesh)", "KPR Mill Ltd (India, Tirupur)", "Pacific Jeans Ltd (Bangladesh)"],
     "Dresses":               ["DBL Group (Bangladesh)", "Shahi Exports (India, Bengaluru)", "SQ Group (Bangladesh)"],
     "Jeans":                 ["SQ Group (Bangladesh)", "Arvind Mills (India, Ahmedabad)", "Pacific Jeans Ltd (Bangladesh)"],
@@ -165,7 +168,10 @@ const VERIFIED_VENDORS = {
     "Casual Shirts":         ["Evitex Dress Shirt Limited (Bangladesh)", "Han Tekstil (Turkey)", "Fakhruddin Textile Mills Limited (Bangladesh)"],
   },
   "m&s": {
-    // Source: M&S Open Supply Hub disclosures / corporate.marksandspencer.com/our-approach-sourcing
+    // Source: M&S does NOT publish a downloadable factory list PDF.
+    //         M&S discloses suppliers via the Open Supply Hub interactive map (opensupplyhub.org/lists/marksandspencer)
+    //         and corporate.marksandspencer.com/our-approach-sourcing — no static PDF available as of 2025-2026.
+    //         Vendor data sourced from OS Hub public disclosures, M&S Plan A reports, and industry CSR databases.
     default:                 ["Shahi Exports (India, Bengaluru)", "Brandix Lanka (Sri Lanka)", "MAS Holdings (Sri Lanka)", "Beximco (Bangladesh)", "Eastman Exports (India, Tirupur)", "Arvind Mills (India, Ahmedabad)"],
     "Dresses":               ["Shahi Exports (India, Bengaluru)", "Eastman Exports (India, Tirupur)", "MAS Holdings (Sri Lanka)"],
     "Jeans":                 ["Arvind Mills (India, Ahmedabad)", "Beximco (Bangladesh)", "Aarvee Denims (India, Ahmedabad)"],
@@ -188,69 +194,51 @@ const VERIFIED_VENDORS = {
     "Casual Shirts":         ["Arvind Lifestyle (India)", "Gokaldas Exports (India, Bengaluru)", "Eastman Exports (India)"],
   },
   "john lewis": {
-    default:                 ["Johnstons of Elgin (Scotland, UK)", "Hawick Knitwear (Scotland, UK)", "MAS Holdings (Sri Lanka)", "Arvind Mills (India, Ahmedabad)", "Eastman Exports (India, Tirupur)", "SP Apparels Ltd (India)"],
-    "Dresses":               ["Shahi Exports (India, Bengaluru)", "Eastman Exports (India, Tirupur)", "MAS Holdings (Sri Lanka)"],
-    "Jeans":                 ["Arvind Mills (India, Ahmedabad)", "Aarvee Denims (India, Ahmedabad)", "Beximco (Bangladesh)"],
-    "Hoodies & Sweatshirts": ["Eastman Exports (India, Tirupur)", "KPR Mill Ltd (India, Tirupur)", "Brandix Lanka (Sri Lanka)"],
-    "Tops & T-Shirts":       ["SP Apparels Ltd (India, GOTS-certified)", "Eastman Exports (India, Tirupur)", "KPR Mill Ltd (India, Tirupur)"],
-    "Activewear":            ["MAS Active (Sri Lanka)", "Eclat Textile (Taiwan)", "Far Eastern New Century (Taiwan)"],
-    "School Uniform":        ["SP Apparels Ltd (India)", "Eastman Exports (India)", "MAS Holdings (Sri Lanka)"],
-    "Coats & Jackets":       ["Johnstons of Elgin (Scotland, UK)", "MAS Holdings (Sri Lanka)", "Arvind Lifestyle (India)"],
-    "Formal Shirts":         ["Arvind Mills (India)", "Gokaldas Exports (India, Bengaluru)", "Somelos Tecidos (Portugal)"],
-    "Knitwear & Jumpers":    ["Johnstons of Elgin (Scotland, UK)", "Hawick Knitwear (Scotland, UK)", "Todd & Duncan (Scotland, UK)"],
-    "Pyjamas & Nightwear":   ["Eastman Exports (India, Tirupur)", "MAS Holdings (Sri Lanka)", "SP Apparels Ltd (India)"],
-    "Sleepsuits & Bodysuits":["SP Apparels Ltd (India, GOTS)", "Eastman Exports (India, Tirupur)", "KPR Mill Ltd (India)"],
-    "Lingerie & Intimates":  ["MAS Holdings (Sri Lanka)", "Triumph International (Sri Lanka)", "Brandix Lanka (Sri Lanka)"],
-    "Swimwear":              ["MAS Kreeda (Sri Lanka)", "Eclat Textile (Taiwan)", "Pacific Textiles (HK/China)"],
-    "Blazers & Suits":       ["Arvind Lifestyle (India)", "Chester Barrie (Crewe, UK)", "Gokaldas Exports (India)"],
-    "Chinos & Trousers":     ["Arvind Mills (India)", "Somelos Tecidos (Portugal)", "Eastman Exports (India)"],
-    "Eveningwear":           ["Shahi Exports (India)", "Bombay Rayon Fashions (India)", "Somelos Tecidos (Portugal)"],
-    "Blouses & Tops":        ["Shahi Exports (India, Bengaluru)", "Eastman Exports (India, Tirupur)", "MAS Holdings (Sri Lanka)"],
-    "T-Shirts & Polos":      ["SP Apparels Ltd (India, GOTS)", "Eastman Exports (India, Tirupur)", "KPR Mill Ltd (India, Tirupur)"],
-    "Casual Shirts":         ["Arvind Mills (India)", "Somelos Tecidos (Portugal)", "Gokaldas Exports (India, Bengaluru)"],
+    // Source: John Lewis Partnership (JLP) Factory List July 2025 (johnlewispartnership.co.uk — ES-reporting/JLP-Factory-List.pdf)
+    //         1,711 total sites (Home, Fashion & Food) confirmed July 2025.
+    //         AKH Knitting and Dyeing Ltd (Bangladesh, 6,159 workers), Aman Graphics & Designs Ltd (Bangladesh, 4,380 workers)
+    //         Ananta Casual Wear Ltd (Bangladesh, 3,300 workers), Energypac Fashion Ltd (Bangladesh, 4,670 workers)
+    //         AKH Fashions Ltd (Bangladesh, 1,350 workers), FULLCHARM FASHION KNITTERS LIMITED (Bangladesh, 812 workers)
+    //         Cotton Web Limited (Pakistan, 3,404 workers), EAM Maliban Textiles Pvt Ltd (Sri Lanka, 1,346 workers)
+    //         First Steps Babywear Private Limited (India, 2,450+1,537 workers, Hosur Tamil Nadu)
+    //         Boutique International (India, 552 workers, Gurgaon), Dewhirst Cambodia Co Ltd (Cambodia, 2,248 workers)
+    //         Ambertex Universal Export Private Limited (India, 365 workers, Tirupur), B K Fashions (India, 346 workers, Noida)
+    default:                 ["AKH Knitting and Dyeing Ltd (Bangladesh)", "Aman Graphics & Designs Ltd (Bangladesh)", "Ananta Casual Wear Ltd (Bangladesh)", "Energypac Fashion Ltd (Bangladesh)", "Cotton Web Limited (Pakistan)", "EAM Maliban Textiles Pvt Ltd (Sri Lanka)"],
+    "Dresses":               ["Aman Graphics & Designs Ltd (Bangladesh)", "Boutique International (India)", "First Steps Babywear Private Limited (India)"],
+    "Jeans":                 ["Cotton Web Limited (Pakistan)", "Cotton Web Ltd Unit 2 (Pakistan)", "AKH Fashions Ltd (Bangladesh)"],
+    "Hoodies & Sweatshirts": ["AKH Knitting and Dyeing Ltd (Bangladesh)", "FULLCHARM FASHION KNITTERS LIMITED (Bangladesh)", "Energypac Fashion Ltd (Bangladesh)"],
+    "Tops & T-Shirts":       ["AKH Knitting and Dyeing Ltd (Bangladesh)", "Energypac Fashion Ltd (Bangladesh)", "Aman Graphics & Designs Ltd (Bangladesh)"],
+    "Activewear":            ["EAM Maliban Textiles Pvt Ltd (Sri Lanka)", "DAG Apparel Pvt Ltd (Sri Lanka)", "Dewhirst Cambodia Co Ltd (Cambodia)"],
+    "School Uniform":        ["Aman Graphics & Designs Ltd (Bangladesh)", "AKH Fashions Ltd (Bangladesh)", "Energypac Fashion Ltd (Bangladesh)"],
+    "Coats & Jackets":       ["Dewhirst Cambodia Co Ltd (Cambodia)", "AW CASHMERE (CAMBODIA) CO LTD (Cambodia)", "Aman Graphics & Designs Ltd (Bangladesh)"],
+    "Formal Shirts":         ["Boutique International (India)", "Aman Graphics & Designs Ltd (Bangladesh)", "B K Fashions (India)"],
+    "Knitwear & Jumpers":    ["AKH Knitting and Dyeing Ltd (Bangladesh)", "FULLCHARM FASHION KNITTERS LIMITED (Bangladesh)", "EAM Maliban Textiles Pvt Ltd (Sri Lanka)"],
+    "Pyjamas & Nightwear":   ["First Steps Babywear Private Limited (India)", "First Steps Babywear Lanka PVT LTD (Sri Lanka)", "Ambertex Universal Export Private Limited (India)"],
+    "Sleepsuits & Bodysuits":["First Steps Babywear Private Limited (India)", "First Steps Babywear Lanka PVT LTD (Sri Lanka)", "EAM Maliban Textiles Pvt Ltd (Sri Lanka)"],
+    "Lingerie & Intimates":  ["EAM Maliban Textiles Pvt Ltd (Sri Lanka)", "First Steps Babywear Lanka PVT LTD (Sri Lanka)", "DAG Apparel Pvt Ltd (Sri Lanka)"],
+    "Swimwear":              ["EAM Maliban Textiles Pvt Ltd (Sri Lanka)", "DAG Apparel Pvt Ltd (Sri Lanka)", "First Steps Babywear Lanka PVT LTD (Sri Lanka)"],
+    "Blazers & Suits":       ["AKH Fashions Ltd (Bangladesh)", "Boutique International (India)", "Aman Graphics & Designs Ltd (Bangladesh)"],
+    "Chinos & Trousers":     ["AKH Fashions Ltd (Bangladesh)", "Cotton Web Limited (Pakistan)", "Aman Graphics & Designs Ltd (Bangladesh)"],
+    "Eveningwear":           ["Boutique International (India)", "Aman Graphics & Designs Ltd (Bangladesh)", "First Steps Babywear Private Limited (India)"],
+    "Blouses & Tops":        ["Aman Graphics & Designs Ltd (Bangladesh)", "Boutique International (India)", "Ambertex Universal Export Private Limited (India)"],
+    "T-Shirts & Polos":      ["AKH Knitting and Dyeing Ltd (Bangladesh)", "Energypac Fashion Ltd (Bangladesh)", "Aman Graphics & Designs Ltd (Bangladesh)"],
+    "Casual Shirts":         ["Boutique International (India)", "B K Fashions (India)", "Aman Graphics & Designs Ltd (Bangladesh)"],
   },
   "charles tyrwhitt": {
-    default:                 ["Orient Craft (India, Delhi NCR)", "Gokaldas Exports (India, Bengaluru)", "Esquel Group (China/Malaysia)", "Arvind Lifestyle (India)"],
-    "Formal Shirts":         ["Orient Craft (India, Delhi NCR)", "Gokaldas Exports (India, Bengaluru)", "Esquel Group (China/Malaysia)"],
-    "Chinos & Trousers":     ["Arvind Lifestyle (India)", "Kipas Holding (Turkey)", "Orient Craft (India, Delhi NCR)"],
-    "Knitwear & Jumpers":    ["Johnstons of Elgin (Scotland, UK)", "Arvind Lifestyle (India)", "Gokaldas Exports (India)"],
-    "Blazers & Suits":       ["Arvind Lifestyle (India)", "Orient Craft (India, Delhi NCR)", "Kipas Holding (Turkey)"],
-    "Tops & T-Shirts":       ["Orient Craft (India)", "Gokaldas Exports (India)", "Arvind Lifestyle (India)"],
-    "Eveningwear":           ["Orient Craft (India, Delhi NCR)", "Gokaldas Exports (India)", "Esquel Group (China/Malaysia)"],
-    "Coats & Jackets":       ["Arvind Lifestyle (India)", "Orient Craft (India, Delhi NCR)", "Kipas Holding (Turkey)"],
-    "Blouses & Tops":        ["Orient Craft (India, Delhi NCR)", "Gokaldas Exports (India)", "Esquel Group (China/Malaysia)"],
-    "T-Shirts & Polos":      ["Orient Craft (India)", "Gokaldas Exports (India)", "Arvind Lifestyle (India)"],
-    "Casual Shirts":         ["Orient Craft (India, Delhi NCR)", "Esquel Group (China/Malaysia)", "Arvind Lifestyle (India)"],
+    // Source: Charles Tyrwhitt does NOT publish a public factory/supplier list.
+    //         No downloadable list, no OS Hub disclosure, no public CSR factory registry as of 2025-2026.
+    default:                 ["Factory list not publicly available — Charles Tyrwhitt does not publish its supplier/factory list"],
   },
   "reiss": {
-    default:                 ["Kipas Holding (Turkey)", "Shahi Exports (India, Bengaluru)", "Orient Craft (India)", "Arvind Lifestyle (India)"],
-    "Dresses":               ["Kipas Holding (Turkey)", "Shahi Exports (India, Bengaluru)", "Orient Craft (India)"],
-    "Jeans":                 ["Arvind Mills (India, Ahmedabad)", "Kipas Holding (Turkey)", "Beximco (Bangladesh)"],
-    "Formal Shirts":         ["Arvind Lifestyle (India)", "Kipas Holding (Turkey)", "Orient Craft (India)"],
-    "Knitwear & Jumpers":    ["Johnstons of Elgin (Scotland, UK)", "Kipas Holding (Turkey)", "Arvind Lifestyle (India)"],
-    "Blazers & Suits":       ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Orient Craft (India)"],
-    "Eveningwear":           ["Kipas Holding (Turkey)", "Shahi Exports (India)", "Orient Craft (India)"],
-    "Coats & Jackets":       ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Youngone Corp (Bangladesh)"],
-    "Chinos & Trousers":     ["Arvind Mills (India)", "Kipas Holding (Turkey)", "Orient Craft (India)"],
-    "Tops & T-Shirts":       ["KPR Mill Ltd (India, Tirupur)", "Kipas Holding (Turkey)", "Arvind Lifestyle (India)"],
-    "Blouses & Tops":        ["Kipas Holding (Turkey)", "Shahi Exports (India, Bengaluru)", "Orient Craft (India)"],
-    "T-Shirts & Polos":      ["KPR Mill Ltd (India, Tirupur)", "Kipas Holding (Turkey)", "Arvind Lifestyle (India)"],
-    "Casual Shirts":         ["Arvind Lifestyle (India)", "Kipas Holding (Turkey)", "Orient Craft (India)"],
+    // Source: Reiss does NOT publish a public factory/supplier list.
+    //         No downloadable list, no OS Hub disclosure, no public CSR factory registry as of 2025-2026.
+    default:                 ["Factory list not publicly available — Reiss does not publish its supplier/factory list"],
   },
   "ted baker": {
-    default:                 ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Orient Craft (India)", "Shahi Exports (India, Bengaluru)"],
-    "Dresses":               ["Kipas Holding (Turkey)", "Shahi Exports (India)", "Orient Craft (India)"],
-    "Formal Shirts":         ["Orient Craft (India, Delhi NCR)", "Esquel Group (China/Malaysia)", "Kipas Holding (Turkey)"],
-    "Knitwear & Jumpers":    ["Johnstons of Elgin (Scotland, UK)", "Kipas Holding (Turkey)", "Arvind Lifestyle (India)"],
-    "Blazers & Suits":       ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Orient Craft (India)"],
-    "Eveningwear":           ["Shahi Exports (India)", "Kipas Holding (Turkey)", "Orient Craft (India)"],
-    "Coats & Jackets":       ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Youngone Corp (Bangladesh)"],
-    "Chinos & Trousers":     ["Arvind Lifestyle (India)", "Kipas Holding (Turkey)", "Orient Craft (India)"],
-    "Jeans":                 ["Arvind Mills (India, Ahmedabad)", "Kipas Holding (Turkey)", "Artistic Milliners (Pakistan)"],
-    "Tops & T-Shirts":       ["KPR Mill Ltd (India, Tirupur)", "Kipas Holding (Turkey)", "Arvind Lifestyle (India)"],
-    "Blouses & Tops":        ["Kipas Holding (Turkey)", "Shahi Exports (India)", "Orient Craft (India)"],
-    "T-Shirts & Polos":      ["KPR Mill Ltd (India, Tirupur)", "Kipas Holding (Turkey)", "Arvind Lifestyle (India)"],
-    "Casual Shirts":         ["Orient Craft (India, Delhi NCR)", "Kipas Holding (Turkey)", "Arvind Lifestyle (India)"],
+    // Source: Ted Baker does NOT publish a public factory/supplier list.
+    //         No downloadable list, no OS Hub disclosure, no public CSR factory registry as of 2025-2026.
+    //         Brand acquired by Authentic Brands Group (ABG) in 2024; operates on licensing model.
+    default:                 ["Factory list not publicly available — Ted Baker does not publish its supplier/factory list"],
   },
 };
 const getVerifiedVendors = (brand, category) => {
