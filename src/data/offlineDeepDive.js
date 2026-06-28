@@ -69,12 +69,12 @@ const BRAND_PROFILES = {
   sainsburys: {
     overviewStance: "Sainsbury's TU is a volume family-clothing label anchored in Sainsbury's supermarkets. Sourcing skews toward price-competitive Asian hubs with BCI cotton, REPREVE recycled polyester, and poly-cotton blends; school uniform and kids ranges carry stain-resistant finishes.",
     sustainability: "Committing to 100% sustainably sourced cotton (BCI/Organic) and full-range recycled polyester by 2030. GRS certifications required for recycled content claims. Tier-1 supply base live on Open Supply Hub (contributor ID 6544) — 1,946 facilities disclosed as of June 2026.",
-    sourcingInsight: "Tier 1 supply base live on Open Supply Hub (contributor ID 6544). Scraped June 2026 — 1,946 total facilities, 210 apparel-only. Bangladesh leads (71 fac, 34%), China second (54 fac, 26%), Türkiye third (29 fac, 14%); Cambodia fourth (20 fac, 10%), India fifth (14 fac, 7%). Sources via TU's ethical trade offices in Hong Kong, Shanghai, Dhaka and Delhi.",
+    sourcingInsight: "Tier 1 supply base live on Open Supply Hub (contributor ID 6544). Scraped June 2026 — 1,946 total facilities, 210 apparel-only. Bangladesh leads (73 fac, 35%), China second (54 fac, 26%), Türkiye third (29 fac, 14%); Cambodia fourth (20 fac, 10%). Sources via TU's ethical trade offices in Hong Kong, Shanghai, Dhaka and Delhi.",
     upgradeAdvice: "Upgrade to organic cotton and non-fluorinated finishes. Sainsbury's TU relies on standard chemical coatings; using premium eco-finishes like Teflon EcoElite™ or Ruco-Bac MED™ adds strong marketing value.",
     // Source: OSH contributor ID 6544 — authenticated scrape June 2026 (1,946 facilities)
     vendors: [
       "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh, Chittagong)",
-      "Paramount Garments Pvt. Ltd. (India, Okhla)",
+      "Zaber & Zubair Fabrics Ltd (Bangladesh, Gazipur)",
       "Echotex Ltd (Bangladesh, Kaliakair)",
       "SQ Birichina Limited (Bangladesh, Bhaluka)",
       "BONY TEKSTIL ISLETMELERI VE SAN. TIC. A.S. (Türkiye, Trabzon)",

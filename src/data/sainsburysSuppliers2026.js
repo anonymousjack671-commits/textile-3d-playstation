@@ -1,6 +1,5 @@
 // Sainsbury's TU Clothing - Apparel Factories (OSH Contributor 6544, June 2026)
 // Apparel-only filtered: 210 fashion-relevant facilities (from 1,946 total)
-// BD: 71 (Zaber&Zubair + ACS Textiles removed - home textiles), IN: 14 (Paramount Okhla + Afflatus Manesar added)
 
 export const SJ_OSH_META = {
   contributorId: 6544,
@@ -12,6 +11,7 @@ export const SJ_OSH_META = {
 };
 
 export const SJ_FACTORIES_BANGLADESH = [
+  { name: "Zaber & Zubair Fabrics Ltd", address: "Pagar, Tongi, Gazipur, Dhaka", os_id: "BD2021113R7R87P", country: "Bangladesh" },
   { name: "HABITUS FASHION LIMITED", address: "Gajaria Para Bahwal Mirzapur Gazipur Sadar Dhaka", os_id: "BD201915877ME2J", country: "Bangladesh" },
   { name: "Dekko Garments Ltd.", address: "Mawna, Sreepur, Gazipur-1740", os_id: "BD2020021QK28YZ", country: "Bangladesh" },
   { name: "Echotex Ltd", address: "Ward no. 7, Holding no. A-30, Chandra, Kaliakair", os_id: "BD2019086JE9PZY", country: "Bangladesh" },
@@ -42,6 +42,7 @@ export const SJ_FACTORIES_BANGLADESH = [
   { name: "Friends Knittings Ltd.", address: "Plot 1406/1, Deshi Para Road, South Salna, Gazipur Sadar", os_id: "BD2019248JNWNMC", country: "Bangladesh" },
   { name: "Progress Apparels (Bangladesh) Limited", address: "MS SFB-1 & 2, Adamjee EPZ, Siddhirganj, Narayanganj", os_id: "BD2019107PMH1MA", country: "Bangladesh" },
   { name: "Renaissance Barind Ltd.", address: "Plot no. 62-68, 72-77, Ishwardi EPZ 6622 Ishwardi", os_id: "BD20200212T3WAJ", country: "Bangladesh" },
+  { name: "ACS Textiles (Bangladesh) Ltd.", address: "Tetlabo, Barpa, Rupgonj, Narayanganj, Dhaka", os_id: "BD2021337FH4VRF", country: "Bangladesh" },
   { name: "Aman Graphics & Designs Ltd.", address: "Singair Road, Nazim Nagar, Tetuljhora, Savar, Dhaka", os_id: "BD2020066CY505A", country: "Bangladesh" },
   { name: "Divine Design Ltd.", address: "Plot 12/13, BSCIC Industrial Estate Road, Chittagong", os_id: "BD2019119AWFTFV", country: "Bangladesh" },
   { name: "Madinaple Fashions Craft Ltd", address: "Ward No-07 E-44/1 Chandra Kallakoir Gazipur", os_id: "BD2019181B52GVS", country: "Bangladesh" },
@@ -222,8 +223,6 @@ export const SJ_FACTORIES_INDIA = [
   { name: "Sri Anuragavi Garments", address: "(UNIT 1) 1/146 P.N.ROAD, PONGUPALAYAM POST, AYYAMPALAYAM VILLAGE", os_id: "IN2022039Q9JG1C", country: "India" },
   { name: "PEARL APPARELS", address: "Plot No-585 Sector-37 Pace City-II Gurgaon India", os_id: "IN2020010SY5VH4", country: "India" },
   { name: "Victus Dyeings (Garment Division)", address: "Sf.No 144/A2, Palani Road, Palappampatti, SV Mills Post, Udumalpet", os_id: "IN2025353AA4X99", country: "India" },
-  { name: "Paramount Garments Pvt. Ltd.", address: "Okhla Industrial Area, New Delhi", os_id: "", country: "India" },
-  { name: "Afflatus Clothing Pvt. Ltd.", address: "Manesar, Gurgaon, Haryana", os_id: "", country: "India" },
 ];
 
 export const SJ_FACTORIES_PAKISTAN = [
@@ -261,12 +260,12 @@ export const SJ_FASHION_FACTORIES_BY_COUNTRY = {
 };
 
 export const SJ_SOURCING_MIX = {
-  Bangladesh: { count: 71, pct: '34%' },
+  Bangladesh: { count: 73, pct: '35%' },
   China: { count: 54, pct: '26%' },
   Türkiye: { count: 29, pct: '14%' },
   Cambodia: { count: 20, pct: '10%' },
   'Sri Lanka': { count: 9, pct: '4%' },
-  India: { count: 14, pct: '7%' },
+  India: { count: 12, pct: '6%' },
   Pakistan: { count: 6, pct: '3%' },
   Vietnam: { count: 5, pct: '2%' },
   Egypt: { count: 2, pct: '1%' },

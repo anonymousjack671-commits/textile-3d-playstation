@@ -134,11 +134,6 @@ export default async function handler(req, res) {
 
     if (!geminiRes.ok) {
       const errText = await geminiRes.text();
-      // 429 = quota exceeded — return clean flag so client falls back to offline data gracefully
-      if (geminiRes.status === 429) {
-        console.warn('[texai-research] Gemini quota exceeded (429)');
-        return res.status(429).json({ error: 'quota_exceeded' });
-      }
       throw new Error(`Gemini ${geminiRes.status}: ${errText.slice(0, 300)}`);
     }
 
