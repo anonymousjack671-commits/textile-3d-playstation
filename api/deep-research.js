@@ -47,13 +47,14 @@ const VERIFIED_VENDORS = {
   "sainsbury's tu": {
     // Source: OSH contributor ID 6544 — authenticated scrape June 2026
     //         1,946 total facilities | 210 apparel-only (home textiles, food, rubber, tea estates excluded)
-    //         Bangladesh:73, China:54, Türkiye:29, Cambodia:20, India:12, Sri Lanka:9, Pakistan:6, Vietnam:5, Egypt:2
+    //         Bangladesh:71, China:54, Türkiye:29, Cambodia:20, India:14, Sri Lanka:9, Pakistan:6, Vietnam:5, Egypt:2
+    //         (Zaber&Zubair + ACS Textiles removed — home textiles; Paramount Okhla + Afflatus Manesar added — womenswear)
     //         Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) confirmed Bangladesh anchor factory
-    //         Echotex Ltd (Bangladesh) confirmed on OSH list; Zaber & Zubair confirmed Bangladesh
+    //         Echotex Ltd (Bangladesh) confirmed on OSH list
     //         BONY TEKSTIL & Ugur Konfeksiyon confirmed Türkiye; Hangzhou Yukai confirmed China
-    default:                 ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh, Chittagong)", "Zaber & Zubair Fabrics Ltd (Bangladesh, Gazipur)", "Echotex Ltd (Bangladesh, Kaliakair)", "BONY TEKSTIL ISLETMELERI VE SAN. TIC. A.S. (Türkiye, Trabzon)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)", "Hangzhou Yukai Garments Co Ltd (China, Hangzhou)", "Kanodia Global Pvt. Ltd. (India, Panipat)", "Hirdaramani Clothing (Private) Limited (Sri Lanka)"],
-    "Dresses":               ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Echotex Ltd (Bangladesh)", "BONY TEKSTIL ISLETMELERI VE SAN. TIC. A.S. (Türkiye)"],
-    "Jeans":                 ["Zaber & Zubair Fabrics Ltd (Bangladesh)", "SQ Birichina Limited (Bangladesh)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)"],
+    default:                 ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh, Chittagong)", "Echotex Ltd (Bangladesh, Kaliakair)", "BONY TEKSTIL ISLETMELERI VE SAN. TIC. A.S. (Türkiye, Trabzon)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)", "Hangzhou Yukai Garments Co Ltd (China, Hangzhou)", "Paramount Garments Pvt. Ltd. (India, Okhla)", "Afflatus Clothing Pvt. Ltd. (India, Manesar)", "Hirdaramani Clothing (Private) Limited (Sri Lanka)"],
+    "Dresses":               ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Echotex Ltd (Bangladesh)", "Paramount Garments Pvt. Ltd. (India, Okhla)", "Afflatus Clothing Pvt. Ltd. (India, Manesar)", "BONY TEKSTIL ISLETMELERI VE SAN. TIC. A.S. (Türkiye)"],
+    "Jeans":                 ["SQ Birichina Limited (Bangladesh)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)"],
     "Hoodies & Sweatshirts": ["Echotex Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "AKADEMI TEKSTIL SANAYI VE TICARET A.S. (Türkiye)"],
     "Tops & T-Shirts":       ["Echotex Ltd (Bangladesh)", "SM Knitwear Ltd (Bangladesh)", "Kanodia Global Pvt. Ltd. (India, Panipat)"],
     "Activewear":            ["Indochine Apparel (Cambodia) Ltd (Cambodia)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Era Tekstil Sanayi Ve Ticaret A.S. (Türkiye)"],

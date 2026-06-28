@@ -170,8 +170,10 @@ const getOfflineData = (garmentName) => {
 };
 
 
-// Client-side cache in sessionStorage — instant on repeat selections
+// Client-side cache in localStorage — persists across sessions (24h TTL)
+// This dramatically reduces Gemini API calls: once a garment is cached it stays cached.
 const CACHE_PREFIX = 'texai_research_';
+const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
 const normalizeTier = (t = '') => {
   const s = t.toLowerCase().replace(/[\s_]/g, '-');
   if (['budget','value','low','entry'].includes(s)) return 'budget';
@@ -179,10 +181,16 @@ const normalizeTier = (t = '') => {
   return 'mid'; // default mid for anything ambiguous
 };
 const getCached = (key) => {
-  try { const v = sessionStorage.getItem(CACHE_PREFIX + key); return v ? JSON.parse(v) : null; } catch { return null; }
+  try {
+    const v = localStorage.getItem(CACHE_PREFIX + key);
+    if (!v) return null;
+    const { data, ts } = JSON.parse(v);
+    if (Date.now() - ts > CACHE_TTL_MS) { localStorage.removeItem(CACHE_PREFIX + key); return null; }
+    return data;
+  } catch { return null; }
 };
 const setCached = (key, val) => {
-  try { sessionStorage.setItem(CACHE_PREFIX + key, JSON.stringify(val)); } catch {}
+  try { localStorage.setItem(CACHE_PREFIX + key, JSON.stringify({ data: val, ts: Date.now() })); } catch {}
 };
 
 export const MarketIntelligencePanel = ({ garmentName }) => {
