@@ -47,30 +47,39 @@ const VERIFIED_VENDORS = {
   "sainsbury's tu": {
     // Source: OSH contributor ID 6544 — authenticated scrape June 2026
     //         1,946 total facilities | 210 apparel-only (home textiles, food, rubber, tea estates excluded)
-    //         Bangladesh:73, China:54, Türkiye:29, Cambodia:20, India:12, Sri Lanka:9, Pakistan:6, Vietnam:5, Egypt:2
-    //         Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) confirmed Bangladesh anchor factory
-    //         Echotex Ltd (Bangladesh) confirmed on OSH list; Zaber & Zubair confirmed Bangladesh
-    //         BONY TEKSTIL & Ugur Konfeksiyon confirmed Türkiye; Hangzhou Yukai confirmed China
-    default:                 ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh, Chittagong)", "Zaber & Zubair Fabrics Ltd (Bangladesh, Gazipur)", "Echotex Ltd (Bangladesh, Kaliakair)", "BONY TEKSTIL ISLETMELERI VE SAN. TIC. A.S. (Türkiye, Trabzon)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)", "Hangzhou Yukai Garments Co Ltd (China, Hangzhou)", "Kanodia Global Pvt. Ltd. (India, Panipat)", "Hirdaramani Clothing (Private) Limited (Sri Lanka)"],
-    "Dresses":               ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Echotex Ltd (Bangladesh)", "BONY TEKSTIL ISLETMELERI VE SAN. TIC. A.S. (Türkiye)"],
-    "Jeans":                 ["Zaber & Zubair Fabrics Ltd (Bangladesh)", "SQ Birichina Limited (Bangladesh)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)"],
-    "Hoodies & Sweatshirts": ["Echotex Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "AKADEMI TEKSTIL SANAYI VE TICARET A.S. (Türkiye)"],
-    "Tops & T-Shirts":       ["Echotex Ltd (Bangladesh)", "SM Knitwear Ltd (Bangladesh)", "Kanodia Global Pvt. Ltd. (India, Panipat)"],
-    "Activewear":            ["Indochine Apparel (Cambodia) Ltd (Cambodia)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Era Tekstil Sanayi Ve Ticaret A.S. (Türkiye)"],
-    "School Uniform":        ["Echotex Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "AMAN KNITTINGS LTD (Bangladesh, Savar)"],
-    "Coats & Jackets":       ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "BONY TEKSTIL ISLETMELERI VE SAN. TIC. A.S. (Türkiye)", "Hangzhou Yukai Garments Co Ltd (China)"],
-    "Formal Shirts":         ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)", "Kanodia Global Pvt. Ltd. (India, Panipat)"],
-    "Knitwear & Jumpers":    ["Jiangyin Chaoyu Knitting Co (China, Jiangyin)", "Agile Sweater (Cambodia) Co Ltd (Cambodia)", "Ningbo Seduno Knitting (China, Ningbo)"],
-    "Pyjamas & Nightwear":   ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Echotex Ltd (Bangladesh)", "SEDUNO CAMBO KNITTING CO. LTD (Cambodia)"],
-    "Swimwear":              ["Indochine Apparel (Cambodia) Ltd (Cambodia)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Era Tekstil Sanayi Ve Ticaret A.S. (Türkiye)"],
-    "Sleepsuits & Bodysuits":["Echotex Ltd (Bangladesh)", "SM Knitwear Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)"],
-    "Lingerie & Intimates":  ["Hirdaramani Clothing (Private) Limited (Sri Lanka)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Hirdaramani Industries (Private) Limited (Sri Lanka)"],
-    "Blazers & Suits":       ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)", "BONY TEKSTIL ISLETMELERI VE SAN. TIC. A.S. (Türkiye)"],
-    "Chinos & Trousers":     ["Zaber & Zubair Fabrics Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)"],
-    "Eveningwear":           ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Echotex Ltd (Bangladesh)", "Hangzhou Yukai Garments Co Ltd (China)"],
-    "Blouses & Tops":        ["Kanodia Global Pvt. Ltd. (India, Panipat)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Quantum Knits (India, Coimbatore)"],
-    "T-Shirts & Polos":      ["Echotex Ltd (Bangladesh)", "SM Knitwear Ltd (Bangladesh)", "AMAN KNITTINGS LTD (Bangladesh, Savar)"],
-    "Casual Shirts":         ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Kanodia Global Pvt. Ltd. (India, Panipat)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)"],
+    //         Bangladesh:71, China:54, Türkiye:29, Cambodia:20, India:14, Sri Lanka:9, Pakistan:6, Vietnam:5, Egypt:2
+    //         Category↔vendor mapping verified via factory websites & trade intelligence (June 2026)
+    //         Key anchors: Babylon Garments (confirmed SJ — MENSWEAR woven shirts), Echotex (all-gender jersey knitwear)
+    //         Kenpark K-3 (woven bottoms/jackets), Paramount Okhla (confirmed SJ womenswear)
+    //         QUATTRO FASHION (woven shirts), Era Tekstil (circular knitwear), SOUTH EAST TEXTILES (jersey all-gender)
+    //         BONY TEKSTIL / NBG / Murat / Penti / Jiangyin Chaoyu → socks/hosiery only
+    //         SQ Birichina → lingerie + activewear + swimwear specialist (NOT jeans)
+    //         AMAN KNITTINGS → full-fashion sweaters/pullovers (NOT T-shirts)
+    //         Indochine Apparel Cambodia → woven shirts/blouses/trousers (NOT activewear/swimwear)
+    //         Hangzhou Yukai → sweaters/cold-weather accessories (NOT coats/eveningwear)
+    //         Babylon Garments → MENSWEAR only (formal + casual shirts); NOT womenswear/dresses/blouses
+    //         SOUTH EAST TEXTILES → jersey composite, supplies kids/men/women jersey categories
+    default:                 ["Babylon Garments Ltd (Bangladesh, Mirpur) — confirmed SJ menswear, woven shirts", "Echotex Ltd (Bangladesh, Kaliakair) — all-gender jersey knitwear (men/women/kids)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh, Chittagong) — woven bottoms & jackets", "Era Tekstil Sanayi Ve Ticaret A.S. (Türkiye, Izmir) — circular knitwear dresses/tops/PJs", "QUATTRO FASHION LIMITED (Bangladesh, Gazipur) — woven shirts", "Paramount Garments Pvt. Ltd. (India, Okhla) — confirmed SJ womenswear", "SOUTH EAST TEXTILES (PVT.) LIMITED (Bangladesh, Gazipur) — jersey composite, kids/men/women"],
+    "Dresses":               ["Era Tekstil Sanayi Ve Ticaret A.S. (Türkiye) — circular knitwear dresses", "Paramount Garments Pvt. Ltd. (India, Okhla) — ladies woven dresses, confirmed SJ", "SM Knitwear Ltd (Bangladesh) — maxi dresses (jersey)", "Afflatus Clothing Pvt. Ltd. (India, Manesar) — womenswear dresses/skirts"],
+    "Jeans":                 ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh) — woven bottoms incl. jeans", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye) — woven casualwear", "QUATTRO FASHION LIMITED (Bangladesh) — woven trousers/bottoms"],
+    "Hoodies & Sweatshirts": ["Echotex Ltd (Bangladesh) — all-gender jersey hoodies/sweatshirts", "SM Knitwear Ltd (Bangladesh) — sweatshirts/hoodies", "SOUTH EAST TEXTILES (PVT.) LIMITED (Bangladesh) — jersey hoodies/sweatshirts, kids/men/women", "AKADEMI TEKSTIL SANAYI VE TICARET A.S. (Türkiye) — fashion knitwear", "Afflatus Clothing Pvt. Ltd. (India, Manesar) — jersey hoodies"],
+    "Tops & T-Shirts":       ["Echotex Ltd (Bangladesh) — all-gender jersey tops/tees", "SOUTH EAST TEXTILES (PVT.) LIMITED (Bangladesh) — jersey tops, kids/men/women", "SM Knitwear Ltd (Bangladesh) — T-shirts/tank tops", "Era Tekstil Sanayi Ve Ticaret A.S. (Türkiye) — circular knit tops", "AKADEMI TEKSTIL SANAYI VE TICARET A.S. (Türkiye) — fashion knit tops"],
+    "Activewear":            ["SQ Birichina Limited (Bangladesh) — activewear specialist, LEED Platinum", "Era Tekstil Sanayi Ve Ticaret A.S. (Türkiye) — knit leggings/active tops", "Liz Fashion Industry Ltd (Bangladesh) — sportswear"],
+    "School Uniform":        ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh) — woven school shirts/trousers", "Echotex Ltd (Bangladesh) — jersey school polos/sweatshirts, all ages", "SOUTH EAST TEXTILES (PVT.) LIMITED (Bangladesh) — jersey school wear, kids/adults", "QUATTRO FASHION LIMITED (Bangladesh) — woven school shirts"],
+    "Coats & Jackets":       ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh) — casual woven jackets", "Hirdaramani Clothing (Private) Limited (Sri Lanka) — outerwear/casualwear", "Hirdaramani Industries (Private) Limited (Sri Lanka) — jackets/outerwear"],
+    "Formal Shirts":         ["QUATTRO FASHION LIMITED (Bangladesh) — woven formal shirts, men's & ladies'", "Babylon Garments Ltd (Bangladesh) — men's woven formal shirts, confirmed SJ", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye) — woven formal shirts"],
+    "Knitwear & Jumpers":    ["Agile Sweater (Cambodia) Co Ltd (Cambodia) — full-fashion sweaters/pullovers", "Indesore Sweater Ltd (Bangladesh) — sweaters/pullovers/cardigans", "AMAN KNITTINGS LTD (Bangladesh, Savar) — hand-flat knit sweaters (2,000 machines)", "SQ CELSIUS LIMITED (Bangladesh) — full-fashion knitwear acrylic-to-cashmere", "AKADEMI TEKSTIL SANAYI VE TICARET A.S. (Türkiye) — ladies'/men's fashion knitwear", "Hangzhou Yukai Garments Co Ltd (China) — sweaters/scarves/shawls", "Ningbo Seduno Knitting Co (China) — cardigans/pullovers/cut-and-sew knitwear"],
+    "Pyjamas & Nightwear":   ["Era Tekstil Sanayi Ve Ticaret A.S. (Türkiye) — PJ sets, nightwear, all-gender", "Paramount Garments Pvt. Ltd. (India, Okhla) — ladies nightwear/beachwear, confirmed SJ", "Ningbo Seduno Knitting Co (China) — sleepwear/knitwear basics"],
+    "Swimwear":              ["SQ Birichina Limited (Bangladesh) — swimwear specialist, LEED Platinum", "Hirdaramani Clothing (Private) Limited (Sri Lanka) — swimwear"],
+    "Sleepsuits & Bodysuits":["Echotex Ltd (Bangladesh) — jersey bodysuits/babywear", "SOUTH EAST TEXTILES (PVT.) LIMITED (Bangladesh) — jersey babywear/bodysuits, kids", "SM Knitwear Ltd (Bangladesh) — toddler/babies knitwear", "Ningbo Seduno Knitting Co (China) — knitwear basics/underwear"],
+    "Lingerie & Intimates":  ["SQ Birichina Limited (Bangladesh) — lingerie + intimate specialist, LEED Platinum", "Hirdaramani Clothing (Private) Limited (Sri Lanka) — loungewear/intimates", "Penti Corap San. ve Tic. A.S. (Türkiye) — intimates/legwear, 86M pairs/yr"],
+    "Blazers & Suits":       ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh) — tailored woven garments", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye) — woven formal casualwear"],
+    "Chinos & Trousers":     ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh) — woven bottoms/chinos/trousers", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye) — woven trousers", "QUATTRO FASHION LIMITED (Bangladesh) — woven bottoms"],
+    "Eveningwear":           ["Era Tekstil Sanayi Ve Ticaret A.S. (Türkiye) — knitwear dresses/occasion tops", "Paramount Garments Pvt. Ltd. (India, Okhla) — ladies occasion dresses", "Afflatus Clothing Pvt. Ltd. (India, Manesar) — ladies occasion wear"],
+    "Blouses & Tops":        ["Paramount Garments Pvt. Ltd. (India, Okhla) — ladies blouses/tops, confirmed SJ", "Afflatus Clothing Pvt. Ltd. (India, Manesar) — womenswear blouses/tops", "Era Tekstil Sanayi Ve Ticaret A.S. (Türkiye) — circular knit tops", "Indochine Apparel (Cambodia) Ltd (Cambodia) — woven blouses/shirts"],
+    "T-Shirts & Polos":      ["Echotex Ltd (Bangladesh) — all-gender jersey T-shirts/polos", "SOUTH EAST TEXTILES (PVT.) LIMITED (Bangladesh) — jersey T-shirts/polos, kids/men/women", "SM Knitwear Ltd (Bangladesh) — T-shirts/polos", "AKADEMI TEKSTIL SANAYI VE TICARET A.S. (Türkiye) — fashion knit tops"],
+    "Casual Shirts":         ["QUATTRO FASHION LIMITED (Bangladesh) — woven casual shirts, men's & ladies'", "Babylon Garments Ltd (Bangladesh) — men's woven casual shirts, confirmed SJ", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye) — woven casual shirts", "Indochine Apparel (Cambodia) Ltd (Cambodia) — woven shirts/casual tops"],
+    "Socks & Hosiery":       ["BONY TEKSTIL ISLETMELERI VE SAN. TIC. A.S. (Türkiye) — 100M pairs/yr socks specialist", "NBG Corap Imalati San. ve Tic. A.S. (Türkiye) — GOTS certified hosiery", "Murat Corap San. Tic. A.S. (Türkiye) — 40M pairs/yr hosiery", "Penti Corap San. ve Tic. A.S. (Türkiye) — legwear/hosiery/intimates", "Jiangyin Chaoyu Knitting Co (China) — sublimation print socks specialist"],
   },
   "asda george": {
     // Source: Asda George Tier 1 Supplier List August 2021 (asda.com/sustainability) — NO 2025 list has been published.
@@ -177,26 +186,32 @@ const VERIFIED_VENDORS = {
     //         Apparel sourcing mix: Bangladesh:64(25%), China:47(19%), Sri Lanka:46(18%), Cambodia:33(13%), Türkiye:23(9%)
     //         India:14(6%), Vietnam:13(5%), Pakistan:7(3%), Egypt:5(2%), Morocco:1. Ethiopia: 0 (cleared — coffee coops only)
     //         M&S joined Bangladesh EIS 2024/25. 70%+ suppliers have worked with M&S >7 years.
-    default:                 ["Zaber & Zubair Fabrics Ltd (Bangladesh)", "Energypac Fashions Ltd (Bangladesh)", "MAS Active (Pvt) Limited - Linea Intimo (Sri Lanka)", "Courtaulds Clothing Lanka (Pvt) Ltd (Sri Lanka)", "Hirdaramani Clothing (Private) Limited (Sri Lanka)", "Sanko Tekstil (Türkiye)", "Dewhirst (Cambodia) Co Ltd (Cambodia)"],
-    "Dresses":               ["Shahi Exports Pvt Ltd (India, Bengaluru)", "Texport Industries Pvt Ltd (India, Bengaluru)", "Gokaldas Exports Ltd (India, Bengaluru)"],
-    "Jeans":                 ["Artistic Milliners Pvt Ltd (Pakistan, Karachi)", "Arvind Limited — Denim Division (India, Ahmedabad)", "Pacific Jeans Cambodia (Cambodia, Phnom Penh)"],
-    "Hoodies & Sweatshirts": ["Energypac Fashions Ltd (Bangladesh, Gazipur)", "Dekko Knitwears Ltd (Bangladesh, Dhaka)", "KPR Mill Limited Unit II (India, Tirupur)"],
-    "Tops & T-Shirts":       ["KPR Mill Limited Unit II (India, Tirupur)", "Classic Polo Limited (India, Tirupur)", "Energypac Fashions Ltd (Bangladesh, Gazipur)"],
-    "Activewear":            ["MAS Active Trading Pvt Ltd (Sri Lanka)", "MAS Kreeda Pvt Ltd (Sri Lanka)", "Hirdaramani Apparel (Sri Lanka)"],
-    "School Uniform":        ["Zaber & Zubair Fabrics Ltd (Bangladesh, Gazipur)", "Energypac Fashions Ltd (Bangladesh)", "KPR Mill Limited Unit II (India, Tirupur)"],
-    "Coats & Jackets":       ["Youngone Cambodia Mfg. Co. Ltd. (Cambodia, Phnom Penh SEZ)", "Dewhirst Cambodia Co Ltd (Cambodia, Phnom Penh)", "Gokaldas Exports Ltd (India, Bengaluru)"],
-    "Formal Shirts":         ["Gul Ahmed Textile Mills (Pakistan, Karachi)", "Orient Craft Limited (India, Gurgaon)", "Aditya Birla Fashion — Madura (India, Bengaluru)"],
-    "Knitwear & Jumpers":    ["Dekko Knitwears Ltd (Bangladesh, Dhaka)", "Epyllion Knitwears Limited (Bangladesh, Narayanganj)", "KPR Mill Limited Unit II (India, Tirupur)"],
-    "Pyjamas & Nightwear":   ["SP Apparels Ltd (India, Tirupur)", "Hela Intimates Lanka Pvt Ltd (Sri Lanka)", "Brandix Lanka Limited (Sri Lanka)"],
-    "Sleepsuits & Bodysuits":["SP Apparels Ltd (India, Tirupur)", "First Steps Babywear Lanka Pvt Ltd (Sri Lanka)", "Brandix Lanka Limited (Sri Lanka)"],
-    "Lingerie & Intimates":  ["MAS Holdings — MAS Intimates Thurulie (Sri Lanka)", "Hela Intimates Lanka Pvt Ltd (Sri Lanka)", "Slimline Pvt Ltd (Sri Lanka)"],
-    "Swimwear":              ["MAS Kreeda Pvt Ltd (Sri Lanka)", "MAS Active Trading Pvt Ltd (Sri Lanka)", "Hirdaramani Apparel (Sri Lanka)"],
-    "Blazers & Suits":       ["Kipas Tekstil (Turkey, Kahramanmaras)", "Aydinli Group (Turkey, Istanbul)", "Gokaldas Exports Ltd (India, Bengaluru)"],
-    "Chinos & Trousers":     ["Nishat Chunian Ltd — Dyeing & Printing Division (Pakistan, Lahore)", "Artistic Milliners Pvt Ltd (Pakistan, Karachi)", "Arvind Limited — Denim Division (India, Ahmedabad)"],
-    "Eveningwear":           ["Shahi Exports Pvt Ltd (India, Bengaluru)", "Texport Industries Pvt Ltd (India, Bengaluru)", "Gokaldas Exports Ltd (India, Bengaluru)"],
-    "Blouses & Tops":        ["Shahi Exports Pvt Ltd (India, Bengaluru)", "Texport Industries Pvt Ltd (India, Bengaluru)", "Brandix Lanka Limited (Sri Lanka)"],
-    "T-Shirts & Polos":      ["KPR Mill Limited Unit II (India, Tirupur)", "Classic Polo Limited (India, Tirupur)", "Energypac Fashions Ltd (Bangladesh, Gazipur)"],
-    "Casual Shirts":         ["Gul Ahmed Textile Mills (Pakistan, Karachi)", "Sapphire Textile Mills (Pakistan, Lahore)", "Orient Craft Limited (India, Gurgaon)"],
+    // Category↔vendor mapping verified via factory websites & trade intelligence (June 2026)
+    // Key anchors confirmed: MAS Thurulie = M&S dedicated lingerie factory (world's 1st carbon-neutral apparel plant)
+    // Youngone Cambodia = performance outerwear (North Face/Nike tier); Orient Craft = M&S/Ralph Lauren confirmed
+    // Shahi Exports = India's largest apparel exporter (M&S confirmed); Artistic Milliners = C2C certified denim
+    // SP Apparels Tirupur = babywear/kidswear specialist (50M garments/yr)
+    // Sanko Tekstil / Kipas Tekstil / Nishat Chunian → primarily fabric/yarn suppliers, removed from garment categories
+    default:                 ["Energypac Fashions Ltd (Bangladesh, Gazipur) — broad capability: blazers, shirts, jackets, trackwear", "Courtaulds Clothing Lanka (Pvt) Ltd (Sri Lanka) — lingerie, sportswear, outerwear, knitwear", "Hirdaramani Clothing (Private) Limited (Sri Lanka) — casualwear, swimwear, outerwear", "Dewhirst (Cambodia) Co Ltd (Cambodia) — casualwear/outerwear", "Shahi Exports Pvt Ltd (India, Bengaluru) — India's largest apparel exporter, M&S confirmed", "Orient Craft Limited (India, Gurgaon) — M&S confirmed, woven/embroidery/casualwear", "MAS Active (Pvt) Limited — Linea Intimo (Sri Lanka) — activewear/intimates"],
+    "Dresses":               ["Shahi Exports Pvt Ltd (India, Bengaluru) — woven & knit ladies' dresses, M&S confirmed", "Texport Industries Pvt Ltd (India, Bengaluru) — woven/knit all-gender apparel", "Gokaldas Exports Ltd (India, Bengaluru) — woven dresses/blouses, M&S/Gap confirmed"],
+    "Jeans":                 ["Artistic Milliners Pvt Ltd (Pakistan, Karachi) — world's first C2C certified denim, 30M garments/yr", "Pacific Jeans Cambodia (Cambodia) — premium 5-pocket & fashion-wash jeans specialist", "Arvind Limited — Denim Division (India, Ahmedabad) — vertically integrated denim"],
+    "Hoodies & Sweatshirts": ["Energypac Fashions Ltd (Bangladesh, Gazipur) — sweatshirts/jerseys/pullovers", "Dekko Knitwears Ltd (Bangladesh, Dhaka) — T-shirts/polo/sweatshirts, Epyllion Group", "Epyllion Knitwears Limited (Bangladesh, Narayanganj) — circular knitwear hoodies/sweatshirts"],
+    "Tops & T-Shirts":       ["KPR Mill Limited Unit II (India, Tirupur) — 95M garments/yr knitwear, T-shirts/polo", "Classic Polo Limited (India, Tirupur) — India's largest-selling T-shirt brand (Classic Polo)", "Energypac Fashions Ltd (Bangladesh, Gazipur) — jerseys/tops"],
+    "Activewear":            ["MAS Active (Pvt) Limited — Linea Intimo (Sri Lanka) — sports bras, yoga wear, athleisure, Nike/Lululemon tier", "MAS Kreeda Pvt Ltd (Sri Lanka) — performance athletic wear, Nike dedicated", "Hirdaramani Clothing (Private) Limited (Sri Lanka) — activewear/swimwear"],
+    "School Uniform":        ["Energypac Fashions Ltd (Bangladesh, Gazipur) — shirts/blazers/trousers", "KPR Mill Limited Unit II (India, Tirupur) — knit school polos/T-shirts", "Courtaulds Clothing Lanka (Pvt) Ltd (Sri Lanka) — broad garment capability"],
+    "Coats & Jackets":       ["Youngone Cambodia Mfg. Co. Ltd. (Cambodia) — performance outerwear, The North Face/Nike/Adidas tier", "Dewhirst Cambodia Co Ltd (Cambodia) — casual & tailored outerwear", "Gokaldas Exports Ltd (India, Bengaluru) — jackets/suits/outerwear, M&S confirmed"],
+    "Formal Shirts":         ["Orient Craft Limited (India, Gurgaon) — woven formal shirts, M&S/Ralph Lauren/Gap confirmed", "Gul Ahmed Textile Mills (Pakistan, Karachi) — woven shirts/shirting", "Aditya Birla Fashion — Madura (India, Bengaluru) — premium menswear shirts"],
+    "Knitwear & Jumpers":    ["Dekko Knitwears Ltd (Bangladesh, Dhaka) — T-shirts/polo/knitwear, Epyllion Group", "Epyllion Knitwears Limited (Bangladesh, Narayanganj) — circular knitwear pullovers", "KPR Mill Limited Unit II (India, Tirupur) — knit tops/cardigans"],
+    "Pyjamas & Nightwear":   ["SP Apparels Ltd (India, Tirupur) — babies' & children's knitwear specialist, 50M garments/yr", "Hela Intimates Lanka Pvt Ltd (Sri Lanka) — sleepwear/intimates, PVH/Michael Kors tier", "Brandix Lanka Limited (Sri Lanka) — M&S/Next confirmed, intimate & casual"],
+    "Sleepsuits & Bodysuits":["SP Apparels Ltd (India, Tirupur) — babywear specialist: bodysuits/sleepsuits/infant knitwear", "Courtaulds Clothing Lanka (Pvt) Ltd (Sri Lanka) — babies' & children's garments", "Brandix Lanka Limited (Sri Lanka) — intimate/baby garments"],
+    "Lingerie & Intimates":  ["MAS Holdings — MAS Intimates Thurulie (Sri Lanka) — M&S DEDICATED factory, world's first carbon-neutral apparel plant, LEED Platinum", "Hela Intimates Lanka Pvt Ltd (Sri Lanka) — bras/shapewear/sleepwear, Calvin Klein/Tommy Hilfiger tier", "Slimline Pvt Ltd (Sri Lanka) — MAS Holdings subsidiary, ladies' & men's intimate apparel", "Courtaulds Clothing Lanka (Pvt) Ltd (Sri Lanka) — lingerie/sportswear"],
+    "Swimwear":              ["MAS Kreeda Pvt Ltd (Sri Lanka) — performance swimwear/athletic, Nike tier", "MAS Active (Pvt) Limited — Linea Intimo (Sri Lanka) — swimwear/beachwear/athleisure", "Hirdaramani Clothing (Private) Limited (Sri Lanka) — swimwear"],
+    "Blazers & Suits":       ["Aydinli Group (Türkiye, Istanbul) — licensed menswear/womenswear (Pierre Cardin, Cacharel, US Polo Assn.), 672 stores", "Gokaldas Exports Ltd (India, Bengaluru) — suits/blazers/jackets", "Orient Craft Limited (India, Gurgaon) — woven tailored garments"],
+    "Chinos & Trousers":     ["Artistic Milliners Pvt Ltd (Pakistan, Karachi) — woven bottoms/chinos alongside denim", "Arvind Limited — Denim Division (India, Ahmedabad) — woven & denim bottoms", "Gokaldas Exports Ltd (India, Bengaluru) — woven trousers/shorts"],
+    "Eveningwear":           ["Shahi Exports Pvt Ltd (India, Bengaluru) — ladies' woven eveningwear", "Texport Industries Pvt Ltd (India, Bengaluru) — woven/knit occasion wear", "Gokaldas Exports Ltd (India, Bengaluru) — woven dresses/eveningwear"],
+    "Blouses & Tops":        ["Shahi Exports Pvt Ltd (India, Bengaluru) — ladies' woven blouses/tops", "Texport Industries Pvt Ltd (India, Bengaluru) — woven/knit ladies' tops", "Brandix Lanka Limited (Sri Lanka) — woven & knit ladies' tops"],
+    "T-Shirts & Polos":      ["KPR Mill Limited Unit II (India, Tirupur) — T-shirts/polo specialist", "Classic Polo Limited (India, Tirupur) — India's largest T-shirt brand", "Energypac Fashions Ltd (Bangladesh, Gazipur) — jerseys/T-shirts"],
+    "Casual Shirts":         ["Orient Craft Limited (India, Gurgaon) — woven casualwear shirts, M&S confirmed", "Sapphire Textile Mills (Pakistan, Lahore) — woven apparel/shirts, vertically integrated", "Gul Ahmed Textile Mills (Pakistan, Karachi) — woven shirts"],
   },
   "john lewis": {
     // Source: John Lewis Partnership (JLP) Factory List July 2025 (johnlewispartnership.co.uk — ES-reporting/JLP-Factory-List.pdf)
