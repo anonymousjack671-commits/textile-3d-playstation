@@ -281,8 +281,8 @@ export const MARKET_INTEL = {
     summary: 'GOTS organic is the expected standard at mid-premium. Softness + safety = everything.',
     brands: [
       { name: "Sainsbury's TU", tier: 'budget', icon: '🟠',
-        fabrics: ['100% Cotton OEKO-TEX® 100 Jersey (bodysuits / sleepsuits)', 'Cotton Interlock OEKO-TEX® (babygrows / rompers)', 'BCI Cotton Terry (bibs / hooded towels)'],
-        cert: 'OEKO-TEX® 100', gsm: '140–175' },
+        fabrics: ['100% Organic Cotton Interlock 200 GSM (rompers / babygrows)', '100% Organic Cotton Jersey (bodysuits / sleepsuits)', 'GOTS Organic Cotton Terry (bibs / hooded towels)'],
+        cert: 'GOTS Organic', gsm: '200' },
       { name: 'Next Baby', tier: 'mid', icon: '🟡',
         fabrics: ['100% Cotton Jersey OEKO-TEX® (bodysuits / basics)', 'Cotton-Modal 50/50 blend (soft sleepsuits)', 'Organic Cotton Jersey (premium baby range)'],
         cert: 'OEKO-TEX® 100', gsm: '150–195' },
