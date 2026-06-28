@@ -69,7 +69,7 @@ const BRAND_PROFILES = {
   sainsburys: {
     overviewStance: "Sainsbury's TU is a volume family-clothing label anchored in Sainsbury's supermarkets. Sourcing skews toward price-competitive Asian hubs with BCI cotton, REPREVE recycled polyester, and poly-cotton blends; school uniform and kids ranges carry stain-resistant finishes.",
     sustainability: "Committing to 100% sustainably sourced cotton (BCI/Organic) and full-range recycled polyester by 2030. GRS certifications required for recycled content claims. Tier-1 supply base live on Open Supply Hub (contributor ID 6544) — 1,946 facilities disclosed as of June 2026.",
-    sourcingInsight: "Tier 1 supply base live on Open Supply Hub (contributor ID 6544). Scraped June 2026 — 1,946 total facilities, 508 fashion-relevant. India leads (132 fac, 26%), China second (97 fac, 19%), Bangladesh third (76 fac, 15%); Türkiye fourth (47 fac, 9%). Sources via TU's ethical trade offices in Hong Kong, Shanghai, Dhaka and Delhi.",
+    sourcingInsight: "Tier 1 supply base live on Open Supply Hub (contributor ID 6544). Scraped June 2026 — 1,946 total facilities, 210 apparel-only. Bangladesh leads (73 fac, 35%), China second (54 fac, 26%), Türkiye third (29 fac, 14%); Cambodia fourth (20 fac, 10%). Sources via TU's ethical trade offices in Hong Kong, Shanghai, Dhaka and Delhi.",
     upgradeAdvice: "Upgrade to organic cotton and non-fluorinated finishes. Sainsbury's TU relies on standard chemical coatings; using premium eco-finishes like Teflon EcoElite™ or Ruco-Bac MED™ adds strong marketing value.",
     // Source: OSH contributor ID 6544 — authenticated scrape June 2026 (1,946 facilities)
     vendors: [
@@ -97,7 +97,7 @@ const BRAND_PROFILES = {
       "Pyjamas & Nightwear":    ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Echotex Ltd (Bangladesh)", "SEDUNO CAMBO KNITTING CO. LTD (Cambodia)"],
       "Swimwear":               ["Indochine Apparel (Cambodia) Ltd (Cambodia)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Era Tekstil Sanayi Ve Ticaret A.S. (Türkiye)"],
       "Sleepsuits & Bodysuits": ["Echotex Ltd (Bangladesh)", "SM Knitwear Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)"],
-      "Lingerie & Intimates":   ["Hirdaramani Clothing (Private) Limited (Sri Lanka)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Lalan Rubbers (Pvt) Ltd. (Sri Lanka)"],
+      "Lingerie & Intimates":   ["Hirdaramani Clothing (Private) Limited (Sri Lanka)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Hirdaramani Industries (Private) Limited (Sri Lanka)"],
       "Blazers & Suits":        ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)", "BONY TEKSTIL ISLETMELERI VE SAN. TIC. A.S. (Türkiye)"],
       "Chinos & Trousers":      ["Zaber & Zubair Fabrics Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)"],
       "Eveningwear":            ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Echotex Ltd (Bangladesh)", "Hangzhou Yukai Garments Co Ltd (China)"],
@@ -105,7 +105,7 @@ const BRAND_PROFILES = {
       "T-Shirts & Polos":       ["Echotex Ltd (Bangladesh)", "SM Knitwear Ltd (Bangladesh)", "AMAN KNITTINGS LTD (Bangladesh)"],
       "Casual Shirts":          ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Kanodia Global Pvt. Ltd. (India)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)"],
     },
-    coo: "India, China, Bangladesh, Türkiye, Sri Lanka, Vietnam, Cambodia, Morocco, Pakistan"
+    coo: "Bangladesh, China, Türkiye, Cambodia, India, Sri Lanka, Pakistan, Vietnam, Egypt"
   },
   next: {
     overviewStance: "Next is the UK's leading mid-market fashion retailer. Sourcing emphasizes combed yarn, cotton-rich blends, and standard viscose, targeting solid wash-and-wear performance.",
@@ -198,9 +198,9 @@ const BRAND_PROFILES = {
     coo: "Bangladesh, Turkey, China, India, UK"
   },
   ms: {
-    overviewStance: "M&S is the benchmark for UK mid-to-premium retail. Bangladesh is the largest sourcing hub (~35%), followed by India (~25%), Sri Lanka (~20%), Turkey (~10%), and Pakistan (~8%). Sourcing is defined by long-term factory partnerships — 70%+ of suppliers have worked with M&S for over 7 years.",
+    overviewStance: "M&S is the benchmark for UK mid-to-premium retail. Bangladesh is the largest apparel sourcing hub (64 fac, 25%), followed by China (47 fac, 19%), Sri Lanka (46 fac, 18%), Cambodia (33 fac, 13%), and Türkiye (23 fac, 9%). Sourcing is defined by long-term factory partnerships — 70%+ of suppliers have worked with M&S for over 7 years.",
     sustainability: "Guided by Plan A. OEKO-TEX Standard 100 is mandatory across all textile lines. Targeting 100% recycled polyester by 2026. Signatory to the International Accord for Health and Safety in the Textile and Garment Industry (Bangladesh + Pakistan). Joined Bangladesh Employment Insurance Scheme (EIS) 2024/25.",
-    sourcingInsight: "Tier 1 supply base live on Open Supply Hub (contributor ID 10061). Scraped June 2026 — 1,853 total facilities disclosed. Top verified suppliers by cross-contributor count: Zaber & Zubair Fabrics (Bangladesh), Energypac Fashions (Bangladesh), Shahi Exports (India, Bengaluru), MAS Intimates Thurulie (Sri Lanka), Brandix Lanka (Sri Lanka), Artistic Milliners (Pakistan), Kipas Tekstil (Turkey). India clusters: Bengaluru wovens, Tirupur knitwear, Ahmedabad denim.",
+    sourcingInsight: "Tier 1 supply base live on Open Supply Hub (contributor ID 10061). Scraped June 2026 — 1,853 total facilities, 253 apparel-only. Top verified suppliers: Zaber & Zubair Fabrics (Bangladesh), Energypac Fashions (Bangladesh), MAS Active Linea Intimo (Sri Lanka), Courtaulds Clothing Lanka (Sri Lanka), Hirdaramani group (Sri Lanka, multiple plants), Sanko Tekstil (Türkiye). Sri Lanka strong in lingerie/intimates; Cambodia growing in knitwear.",
     upgradeAdvice: "To match or beat M&S, focus on GOTS organic cotton and closed-loop TENCEL™ Lyocell. Use high-performance natural blends (cotton-silk or linen-TENCEL) to capture their premium demographic. Strong in Bengaluru woven garments, Tirupur knitwear, and Sri Lanka intimate apparel.",
     // Source: Open Supply Hub (opensupplyhub.org), Contributor ID 10061 — LIVE SCRAPED June 2026
     //         1,853 total facilities. Top 472 visible sorted by # contributors (most cross-verified).
@@ -228,7 +228,7 @@ const BRAND_PROFILES = {
       "T-Shirts & Polos":       ["KPR Mill Limited Unit II (India, Tirupur)", "Classic Polo Limited (India, Tirupur)", "Energypac Fashions Ltd (Bangladesh, Gazipur)"],
       "Casual Shirts":          ["Gul Ahmed Textile Mills (Pakistan, Karachi)", "Sapphire Textile Mills (Pakistan, Lahore)", "Orient Craft Limited (India, Gurgaon)"],
     },
-    coo: "Bangladesh, India, Sri Lanka, Turkey, Pakistan, Cambodia, Vietnam, Morocco, Ethiopia"
+    coo: "Bangladesh, China, Sri Lanka, Cambodia, Türkiye, India, Vietnam, Pakistan, Egypt, Morocco"
   },
   johnlewis: {
     overviewStance: "John Lewis is a premium UK department store. Sourcing prioritizes quality across multiple tiers including Bangladesh knitwear, Pakistan cotton fabrics, Sri Lanka intimate apparel, and Indian garment manufacturing.",

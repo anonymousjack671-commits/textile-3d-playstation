@@ -46,8 +46,8 @@ const VERIFIED_VENDORS = {
   },
   "sainsbury's tu": {
     // Source: OSH contributor ID 6544 — authenticated scrape June 2026
-    //         1,946 total facilities | 508 fashion-relevant extracted
-    //         India:132, China:97, Bangladesh:76, Türkiye:47, Sri Lanka:29, Vietnam:26, Cambodia:21, Morocco:13, Pakistan:10
+    //         1,946 total facilities | 210 apparel-only (home textiles, food, rubber, tea estates excluded)
+    //         Bangladesh:73, China:54, Türkiye:29, Cambodia:20, India:12, Sri Lanka:9, Pakistan:6, Vietnam:5, Egypt:2
     //         Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) confirmed Bangladesh anchor factory
     //         Echotex Ltd (Bangladesh) confirmed on OSH list; Zaber & Zubair confirmed Bangladesh
     //         BONY TEKSTIL & Ugur Konfeksiyon confirmed Türkiye; Hangzhou Yukai confirmed China
@@ -64,7 +64,7 @@ const VERIFIED_VENDORS = {
     "Pyjamas & Nightwear":   ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Echotex Ltd (Bangladesh)", "SEDUNO CAMBO KNITTING CO. LTD (Cambodia)"],
     "Swimwear":              ["Indochine Apparel (Cambodia) Ltd (Cambodia)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Era Tekstil Sanayi Ve Ticaret A.S. (Türkiye)"],
     "Sleepsuits & Bodysuits":["Echotex Ltd (Bangladesh)", "SM Knitwear Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)"],
-    "Lingerie & Intimates":  ["Hirdaramani Clothing (Private) Limited (Sri Lanka)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Lalan Rubbers (Pvt) Ltd. (Sri Lanka, Biyagama)"],
+    "Lingerie & Intimates":  ["Hirdaramani Clothing (Private) Limited (Sri Lanka)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Hirdaramani Industries (Private) Limited (Sri Lanka)"],
     "Blazers & Suits":       ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)", "BONY TEKSTIL ISLETMELERI VE SAN. TIC. A.S. (Türkiye)"],
     "Chinos & Trousers":     ["Zaber & Zubair Fabrics Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)"],
     "Eveningwear":           ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Echotex Ltd (Bangladesh)", "Hangzhou Yukai Garments Co Ltd (China)"],
@@ -172,11 +172,12 @@ const VERIFIED_VENDORS = {
   },
   "m&s": {
     // Source: Open Supply Hub (opensupplyhub.org), Contributor ID 10061 — Marks & Spencer
-    //         LIVE SCRAPED: June 2026. Top 472 facilities (of 1,853 total) sorted by # contributors.
+    //         LIVE SCRAPED: June 2026. 1,853 total facilities | 253 apparel-only (home textiles, food, tea excluded)
     //         src/data/msSuppliers2026.js contains full structured dataset.
-    //         Key sourcing mix (M&S ESG 2025): Bangladesh ~35%, India ~25%, Sri Lanka ~20%, Turkey ~10%, Pakistan ~8%.
+    //         Apparel sourcing mix: Bangladesh:64(25%), China:47(19%), Sri Lanka:46(18%), Cambodia:33(13%), Türkiye:23(9%)
+    //         India:14(6%), Vietnam:13(5%), Pakistan:7(3%), Egypt:5(2%), Morocco:1. Ethiopia: 0 (cleared — coffee coops only)
     //         M&S joined Bangladesh EIS 2024/25. 70%+ suppliers have worked with M&S >7 years.
-    default:                 ["Zaber & Zubair Fabrics Ltd (Bangladesh, Gazipur)", "Energypac Fashions Ltd (Bangladesh, Gazipur)", "Shahi Exports Pvt Ltd (India, Bengaluru)", "MAS Holdings — MAS Intimates Thurulie (Sri Lanka)", "Brandix Lanka Limited (Sri Lanka)", "Artistic Milliners Pvt Ltd (Pakistan, Karachi)"],
+    default:                 ["Zaber & Zubair Fabrics Ltd (Bangladesh)", "Energypac Fashions Ltd (Bangladesh)", "MAS Active (Pvt) Limited - Linea Intimo (Sri Lanka)", "Courtaulds Clothing Lanka (Pvt) Ltd (Sri Lanka)", "Hirdaramani Clothing (Private) Limited (Sri Lanka)", "Sanko Tekstil (Türkiye)", "Dewhirst (Cambodia) Co Ltd (Cambodia)"],
     "Dresses":               ["Shahi Exports Pvt Ltd (India, Bengaluru)", "Texport Industries Pvt Ltd (India, Bengaluru)", "Gokaldas Exports Ltd (India, Bengaluru)"],
     "Jeans":                 ["Artistic Milliners Pvt Ltd (Pakistan, Karachi)", "Arvind Limited — Denim Division (India, Ahmedabad)", "Pacific Jeans Cambodia (Cambodia, Phnom Penh)"],
     "Hoodies & Sweatshirts": ["Energypac Fashions Ltd (Bangladesh, Gazipur)", "Dekko Knitwears Ltd (Bangladesh, Dhaka)", "KPR Mill Limited Unit II (India, Tirupur)"],

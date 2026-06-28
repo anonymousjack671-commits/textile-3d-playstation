@@ -2,247 +2,356 @@
  * M&S Open Supply Hub — LIVE SCRAPED June 2026 (Authenticated Session)
  * Source: opensupplyhub.org, Contributor ID 10061 (Marks & Spencer)
  * Total disclosed: 1,853 facilities (Fashion + Food + Home + Beauty)
- * Fashion-relevant: 570 factories across 33 countries (filtered from full dataset)
- * Scraped: June 27–28, 2026 — all 38 API pages extracted (50/page)
+ * Apparel-only: 253 factories across 10 countries (home textiles, food, rubber, tea estates excluded)
  *
- * Full raw CSVs saved to workspace:
- *   MS_OSH_Fashion_Suppliers_2026_full.csv    — 570 fashion factories
- *   MS_OSH_ALL_Suppliers_2026_complete.csv    — 1,853 all facilities
+ * Filter methodology:
+ *   - EXCLUDE regex removes shoes, home textiles, food, tea, rubber, leather goods, etc.
+ *   - GARMENT_PURE countries (BD, KH, ET, MM, LK): EXCLUDE check only
+ *   - GARMENT_MIXED countries (IN, CN, TR, VN, MA, PK, EG): EXCLUDE + must match garment keywords
+ *   - Manual removals: BOGAWANTALAWA (tea), WINTERQUILTS (home textile),
+ *     changzhou samantha home fashion (home décor), Yantai Pacific Home Fashion (home décor),
+ *     Hamko Leathers (leather goods), Ethiopia coffee coops (cleared to 0)
  */
 
 export const MS_OSH_META = {
   contributorId: 10061,
-  totalFacilities: 1853,
-  fashionFacilities: 570,
+  retailer: "Marks & Spencer",
   scrapedDate: 'June 2026',
-  authenticated: true,
-  note: 'Includes apparel, knitwear, footwear, home textiles. Excludes food/grocery/wine division.'
+  totalFacilities: 1853,
+  fashionFacilities: 253,
+  source: 'Open Supply Hub',
+};
+
+// ─── BANGLADESH (64) ────────────────────────────────────────────────────────
+export const MS_FACTORIES_BANGLADESH = [
+  { name: 'Zaber & Zubair Fabrics Ltd', os_id: 'BD2021113R7R87P', address: '' },
+  { name: 'HABITUS FASHION LIMITED', os_id: 'BD201915877ME2J', address: '' },
+  { name: 'Energypac Fashions Ltd', os_id: 'BD2019083KBFXKT', address: '' },
+  { name: 'Meghna Knit Composite Ltd', os_id: 'BD2019248ZHTXBJ', address: '' },
+  { name: 'Fakhruddin Textile Mills Ltd', os_id: 'BD2019248JDDH52', address: '' },
+  { name: 'Interstoff Apparels Ltd', os_id: 'BD2019248K41FQY', address: '' },
+  { name: 'AMAN KNITTINGS LTD', os_id: 'BD2021335HRJ48X', address: '' },
+  { name: 'SQ Birichina Limited', os_id: 'BD20202686CK76C', address: '' },
+  { name: 'Universal Menswear Ltd', os_id: 'BD2019086TN16RE', address: '' },
+  { name: 'Talisman Ltd', os_id: 'BD20243292KV6J4', address: '' },
+  { name: 'Crown Wears (Pvt) Ltd', os_id: 'BD2019083X6XXGA', address: '' },
+  { name: 'Dekko Designs Ltd', os_id: 'BD2020230BWWY2J', address: '' },
+  { name: 'SOUTH EAST TEXTILES (PVT.) LIMITED', os_id: 'BD2019259FKJSYD', address: '' },
+  { name: 'SQ CELSIUS LIMITED-UNIT-1', os_id: 'BD2020010S7B695', address: '' },
+  { name: 'Epyllion Style Ltd', os_id: 'BD20211653ES9KX', address: '' },
+  { name: 'Interfab Shirt Manufacturing Ltd', os_id: 'BD2019083MSVQZV', address: '' },
+  { name: 'KenPark Bangladesh Apparel (Pvt.) Limited (K5)', os_id: 'BD2020308NEEYY2', address: '' },
+  { name: 'Renaissance Barind Ltd', os_id: 'BD20200212T3WAJ', address: '' },
+  { name: 'ACS Textiles (Bangladesh) Ltd', os_id: 'BD2021337FH4VRF', address: '' },
+  { name: 'AKH FASHIONS LTD', os_id: 'BD2019083CDP49S', address: '' },
+  { name: 'Aman Graphics & Designs Ltd', os_id: 'BD2020066CY505A', address: '' },
+  { name: 'Madinaple Fashions Craft Ltd', os_id: 'BD2019181B52GVS', address: '' },
+  { name: 'SG WICUS (BD) Limited', os_id: 'BD2019241YABN67', address: '' },
+  { name: 'Sparrow Apparels Ltd', os_id: 'BD20192485FW70Q', address: '' },
+  { name: 'Viyellatex Limited', os_id: 'BD202133732HBSJ', address: '' },
+  { name: 'Agami Apparels Ltd', os_id: 'BD2021154D48Y4G', address: '' },
+  { name: 'Ananta Huaxiang Ltd', os_id: 'BD2019086H7EAQ7', address: '' },
+  { name: 'Helicon Ltd', os_id: 'BD20190832NBYXT', address: '' },
+  { name: 'MNR Sweaters Ltd', os_id: 'BD20190833Z2TZT', address: '' },
+  { name: 'Tusuka Trousers Ltd', os_id: 'BD2019248EZBM1D', address: '' },
+  { name: 'Divine Fabrics Ltd', os_id: 'BD2019086K28A8F', address: '' },
+  { name: 'SQ Celsius Limited (Unit 2)', os_id: 'BD20200579QXDQQ', address: '' },
+  { name: 'Tusuka Denim Ltd', os_id: 'BD2019086Q01MET', address: '' },
+  { name: 'Crystal Martin Apparel Bangladesh Limited', os_id: 'BD201908365GB14', address: '' },
+  { name: 'Hop Yick (Bangladesh) Ltd - Unit 2', os_id: 'BD2022136T17SCX', address: '' },
+  { name: 'MILLENNIUM TEXTILES (SOUTHERN) LTD', os_id: 'BD20200211AEY8C', address: '' },
+  { name: 'Shams Styling Wears Ltd', os_id: 'BD20191089C8D5A', address: '' },
+  { name: 'Executive Greentex Limited', os_id: 'BD2021043CH7A11', address: '' },
+  { name: 'Kenpark Bangladesh Apparel Pvt. Ltd. (Unit 2)', os_id: 'BD2019133VHBW0C', address: '' },
+  { name: 'Urmi Garments Ltd (New Factory)', os_id: 'BD20223009J14YD', address: '' },
+  { name: 'EcoFab Ltd', os_id: 'BD2019133WJE03R', address: '' },
+  { name: 'Kenpark Bangladesh (Pvt.) Ltd Unit 1', os_id: 'BD2019095MAEPQS', address: '' },
+  { name: 'Rose Sweaters Ltd (Unit-2)', os_id: 'BD20192481177Q7', address: '' },
+  { name: 'Shanta Denims Limited', os_id: 'BD2019297W046W6', address: '' },
+  { name: 'Probridhi Apparels Limited', os_id: 'BD2020308RWGR9T', address: '' },
+  { name: 'Dekko Knitwears Ltd', os_id: 'BD2019095GPWMNB', address: '' },
+  { name: 'Epyllion Knitwears Limited (Madanpur)', os_id: 'BD2021168FJ5D2F', address: '' },
+  { name: 'Executive Hi Fashion Ltd', os_id: 'BD20200092DAEHB', address: '' },
+  { name: 'Kazipur Fashion Ltd', os_id: 'BD2020021WW2VMP', address: '' },
+  { name: 'Standard Stitches Ltd (Woven Unit)', os_id: 'BD2019248C9MGA3', address: '' },
+  { name: 'Vintage Denim Ltd', os_id: 'BD2019248MQJVPE', address: '' },
+  { name: 'SECTION SEVEN INTERNATIONAL LTD', os_id: 'BD2020021VJF5R6', address: '' },
+  { name: 'Section Seven Ltd', os_id: 'BD2020010YQE52N', address: '' },
+  { name: 'Square Fashions Ltd - Manufacturing Unit', os_id: 'BD202133693T2MK', address: '' },
+  { name: 'Divine Garments Limited', os_id: 'BD2020021RTWH1D', address: '' },
+  { name: 'Kenpark Bangladesh Apparel Pvt. Ltd. (K-3)', os_id: 'BD2019083154XW0', address: '' },
+  { name: 'Interfab Shirt Manufacturing Ltd (Unit-2)', os_id: 'BD2020021QATDE3', address: '' },
+  { name: 'Standard Stitches Ltd (Unit-2)', os_id: 'BD2019248YR1NGW', address: '' },
+  { name: 'CRYSTAL MARTIN APPAREL BD LTD UNIT', os_id: 'BD2022305VX448W', address: '' },
+  { name: 'Indochine Apparel (Bangladesh) Limited, Plot 54-56', os_id: 'BD2026072V4ZTK4', address: '' },
+  { name: 'Talisman Ltd (New Unit)', os_id: 'BD2026078GTNZEB', address: '' },
+  { name: 'Epyllion Style Limited (Extension)', os_id: 'BD2026084KA7ZNM', address: '' },
+  { name: 'FCI BD Ltd', os_id: 'BD2026083J17380', address: '' },
+  { name: 'MAS Intimates Bangladesh (Private) Limited', os_id: 'BD2026084CT60MW', address: '' },
+];
+
+// ─── CHINA (47) ─────────────────────────────────────────────────────────────
+export const MS_FACTORIES_CHINA = [
+  { name: 'Hangzhou Hs Fashion Corporation Ltd - 1st Branch', os_id: 'CN201908519MPYW', address: '' },
+  { name: 'Hangzhou Yukai Garments Co Ltd', os_id: 'CN2019083RCC2RJ', address: '' },
+  { name: 'Shengzhou Xingbaili Necktie And Garment Co., Ltd', os_id: 'CN2025195C918RZ', address: '' },
+  { name: 'Jiangyin Chaoyu Knitting Co', os_id: 'CN2019083G5FWKV', address: '' },
+  { name: 'Hangzhou Yutu Spinning & Knitting Co., Ltd', os_id: 'CN2021299AR07SC', address: '' },
+  { name: 'Nanjing Trust Garment Co., Ltd', os_id: 'CN2021153FK84AQ', address: '' },
+  { name: 'Neo-Concept Fashion (Zhongshan) Co., Ltd', os_id: 'CN20190834ZNSMD', address: '' },
+  { name: 'Tonglu Fangxin Knitting Co Ltd', os_id: 'CN2019083DXAHQ4', address: '' },
+  { name: 'Tian Run Garment Limited', os_id: 'CN2019100YGS3FQ', address: '' },
+  { name: 'Anyang Dishang Huaying Garment Co Ltd', os_id: 'CN2021252N2XYZG', address: '' },
+  { name: 'Jinhua Mengna Textile Co. Ltd', os_id: 'CN2019086R3QSK9', address: '' },
+  { name: 'Suqian Kelly Textile Co Ltd', os_id: 'CN2019108BRY0GQ', address: '' },
+  { name: 'Suzhou Tianguang Textile Co., Ltd', os_id: 'CN2020043VDTFBR', address: '' },
+  { name: 'Rongli Garments Co. Ltd', os_id: 'CN2019100MNF3QG', address: '' },
+  { name: 'Dongguan Prosperity Knitwear & Garment Ltd', os_id: 'CN2021355PJEKV7', address: '' },
+  { name: 'Hangzhou Beiming Textile Co., Ltd', os_id: 'CN2025220TXRA5W', address: '' },
+  { name: 'Jiangsu Guotai Baoma Clothing', os_id: 'CN20190838AXDSX', address: '' },
+  { name: 'Hai Yang Jin De Li Sweater Co Ltd', os_id: 'CN2019083EV3NS2', address: '' },
+  { name: 'JIAXING MENGXIN FASHION CORP., LTD', os_id: 'CN2020268ZY748N', address: '' },
+  { name: 'Suzhou Heft Garments & Fashion Accessories Co Ltd', os_id: 'CN2021105NMBHZ0', address: '' },
+  { name: 'Shaoxing Maidilang Apparel Co., Ltd', os_id: 'CN2019085J1EDE6', address: '' },
+  { name: 'ZHEJIANG AIYIMEI GARMENTS CO. LTD', os_id: 'CN20213567W3CG6', address: '' },
+  { name: 'Hefei Tristate Garment Manufacturing Co., Ltd', os_id: 'CN20190857G2DP6', address: '' },
+  { name: 'Jingjiang Eknit Co Ltd', os_id: 'CN2020010X0N0JT', address: '' },
+  { name: 'Sumec Cheerway Knitting Co. Ltd', os_id: 'CN20200859M1D9P', address: '' },
+  { name: 'Foshan ShunDe Strategic Garment Co., Ltd', os_id: 'CN20231465AMHZP', address: '' },
+  { name: 'GuangZhou PanYu ZhuoHua Garment Co., Ltd', os_id: 'CN2025255XHHFRC', address: '' },
+  { name: 'WUXI CHUANG MEI FASHION KNITTING CO', os_id: 'CN202230513DCMG', address: '' },
+  { name: 'Jiangsu Xinmengya Smart Textile Co., Ltd', os_id: 'CN2021186W8DKBM', address: '' },
+  { name: 'Haian Lianfa Garments Co Ltd', os_id: 'CN20192681FDF0S', address: '' },
+  { name: 'Kaiping Charming Apparel Accessory Limited', os_id: 'CN2022081QCESMY', address: '' },
+  { name: 'Suzhou New Best Textile Co., Ltd', os_id: 'CN20202816MP7E5', address: '' },
+  { name: 'Tonglu Wei Zi Garments Co. Ltd', os_id: 'CN20192212S43AE', address: '' },
+  { name: 'Chenfeng (Jiangsu) Apparel & Accessories Knitting', os_id: 'CN2019097C8A9D1', address: '' },
+  { name: 'DALIAN ZHONGYUN GARMENT CO., LTD', os_id: 'CN2024214D1VX4A', address: '' },
+  { name: 'Jiangsu Dreamland Textile Co Ltd', os_id: 'CN2020009VVZDKK', address: '' },
+  { name: 'Jiaxing Hongrun Textile Co., Ltd', os_id: 'CN2023030J5GTHD', address: '' },
+  { name: 'HUBEI TIANHE KINGSRICH FASHION', os_id: 'CN20223054F28XS', address: '' },
+  { name: 'Zhangjiagang Free Trade Zone Supertex International Textile Co., Ltd', os_id: 'CN2020191RWDYA9', address: '' },
+  { name: 'DONGGUAN YUDA GARMENT CO. LTD', os_id: 'CN2025336KGQ8Z7', address: '' },
+  { name: 'Wuxi Taste Textile Co., Ltd', os_id: 'CN20200105GK6FK', address: '' },
+  { name: 'ZHEJIANG PENGFEI KNITTING CO', os_id: 'CN202230520BY0A', address: '' },
+  { name: 'Inner Mongolia Erdos Resource Co., Ltd. No.1 Knitting Factory', os_id: 'CN2026084SHGVJE', address: '' },
+  { name: 'Nanjing SUMEC Chuangjin Garment Technology Co., Ltd', os_id: 'CN2026083PY1QYG', address: '' },
+  { name: 'Tonglu Simeng Knitting Factory', os_id: 'CN20212700156JX', address: '' },
+  { name: 'Zhejiang Mengna Socks & Hosiery Beiyuan Branch', os_id: 'CN202608440N55A', address: '' },
+  { name: 'Zhucheng Yuli Garment Co., Ltd', os_id: 'CN2026083XTA6CS', address: '' },
+];
+
+// ─── SRI LANKA (46) ─────────────────────────────────────────────────────────
+export const MS_FACTORIES_SRI_LANKA = [
+  { name: 'MAS Active (Pvt) Limited - Linea Intimo', os_id: 'LK2019085W4B252', address: '' },
+  { name: 'Silueta (Pvt) Limited', os_id: 'LK2019085TT8DVM', address: '' },
+  { name: 'Voguetex (Pvt) Ltd - Weligama', os_id: 'LK2019083YGP1H4', address: '' },
+  { name: 'Hirdaramani Clothing (Private) Limited', os_id: 'LK201908348T8A6', address: '' },
+  { name: 'Hirdaramani Industries (Private) Limited', os_id: 'LK2019085GPJWJP', address: '' },
+  { name: 'Courtaulds Clothing Lanka (Pvt) Ltd', os_id: 'LK2020090PJZEMD', address: '' },
+  { name: 'VogueTex (Pvt.) Ltd - Hikkaduwa', os_id: 'LK2019221A3A3NQ', address: '' },
+  { name: 'Hirdaramani - Ceylon Knit Trend - Eheliyagoda', os_id: 'LK20190859DHZ2R', address: '' },
+  { name: 'Miami Clothing (Private) Limited', os_id: 'LK2019107XBW20H', address: '' },
+  { name: 'Unichela (Pvt) Ltd - Slimline Division', os_id: 'LK201908506Y46Y', address: '' },
+  { name: 'Hirdaramani Knit Seethawaka', os_id: 'LK2019083BPWQY0', address: '' },
+  { name: 'Marsylka Manufacturing (Plot 10)', os_id: 'LK20191815MCVYB', address: '' },
+  { name: 'Vogue Tex (Pvt) Ltd - Kosgoda', os_id: 'LK201908536GXSZ', address: '' },
+  { name: 'Winter Fashion (Pvt) Ltd', os_id: 'LK2019086H0F5SF', address: '' },
+  { name: 'MIAMI CLOTHING (PRIVATE) LIMITED - RATHMALE', os_id: 'LK2022286BBNX1P', address: '' },
+  { name: 'Ritz Clothing Yapahuwa (Pvt) Ltd', os_id: 'LK2021252Q2ENRS', address: '' },
+  { name: 'Eam Maliban Textiles (Pvt) Ltd - Nalanda', os_id: 'LK20191080KMVP4', address: '' },
+  { name: 'Interfashion (Pvt) Ltd', os_id: 'LK2019083JQ9NK8', address: '' },
+  { name: 'Star Garments (Pvt) Ltd - Baddegama', os_id: 'LK20210705ZJWC1', address: '' },
+  { name: 'Unichela (Pvt) Ltd - Slimtex Plant', os_id: 'LK2019108M72XQX', address: '' },
+  { name: 'Unichela (Pvt) Ltd - Vidiyal Division', os_id: 'LK2024192HH90TG', address: '' },
+  { name: 'COURTAULDS CLOTHING RAJANGANAYA (PVT) LTD', os_id: 'LK2020084VVRTQ6', address: '' },
+  { name: 'Crystal Martin Ceylon (PVT) Ltd - Wathupitiwala', os_id: 'LK2020106AJF2H0', address: '' },
+  { name: 'Linea Aqua (Pvt) Ltd (Naiwala/Veyangoda)', os_id: 'LK2021355E2XBWX', address: '' },
+  { name: 'VOGUE TEX (PVT) LTD', os_id: 'LK20213079BH3K1', address: '' },
+  { name: 'Crystal Martin Central (Pvt) Ltd - Dambulla', os_id: 'LK202023042EBKJ', address: '' },
+  { name: 'HIRDARAMANI FASHIONS (PVT) LTD', os_id: 'LK2020084F3RPX4', address: '' },
+  { name: 'Martex Clothing (Pvt) Ltd - Meegahakiula', os_id: 'LK202532918V5QE', address: '' },
+  { name: 'STAR GARMENTS (PVT) LTD - KOGGALA 2', os_id: 'LK20201067W3B4Q', address: '' },
+  { name: 'COURTAULDS CLOTHING VEYANGODA', os_id: 'LK2024329CB4G2T', address: '' },
+  { name: 'Crystal Martin Ceylon (Pvt) Ltd - Kantale', os_id: 'LK2019086221XVE', address: '' },
+  { name: 'Maliban Wovens (Pvt) Ltd - Dehiyaththakandiya', os_id: 'LK2026084W1TYBD', address: '' },
+  { name: 'STAR GARMENTS (PVT) LTD - BUTTALA', os_id: 'LK2022305AV8YBV', address: '' },
+  { name: 'Triple Holdings (Pvt) Ltd', os_id: 'LK2025009RR8DT8', address: '' },
+  { name: 'Crystal Martin Ceylon (Pvt) Ltd - Galagedara', os_id: 'LK2025009WHKQ33', address: '' },
+  { name: 'Jinadasa Bennett Pvt Ltd - Mawathagama', os_id: 'LK2026083JDBC9B', address: '' },
+  { name: 'Martex M F G Pvt Ltd - Mahiyanganaya', os_id: 'LK2026084GP1KZ6', address: '' },
+  { name: 'DAG Apparel (Pvt) Ltd - Talalla', os_id: 'LK202608358Z9VW', address: '' },
+  { name: 'Jinadasa Bennett Pvt Ltd - Narammala', os_id: 'LK2026083G76TBE', address: '' },
+  { name: 'Maliban Wovens (Pvt) Ltd - Balangoda', os_id: 'LK2026083N80K0W', address: '' },
+  { name: 'Miami Exports Pvt Ltd - Ranna', os_id: 'LK2026083DMSBEZ', address: '' },
+  { name: 'Ritz Clothing Nikaweratiya (Pvt) Ltd', os_id: 'LK2026035JKERF3', address: '' },
+  { name: 'Star Garments Pvt Ltd - Katunayake', os_id: 'LK2026084EECMEQ', address: '' },
+  { name: 'Sumithra Polgahawela SL', os_id: 'LK20252206397RN', address: '' },
+  { name: 'Unichela Pvt Ltd - Casualline', os_id: 'LK2026083GZVH6D', address: '' },
+  { name: 'Vira Fashions Pvt Ltd', os_id: 'LK2026083X67VH2', address: '' },
+];
+
+// ─── CAMBODIA (33) ──────────────────────────────────────────────────────────
+export const MS_FACTORIES_CAMBODIA = [
+  { name: 'New Fuma Costume (Cambodia) Co Ltd', os_id: 'KH201924172VBH6', address: '' },
+  { name: 'Dewhirst (Cambodia) Co Ltd', os_id: 'KH2019083ZWWEM3', address: '' },
+  { name: 'Camkaxin (Cambodia) Garment Co., Ltd', os_id: 'KH2024328A851HH', address: '' },
+  { name: 'SEDUNO CAMBO KNITTING CO. LTD', os_id: 'KH2019291SPM2P6', address: '' },
+  { name: 'YI DA Manufacturer Co., Ltd', os_id: 'KH2019087DWZD8B', address: '' },
+  { name: 'LIANFA HENGYU GARMENT CO. LTD', os_id: 'KH20211207CH5PT', address: '' },
+  { name: 'SOHO SHENG HE CAMBODIA GARMENT CO LTD', os_id: 'KH2019083KV3WC3', address: '' },
+  { name: 'Starlight Apparel Manufacturing Co., Ltd', os_id: 'KH2019083QSPAA4', address: '' },
+  { name: 'BLOSSOM KNITWEAR (CAMBODIA) COMPANY LIMITED', os_id: 'KH2024004MNHHP0', address: '' },
+  { name: 'CERIE (CAMBODIA) GARMENT', os_id: 'KH2019085601YTB', address: '' },
+  { name: 'Joyance International (Cambodia) Apparel Co Ltd', os_id: 'KH2021252X05VEC', address: '' },
+  { name: 'Strong Health International Ltd', os_id: 'KH20190833SF8XT', address: '' },
+  { name: 'FAST PACED VISIONARY FASHION CO., LTD', os_id: 'KH2025104ZHM5S3', address: '' },
+  { name: 'Quantum Clothing (Cambodia) Ltd', os_id: 'KH201908302NX0Y', address: '' },
+  { name: 'Toyoki Apparel (Cambodia) Co. Ltd (Main)', os_id: 'KH20233125R1R6W', address: '' },
+  { name: 'Xin Heng Yi (Cambodia) International Trading Co., Ltd', os_id: 'KH20251219VWMC0', address: '' },
+  { name: 'AETA Apparel Co', os_id: 'KH2024192EZJCE0', address: '' },
+  { name: 'JIN YUN XIU', os_id: 'KH202432925PAFZ', address: '' },
+  { name: 'Hui Xin Lu (Cambodia) Garment Co. Ltd', os_id: 'KH2025107YQPHMM', address: '' },
+  { name: 'K FINE (CAMBODIA) GARMENT COMPANY LIMITED', os_id: 'KH2023064NYH2DQ', address: '' },
+  { name: 'NC Apparel (Cambodia) Co., Ltd', os_id: 'KH202600744DH3D', address: '' },
+  { name: 'TWHQ GARMENTS CO., LTD', os_id: 'KH20240338NVDFN', address: '' },
+  { name: 'CAM FOREVER CO LTD', os_id: 'KH2025220G9XQFW', address: '' },
+  { name: 'Elegance Industries (Cambodia) Co., Ltd', os_id: 'KH20252988BMAZZ', address: '' },
+  { name: 'JIN YUN JIN (CAMBODIA) GARMENT COMPANY LIMITED', os_id: 'KH2023064ZEDE6J', address: '' },
+  { name: 'KYLIN (CAMBODIA) SPORTS CO., LTD', os_id: 'KH202400644FH1A', address: '' },
+  { name: 'YOU LI INTERNATIONAL (CAMBODIA) GARMENTS CO., LTD', os_id: 'KH20230621DG055', address: '' },
+  { name: 'KINGDEER (CAMBODIA) KNITTING CO. LTD', os_id: 'KH2026083K3NGCF', address: '' },
+  { name: 'Pengjiao (Cambodia) Industrial Co., Ltd', os_id: 'KH2026083FTG2BE', address: '' },
+  { name: 'Phoenix Fashion Co. Ltd', os_id: 'KH2024329ZV4T56', address: '' },
+  { name: 'QUANTUM GARMENT CO., LTD', os_id: 'KH2024192SPH9XD', address: '' },
+  { name: 'SHANDA (CAMBODIA) TEXTILE CO., LTD', os_id: 'KH2026083BKCG57', address: '' },
+  { name: 'S W J (Cambodia) Garment Co., Ltd', os_id: 'KH2026083GKQ147', address: '' },
+];
+
+// ─── TURKEY (23) ────────────────────────────────────────────────────────────
+export const MS_FACTORIES_TURKEY = [
+  { name: 'Ugur Konfeksiyon San. Ve Tic. A.S.', os_id: 'TR2019268E04JCJ', address: '' },
+  { name: 'Nesa Tekstil San. Ve. Tic. A.S.', os_id: 'TR2019083G2TWBG', address: '' },
+  { name: 'Baykan Denim Konfeksiyon A.S.', os_id: 'TR20190831C26N7', address: '' },
+  { name: 'BROSS TEKSTIL SANAYI VE TICARET A.S.', os_id: 'TR20191812NKMJC', address: '' },
+  { name: 'ATT Tekstil San. Ve Tic. A.S. - Kirklareli Branch', os_id: 'TR20190869FR6B1', address: '' },
+  { name: 'Gamateks Tekstil San. ve Tic. A.S. (Gurlek Factory)', os_id: 'TR20200347V4GCK', address: '' },
+  { name: 'Aster Tekstil San. Dis. Tic. A.S.', os_id: 'TR2019083VYM2S5', address: '' },
+  { name: 'ATT TEKSTIL SAN. VE TIC. A.S. (ERZINCAN SUBE)', os_id: 'TR20211609ER4X2', address: '' },
+  { name: 'Hateks Hatay Tekstil Isletmeleri A.S.', os_id: 'TR201909104XFW8', address: '' },
+  { name: 'APS Giyim', os_id: 'TR2019083RCCEJD', address: '' },
+  { name: 'Gamma Giyim San. ve Tic. A.S.', os_id: 'TR2023064Q1QS32', address: '' },
+  { name: 'Alpin Corap San. ve Tic. A.S.', os_id: 'TR20223310A5DVA', address: '' },
+  { name: 'Sanko Tekstil Isl. San. Ve Tic. A.S.', os_id: 'TR20190838VYMXF', address: '' },
+  { name: 'Penti Corap San. ve Tic. A.S. (Factory 1)', os_id: 'TR2023128C97JFN', address: '' },
+  { name: 'EKO TEKSTIL SAN. VE TIC. A.S. - CAYCUMA BRANCH', os_id: 'TR2020084DNW0BZ', address: '' },
+  { name: 'Gamateks Tekstil San. ve Tic. A.S. (Batman Branch)', os_id: 'TR20190867JBVED', address: '' },
+  { name: 'UGUR KONFEKSIYON SAN. VE TIC. AS BATMAN BRANCH', os_id: 'TR2022007E06Z4A', address: '' },
+  { name: 'Ceylingul Tekstil Giyim San. Tic. Ltd. Sti.', os_id: 'TR2023312SFGHQK', address: '' },
+  { name: 'LIONS GRUP TEKSTIL SAN. TIC. LTD. STI.', os_id: 'TR2025042HEBFQ5', address: '' },
+  { name: 'ALPIN AKTIF GIYIM SAN. TIC. A.S.', os_id: 'TR2022305FFMWVX', address: '' },
+  { name: 'Bereket Tekstil Muhammet Özçelik', os_id: 'TR20240976MJGB5', address: '' },
+  { name: 'Aster Tekstil - Erbaa Subesi', os_id: 'TR20241926ZZFP3', address: '' },
+  { name: 'Yildirim Corap Manufacturing Trade and Industry Inc', os_id: 'TR2026084ZK9FSZ', address: '' },
+];
+
+// ─── INDIA (14) ─────────────────────────────────────────────────────────────
+export const MS_FACTORIES_INDIA = [
+  { name: 'Ambattur Clothing Private Limited - D15 & D16', os_id: 'IN20192689KA5KH', address: '' },
+  { name: 'Poppys Knitwear Pvt Ltd - Unit-VI', os_id: 'IN2025132EGJWZH', address: '' },
+  { name: 'Intimate Fashions (India) Pvt Ltd', os_id: 'IN20230308XSPC1', address: '' },
+  { name: 'Venkateshwara Clothing Company - 2', os_id: 'IN2019108TFARH8', address: '' },
+  { name: 'M B APPARELS PRIVATE LIMITED', os_id: 'IN202136545F5MV', address: '' },
+  { name: 'AMBATTUR FASHION INDIA PRIVATE LIMITED (B-9)', os_id: 'IN2023088CWZK4C', address: '' },
+  { name: 'Poppys Garments', os_id: 'IN20212520PCS22', address: '' },
+  { name: 'Poppys Knitwear PVT Ltd', os_id: 'IN2020147EWEZCA', address: '' },
+  { name: 'VICTUS DYEINGS (GARMENT UNIT 2)', os_id: 'IN2023248SKB429', address: '' },
+  { name: 'Patronus Apparel', os_id: 'IN2025268FZWBDJ', address: '' },
+  { name: 'Poppys Knitwear Private Limited - Unit V', os_id: 'IN20240032HSSMV', address: '' },
+  { name: 'Victus Dyeings (Garment Division)', os_id: 'IN2025353AA4X99', address: '' },
+  { name: 'AAN CLOTHINGS LLP', os_id: 'IN2023153H5FT4A', address: '' },
+  { name: 'Saran Garments', os_id: 'IN20260834VXPHF', address: '' },
+];
+
+// ─── VIETNAM (13) ───────────────────────────────────────────────────────────
+export const MS_FACTORIES_VIETNAM = [
+  { name: 'Gaiwach International (Viet Nam) Garment Co., Ltd', os_id: 'VN2023158VDP9PP', address: '' },
+  { name: 'YSS Garment Co., Ltd', os_id: 'VN2019097SY3W3S', address: '' },
+  { name: 'Son Ha Garment Joint Stock Company', os_id: 'VN2019083827T28', address: '' },
+  { name: 'United Swimwear Apparel Co. Ltd', os_id: 'VN20190851D59SJ', address: '' },
+  { name: 'Bim Son Garment Joint Stock Company', os_id: 'VN201908328Z0FK', address: '' },
+  { name: 'Tay Son Garment Joint Stock Company', os_id: 'VN2019083B5VNPH', address: '' },
+  { name: 'VINATEX HUONG TRA GARMENT LIMITED COMPANY', os_id: 'VN2025192SW8Q2F', address: '' },
+  { name: 'TNG Investment and Trading JSC - Phu Binh Garment Branches', os_id: 'VN2021266QPX6HR', address: '' },
+  { name: 'Song Hong - Nghia Hung Garment JSC', os_id: 'VN20220767CQYVT', address: '' },
+  { name: 'AN PHAT CAM RANH GARMENT FACTORY', os_id: 'VN20233617DMY94', address: '' },
+  { name: 'Branch of Garment 10 Corporation JSC - Hung Ha Suit Factory', os_id: 'VN20252658EZSGR', address: '' },
+  { name: 'NAM CHAU GARMENT JOINT STOCK COMPANY', os_id: 'VN20223058BR9Z5', address: '' },
+  { name: 'Viet Y Hung Yen Garment Joint Stock Company', os_id: 'VN202500999RM3Q', address: '' },
+];
+
+// ─── PAKISTAN (7) ───────────────────────────────────────────────────────────
+export const MS_FACTORIES_PAKISTAN = [
+  { name: 'Gohar Textile Mills (Pvt) Ltd', os_id: 'PK2021354NCSQ0X', address: '' },
+  { name: 'Interloop Limited Apparel Park', os_id: 'PK2024197MJ7Z22', address: '' },
+  { name: 'US Apparel & Textiles (Pvt) Ltd - UNIT 1-R', os_id: 'PK2021141Q73GMB', address: '' },
+  { name: 'GREEN APPAREL (PVT) LIMITED', os_id: 'PK2023228FS7KAT', address: '' },
+  { name: 'US Apparel & Textile Unit (3&4)', os_id: 'PK2026141SBX3FY', address: '' },
+  { name: 'Nishat Mills Limited (Terry/Textile Division)', os_id: 'PK2024341STC66P', address: '' },
+  { name: 'Sapphire Textile Mills Limited (Stitching Unit)', os_id: 'PK2025056TP6FE2', address: '' },
+];
+
+// ─── EGYPT (5) ──────────────────────────────────────────────────────────────
+export const MS_FACTORIES_EGYPT = [
+  { name: 'Alpha Textile', os_id: 'EG202010637ZPA0', address: '' },
+  { name: 'T&C Garments SAE', os_id: 'EG2019083R1DNTR', address: '' },
+  { name: 'Dice for Ready Made Garments', os_id: 'EG2019087D755FM', address: '' },
+  { name: 'K.C.G TEXTILE EGYPT S.A.E', os_id: 'EG20200536SHPWT', address: '' },
+  { name: 'Eroglu Egypt for Ready Made Garment LLC', os_id: 'EG2026083XFQZTX', address: '' },
+];
+
+// ─── MOROCCO (1) ────────────────────────────────────────────────────────────
+export const MS_FACTORIES_MOROCCO = [
+  { name: 'Stil Nua Fashion', os_id: 'MA2020204S66906', address: '' },
+];
+
+// ─── AGGREGATES ─────────────────────────────────────────────────────────────
+export const MS_FASHION_FACTORIES_BY_COUNTRY = {
+  Bangladesh: MS_FACTORIES_BANGLADESH,
+  China: MS_FACTORIES_CHINA,
+  'Sri Lanka': MS_FACTORIES_SRI_LANKA,
+  Cambodia: MS_FACTORIES_CAMBODIA,
+  Türkiye: MS_FACTORIES_TURKEY,
+  India: MS_FACTORIES_INDIA,
+  Vietnam: MS_FACTORIES_VIETNAM,
+  Pakistan: MS_FACTORIES_PAKISTAN,
+  Egypt: MS_FACTORIES_EGYPT,
+  Morocco: MS_FACTORIES_MOROCCO,
 };
 
 export const MS_SOURCING_MIX = {
-  'China':      { count: 84,  share: '~22%', note: 'Accessories, knitwear, home textiles' },
-  'India':      { count: 83,  share: '~21%', note: 'Wovens (Bengaluru), knitwear (Tirupur), home textiles (Panipat)' },
-  'Bangladesh': { count: 68,  share: '~18%', note: 'Knitwear, jersey, denim (Gazipur, Chittagong)' },
-  'Sri Lanka':  { count: 51,  share: '~13%', note: 'Intimates, activewear, bras (Biyagama EPZ)' },
-  'Türkiye':    { count: 43,  share: '~11%', note: 'Denim, knitwear, wovens (Denizli, Bursa, Istanbul)' },
-  'Vietnam':    { count: 42,  share: '~11%', note: 'Garments, lingerie, activewear' },
-  'Cambodia':   { count: 37,  share: '~10%', note: 'Garments, knitwear' },
-  'Peru':       { count: 30,  share: '~8%',  note: 'Pima cotton knitwear' },
-  'Colombia':   { count: 30,  share: '~8%',  note: 'Activewear, denim' },
-  'Pakistan':   { count: 14,  share: '~4%',  note: 'Knitwear, denim, towels (Faisalabad, Lahore)' },
-  'Morocco':    { count: 13,  share: '~3%',  note: 'Near-shore garments (Tangier Free Zone)' },
-  'Portugal':   { count: 13,  share: '~3%',  note: 'Premium knitwear, home textiles' },
-  'Thailand':   { count: 12,  share: '~3%',  note: 'Garments, accessories' },
+  Bangladesh: { count: 64, pct: '25%' },
+  China: { count: 47, pct: '19%' },
+  'Sri Lanka': { count: 46, pct: '18%' },
+  Cambodia: { count: 33, pct: '13%' },
+  Türkiye: { count: 23, pct: '9%' },
+  India: { count: 14, pct: '6%' },
+  Vietnam: { count: 13, pct: '5%' },
+  Pakistan: { count: 7, pct: '3%' },
+  Egypt: { count: 5, pct: '2%' },
+  Morocco: { count: 1, pct: '0%' },
 };
 
-// ─── BANGLADESH (68 factories) ────────────────────────────────────────────────
-export const MS_FACTORIES_BANGLADESH = [
-  { name: 'Zaber & Zubair Fabrics Ltd',               address: 'Pagar, Tongi, Gazipur 1710, Dhaka',                      osId: 'BD2021113R7R87P', claimed: false },
-  { name: 'HABITUS FASHION LIMITED',                   address: 'Gajaria Para Bahwal Mirzapur, Gazipur Sadar',             osId: 'BD201915877ME2J',  claimed: false },
-  { name: 'Energypac Fashions Ltd',                    address: 'Hotapara Borkan Monipur, Bhabani Pur, Gazipur Sadar',     osId: 'BD2019083KBFXKT',  claimed: false },
-  { name: 'Noman Terry Towel Mills Ltd.',               address: 'Purbo Vawal Mirzapur, Joydevpur, Gazipur, Dhaka 1703',   osId: 'BD2019178SGAVYE',  claimed: false },
-  { name: 'Meghna Knit Composite Ltd.',                address: 'Eco Textile Mills Road, Gilar Chala, Sreepur, Gazipur',   osId: 'BD2019248ZHTXBJ',  claimed: false },
-  { name: 'Fakhruddin Textile Mills Ltd.',              address: 'Gorgoria Masterbari, Kewa, Sreepur, Gazipur-1740',        osId: 'BD2019248JDDH52',  claimed: false },
-  { name: 'Interstoff Apparels Ltd.',                   address: 'Plot 79, Dhaka Jamalpur Highway, Chandra, Kaliakoir',     osId: 'BD2019248K41FQY',  claimed: false },
-  { name: 'AMAN KNITTINGS LTD',                        address: 'Kulashur, Hemayetpur, Savar, Dhaka',                      osId: 'BD2021335HRJ48X',  claimed: false },
-  { name: 'SQ Birichina Limited',                      address: 'SQ Station Road, Narsingdi',                              osId: 'BD2020052SQBIRI',  claimed: false },
-  { name: 'SQ CELSIUS LIMITED (Unit 1)',                address: 'Beraiderchala, Keowa, Mawna, Sreepur 1740, Gazipur',      osId: 'BD2020010S7B695',  claimed: false },
-  { name: 'SQ Celsius Limited (Unit 2)',                address: 'Jamirdia, Bhaluka, Mymensingh',                           osId: 'BD20200579QXDQQ',  claimed: false },
-  { name: 'Epyllion Style Ltd.',                        address: 'Bahadurpur, P.O. Vawal Mirzapur, Gazipur 1703',           osId: 'BD20211653ES9KX',  claimed: false },
-  { name: 'Epyllion Knitwears Limited',                 address: 'Narayanganj, Dhaka',                                     osId: 'BD2019083EPYKNT',  claimed: false },
-  { name: 'Interfab Shirt Manufacturing Ltd.',          address: 'Plot 302/547, Dhaka-Mymensingh Highway, Kunia, Gazipur',  osId: 'BD2019083MSVQZV',  claimed: false },
-  { name: 'KenPark Bangladesh Apparel (Pvt.) Ltd K5',  address: 'Plot 14-23, Sector 02, KEPZ, Chittagong',                 osId: 'BD2020308NEEYY2',  claimed: false },
-  { name: 'Kenpark Bangladesh Apparel (Unit 2)',        address: 'Plot 69-85, Karnaphuli Export Processing Zone, Chittagong', osId: 'BD2019133VHBW0C', claimed: false },
-  { name: 'Renaissance Barind Ltd.',                    address: 'Plot 62-68, 72-77, Ishwardi EPZ 6622, Ishwardi',          osId: 'BD20200212T3WAJ',  claimed: false },
-  { name: 'ACS Textiles (Bangladesh) Ltd.',             address: 'Tetlabo, Barpa, Rupgonj, Narayangonj',                   osId: 'BD2021337FH4VRF',  claimed: false },
-  { name: 'ACS Towel Ltd',                              address: 'Tetlabo, Word No 03, Rupgonj, Narayangonj 1460',          osId: 'BD202608409BMEJ',  claimed: false },
-  { name: 'Standard Stitches Ltd. (Unit 2)',            address: '10/4, Kornapara, Genda, Savar, Dhaka 1340',               osId: 'BD2019248YR1NGW',  claimed: false },
-  { name: 'Executive Greentex Limited',                 address: 'Mulaid Telihati Gilarchala, Sreepur, Gazipur',             osId: 'BD2021043CH7A11',  claimed: false },
-  { name: 'Hamko Leathers Ltd.',                        address: 'Andarmanik, Mouchak, Kaliakoir, Gazipur, Dhaka',          osId: 'BD20202812G10CM',  claimed: false },
-  { name: 'Divine Garments Limited',                    address: 'Koyerpara, Chowgacha, Jessore 7410',                      osId: 'BD2020021RTWH1D',  claimed: false },
-  { name: 'Tusuka Denim Ltd',                           address: 'Konabari, Gazipur',                                       osId: 'BD2019083TUSDNM',  claimed: false },
-  { name: 'AKH Fashions Ltd',                           address: 'Kanchpur, Sonargaon, Narayanganj',                        osId: 'BD2019083AKHFSH',  claimed: false },
-  { name: 'Dekko Knitwears Ltd',                        address: 'Savar, Dhaka',                                            osId: 'BD2019083DEKKNW',  claimed: false },
-];
-
-// ─── INDIA (83 factories) ─────────────────────────────────────────────────────
-export const MS_FACTORIES_INDIA = [
-  { name: 'ARVIND LIMITED (Bangalore)',                 address: '63/9, Doddathogur Village, Begur-Hobli, Electronic City, Bangalore', osId: 'IN20203511ZB32M', claimed: false },
-  { name: 'Arvind Limited — Denim Division (Ahmedabad)', address: 'Ahmedabad, Gujarat',                                   osId: 'IN2019083ARVAHM',  claimed: false },
-  { name: 'Arvind Limited (Arsikere)',                  address: 'Arsikere, Hassan District, Karnataka',                   osId: 'IN2019083ARVARS',  claimed: false },
-  { name: 'Shahi Exports Pvt Ltd',                      address: 'Bangalore, Karnataka',                                   osId: 'IN2019083SHAHIX',  claimed: false },
-  { name: 'Texport Industries Pvt Ltd',                 address: 'Bangalore, Karnataka',                                   osId: 'IN2019083TEXIND',  claimed: false },
-  { name: 'Gokaldas Exports Ltd',                       address: 'Bangalore, Karnataka',                                   osId: 'IN2019083GOKEXP',  claimed: false },
-  { name: 'Jak Group Pvt Ltd.',                         address: 'Plot 704-P, Sector-37, Pace City-II, HSIIDC, Gurgaon',   osId: 'IN20190837ZE45B',  claimed: false },
-  { name: 'KPR Mill Limited Unit II',                   address: 'Tirupur, Tamil Nadu',                                    osId: 'IN2019083KPRMLL',  claimed: false },
-  { name: 'Classic Polo Limited',                       address: 'Tirupur, Tamil Nadu',                                    osId: 'IN2019083CLSPOL',  claimed: false },
-  { name: 'SP Apparels Ltd',                            address: 'Tirupur, Tamil Nadu',                                    osId: 'IN2019083SPAPPX',  claimed: false },
-  { name: 'Quantum Knits',                              address: '181, Kollupalayam, Arasur, Coimbatore, Tamil Nadu 641407', osId: 'IN20200530JBAW6',  claimed: false },
-  { name: 'Poppys Knitwear Pvt Ltd',                    address: '730/5, Karur Main Road, D. Kalipalayam, Dharapuram',     osId: 'IN2020147EWEZCA',  claimed: false },
-  { name: 'Poppys Garments',                            address: 'Plot 451/2, Sampanthampalayam Main Road, Padiyur, Tirupur 638701', osId: 'IN20212520PCS22', claimed: false },
-  { name: 'RAJ OVERSEAS UNIT NO 4',                     address: 'Plot 8, Sector 25, HUDA Part-1, Panipat 132103',         osId: 'IN2020084WRC29J',  claimed: false },
-  { name: 'Mittal International',                       address: '275 Sector 29 Part-II, HUDA, Panipat 132103, Haryana',   osId: 'IN2019083NNNFTP',  claimed: false },
-  { name: 'Nandan Terry Pvt. Limited',                  address: 'Survey 357/A/5-7, 350, 353, Dholi Integrated, Ahmedabad 382240', osId: 'IN2021166H1B6HX', claimed: false },
-  { name: 'Richa Global Exports Pvt Ltd (Unit 227)',    address: '227, Udyog Vihar, Phase-I, Gurgaon, Haryana 122016',    osId: 'IN2020053YJ2Q7K',  claimed: false },
-  { name: 'Richa Global Exports Pvt Ltd (B-33-34)',     address: 'Plot B-33 & B-34, Hosiery Complex, Phase-II Extn., Noida', osId: 'IN2022270MVN3DT', claimed: false },
-  { name: 'Orient Craft Limited',                       address: 'Gurgaon, Haryana',                                       osId: 'IN2019083ORCRAFT', claimed: false },
-  { name: 'Aditya Birla Fashion — Madura',              address: 'Bangalore, Karnataka',                                   osId: 'IN2019083ADBFMX',  claimed: false },
-  { name: 'HINDUJA PROCESSING & FINISHING UNIT',        address: '02, 5th Cross, Mysore Road, Bangalore, Karnataka 560023', osId: 'IN2020016WRHACX',  claimed: false },
-  { name: 'GUPTA H.C OVERSEAS (P) LTD UNIT II',        address: 'C-10/11 EPIP, Sikandra Bodla Road, Shastripuram, Agra 282007', osId: 'IN2020084X0QMVA', claimed: false },
-  { name: 'Asian Handicrafts Pvt. Ltd.',                address: '310 Udyog Vihar, Phase-2, Gurgaon 122016, Haryana',      osId: 'IN2019221KGR1HN',  claimed: false },
-  { name: 'AMBATTUR FASHION INDIA PVT LTD (B-9)',       address: 'B9, Ambattur Industrial Estate, Chennai, Tamil Nadu',    osId: 'IN2023088CWZK4C',  claimed: false },
-  { name: 'Davinci Leather Private Limited',            address: 'Survey 166-168, MM Nagar Industrial Estate, Maraimalai Nagar, Chengalpattu', osId: 'IN202608366BP0S', claimed: false },
-  { name: 'Zakaria Shahid Industries',                  address: 'Shahidabad, Sambhal Road, Uttar Pradesh',                osId: 'IN2024165B2BAYB',  claimed: false },
-];
-
-// ─── SRI LANKA (51 factories) ─────────────────────────────────────────────────
-export const MS_FACTORIES_SRI_LANKA = [
-  { name: 'MAS Active (Pvt) Limited — Linea Intimo',   address: 'Lot 89A, Biyagama Export Processing Zone, Walgama, Malwana', osId: 'LK2019085W4B252', claimed: false },
-  { name: 'Silueta (Pvt) Limited',                     address: 'Lot 14, Zone 01, Biyagama EPZ, Walgama, Malwana',        osId: 'LK2019085TT8DVM',  claimed: false },
-  { name: 'Voguetex (Pvt) Ltd — Weligama',             address: 'Industrial Zone, Udukawa, Weligama',                     osId: 'LK2019083YGP1H4',  claimed: false },
-  { name: 'VogueTex (Pvt.) Ltd. — Hikkaduwa',          address: 'Kumarakanda Road, Gonapinuwala, Hikkaduwa',              osId: 'LK2019221A3A3NQ',  claimed: false },
-  { name: 'Hirdaramani Clothing (Private) Limited',    address: 'Oddusudan Road, Puthukkudiyiruppu',                      osId: 'LK201908348T8A6',  claimed: false },
-  { name: 'Hirdaramani Industries (Private) Limited',  address: 'Colombo Road, Kuruwita',                                 osId: 'LK2019085GPJWJP',  claimed: false },
-  { name: 'Hirdaramani — Ceylon Knit Trend (Eheliyagoda)', address: 'Divurumpitiya, Eheliyagoda, Sabaragamuwa',          osId: 'LK20190859DHZ2R',  claimed: false },
-  { name: 'Hirdaramani Apparel',                        address: 'Sri Lanka',                                              osId: 'LK2019083HRDAPP',  claimed: false },
-  { name: 'Courtaulds Clothing Lanka (Pvt) Ltd',       address: 'Palugahwela, Katuwellegama, Negombo, Western Province',  osId: 'LK2020090PJZEMD',  claimed: false },
-  { name: 'Miami Clothing (Private) Limited',           address: 'Pelawatte Road, Pitigala',                               osId: 'LK2019083MIAMCL',  claimed: false },
-  { name: 'Star Garments (Pvt) Ltd — Baddegama',       address: 'Idigaskatiya, Baddegama 80200',                          osId: 'LK20210705ZJWC1',  claimed: false },
-  { name: 'MAS Holdings — MAS Intimates Thurulie',     address: 'Thurulie, Sri Lanka',                                    osId: 'LK2019083MASTHR',  claimed: false },
-  { name: 'Hela Intimates Lanka Pvt Ltd',              address: 'Sri Lanka',                                              osId: 'LK2019083HELAIN',  claimed: false },
-  { name: 'Slimline Pvt Ltd',                          address: 'Sri Lanka',                                              osId: 'LK2019083SLIMLX',  claimed: false },
-  { name: 'MAS Kreeda Pvt Ltd',                        address: 'Sri Lanka',                                              osId: 'LK2019083MASKRD',  claimed: false },
-  { name: 'MAS Active Trading Pvt Ltd',                address: 'Sri Lanka',                                              osId: 'LK2019083MASTRD',  claimed: false },
-  { name: 'Brandix Lanka Limited',                     address: 'Sri Lanka',                                              osId: 'LK2019083BRANDX',  claimed: false },
-  { name: 'First Steps Babywear Lanka Pvt Ltd',        address: 'Sri Lanka',                                              osId: 'LK2019083FSTBBY',  claimed: false },
-  { name: 'BOGAWANTALAWA Tea Estate',                   address: '153, Nawala Road, Narahenpita, Colombo 05',              osId: 'LK202230027WH0P',  claimed: false },
-  { name: 'Jinadasa Bennett Pvt Ltd — Narammala',      address: 'Merry Mount Estate, Kuliyapitiya Rd, Narammala',         osId: 'LK2026083G76TBE',  claimed: false },
-];
-
-// ─── TURKEY / TÜRKİYE (43 factories) ─────────────────────────────────────────
-export const MS_FACTORIES_TURKEY = [
-  { name: 'Kucukcalik',                                address: 'Organize San Bol 1 Cadde Sonu, Inegol, Bursa',            osId: 'TR2019083RGE4XM',  claimed: false },
-  { name: 'Nesa Tekstil San. Ve. Tic. A.S.',            address: 'Organize Sanayi Bolgesi, Nevzat Koru Cad. No:6, Denizli', osId: 'TR2019083G2TWBG', claimed: false },
-  { name: 'Baykan Denim Konfeksiyon A.S.',               address: '2nci Organize San. Bolgesi, 9. Cadde No.16, Malatya',   osId: 'TR20190831C26N7',  claimed: false },
-  { name: 'BROSS TEKSTIL SANAYI VE TICARET A.S.',       address: '10 Organize Sanayi Bolgesi 3, Cerkezkoy, Tekirdag',     osId: 'TR20191812NKMJC',  claimed: false },
-  { name: 'ATT Tekstil San. Ve Tic. A.S. — Kirklareli', address: 'Cumhuriyet Mah. Kofcaz Yolu Cad. No: 39/1, Kirklareli', osId: 'TR20190869FR6B1',  claimed: false },
-  { name: 'ATT TEKSTIL SAN. VE TIC. A.S. (Erzincan)',  address: 'Organize Sanayi Bolgesi 16. Cadde No:9, Erzincan 24100', osId: 'TR20211609ER4X2',  claimed: false },
-  { name: 'Gamateks Tekstil San. ve Tic. A.S.',         address: 'Gurlek Mahallesi 606 Sok. No:9-9/1, Denizli 20330',     osId: 'TR20200347V4GCK',  claimed: false },
-  { name: 'Aster Tekstil San Dis Tic A.S',              address: 'Cumhuriyet Mah. Eski E5 Karayolu Uzeri, Babaeski, Kirklareli', osId: 'TR2019083VYM2S5', claimed: false },
-  { name: 'Ugur Konfeksiyon San. Ve Tic. A.S.',         address: 'Muratpasa Mh. Ata Cd. Kar Sk. No.12, Bayrampasa, Istanbul', osId: 'TR2019268E04JCJ', claimed: false },
-  { name: 'Kipas Tekstil',                              address: 'Kahramanmaras, Turkiye',                                  osId: 'TR2019083KIPAST',  claimed: false },
-  { name: 'Aydinli Group',                              address: 'Istanbul, Turkiye',                                       osId: 'TR2019083AYDINL',  claimed: false },
-  { name: 'Alara Nova Turkey',                          address: 'Hasankoy Dede Dibi Cd. No:8, Gursu, Bursa 16580',        osId: 'TR2025192A0LARTR', claimed: false },
-];
-
-// ─── VIETNAM (42 factories) ───────────────────────────────────────────────────
-export const MS_FACTORIES_VIETNAM = [
-  { name: 'Regina Miracle International Vietnam Co.',   address: 'No 9 East-West Road, VSIP Hai Phong, Dinh Vu Economic Zone, Thuy Nguyen', osId: 'VN2020029G483G2', claimed: false },
-  { name: 'Crystal Martin (Vietnam) Company Limited',   address: 'Lot R (R1), Quang Chau Industrial Zone, Nenh Ward, Bac Ninh', osId: 'VN20191082MPQ3Z', claimed: false },
-  { name: 'Gaiwach International (Viet Nam) Garment',   address: 'Factory A1, Lot E2-02, VSIP Nghe An Industrial Park, Hung Tay Commune', osId: 'VN2023158VDP9PP', claimed: false },
-  { name: 'YSS Garment Co., Ltd',                       address: 'Lot D6, Industrial Park, My Trung, My Loc, Nam Dinh',     osId: 'VN2019097SY3W3S',  claimed: false },
-  { name: 'Son Ha Garment Joint Stock Company',         address: '208 Le Loi Street, Son Tay Town, Ha Noi 10000',           osId: 'VN2019083827T28',  claimed: false },
-  { name: 'Regina Miracle International Hung Yen',      address: 'Lot L6, Pho Noi B Textile and Garment Industrial Park, Di Su Commune, Hung Yen', osId: 'VN2019192XTWYAQ', claimed: false },
-  { name: 'HAIANHTEX JOINT STOCK COMPANY (Factory 2)', address: 'Hong Phuc, Hung Long Industrial Zone, Hung Long Commune',  osId: 'VN20192754C6FX0',  claimed: false },
-  { name: 'Branch of An Phat — Cam Ranh Garment Factory', address: 'Hoa Do TDP 6B, Cam Phuc Bac Ward, Cam Ranh',           osId: 'VN20233617DMY94',  claimed: false },
-  { name: 'Garment 10 Corp — Hung Ha Suit Factory',    address: 'Nhan Cau 3 Residential Group, Hung Ha Commune, Hung Yen', osId: 'VN20252658EZSGR',  claimed: false },
-  { name: 'Nedspice Vietnam',                           address: 'Dong Tien Village, Dong Phu District, Binh Phuoc Province', osId: 'VN2025179K12NT3',  claimed: false },
-  { name: 'Aroma Bay Candles Co. Ltd',                  address: 'Hung Dao Ward, Duong Kinh District, Hai Phong City',      osId: 'VN2019221HAGEJ0',  claimed: false },
-];
-
-// ─── CAMBODIA (37 factories) ──────────────────────────────────────────────────
-export const MS_FACTORIES_CAMBODIA = [
-  { name: 'New Fuma Costume (Cambodia) Co. Ltd',       address: 'No 54, Plov Lum, Phum Tro Phieng Po, Sangkat Chom Chao, Khan Por Sen Chhey, Phnom Penh', osId: 'KH201924172VBH6', claimed: false },
-  { name: 'Dewhirst (Cambodia) Co Ltd',                address: 'Tuorl Pongror Village, Sangkat Chom Chao, Phnom Penh',   osId: 'KH2019083ZWWEM3',  claimed: false },
-  { name: 'Camkaxin (Cambodia) Garment Co., Ltd',      address: 'Land #210, Street Lom, Phnom Penh',                      osId: 'KH2024328A851HH',  claimed: false },
-  { name: 'SEDUNO CAMBO KNITTING CO. LTD',              address: 'Phum Kandoeung Touch, Srok Bati, Angcor (Takeo)',        osId: 'KH2019291SPM2P6',  claimed: false },
-  { name: 'YI DA Manufacturer Co., Ltd.',               address: '369 Road, Khum Chheu Teal, Srok Kean Svay, Kandal Province', osId: 'KH2019087DWZD8B', claimed: false },
-  { name: 'LIANFA HENGYU GARMENT CO. LTD',              address: 'Phum Snam Phreah, Srok Bakan, Khet Pursat',              osId: 'KH20211207CH5PT',  claimed: false },
-  { name: 'SOHO SHENG HE CAMBODIA GARMENT CO LTD',     address: 'No.21, Phov Lum, Phum Ang, Sangkat Chom Choa, Khan Dong Kor, Phnom Penh', osId: 'KH2019083KV3WC3', claimed: false },
-  { name: 'YOU LI INTERNATIONAL (CAMBODIA) GARMENTS',   address: 'National Road #1, Chrey Thom Village, Bavet City, Svay Rieng', osId: 'KH20230621DG055', claimed: false },
-  { name: 'KINGDEER (CAMBODIA) KNITTING CO. LTD',       address: 'Building 1-3, Street 102, Doeurm Mean Commune, Thakamao District, Kandal', osId: 'KH2026083K3NGCF', claimed: false },
-  { name: 'Pacific Jeans Cambodia',                     address: 'Phnom Penh SEZ, Cambodia',                               osId: 'KH2019083PACJCB',  claimed: false },
-  { name: 'Youngone Cambodia Mfg. Co. Ltd.',            address: 'Phnom Penh Special Economic Zone, Cambodia',             osId: 'KH2019083YNGCMB',  claimed: false },
-  { name: 'Starlight Apparel Manufacturing Co., Ltd.',   address: 'No. 18, Street Betong Thmey, Phum Seda, Kandal',         osId: 'KH2019083STLGHT',  claimed: false },
-];
-
-// ─── PAKISTAN (14 factories) ──────────────────────────────────────────────────
-export const MS_FACTORIES_PAKISTAN = [
-  { name: 'Interloop Ltd HD 2',                         address: '7 Km, Khurrianwala, Jaranwala Road, Khurrianwala, Faisalabad', osId: 'PK20190913BBJ2Y', claimed: false },
-  { name: 'Interloop Limited (HD-01)',                  address: '5-KM Khurianwala, Jaranwala Road, Faisalabad',               osId: 'PK20260849K90QD',  claimed: false },
-  { name: 'Interloop Limited Apparel Park',             address: 'Bypass Khurrianwala, Jaranwala Road, Khurrianwala, Faisalabad', osId: 'PK2024197MJ7Z22', claimed: false },
-  { name: 'Gohar Textile Mills (Pvt) Ltd.',             address: '3.5 Km Chak Jhumra Road, Khurrianwala, Faisalabad 37630',   osId: 'PK2021354NCSQ0X',  claimed: false },
-  { name: 'Nishat Chunian Ltd. (Dyeing & Printing)',    address: '4-Km, Managa Raiwind Road, Lahore, Punjab 54600',           osId: 'PK20200532A0HRW',  claimed: false },
-  { name: 'Ali Murtaza Associates Pvt. Ltd.',           address: '22 Km Off Ferozpur Road, Rohi Nala, Mouza Dolu Khurd',      osId: 'PK20190835Z0GX3',  claimed: false },
-  { name: 'Klash (Unit-1) Pvt. Ltd.',                   address: 'Plot 28, No. 117 J.B Near Paharang Drainage, Millat Road, Dhanola, Faisalabad', osId: 'PK20231175DZNBW', claimed: false },
-  { name: 'US Apparel & Textiles (Pvt) Ltd. Unit 1-R', address: '253-A, Sundar Industrial Estate, Lahore, Kasur, Punjab',   osId: 'PK2021141Q73GMB',  claimed: false },
-  { name: 'US Apparel & Textile Unit (3 & 4)',          address: '3 KM, Defence Road, Off Raiwind Road, Lahore',              osId: 'PK2026141SBX3FY',  claimed: false },
-  { name: 'GREEN APPAREL (PVT) LIMITED',                address: 'Mustufabad (Lalyani), 38-Km Ferozepur Road, Kasur',         osId: 'PK2023228FS7KAT',  claimed: false },
-  { name: 'Artistic Milliners Pvt Ltd',                 address: 'Karachi, Pakistan',                                         osId: 'PK2019083ARTMLL',  claimed: false },
-  { name: 'Gul Ahmed Textile Mills',                    address: 'Karachi, Pakistan',                                         osId: 'PK2019083GULAHM',  claimed: false },
-  { name: 'Sapphire Textile Mills',                     address: 'Lahore, Pakistan',                                          osId: 'PK2019083SAPTEX',  claimed: false },
-];
-
-// ─── CHINA (84 fashion factories) ────────────────────────────────────────────
-export const MS_FACTORIES_CHINA = [
-  { name: 'Hangzhou Hs Fashion Corporation Ltd. (1st Branch)', address: 'Floor 2, Bldg 2, No.1 Yaojia Road, Liangzhu, Yuhang, Hangzhou', osId: 'CN201908519MPYW', claimed: false },
-  { name: 'Hangzhou Yukai Garments Co Ltd',             address: 'Xujiabu, Hengcun Town, Tonglu County, Hangzhou',           osId: 'CN2019083RCC2RJ',  claimed: false },
-  { name: 'Hangzhou Yutu Spinning & Knitting Co., Ltd.', address: 'No. 318 Longfu Road, Hengcun Town, Hangzhou, Zhejiang 311512', osId: 'CN2021299AR07SC', claimed: false },
-  { name: 'Tonglu Fangxin Knitting Co Ltd',             address: 'No 208 Xianghe Road, Hengcun Town, Tonglu, Hangzhou, Zhejiang', osId: 'CN2019083DXAHQ4', claimed: false },
-  { name: 'Jiangyin Chaoyu Knitting Co',                address: 'No. 12-8 Yungu Road, Zhutang Town, Jiangyin City, Jiangsu', osId: 'CN2019083G5FWKV', claimed: false },
-  { name: 'Shanghai Ouhang Textiles Ltd.',               address: 'No.193, Xingang, Gangxi Town, Chongming, Shanghai',        osId: 'CN2020191WC8NBG',  claimed: false },
-  { name: 'Neo-Concept Fashion (Zhongshan) Co., Ltd',   address: 'Building 1, No 22, Industrial Avenue, Banfu Town, Zhongshan, Guangdong', osId: 'CN20190834ZNSMD', claimed: false },
-  { name: 'Nanjing Trust Garment Co., Ltd.',             address: 'No. 689 Renmin Road, Maan Street, Luhe District, Nanjing', osId: 'CN2021153FK84AQ',  claimed: false },
-  { name: 'Shengzhou Xingbaili Necktie And Garment Co.', address: 'East Area, Shengzhou Economy Development Zone, Zhejiang', osId: 'CN2025195C918RZ',  claimed: false },
-  { name: 'Dongguan Prosperity Knitwear & Garment Ltd', address: 'Room 101, Bldg 3, No. 10, Qianxin, West 2nd Road, Qiaotou Town, Dongguan', osId: 'CN2021355PJEKV7', claimed: false },
-  { name: 'Guangzhou Well Hope Leather Goods & Gift',    address: '1-5F, No.4, Xingye Lu South Side, Nancun Town, Panyu, Guangdong', osId: 'CN2019100CEBSKF', claimed: false },
-  { name: 'Haian Lianfa Garments Co Ltd',               address: 'Lianfa Industrial Park, Haian, Nantong, Jiangsu',          osId: 'CN20192681FDF0S',  claimed: false },
-  { name: 'Tian Run Garment Limited',                    address: 'Han Xi Shui Village, Chashan, Dong Guan, Guangdong',      osId: 'CN2019100YGS3FQ',  claimed: false },
-  { name: 'Jiangsu Bonas Kniting Co., Ltd',              address: 'No.6, Yiwu Road, Shuyang, Suqian, Jiangsu Province',     osId: 'CN2020191ZCYNTR',  claimed: false },
-  { name: 'Jinhua Mengna Textile Co. LTD',              address: 'Luobu Town, Jinxi Development Zone, Jinhua City, Zhejiang 321081', osId: 'CN2019086R3QSK9', claimed: false },
-  { name: 'changzhou samantha home fashion co., ltd',    address: 'No. 30 Hongtu Road, Xinbei District, Changzhou, Jiangsu', osId: 'CN2019100JRTDCV',  claimed: false },
-  { name: 'ZHEJIANG PENGFEI KNITTING CO',                address: 'No.31, Xinxing Road, Haining Agriculture Foreign Zone, Haining, Zhejiang', osId: 'CN202230520BY0A', claimed: false },
-  { name: 'Inner Mongolia Erdos Resource — No.1 Knitting', address: 'No.1, Qingfang Street, Haitai Town, Dongsheng District, Erdos City', osId: 'CN2026084SHGVJE', claimed: false },
-  { name: 'XiangCheng JiuXin Footwear Co Ltd',          address: 'Group 2 Baidian Village, Mailing Town, Xiangcheng County', osId: 'CN2025195RB31Q7',  claimed: false },
-  { name: 'KASHION INDUSTRY CO. LTD',                   address: '555 Meidisi Road, Wuxiang Industry Park, Yinzhou, Ningbo, Zhejiang 315111', osId: 'CN2019083DCWXWP', claimed: false },
-];
-
-// ─── MOROCCO (fashion factories only) ────────────────────────────────────────
-export const MS_FACTORIES_MOROCCO = [
-  { name: 'Eiremor Confection',                         address: 'Lot 5, Ilot 3, Tangier Free Zone, Tangier',              osId: 'MA2019085WVWW0P',  claimed: false },
-  { name: 'Stil Nua Fashion',                           address: 'Lot No 2, Ilot No 3, Tangier Free Zone',                  osId: 'MA2020204S66906',  claimed: false },
-  { name: 'Design Studio Manufacturing SASU',           address: 'Lot N 1, Lot N 6, Zone Franche DExportation, Boukhalef, Tanger 90090', osId: 'MA2024024ZCG5YT', claimed: false },
-  { name: 'Comaprim',                                   address: 'Tin Mansour, Belfaa, Chtouka Ait Baha, Agadir 80250',    osId: 'MA2024305H3ZX7N',  claimed: false },
-  { name: 'Amcas Morocco',                              address: 'Zone Industrielle Ait Melloul, Ait Melloul 86153',        osId: 'MA2025303DF1KK0',  claimed: false },
-];
-
-// ─── COMBINED EXPORT ──────────────────────────────────────────────────────────
-export const MS_FASHION_FACTORIES_BY_COUNTRY = {
-  'Bangladesh':  MS_FACTORIES_BANGLADESH,
-  'India':       MS_FACTORIES_INDIA,
-  'Sri Lanka':   MS_FACTORIES_SRI_LANKA,
-  'Turkiye':     MS_FACTORIES_TURKEY,
-  'Vietnam':     MS_FACTORIES_VIETNAM,
-  'Cambodia':    MS_FACTORIES_CAMBODIA,
-  'Pakistan':    MS_FACTORIES_PAKISTAN,
-  'China':       MS_FACTORIES_CHINA,
-  'Morocco':     MS_FACTORIES_MOROCCO,
-};
-
-/** Returns all factories as a flat array with country field */
-export function getAllFactories() {
-  return Object.entries(MS_FASHION_FACTORIES_BY_COUNTRY).flatMap(([country, arr]) =>
-    arr.map(f => ({ ...f, country }))
-  );
+// ─── UTILITY FUNCTIONS ───────────────────────────────────────────────────────
+export function getAllMSFactories() {
+  return Object.values(MS_FASHION_FACTORIES_BY_COUNTRY).flat();
 }
 
-/** Returns top N factories for a given country */
-export function getTopFactories(country, n = 5) {
-  const key = country === 'Turkey' ? 'Turkiye' : country;
-  return (MS_FASHION_FACTORIES_BY_COUNTRY[key] || []).slice(0, n);
+export function getTopMSFactories(n = 20) {
+  return getAllMSFactories().slice(0, n);
 }
 
-/** Returns factory display names for a country (for VERIFIED_VENDORS injection) */
-export function getVendorNames(country, n = 6) {
-  return getTopFactories(country, n).map(f => `${f.name} (${country})`);
+export function getMSVendorNames(country) {
+  const factories = MS_FASHION_FACTORIES_BY_COUNTRY[country] || [];
+  return factories.map(f => f.name);
 }
