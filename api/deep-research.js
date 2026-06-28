@@ -45,29 +45,32 @@ const VERIFIED_VENDORS = {
     "Casual Shirts":         ["AKH Apparels Ltd (Bangladesh)", "Ananta Apparels Ltd (Bangladesh)", "Universal Menswear Ltd (Bangladesh)"],
   },
   "sainsbury's tu": {
-    // Source: Sainsbury's TU Supplier List Nov 2024 (corporate.sainsburys.co.uk/tu-supplier-list-nov2024.pdf)
-    //         Sainsbury's GM & Clothing Tier 1 Supplier List 2025 (corporate.sainsburys.co.uk — gm-and-clothing-tier-1-supplier-list-2025.pdf)
-    //         Echotex Ltd (Bangladesh) confirmed on 2025 list (13,416 workers); Crown Exclusive Wears confirmed 2025
-    default:                 ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "Echotex Ltd (Bangladesh)", "DATSA TEXTIL SRL (Romania)", "FB DIS TICARET AS (Turkey)", "Taneks Giyim Tekstil (Turkey)"],
-    "Dresses":               ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "DATSA TEXTIL SRL (Romania)", "FB DIS TICARET AS (Turkey)"],
-    "Jeans":                 ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "DATSA TEXTIL SRL (Romania)", "Taneks Giyim Tekstil (Turkey)"],
-    "Hoodies & Sweatshirts": ["Echotex Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "Taneks Giyim Tekstil (Turkey)"],
-    "Tops & T-Shirts":       ["Echotex Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "DATSA TEXTIL SRL (Romania)"],
-    "Activewear":            ["Tefron Europe SRL (Romania)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "FB DIS TICARET AS (Turkey)"],
-    "School Uniform":        ["Echotex Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "FB DIS TICARET AS (Turkey)"],
-    "Coats & Jackets":       ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "FB DIS TICARET AS (Turkey)", "DATSA TEXTIL SRL (Romania)"],
-    "Formal Shirts":         ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "DATSA TEXTIL SRL (Romania)", "Taneks Giyim Tekstil (Turkey)"],
-    "Knitwear & Jumpers":    ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "Taneks Giyim Tekstil (Turkey)", "DATSA TEXTIL SRL (Romania)"],
-    "Pyjamas & Nightwear":   ["Tefron Europe SRL (Romania)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "Taneks Giyim Tekstil (Turkey)"],
-    "Swimwear":              ["Tefron Europe SRL (Romania)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "FB DIS TICARET AS (Turkey)"],
-    "Sleepsuits & Bodysuits":["Tefron Europe SRL (Romania)", "Echotex Ltd (Bangladesh)", "DATSA TEXTIL SRL (Romania)"],
-    "Lingerie & Intimates":  ["Tefron Europe SRL (Romania)", "DATSA TEXTIL SRL (Romania)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)"],
-    "Blazers & Suits":       ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "FB DIS TICARET AS (Turkey)", "DATSA TEXTIL SRL (Romania)"],
-    "Chinos & Trousers":     ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "FB DIS TICARET AS (Turkey)", "DATSA TEXTIL SRL (Romania)"],
-    "Eveningwear":           ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "DATSA TEXTIL SRL (Romania)", "FB DIS TICARET AS (Turkey)"],
-    "Blouses & Tops":        ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "DATSA TEXTIL SRL (Romania)", "Taneks Giyim Tekstil (Turkey)"],
-    "T-Shirts & Polos":      ["Echotex Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "Taneks Giyim Tekstil (Turkey)"],
-    "Casual Shirts":         ["Kenpark Bangladesh Apparel Pvt. Ltd. (Bangladesh)", "DATSA TEXTIL SRL (Romania)", "Taneks Giyim Tekstil (Turkey)"],
+    // Source: OSH contributor ID 6544 — authenticated scrape June 2026
+    //         1,946 total facilities | 508 fashion-relevant extracted
+    //         India:132, China:97, Bangladesh:76, Türkiye:47, Sri Lanka:29, Vietnam:26, Cambodia:21, Morocco:13, Pakistan:10
+    //         Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) confirmed Bangladesh anchor factory
+    //         Echotex Ltd (Bangladesh) confirmed on OSH list; Zaber & Zubair confirmed Bangladesh
+    //         BONY TEKSTIL & Ugur Konfeksiyon confirmed Türkiye; Hangzhou Yukai confirmed China
+    default:                 ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh, Chittagong)", "Zaber & Zubair Fabrics Ltd (Bangladesh, Gazipur)", "Echotex Ltd (Bangladesh, Kaliakair)", "BONY TEKSTIL ISLETMELERI VE SAN. TIC. A.S. (Türkiye, Trabzon)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)", "Hangzhou Yukai Garments Co Ltd (China, Hangzhou)", "Kanodia Global Pvt. Ltd. (India, Panipat)", "Hirdaramani Clothing (Private) Limited (Sri Lanka)"],
+    "Dresses":               ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Echotex Ltd (Bangladesh)", "BONY TEKSTIL ISLETMELERI VE SAN. TIC. A.S. (Türkiye)"],
+    "Jeans":                 ["Zaber & Zubair Fabrics Ltd (Bangladesh)", "SQ Birichina Limited (Bangladesh)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)"],
+    "Hoodies & Sweatshirts": ["Echotex Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "AKADEMI TEKSTIL SANAYI VE TICARET A.S. (Türkiye)"],
+    "Tops & T-Shirts":       ["Echotex Ltd (Bangladesh)", "SM Knitwear Ltd (Bangladesh)", "Kanodia Global Pvt. Ltd. (India, Panipat)"],
+    "Activewear":            ["Indochine Apparel (Cambodia) Ltd (Cambodia)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Era Tekstil Sanayi Ve Ticaret A.S. (Türkiye)"],
+    "School Uniform":        ["Echotex Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "AMAN KNITTINGS LTD (Bangladesh, Savar)"],
+    "Coats & Jackets":       ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "BONY TEKSTIL ISLETMELERI VE SAN. TIC. A.S. (Türkiye)", "Hangzhou Yukai Garments Co Ltd (China)"],
+    "Formal Shirts":         ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)", "Kanodia Global Pvt. Ltd. (India, Panipat)"],
+    "Knitwear & Jumpers":    ["Jiangyin Chaoyu Knitting Co (China, Jiangyin)", "Agile Sweater (Cambodia) Co Ltd (Cambodia)", "Ningbo Seduno Knitting (China, Ningbo)"],
+    "Pyjamas & Nightwear":   ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Echotex Ltd (Bangladesh)", "SEDUNO CAMBO KNITTING CO. LTD (Cambodia)"],
+    "Swimwear":              ["Indochine Apparel (Cambodia) Ltd (Cambodia)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Era Tekstil Sanayi Ve Ticaret A.S. (Türkiye)"],
+    "Sleepsuits & Bodysuits":["Echotex Ltd (Bangladesh)", "SM Knitwear Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)"],
+    "Lingerie & Intimates":  ["Hirdaramani Clothing (Private) Limited (Sri Lanka)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Lalan Rubbers (Pvt) Ltd. (Sri Lanka, Biyagama)"],
+    "Blazers & Suits":       ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)", "BONY TEKSTIL ISLETMELERI VE SAN. TIC. A.S. (Türkiye)"],
+    "Chinos & Trousers":     ["Zaber & Zubair Fabrics Ltd (Bangladesh)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)"],
+    "Eveningwear":           ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Echotex Ltd (Bangladesh)", "Hangzhou Yukai Garments Co Ltd (China)"],
+    "Blouses & Tops":        ["Kanodia Global Pvt. Ltd. (India, Panipat)", "Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Quantum Knits (India, Coimbatore)"],
+    "T-Shirts & Polos":      ["Echotex Ltd (Bangladesh)", "SM Knitwear Ltd (Bangladesh)", "AMAN KNITTINGS LTD (Bangladesh, Savar)"],
+    "Casual Shirts":         ["Kenpark Bangladesh Apparel Pvt. Ltd. (K-3) (Bangladesh)", "Kanodia Global Pvt. Ltd. (India, Panipat)", "Ugur Konfeksiyon San. Ve Tic. A.S. (Türkiye)"],
   },
   "asda george": {
     // Source: Asda George Tier 1 Supplier List August 2021 (asda.com/sustainability) — NO 2025 list has been published.
