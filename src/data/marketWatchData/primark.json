@@ -1,1 +1,19 @@
-{ "lastUpdated": null, "weekOf": null, "sections": null }
+{
+  "lastUpdated": "2026-07-02T09:00:00.000Z",
+  "weekOf": "July 2, 2026",
+  "sections": {
+    "vendors": "97 factories across Bangladesh, China and India are now onboarded onto Primark's resource efficiency programme, targeting reduced energy, water and chemical use across tier-1 suppliers. All clothing, textile and footwear suppliers have been onboarded to Primark's traceability programme — a significant supply chain transparency milestone.",
+    "sustainability": "Primark's fourth Sustainability & Ethics Progress Report confirms 74% of clothes now made from recycled or more sustainably sourced fibres (up from 66%), and 57% of cotton is organic, recycled or from the Primark Cotton Project. Primark has also rolled out an updated Circular Product Standard, embedding circularity into design briefs across all categories.",
+    "sourcing": "Primark continues its Bangladesh-first sourcing strategy with no publicly announced shifts this week. The brand is reviewing its sustainability strategy to align with upcoming EU textile regulations (ESPR), with sourcing implications expected to be announced in Q4 2026.",
+    "strategy": "Interim CEO acknowledged sustainability progress but downplayed external praise, signalling a more operational focus going forward. The review of Primark Cares strategy suggests a possible pivot from aspirational targets to compliance-driven, regulation-ready commitments as EU textile rules tighten.",
+    "pricing": null,
+    "launches": "Primark's Circular Product Standard is now active across new ranges — products designed for disassembly, with mono-material construction where possible. This affects jersey knit basics and childrenswear most directly.",
+    "gossip": "Trade press noting Primark's interim CEO's unusually modest tone on sustainability — 'no praise needed' quote is being read as a signal that Primark is preparing for tougher regulatory scrutiny rather than brand-led greenwashing narratives.",
+    "soWhat": [
+      "Traceability programme across all suppliers means your factory OSH listing and audit status will be more closely scrutinised — ensure tier-1 certification is current before new season orders.",
+      "Circular Product Standard rollout means Primark buyers will increasingly specify mono-material constructions — if you supply jersey basics, start offering 100% cotton interlock or 100% recycled polyester options.",
+      "EU ESPR compliance review by Primark suggests sourcing decisions in 2027 will heavily weight suppliers with GRS, GOTS or OCS certifications — start building that paper trail now."
+    ],
+    "quietWeeks": ["pricing"]
+  }
+}

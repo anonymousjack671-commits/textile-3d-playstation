@@ -1,1 +1,19 @@
-{ "lastUpdated": null, "weekOf": null, "sections": null }
+{
+  "lastUpdated": "2026-07-02T09:00:00.000Z",
+  "weekOf": "July 2, 2026",
+  "sections": {
+    "vendors": "No new supplier announcements this week. George's distribution infrastructure is undergoing a significant shift — Asda is outsourcing George online clothing distribution from 3 existing depots to a single DHL Super-Depot in Derby, putting approximately 1,200 jobs at risk and signalling a major logistics consolidation.",
+    "sustainability": null,
+    "sourcing": "DHL Derby depot consolidation is the biggest sourcing-adjacent story — this affects inbound logistics and delivery windows for all George garment suppliers. Suppliers shipping into UK may see changed booking windows and transit instructions from H2 2026 as the DHL depot goes live.",
+    "strategy": "George is aggressively ramping up menswear with a dedicated 'Studio Edit' range — style-led collections at competitive prices targeting modern wardrobe staples with updated silhouettes and refined finishing. The brand is also rolling out 10 more standalone George concept stores following double-digit growth in Leeds and Hull pilots.",
+    "pricing": "George continues to compete at Primark price points — Studio Edit menswear positions as 'style at supermarket prices'. Standalone store format (decoupled from Asda grocery) allows cleaner full-price selling without markdown pressure from grocery adjacency.",
+    "launches": "Studio Edit menswear range is live — textured fabrics, updated fits, seasonal essentials. 10 new standalone George fashion stores confirmed for 2026 rollout following strong Leeds/Hull pilot performance with consistent double-digit growth.",
+    "gossip": "1,200 jobs at risk from the DHL depot consolidation is generating trade press attention and union activity — Asda is framing it as 'capacity expansion' but workers see it as outsourcing. This could cause short-term operational disruption to George's clothing supply chain in H2 2026.",
+    "soWhat": [
+      "DHL depot consolidation in Derby means booking-in procedures for George garment deliveries will change — confirm new logistics contacts and booking window changes with your George supply chain team before Q3 shipments.",
+      "Studio Edit menswear expansion means George is a real opportunity for jersey casual menswear suppliers — tees, chinos, structured knitwear. If you're not pitching menswear to George buyers, start now.",
+      "Standalone store rollout (10 new locations) suggests George is building a genuine fashion retail identity — this means more planned seasonal buys, editorial displays, and potentially longer lead time windows than the supermarket model."
+    ],
+    "quietWeeks": ["sustainability"]
+  }
+}

@@ -1,1 +1,19 @@
-{ "lastUpdated": null, "weekOf": null, "sections": null }
+{
+  "lastUpdated": "2026-07-02T09:00:00.000Z",
+  "weekOf": "July 2, 2026",
+  "sections": {
+    "vendors": "ASOS publishes its factory list at asosplc.com. This week ASOS joined forces with New Look, Zalando and other major retailers to launch the Retailer Brand Due Diligence Questionnaire — a free digital platform standardising Human Rights and Environmental Due Diligence assessments across the apparel and footwear sector. This will change how all ASOS suppliers are assessed.",
+    "sustainability": "ASOS's Fashion with Integrity (FWI) strategy updated in 2024 is in active execution — 95% recycled content in plastic mailing and garment bags by FY26 is on track. ASOS is aligned to SBTi (Science Based Targets) for 1.5°C pathway, targeting carbon neutrality in direct operations by 2025 and net-zero across the full value chain by 2030.",
+    "sourcing": "ASOS sources primarily from UK, China, Turkey, Bangladesh and India. No sourcing country changes announced this week. The new due diligence questionnaire (launched with Zalando, New Look et al) will standardise supplier assessments — reducing the admin burden for multi-retailer factories but raising the compliance bar.",
+    "strategy": "ASOS continues to own Topshop, Topman and Miss Selfridge brands with digital-only distribution. Focus this week has been on the cross-retailer due diligence collaboration — ASOS positioning itself as a sustainability leader through industry coalitions rather than just internal targets.",
+    "pricing": "ASOS maintains a promotional discount culture with regular percentage-off events and student discounts. No structural pricing changes announced. Margin pressure from returns logistics remains an industry-wide challenge for ASOS's digital-only model.",
+    "launches": null,
+    "gossip": "ASOS's participation in the cross-retailer due diligence platform (with Zalando and New Look) is being read as a deflection from ASOS's own ongoing losses — by leading industry sustainability collaborations, ASOS maintains credibility with ESG investors while their financial recovery remains uncertain.",
+    "soWhat": [
+      "The new cross-retailer Due Diligence Questionnaire will likely become the standard format for ASOS supplier assessments — get familiar with the platform early, as factories that complete it proactively will stand out.",
+      "ASOS's Topshop/Topman operation is digital-only with trend-fast cycles — if you can handle small batches (500–2,000 units) with 6–8 week lead times, ASOS's brand portfolio is worth pitching.",
+      "Net-zero value chain target by 2030 means ASOS will require supplier-level carbon reporting within 2–3 seasons — start measuring and documenting your factory's Scope 1 and 2 emissions now."
+    ],
+    "quietWeeks": ["launches"]
+  }
+}
