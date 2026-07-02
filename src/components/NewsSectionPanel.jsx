@@ -267,7 +267,7 @@ export const NewsSectionPanel = () => {
 
         {/* Sources note */}
         <p style={{ color: 'var(--color-on-dark-mute)', fontSize: '0.75rem', marginTop: '2.5rem', textAlign: 'center' }}>
-          Sources: Fibre2Fashion · Textile World · Just Style · Textile Today &nbsp;·&nbsp; Refreshes hourly
+          Sources: Fibre2Fashion · Textile World · Just Style · Textile Today · Vogue Business · Business of Fashion · Wazir Advisors &nbsp;·&nbsp; Refreshes hourly
         </p>
       </div>
 

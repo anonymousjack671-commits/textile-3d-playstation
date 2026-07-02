@@ -1,12 +1,15 @@
 // ── Vercel Serverless — Textile Industry News Feed ───────────────────────────
 // Route: GET /api/fabric-news
-// Aggregates RSS from 4 textile news sources, filters by keyword, caches 1 hr
+// Aggregates RSS from 7 textile/fashion news sources, filters by keyword, caches 1 hr
 
 const RSS_FEEDS = [
-  { url: 'https://www.fibre2fashion.com/rss/',         source: 'Fibre2Fashion', category: 'Industry',      color: '#4db87a' },
-  { url: 'https://www.textileworld.com/feed/',          source: 'Textile World', category: 'Technology',    color: '#00f2fe' },
-  { url: 'https://www.just-style.com/feed/',            source: 'Just Style',    category: 'Sourcing',      color: '#f0c94e' },
-  { url: 'https://www.textiletoday.com.bd/feed/',       source: 'Textile Today', category: 'Industry',      color: '#e06b5a' },
+  { url: 'https://www.fibre2fashion.com/rss/',            source: 'Fibre2Fashion',     category: 'Industry',      color: '#4db87a' },
+  { url: 'https://www.textileworld.com/feed/',             source: 'Textile World',     category: 'Technology',    color: '#00f2fe' },
+  { url: 'https://www.just-style.com/feed/',               source: 'Just Style',        category: 'Sourcing',      color: '#f0c94e' },
+  { url: 'https://www.textiletoday.com.bd/feed/',          source: 'Textile Today',     category: 'Industry',      color: '#e06b5a' },
+  { url: 'https://www.voguebusiness.com/feed',             source: 'Vogue Business',    category: 'Industry',      color: '#c084fc' },
+  { url: 'https://www.businessoffashion.com/feed/',        source: 'Business of Fashion', category: 'Industry',    color: '#818cf8' },
+  { url: 'https://wazir.in/feed/',                         source: 'Wazir Advisors',    category: 'Sourcing',      color: '#f0c94e' },
 ];
 
 const KEYWORDS = [
@@ -15,6 +18,9 @@ const KEYWORDS = [
   'supply chain','sourcing','dyeing','spinning','weaving','finishing','nylon',
   'viscose','linen','wool','synthetic','biodegradable','circular','gots','bci',
   'tencel','modal','lyocell','elastane','denim','jersey','fleece','interlock',
+  // fashion business keywords (for Vogue Business + BoF)
+  'fashion','apparel','retail','brand','collection','luxury','trend','designer',
+  'sustainability','manufacturing','factory','supplier','cost','price','margin',
 ];
 
 function stripHtml(str = '') {
@@ -28,7 +34,7 @@ export default async function handler(req, res) {
   const results = await Promise.allSettled(
     RSS_FEEDS.map(async (feed) => {
       try {
-        const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}&count=25`;
+        const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}&count=20`;
         const controller = new AbortController();
         const tid = setTimeout(() => controller.abort(), 8000);
         const resp = await fetch(apiUrl, { signal: controller.signal });
@@ -72,7 +78,7 @@ export default async function handler(req, res) {
       return true;
     })
     .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate))
-    .slice(0, 40);
+    .slice(0, 50);
 
   return res.status(200).json({ articles, total: articles.length, fetchedAt: new Date().toISOString() });
 }
