@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Layers, Menu, X, Sparkles, Bookmark } from 'lucide-react';
 
 const NAV_LINKS = [
+  { href: '#market-watch',         label: 'Market Watch' },
+  { href: '#news-section',         label: 'News' },
   { href: '#garment-recommender',  label: 'Garments' },
   { href: '#library',              label: 'Library' },
   { href: '#finishing-guide',      label: 'Finishes' },
-  { href: '#testing-guide',        label: 'Testing' },
   { href: '#fiber-guide',          label: 'Fibers' },
 ];
 

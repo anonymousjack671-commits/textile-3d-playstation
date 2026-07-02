@@ -12,6 +12,8 @@ import { ShortlistPanel } from './components/ShortlistPanel';
 import { TrustSection } from './components/TrustSection';
 import { OnboardingModal } from './components/OnboardingModal';
 import { RecentlyViewed } from './components/RecentlyViewed';
+import { MarketWatchPanel } from './components/MarketWatchPanel';
+import { NewsSectionPanel } from './components/NewsSectionPanel';
 import { allTextiles } from './data/textiles';
 
 // ── Back to Top button ────────────────────────────────────────────────────────
@@ -195,6 +197,8 @@ function App() {
       />
       <main id="main-content">
         <Hero userRole={userRole} onRoleSelect={setUserRole} />
+        <MarketWatchPanel />
+        <NewsSectionPanel />
         <GarmentRecommender onSelectFabric={trackViewed} />
         <LibraryGrid
           onSelectFabric={trackViewed}
