@@ -150,24 +150,24 @@ export const NewsSectionPanel = () => {
   const [activeCategory, setActive] = useState('All');
   const [fetchedAt, setFetchedAt]   = useState(null);
 
-  useEffect(() => {
-    const load = async () => {
-      try {
-        setLoading(true);
-        setError(false);
-        const res = await fetch('/api/fabric-news');
-        if (!res.ok) throw new Error('Network error');
-        const data = await res.json();
-        setArticles(data.articles || []);
-        setFetchedAt(data.fetchedAt);
-      } catch (e) {
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    };
-    load();
-  }, []);
+  const load = async () => {
+    try {
+      setLoading(true);
+      setError(false);
+      // cache-busting param ensures we bypass any stale browser cache on manual refresh
+      const res = await fetch(`/api/fabric-news?t=${Math.floor(Date.now() / 7200000)}`);
+      if (!res.ok) throw new Error('Network error');
+      const data = await res.json();
+      setArticles(data.articles || []);
+      setFetchedAt(data.fetchedAt);
+    } catch (e) {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => { load(); }, []);
 
   const filtered = activeCategory === 'All'
     ? articles
@@ -190,11 +190,29 @@ export const NewsSectionPanel = () => {
               Daily updates on fiber innovation, fabric technology, sustainability breakthroughs & global sourcing shifts.
             </p>
           </div>
-          {fetchedAt && (
-            <p style={{ color: 'var(--color-on-dark-mute)', fontSize: '0.75rem', margin: 0, alignSelf: 'flex-end' }}>
-              Refreshed {timeAgo(fetchedAt)}
-            </p>
-          )}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', alignSelf: 'flex-end' }}>
+            {fetchedAt && (
+              <span style={{ color: 'var(--color-on-dark-mute)', fontSize: '0.75rem' }}>
+                Updated {timeAgo(fetchedAt)}
+              </span>
+            )}
+            <button
+              onClick={load}
+              disabled={loading}
+              style={{
+                padding: '0.35rem 0.85rem', borderRadius: 'var(--rounded-full)',
+                border: '1px solid var(--color-hairline-dark)',
+                background: 'transparent', color: 'var(--color-on-dark-mute)',
+                fontSize: '0.78rem', cursor: loading ? 'not-allowed' : 'pointer',
+                fontFamily: 'Inter, sans-serif', transition: 'all 0.2s',
+                opacity: loading ? 0.5 : 1,
+              }}
+              onMouseOver={e => { if (!loading) e.currentTarget.style.color = '#fff'; }}
+              onMouseOut={e => { e.currentTarget.style.color = 'var(--color-on-dark-mute)'; }}
+            >
+              {loading ? '…' : '↻ Refresh'}
+            </button>
+          </div>
         </div>
 
         {/* Category Filter */}
