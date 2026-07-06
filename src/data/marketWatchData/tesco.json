@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-07-02T09:00:00.000Z",
-  "weekOf": "July 2, 2026",
+  "lastUpdated": "2026-07-06T07:35:00.000Z",
+  "weekOf": "July 6, 2026",
   "sections": {
-    "vendors": "Tesco has published its full F&F garment and footwear factory list — one of the most transparent disclosures among UK supermarket fashion brands. A 40-strong in-house labour standards team operates across key Asian sourcing countries visiting factories daily, pre-approving all sites with zero tolerance for child labour.",
-    "sustainability": "Tesco is phasing out hazardous chemicals from F&F clothing, having published its January 2025 chemical management update. Tesco was the first UK supermarket to use recycled polyester in garments and is targeting 100% recycled polyester by 2030. As a founding member of ETI and BCI, F&F's sustainability credentials among supermarket peers are strong.",
-    "sourcing": "No major sourcing country changes announced. Tesco is pursuing an online-only F&F expansion model following strong digital performance — product strategy is shifting toward tighter trend-led edits with fewer high-volume repeat styles and growing emphasis on longevity and responsible sourcing.",
-    "strategy": "F&F partnered with the Graduate Fashion Foundation as key partner for the 35th Graduate Fashion Week (15–18 June 2026 at Truman Brewery, London) — a deliberate move to position F&F as a fashion-forward brand, not just a supermarket label. Tesco is also expanding F&F via online-only in new markets.",
-    "pricing": "Graduate Fashion Week partnership and online-only expansion suggest F&F is willing to test slightly elevated price points in digital channel. Current supermarket stores maintain value-first pricing consistent with George and TU competition.",
-    "launches": "F&F was headline partner at Graduate Fashion Week 2026 — the most high-profile brand positioning move for F&F in years, aimed at younger fashion-conscious consumers. Online-only F&F expansion into new markets is underway.",
-    "gossip": "Graduate Fashion Week partnership is the boldest 'fashion credibility' play any UK supermarket brand has made this year — F&F is clearly trying to distance itself from the 'supermarket basics' perception ahead of a potential standalone brand push.",
+    "vendors": null,
+    "sustainability": null,
+    "sourcing": "No new sourcing-country shifts reported this week. Tesco's F&F supply base remains anchored across China, India, Bangladesh, Sri Lanka and Turkey, coordinated by the ~300-person Tesco Sourcing team headquartered in Hong Kong, with Sri Lanka reaffirmed in recent trade coverage as a 'significant' long-term sourcing destination.",
+    "strategy": "No fresh strategy announcements surfaced this week. Ongoing context: F&F's May 2026 online relaunch (2,200+ products via Tesco.com and the Clubcard app) continues to drive non-food sales growth, with clothing and home MD Katja Ahola Klamkin (joined from H&M Group) overseeing further planned range expansion online 'over the coming months'.",
+    "pricing": null,
+    "launches": "No new product launch news this week beyond the already-live spring/summer 2026 range (co-ord sets, midi dresses, elevated basics, most under £40), which remains on shelf and online.",
+    "gossip": null,
     "soWhat": [
-      "Factory list publication means your factory must be on Tesco's approved list before any direct business — check OSH/Open Supply Hub registration and ensure your factory name appears correctly under F&F records.",
-      "100% recycled polyester target by 2030 means F&F buyers will increasingly mandate GRS-certified recycled polyester for synthetic garments — start transitioning polyester jersey and fleece to GRS-cert material now.",
-      "Online-only expansion into new markets means Tesco may start sourcing more trend-led, smaller-batch styles — opportunity for factories with agile production and lower MOQs in jersey tops and occasionwear."
+      "Stable five-country sourcing footprint (China, India, Bangladesh, Sri Lanka, Turkey) with no signalled shifts means current supplier allocations are safe for now — no urgent repositioning needed this week.",
+      "F&F's continued sales momentum (FY sales up 5.1% to £1.2bn, plus the digital relaunch) points to rising order volumes ahead; factories with headroom should be ready to field increased capacity requests as online range expansion continues.",
+      "New clothing/home MD arriving from H&M Group raises the chance that H&M-style sourcing discipline, sustainability requirements (e.g. tighter Better Cotton/recycled content targets), or vendor consolidation could be introduced in coming quarters — worth monitoring for early signals."
     ],
-    "quietWeeks": []
+    "quietWeeks": ["vendors", "sustainability", "pricing", "gossip"]
   }
 }
