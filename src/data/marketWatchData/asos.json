@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-07-02T09:00:00.000Z",
-  "weekOf": "July 2, 2026",
+  "lastUpdated": "2026-07-06T03:37:49.000Z",
+  "weekOf": "June 29 - July 6, 2026",
   "sections": {
-    "vendors": "ASOS publishes its factory list at asosplc.com. This week ASOS joined forces with New Look, Zalando and other major retailers to launch the Retailer Brand Due Diligence Questionnaire — a free digital platform standardising Human Rights and Environmental Due Diligence assessments across the apparel and footwear sector. This will change how all ASOS suppliers are assessed.",
-    "sustainability": "ASOS's Fashion with Integrity (FWI) strategy updated in 2024 is in active execution — 95% recycled content in plastic mailing and garment bags by FY26 is on track. ASOS is aligned to SBTi (Science Based Targets) for 1.5°C pathway, targeting carbon neutrality in direct operations by 2025 and net-zero across the full value chain by 2030.",
-    "sourcing": "ASOS sources primarily from UK, China, Turkey, Bangladesh and India. No sourcing country changes announced this week. The new due diligence questionnaire (launched with Zalando, New Look et al) will standardise supplier assessments — reducing the admin burden for multi-retailer factories but raising the compliance bar.",
-    "strategy": "ASOS continues to own Topshop, Topman and Miss Selfridge brands with digital-only distribution. Focus this week has been on the cross-retailer due diligence collaboration — ASOS positioning itself as a sustainability leader through industry coalitions rather than just internal targets.",
-    "pricing": "ASOS maintains a promotional discount culture with regular percentage-off events and student discounts. No structural pricing changes announced. Margin pressure from returns logistics remains an industry-wide challenge for ASOS's digital-only model.",
+    "vendors": "No new factory list was published this week — the last one remains dated 1 April 2026, published on the standard quarterly cadence at asosplc.com. A refresh would ordinarily be due around this point in the cycle, so watch for a July edition in the coming weeks. No changes to the Code of Conduct for Own Brand Manufacturers & Suppliers were identified.",
+    "sustainability": null,
+    "sourcing": "No sourcing-country shifts were announced this week; ASOS's supplier base remains anchored in the UK, China, Turkey, Bangladesh and India per its Fashion with Integrity programme. The main supply-chain-adjacent news was logistics, not sourcing: ASOS completed the £48m disposal of its former Atlanta fulfilment centre, assigning the lease to an undisclosed global consumer brand and selling the automation assets to a DHL Group company, closing out its non-core asset disposal programme following May's £67.5m Lichfield centre sale to M&S.",
+    "strategy": "CEO José Antonio Ramos framed the Atlanta disposal (completed 1 July) as proof of the turnaround strategy — strengthening the balance sheet and simplifying the business after the earlier Lichfield sale and 2025 refinancing/bond repayment. Combined, the two site disposals cut pro forma net debt (ex-leases) to roughly £180m from £295m. No Topshop/Topman/Miss Selfridge strategy news broke within the past 7 days; the most recent Topshop item (a Summer House resort collection) dates to 11 June.",
+    "pricing": "Routine promotional activity continues — ASOS's ongoing mid-season sale (up to an extra 70% off sitewide) and standard app/student/referral discounts remained in effect, with no structural pricing changes announced this week.",
     "launches": null,
-    "gossip": "ASOS's participation in the cross-retailer due diligence platform (with Zalando and New Look) is being read as a deflection from ASOS's own ongoing losses — by leading industry sustainability collaborations, ASOS maintains credibility with ESG investors while their financial recovery remains uncertain.",
+    "gossip": "Deutsche Bank and other analysts had flagged Atlanta as the next likely disposal after Lichfield, and the completed sale prompted renewed price-target upgrades (Deutsche Bank to 400p from 375p); shares rose on the news, consistent with the market reading it as evidence of balance-sheet repair.",
     "soWhat": [
-      "The new cross-retailer Due Diligence Questionnaire will likely become the standard format for ASOS supplier assessments — get familiar with the platform early, as factories that complete it proactively will stand out.",
-      "ASOS's Topshop/Topman operation is digital-only with trend-fast cycles — if you can handle small batches (500–2,000 units) with 6–8 week lead times, ASOS's brand portfolio is worth pitching.",
-      "Net-zero value chain target by 2030 means ASOS will require supplier-level carbon reporting within 2–3 seasons — start measuring and documenting your factory's Scope 1 and 2 emissions now."
+      "No factory list update this week — but one is due on the quarterly cycle, so expect a July refresh; check back for tier changes across China, Turkey, Bangladesh and India facilities.",
+      "The debt-reduction programme (Atlanta + Lichfield disposals, ~£180m net debt) signals ASOS has more balance-sheet room to invest in sourcing/product next FY — a mild positive signal for supplier payment terms and order volumes.",
+      "With no sourcing or sustainability news this week, suppliers should treat this as a quiet period to get ahead on compliance documentation before the next factory list and FWI updates land."
     ],
-    "quietWeeks": ["launches"]
+    "quietWeeks": ["sustainability", "launches"]
   }
 }
