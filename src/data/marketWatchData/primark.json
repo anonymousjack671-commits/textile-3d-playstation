@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-07-02T09:00:00.000Z",
-  "weekOf": "July 2, 2026",
+  "lastUpdated": "2026-07-06T12:00:00.000Z",
+  "weekOf": "July 6, 2026",
   "sections": {
-    "vendors": "97 factories across Bangladesh, China and India are now onboarded onto Primark's resource efficiency programme, targeting reduced energy, water and chemical use across tier-1 suppliers. All clothing, textile and footwear suppliers have been onboarded to Primark's traceability programme — a significant supply chain transparency milestone.",
-    "sustainability": "Primark's fourth Sustainability & Ethics Progress Report confirms 74% of clothes now made from recycled or more sustainably sourced fibres (up from 66%), and 57% of cotton is organic, recycled or from the Primark Cotton Project. Primark has also rolled out an updated Circular Product Standard, embedding circularity into design briefs across all categories.",
-    "sourcing": "Primark continues its Bangladesh-first sourcing strategy with no publicly announced shifts this week. The brand is reviewing its sustainability strategy to align with upcoming EU textile regulations (ESPR), with sourcing implications expected to be announced in Q4 2026.",
-    "strategy": "Interim CEO acknowledged sustainability progress but downplayed external praise, signalling a more operational focus going forward. The review of Primark Cares strategy suggests a possible pivot from aspirational targets to compliance-driven, regulation-ready commitments as EU textile rules tighten.",
-    "pricing": null,
-    "launches": "Primark's Circular Product Standard is now active across new ranges — products designed for disassembly, with mono-material construction where possible. This affects jersey knit basics and childrenswear most directly.",
-    "gossip": "Trade press noting Primark's interim CEO's unusually modest tone on sustainability — 'no praise needed' quote is being read as a signal that Primark is preparing for tougher regulatory scrutiny rather than brand-led greenwashing narratives.",
+    "vendors": null,
+    "sustainability": null,
+    "sourcing": "No new sourcing-geography shifts reported this week, but Primark continues to press its stated ambition to increase and diversify sourcing from Bangladesh (its second-largest market at ~$900m/year from 100+ factories) ahead of Bangladesh's 2026 LDC graduation. The strategy remains focused on placing higher-value, higher-volume orders to fund supplier backward-linkage investment rather than shifting volume away from existing hubs.",
+    "strategy": "ABF's July 2026 Q3 trading update (16 weeks to 20 June) showed Primark sales up 3%, but growth was driven entirely by new store openings (+5pp) while like-for-like sales fell 2.2%, underscoring a 'challenging' consumer environment, flat UK trading, and continued softness in continental Europe. Management told analysts it will focus on 're-energising' the customer proposition via pricing, womenswear, marketing and digital investment. Two new US stores (Houston, TX and Indianapolis, IN) were confirmed for July, taking the US estate to 44 stores, alongside continued momentum toward the previously announced Primark/ABF demerger targeted for completion before end of 2027.",
+    "pricing": "Analysts (Barclays, Deutsche Bank, eToro) flagged that despite Primark's lowest price points remaining unchanged (e.g. UK kids' tees still £1.30), the brand is no longer perceived by shoppers as the cheapest in the UK market after several years of broad price increases (Bernstein estimates ~33% rise in minimum UK prices 2023-2025). Closing this perception gap is now an explicit management priority heading into the demerger.",
+    "launches": null,
+    "gossip": "Fresh analyst commentary this week (Barclays, Deutsche Bank's Adam Cochrane, eToro's Mark Crouch) described ABF as 'a tale of two businesses moving in opposite directions,' with Primark's 3% growth called 'decent' but overshadowed by a Sugar division profit warning. Deutsche Bank cautioned that enthusiasm for the Primark demerger 'will remain subdued' until like-for-like sales improve, reinforcing press narratives (Irish Times, 5 July) that uneven growth strengthens the case for the ABF/Primark split.",
     "soWhat": [
-      "Traceability programme across all suppliers means your factory OSH listing and audit status will be more closely scrutinised — ensure tier-1 certification is current before new season orders.",
-      "Circular Product Standard rollout means Primark buyers will increasingly specify mono-material constructions — if you supply jersey basics, start offering 100% cotton interlock or 100% recycled polyester options.",
-      "EU ESPR compliance review by Primark suggests sourcing decisions in 2027 will heavily weight suppliers with GRS, GOTS or OCS certifications — start building that paper trail now."
+      "Primark's like-for-like sales decline signals continued cautious buying volumes on existing ranges even as store count expands — suppliers should expect growth to concentrate around new-store fulfilment rather than broad reorder uplifts.",
+      "Management's explicit pivot toward 'pricing' as a lever to fix the value perception gap could mean renewed downward pressure on FOB costs during supplier negotiations in the coming months.",
+      "The upcoming demerger (targeted before end of 2027) and new standalone Primark leadership (Eoin Tonge) may bring procurement/strategy changes over the next 12-18 months — worth monitoring for shifts in sourcing priorities as Primark operates independently of ABF's food business."
     ],
-    "quietWeeks": ["pricing"]
+    "quietWeeks": ["vendors", "sustainability", "launches"]
   }
 }
