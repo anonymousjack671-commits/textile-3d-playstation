@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-07-02T09:00:00.000Z",
-  "weekOf": "July 2, 2026",
+  "lastUpdated": "2026-07-13T09:00:00.000Z",
+  "weekOf": "July 13, 2026",
   "sections": {
-    "vendors": "Sainsbury's TU sources from 300+ sites across 15 countries, with dedicated ethical trade teams operating from UK, Hong Kong, Shanghai, Dhaka and Delhi offices. No new supplier additions or removals announced this week. TU's Supplier Code of Conduct remains aligned with ETI Base Code across all 300 sites.",
-    "sustainability": "TU has switched plastic babywear hangers to cardboard — a packaging sustainability win that signals direction of travel for other garment categories. Sainsbury's maintains its Scope 3 emission reduction target of 30% by 2030, measured using the Higg Index across key raw material categories.",
-    "sourcing": "TU sources 80% of its high summer 2026 womenswear collection at £25 or under — indicating continued value-first sourcing discipline. No nearshoring or sourcing country changes announced. Bangladesh and China remain primary manufacturing hubs per Dhaka and Shanghai office operations.",
-    "strategy": "TU has locked school uniform prices for a fourth consecutive year — a strong value positioning move ahead of back-to-school season. The high summer collection launched with phased drops from May to August 2026, indicating a move away from two-season buying toward continuous newness.",
-    "pricing": "80% of high summer 2026 womenswear priced at £25 or less — TU is doubling down on budget credentials against George and Tesco F&F. School uniform price lock (4th year running) reinforces value message to families.",
-    "launches": "TU's high summer womenswear 2026 collection is live — phased drops from May through August with a mix of occasionwear and casual staples. Babywear sustainability upgrade (cardboard hangers replacing plastic) rolled out across all TU baby ranges in store.",
-    "gossip": "TU's continuous drop model (May–August phases) rather than a single summer range mirrors what ASOS does digitally — unusual for a supermarket brand and suggests TU's buying team is operating more like a fashion brand than a grocery sideline.",
+    "vendors": null,
+    "sustainability": "Sainsbury's published its Plan for Better Report 2025/26 in June, covering the year to 28 February 2026. Headline commitments remain net zero across the value chain by 2050 and a 30% cut to whole value-chain carbon by 2030, alongside a milestone of 1.5 million trees planted with the Woodland Trust in 2026 (5.4 million total since 2004). Own-brand ranges, including TU, are confirmed deforestation- and conversion-free as of December 2025.",
+    "sourcing": null,
+    "strategy": "Sainsbury's Q1 trading statement (16 weeks to 20 June 2026, published late June) showed TU Clothing sales down 2.1% and combined General Merchandise & Clothing down 3.7% to £438m, with GM specifically down 6.3% as space is reallocated toward food. Sainsbury's framed the clothing dip as market outperformance, but it's a marked reversal from FY25's 4.8% full-year growth and seven straight quarters of outperformance. This lands alongside the still-unresolved April restructure of TU's buying and merchandising team and new Clothing MD Ben Smith (ex-Matalan chief trading officer, previously Primark and Pep&Co) now installed and reporting to CCO Rhian Bartlett, replacing Christine Kasoulis.",
+    "pricing": "TU's high summer 2026 womenswear collection keeps 80% of lines at £25 or under; swimwear goes further, with 92% of styles £20 or less and 79% made from UPF50+ fabric. TU has also locked key school uniform prices for a fourth consecutive year ahead of back-to-school buying, reinforcing its value positioning against Primark, George and Tesco F&F.",
+    "launches": "High summer womenswear continues its phased May–August drop schedule (balloon-leg trousers, co-ords, linen, crochet, lace, suede) rather than a single seasonal delivery. Swimwear has moved in a more fashion-led direction with cut-outs and embellishment. Back-to-school uniform ranges are live in stores and online with the fourth-year price freeze as the key hook.",
+    "gossip": "Trade press (Drapers, Retail Gazette, The Grocer) is reading the Q1 clothing decline alongside the ongoing buying/merchandising restructure and Ben Smith's arrival as signs Sainsbury's is tightening TU's operating model in the final year of its Next Level Strategy, even as it publicly maintains TU is still beating a soft clothing market.",
     "soWhat": [
-      "School uniform price lock 4th year running means TU buyers will resist any price increases on jersey schoolwear — keep school polo and trouser FOBs flat or offer volume discounts to retain the programme.",
-      "Phased summer collection drops signal that TU is moving toward faster replenishment cycles — suppliers need shorter lead times and more flexibility rather than one large order per season.",
-      "Plastic to cardboard packaging shift on babywear will likely extend to other categories — start offering cardboard hang-tag and hanger solutions proactively to stay ahead of TU's packaging roadmap."
+      "Q1 clothing sales turned negative (-2.1%) after a strong FY25, and General Merchandise space keeps shrinking toward food (-6.3% sales, ~3% less space) — expect flatter or more cautious order volumes from TU's buying team through H2 rather than assumed growth.",
+      "New Clothing MD Ben Smith arrives from Matalan/Primark/Pep&Co, all hard-value retailers — his track record points to tighter FOB negotiation and continued price-architecture discipline (already visible in the 80%-under-£25 and school uniform price-freeze messaging), so expect firmer margin pressure from TU buyers.",
+      "The buying/merchandising restructure announced in April still hasn't been confirmed as resolved — supplier-facing contacts at TU may be in flux; worth confirming current buyer/merchandiser assignments before committing to new season negotiations."
     ],
-    "quietWeeks": []
+    "quietWeeks": ["vendors", "sourcing"]
   }
 }
