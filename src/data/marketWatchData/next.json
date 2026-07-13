@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-07-06T09:00:00.000Z",
-  "weekOf": "July 6, 2026",
+  "lastUpdated": "2026-07-13T05:48:00.000Z",
+  "weekOf": "July 13, 2026",
   "sections": {
     "vendors": null,
     "sustainability": null,
-    "sourcing": null,
-    "strategy": "Sky News reported on 4 July 2026 that Next is drawing up an early-stage takeover bid for luxury department store Harvey Nichols, after owner Sir Dickson Poon put the Knightsbridge-based chain up for sale. Neither company has commented and no formal offer is confirmed, but it would be Next's fifth brand acquisition in recent years (following Reiss, Joules, FatFace and Russell & Bromley) and its first move into premium department-store retail.",
+    "sourcing": "No Tier 1/2/3 factory list update was published on nextplc.co.uk this week, but a live sourcing-cost story is worth tracking: under the US Section 122 tariff regime, Bangladesh's rate has fallen to match Turkey's at 10%, erasing Turkey's previous tariff advantage over Next's largest South Asian hub. That 10% Section 122 rate is currently due to expire around 24 July 2026, so a US policy change in the next fortnight could quickly reshuffle relative cost competitiveness between two of Next's core sourcing countries.",
+    "strategy": "Follow-up commentary (Forbes, 7 July) framed Next's reported early-stage interest in Harvey Nichols as evidence of a broader shift: Next increasingly competes on logistics, tech and its Total Platform infrastructure rather than just mainline fashion, and a luxury department-store acquisition would let it capture spend across the full price spectrum, from accessible fashion to designer goods. Talks remain described as early stage; Harvey Nichols declined to comment and Next has not confirmed a bid.",
     "pricing": null,
     "launches": null,
-    "gossip": "Coverage frames the Harvey Nichols interest as 'the latest high street move' in Next's acquisition spree, with commentators noting it would mark a step up-market from Next's usual mid-price roll-ups. Talks are described as very early stage and could still fall through.",
+    "gossip": "No new leak beyond last week's Sky News scoop on Harvey Nichols has surfaced; trade press this week largely re-analyzed the same story rather than reporting fresh developments, with no confirmation that discussions have advanced to a formal offer.",
     "soWhat": [
-      "A Harvey Nichols acquisition would push Next further into premium/luxury retail — suppliers with higher-spec fabric, trim or finishing capability should watch for this as a potential new demand channel distinct from Next's core mainline.",
-      "The bid (if it proceeds) would be Next's fifth acquisition in a few years, reinforcing that Next's growth model is now as much about brand roll-up and Total Platform hosting as organic mainline growth — vendors serving Next's owned brands may see cross-brand volume opportunities.",
-      "No Tier 1 supplier list update, sourcing-country shift, or sustainability certification news surfaced this week — a quiet week on direct supply-chain intelligence. Next check-in should confirm whether the Harvey Nichols talks advance to a formal bid."
+      "The Harvey Nichols story hasn't progressed to a formal bid this week, but continued analyst framing of it as a 'platform-led' luxury move reinforces that Next's growth thesis now leans on Total Platform infrastructure and brand roll-ups as much as organic mainline sales — worth watching for eventual cross-brand sourcing volume if it closes.",
+      "Bangladesh's Section 122 tariff rate now matches Turkey's at 10%, narrowing a cost gap that has shaped sourcing allocation between the two countries; with that rate scheduled to expire around 24 July 2026, suppliers in both hubs should watch for a US policy update in the coming weeks that could reopen the gap either way.",
+      "No new Tier 1 supplier list, sustainability certification news (BCI/GOTS/GRS), or Total Platform brand update was published this week — direct supply-chain disclosures remain quiet; the next scheduled catalyst is Next's H1 trading/results cycle."
     ],
-    "quietWeeks": ["vendors", "sustainability", "sourcing", "pricing", "launches"]
+    "quietWeeks": ["vendors", "sustainability", "pricing", "launches"]
   }
 }
