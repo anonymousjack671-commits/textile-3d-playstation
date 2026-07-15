@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-07-06T12:00:00.000Z",
-  "weekOf": "July 6, 2026",
+  "lastUpdated": "2026-07-13T02:05:00.000Z",
+  "weekOf": "July 13, 2026",
   "sections": {
     "vendors": null,
     "sustainability": null,
-    "sourcing": "No new sourcing-geography shifts reported this week, but Primark continues to press its stated ambition to increase and diversify sourcing from Bangladesh (its second-largest market at ~$900m/year from 100+ factories) ahead of Bangladesh's 2026 LDC graduation. The strategy remains focused on placing higher-value, higher-volume orders to fund supplier backward-linkage investment rather than shifting volume away from existing hubs.",
-    "strategy": "ABF's July 2026 Q3 trading update (16 weeks to 20 June) showed Primark sales up 3%, but growth was driven entirely by new store openings (+5pp) while like-for-like sales fell 2.2%, underscoring a 'challenging' consumer environment, flat UK trading, and continued softness in continental Europe. Management told analysts it will focus on 're-energising' the customer proposition via pricing, womenswear, marketing and digital investment. Two new US stores (Houston, TX and Indianapolis, IN) were confirmed for July, taking the US estate to 44 stores, alongside continued momentum toward the previously announced Primark/ABF demerger targeted for completion before end of 2027.",
-    "pricing": "Analysts (Barclays, Deutsche Bank, eToro) flagged that despite Primark's lowest price points remaining unchanged (e.g. UK kids' tees still £1.30), the brand is no longer perceived by shoppers as the cheapest in the UK market after several years of broad price increases (Bernstein estimates ~33% rise in minimum UK prices 2023-2025). Closing this perception gap is now an explicit management priority heading into the demerger.",
+    "sourcing": "No new sourcing-geography shifts this week. Bangladesh's BGMEA hosted an interactive dialogue with SME member factories on 6 July to discuss pathways for improving competitiveness, part of the ongoing industry push (which Primark has previously engaged with) to capture more diversified, higher-value orders from major buyers ahead of Bangladesh's 2026 LDC graduation.",
+    "strategy": "Primark's two previously announced US stores are now imminent: Willowbrook Mall in Houston, TX opens 16 July and Castleton Square Mall in Indianapolis, IN (Primark's first Indiana store) opens 23 July, taking the US estate to 44 locations. The ABF/Primark demerger remains on track for completion before end of 2027, and incoming CFO Lucy Slinger is set to join in September, continuing the leadership transition flagged in the July trading update.",
+    "pricing": null,
     "launches": null,
-    "gossip": "Fresh analyst commentary this week (Barclays, Deutsche Bank's Adam Cochrane, eToro's Mark Crouch) described ABF as 'a tale of two businesses moving in opposite directions,' with Primark's 3% growth called 'decent' but overshadowed by a Sugar division profit warning. Deutsche Bank cautioned that enthusiasm for the Primark demerger 'will remain subdued' until like-for-like sales improve, reinforcing press narratives (Irish Times, 5 July) that uneven growth strengthens the case for the ABF/Primark split.",
+    "gossip": null,
     "soWhat": [
-      "Primark's like-for-like sales decline signals continued cautious buying volumes on existing ranges even as store count expands — suppliers should expect growth to concentrate around new-store fulfilment rather than broad reorder uplifts.",
-      "Management's explicit pivot toward 'pricing' as a lever to fix the value perception gap could mean renewed downward pressure on FOB costs during supplier negotiations in the coming months.",
-      "The upcoming demerger (targeted before end of 2027) and new standalone Primark leadership (Eoin Tonge) may bring procurement/strategy changes over the next 12-18 months — worth monitoring for shifts in sourcing priorities as Primark operates independently of ABF's food business."
+      "Two US store openings landing within days of each other (Houston 16 July, Indianapolis 23 July) means initial stocking orders for US-bound ranges should already be moving through the supply chain — suppliers on those SKUs should confirm on-time replenishment capacity for the back-to-school push.",
+      "BGMEA's continued SME competitiveness dialogue signals Bangladesh is actively courting more diversified, higher-value orders from buyers like Primark ahead of LDC graduation — smaller and mid-tier Bangladeshi suppliers may see increased inquiry activity in H2 2026.",
+      "With CFO Lucy Slinger starting in September amid active demerger preparation, expect finance-led scrutiny of supplier costs and payment terms to sharpen later this year as Primark firms up its standalone cost base."
     ],
-    "quietWeeks": ["vendors", "sustainability", "launches"]
+    "quietWeeks": ["vendors", "sustainability", "pricing", "launches", "gossip"]
   }
 }
