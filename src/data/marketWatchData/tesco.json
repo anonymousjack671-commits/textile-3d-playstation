@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-07-06T07:35:00.000Z",
-  "weekOf": "July 6, 2026",
+  "lastUpdated": "2026-07-15T00:00:00.000Z",
+  "weekOf": "July 15, 2026",
   "sections": {
     "vendors": null,
     "sustainability": null,
-    "sourcing": "No new sourcing-country shifts reported this week. Tesco's F&F supply base remains anchored across China, India, Bangladesh, Sri Lanka and Turkey, coordinated by the ~300-person Tesco Sourcing team headquartered in Hong Kong, with Sri Lanka reaffirmed in recent trade coverage as a 'significant' long-term sourcing destination.",
-    "strategy": "No fresh strategy announcements surfaced this week. Ongoing context: F&F's May 2026 online relaunch (2,200+ products via Tesco.com and the Clubcard app) continues to drive non-food sales growth, with clothing and home MD Katja Ahola Klamkin (joined from H&M Group) overseeing further planned range expansion online 'over the coming months'.",
+    "sourcing": "No new sourcing-country shifts surfaced this week. F&F's supply base remains anchored across China, India, Bangladesh, Sri Lanka and Turkey via the Hong Kong-headquartered Tesco Sourcing team; Tier 1 factory disclosure lists remain the reference point for supplier vetting. Separately, Tesco continues expanding F&F's franchise footprint into the Middle East (with Al Futtaim in Dubai) and Central Asia (Kazakhstan, Georgia, Armenia, Azerbaijan via Al Hokair), which over time could add volume pressure on existing vendors as store count grows.",
+    "strategy": "No fresh strategy announcement this week; ongoing context still dominates. F&F is mid-repositioning as a 'design-led' high-street competitor rather than a grocery add-on: tighter trend-led edits, fewer high-volume repeat styles, and more emphasis on longevity/responsible sourcing, per recent trade coverage. The May 2026 online relaunch (2,200+ SKUs via tesco.com and the Clubcard app) continues to underpin digital growth, with further range expansion planned 'over coming months' under clothing & home MD Katja Ahola Klamkin (ex-H&M).",
     "pricing": null,
-    "launches": "No new product launch news this week beyond the already-live spring/summer 2026 range (co-ord sets, midi dresses, elevated basics, most under £40), which remains on shelf and online.",
+    "launches": "No brand-new collection this week. The BBH London-created 'Style It Out' campaign (launched mid-May, running through summer) continues to run, spotlighting the versatility of F&F's summer range through comic travel-chaos vignettes — a continuation of last year's 'Style Your Way Out' platform rather than a new one.",
     "gossip": null,
     "soWhat": [
-      "Stable five-country sourcing footprint (China, India, Bangladesh, Sri Lanka, Turkey) with no signalled shifts means current supplier allocations are safe for now — no urgent repositioning needed this week.",
-      "F&F's continued sales momentum (FY sales up 5.1% to £1.2bn, plus the digital relaunch) points to rising order volumes ahead; factories with headroom should be ready to field increased capacity requests as online range expansion continues.",
-      "New clothing/home MD arriving from H&M Group raises the chance that H&M-style sourcing discipline, sustainability requirements (e.g. tighter Better Cotton/recycled content targets), or vendor consolidation could be introduced in coming quarters — worth monitoring for early signals."
+      "Sourcing footprint is stable — no reallocation signals this week — but franchise expansion into the Middle East and Central Asia is a slow-building demand driver worth tracking for future order-volume upside.",
+      "F&F's continued push toward 'design-led' positioning and fewer high-volume repeat styles could mean smaller, more frequent orders and higher design/quality expectations from vendors rather than sheer volume growth.",
+      "With FY25/26 results (sales +5.1% to £1.2bn) and the online relaunch now several months old, expect the next hard data point (interim results) to be the trigger for any real vendor-facing news — this week is a holding pattern."
     ],
-    "quietWeeks": ["vendors", "sustainability", "pricing", "gossip"]
+    "quietWeeks": ["vendors", "sustainability", "pricing", "gossip", "launches", "strategy"]
   }
 }
