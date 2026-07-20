@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-07-13T02:05:00.000Z",
-  "weekOf": "July 13, 2026",
+  "lastUpdated": "2026-07-20T02:21:44.000Z",
+  "weekOf": "July 20, 2026",
   "sections": {
     "vendors": null,
-    "sustainability": null,
-    "sourcing": "No new sourcing-geography shifts this week. Bangladesh's BGMEA hosted an interactive dialogue with SME member factories on 6 July to discuss pathways for improving competitiveness, part of the ongoing industry push (which Primark has previously engaged with) to capture more diversified, higher-value orders from major buyers ahead of Bangladesh's 2026 LDC graduation.",
-    "strategy": "Primark's two previously announced US stores are now imminent: Willowbrook Mall in Houston, TX opens 16 July and Castleton Square Mall in Indianapolis, IN (Primark's first Indiana store) opens 23 July, taking the US estate to 44 locations. The ABF/Primark demerger remains on track for completion before end of 2027, and incoming CFO Lucy Slinger is set to join in September, continuing the leadership transition flagged in the July trading update.",
-    "pricing": null,
-    "launches": null,
-    "gossip": null,
+    "sustainability": "No new announcements this week, but Primark's latest Sustainability and Ethics Progress Report continues to shape supplier conversations: 74% of clothing now uses recycled or more sustainably sourced fibres (up from 66%), and 1 in 20 items is circular by design. The Textile Takeback programme is slated to expand to the USA and Romania during 2026.",
+    "sourcing": "No fresh sourcing-geography news this week. Primark's footprint remains ~500 suppliers across ~880 factories in 26 countries, with China (~407 factories) and Bangladesh (~132) the two largest hubs, and the company continues signalling intent to shift Bangladesh toward higher-value, diversified product.",
+    "strategy": "The dominant story remains ABF's confirmed demerger of Primark, expected before end of calendar 2027 via dividend demerger, with Primark listing separately on the LSE under CEO Eoin Tonge and Weston-family vehicle Wittington retaining majority ownership. US expansion continues apace: the seventh Texas store opened at Willowbrook Mall, Houston on July 16, with the first Indiana store (Castleton Square, Indianapolis) opening July 23, bringing the US estate to 44 stores.",
+    "pricing": "No specific price moves reported this week. Primark says it continued to gain share in a declining UK market, holding its value positioning while supermarket rivals George, F&F and Tu step up fashion investment.",
+    "launches": "The Minions & Monsters licensed collection with Illumination/Universal is in stores, backed by a Manchester flagship activation earlier this month. The Paula Echevarría summer collaboration and the 'The Get Away' summer campaign (via VCCP) continue to run, alongside the Coleen Rooney athleisure partnership sourced from Bangladesh.",
+    "gossip": "Analyst chatter centres on the demerger and Q3 numbers from the July 1 trading update: total sales +3% but like-for-likes down 2.2%, with US sales up 16% in Q3 doing the heavy lifting. Commentators (Retail Dive, Drapers) note Primark is leaning on new-store expansion to mask soft underlying demand in the UK/Europe, attributed to weather and weak consumer sentiment.",
     "soWhat": [
-      "Two US store openings landing within days of each other (Houston 16 July, Indianapolis 23 July) means initial stocking orders for US-bound ranges should already be moving through the supply chain — suppliers on those SKUs should confirm on-time replenishment capacity for the back-to-school push.",
-      "BGMEA's continued SME competitiveness dialogue signals Bangladesh is actively courting more diversified, higher-value orders from buyers like Primark ahead of LDC graduation — smaller and mid-tier Bangladeshi suppliers may see increased inquiry activity in H2 2026.",
-      "With CFO Lucy Slinger starting in September amid active demerger preparation, expect finance-led scrutiny of supplier costs and payment terms to sharpen later this year as Primark firms up its standalone cost base."
+      "The 2027 demerger means Primark will face standalone-margin scrutiny — expect tighter cost discipline and harder price negotiations with suppliers as it defends its ~10% operating margin.",
+      "US growth (+16% Q3, 44 stores) is where volume upside sits — suppliers with US-compliant capacity and faster transatlantic logistics are best placed for new programmes.",
+      "Sustainability thresholds keep rising (74% preferred fibres, circular design expansion) — recycled/certified fibre capability (GRS, BCI) is increasingly a de facto requirement for new orders."
     ],
-    "quietWeeks": ["vendors", "sustainability", "pricing", "launches", "gossip"]
+    "quietWeeks": ["vendors", "pricing"]
   }
 }
