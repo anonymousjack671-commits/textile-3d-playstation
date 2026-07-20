@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-07-13T12:00:00.000Z",
-  "weekOf": "July 13, 2026",
+  "lastUpdated": "2026-07-20T16:27:34Z",
+  "weekOf": "Week of 13–20 July 2026",
   "sections": {
-    "vendors": "No new monthly supplier-list drop this week — H&M Group's supply-chain transparency page now points to the May 2026 spreadsheet and states the list is updated quarterly rather than monthly, so suppliers shouldn't expect a fresh xlsx again until closer to Q3/Q4. Latest published numbers: 554 commercial suppliers across 969 tier-1 factories, with China and Bangladesh remaining the largest production markets.",
-    "sustainability": null,
-    "sourcing": null,
-    "strategy": "The main dated news this week: ARKET will open its second physical Paris store in 2026, alongside its existing Rue des Archives flagship (announced 9 July). This continues the pattern from Q2 results (published 25 June, just outside this window) where H&M Group flagged a delayered, market-led organisation and cost cuts, while still investing selectively in premium-brand physical retail (ARKET, COS) even as core H&M store count shrinks (4,038 stores at end of May, down from 4,166 a year earlier).",
-    "pricing": null,
-    "launches": null,
+    "vendors": "No new monthly supplier list surfaced this week; the most recent confirmed public version remains the spring 2026 spreadsheet on hmgroup.com, with the list cadence appearing to have shifted from monthly to quarterly. Published figures still show ~554–600 commercial product suppliers across roughly 970–1,100 tier-1 factories, with China and Bangladesh the largest apparel production markets.",
+    "sustainability": "H&M's multi-year deal with Recover to integrate mechanically recycled RCotton into product lines (building on the 2024 collaboration) remains the headline materials story. The group is tracking toward 100% recycled or sustainably sourced materials by 2030, having reported ~89% recycled/sustainably sourced and ~29.5% recycled content. No new OCS/GOTS/GRS/ECOVERO-specific announcements this week.",
+    "sourcing": "Bangladesh remains a key market (~300 factories, ~$5bn/year) but local officials report lower work orders year-on-year amid demand softness, US tariff uncertainty, and Bangladesh's approaching LDC graduation (November 2026). India (~92 factories, denim strength, government incentives) is gaining competitiveness; Turkey (~115 factories) remains the go-to for jersey, denim and knitwear speed sourcing.",
+    "strategy": "H&M is executing a net reduction of ~80 stores in 2026 (~90 openings vs ~170 closures), with the group store count down to ~4,036 as of 31 May 2026 — the biggest net losses in Asia, Oceania and Africa. The Monki brand has been shut down, with parts of the assortment folded into Weekday. Q2 net sales were ~SEK 54.8bn, roughly flat in local currencies despite ~3% fewer stores.",
+    "pricing": "H&M launched aggressive July 2026 summer sale discounts of up to 75% off in the UK. Sister brands are matching: COS up to 50% off (through 20 July), Arket up to 60% off tailoring, & Other Stories up to 50% off — heavy summer clearance across the whole group.",
+    "launches": "Wardrobe.NYC x H&M launches globally on 6 August: monochrome tailoring, wool coats, blazers, washed denim and padded bombers. Arket's SS26 debut ready-to-wear collaboration with artist Laila Gohar (27 pieces) is in market, and the Stella McCartney x H&M collection (certified/recycled materials, launched 7 May) continues its 20th-anniversary run.",
     "gossip": null,
     "soWhat": [
-      "Supplier-list cadence has shifted from monthly to quarterly per H&M's own site — don't plan around a monthly refresh; the next real update likely lands with the Q3 report cycle (autumn 2026).",
-      "Bangladesh LDC graduation (November 2026) remains the single biggest sourcing-cost risk on the horizon — factories running large-scale, high-volume lines (H&M's Bangladesh base skews toward 1,000+ worker factories) are best positioned to absorb the 10–12% duty hit once the EU grace period narrows.",
-      "H&M Group's capital is visibly tilting toward COS/ARKET/& Other Stories store growth (Paris, Stockholm, Mexico expansions announced in recent weeks) even as core H&M's footprint contracts — suppliers serving the premium sub-brands may see comparatively steadier order flow than core H&M vendors this year."
+      "Bangladesh order volumes are softening while India gains ground — suppliers with Indian denim capacity or Turkish quick-turn knits are better positioned for H&M's near-term allocations.",
+      "The Recover RCotton multi-year deal signals recycled-cotton content is becoming a baseline expectation; mills should have GRS-certified recycled cotton blends ready to quote.",
+      "Heavy 50–75% clearance across all group brands plus a shrinking store estate points to tight inventory discipline — expect cautious AW26 order volumes and continued price pressure."
     ],
-    "quietWeeks": ["sustainability", "sourcing", "pricing", "launches", "gossip"]
+    "quietWeeks": ["vendors", "gossip"]
   }
 }
