@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-07-13T05:48:00.000Z",
-  "weekOf": "July 13, 2026",
+  "lastUpdated": "2026-07-20T06:08:00Z",
+  "weekOf": "Week of 13–19 July 2026",
   "sections": {
     "vendors": null,
-    "sustainability": null,
-    "sourcing": "No Tier 1/2/3 factory list update was published on nextplc.co.uk this week, but a live sourcing-cost story is worth tracking: under the US Section 122 tariff regime, Bangladesh's rate has fallen to match Turkey's at 10%, erasing Turkey's previous tariff advantage over Next's largest South Asian hub. That 10% Section 122 rate is currently due to expire around 24 July 2026, so a US policy change in the next fortnight could quickly reshuffle relative cost competitiveness between two of Next's core sourcing countries.",
-    "strategy": "Follow-up commentary (Forbes, 7 July) framed Next's reported early-stage interest in Harvey Nichols as evidence of a broader shift: Next increasingly competes on logistics, tech and its Total Platform infrastructure rather than just mainline fashion, and a luxury department-store acquisition would let it capture spend across the full price spectrum, from accessible fashion to designer goods. Talks remain described as early stage; Harvey Nichols declined to comment and Next has not confirmed a bid.",
+    "sustainability": "No new sustainability announcements this week. Next's Corporate Responsibility Report to January 2026 remains the current reference: it reiterates the Preferred Materials ambition (100% of main raw materials via traceable, certified routes by 2030), the cotton ban on Uzbekistan, Turkmenistan and Xinjiang, ZDHC MMCF wastewater guidelines for mills, and the ongoing Arvind organic cotton conversion programme with ~1,500 farmers in India.",
+    "sourcing": "No Next-specific sourcing shifts reported this week, but the backdrop is moving: Bangladesh saw further permanent garment factory closures (~1,800 workers affected) amid order shortages and rising production costs, while India is pushing to win apparel share from Bangladesh and Vietnam on tariff dynamics. Worth monitoring for knock-on effects on Next's Tier 1 base in Bangladesh and India.",
+    "strategy": "The dominant story remains Next's reported interest in bidding for Harvey Nichols (Sky News, 4 July); the approach is still described as early-stage and no fresh development emerged this week. A deal would extend Next's multi-brand roll-up (Reiss, FatFace, Joules, Cath Kidston, plus the January 2026 Russell & Bromley acquisition) into luxury retail, most likely via the TOTAL Platform playbook.",
     "pricing": null,
     "launches": null,
-    "gossip": "No new leak beyond last week's Sky News scoop on Harvey Nichols has surfaced; trade press this week largely re-analyzed the same story rather than reporting fresh developments, with no confirmation that discussions have advanced to a formal offer.",
+    "gossip": "City desks spent the week positioning ahead of the Q2 trading statement due 5 August. Consensus sits at Buy/Hold with mid-single to low-double-digit implied upside; shares trade near record London levels after June's guidance nudge on resilient online and international sales. UBS and Goldman Sachs continue to flag subdued UK apparel demand as the key macro headwind.",
     "soWhat": [
-      "The Harvey Nichols story hasn't progressed to a formal bid this week, but continued analyst framing of it as a 'platform-led' luxury move reinforces that Next's growth thesis now leans on Total Platform infrastructure and brand roll-ups as much as organic mainline sales — worth watching for eventual cross-brand sourcing volume if it closes.",
-      "Bangladesh's Section 122 tariff rate now matches Turkey's at 10%, narrowing a cost gap that has shaped sourcing allocation between the two countries; with that rate scheduled to expire around 24 July 2026, suppliers in both hubs should watch for a US policy update in the coming weeks that could reopen the gap either way.",
-      "No new Tier 1 supplier list, sustainability certification news (BCI/GOTS/GRS), or Total Platform brand update was published this week — direct supply-chain disclosures remain quiet; the next scheduled catalyst is Next's H1 trading/results cycle."
+      "A Harvey Nichols acquisition would add a luxury assortment to Next's stable — a potential opening for higher-spec fabric suppliers if Next migrates it onto TOTAL Platform and rationalises its supply base.",
+      "Bangladesh factory closures alongside India's tariff-driven push could shift Next's Tier 1 allocation between the two countries; India-based suppliers may see incremental order flow.",
+      "The Q2 trading statement on 5 August is the near-term catalyst — expect full-price sales data and possibly autumn/winter order-book commentary that signals volume direction for suppliers."
     ],
-    "quietWeeks": ["vendors", "sustainability", "pricing", "launches"]
+    "quietWeeks": ["vendors", "pricing", "launches"]
   }
 }
