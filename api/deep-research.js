@@ -132,9 +132,9 @@ const VERIFIED_VENDORS = {
     "Casual Shirts":         ["Esquel Group (China/Malaysia)", "Orient Craft (India)", "DBL Group (Bangladesh)"],
   },
   "next": {
-    // Source: Next PLC Tier 1 Manufacturing Sites August 2025 (nextplc.co.uk — T1 2025.pdf)
-    //         Taqwa Fabrics Ltd, Liz Fashion Industry Ltd, Sm Knitwear Ltd confirmed on 2025 list
-    //         Utah Fashions, Square Fashions, Tusuka, AKM Knit Wear, Echotex, Ananta Garments all re-confirmed 2025
+    // Source: Next PLC Tier 1 Manufacturing Sites February 2026 (nextplc.co.uk — PLC LIST FEB 2026 - TIER1.pdf)
+    //         Taqwa Fabrics, Tusuka, Echotex, AKM Knit Wear, Utah Fashions, Square Fashions,
+    //         Liz Fashion Industry, Best Shirts, Ananta all re-confirmed on Feb 2026 list (checked July 2026)
     default:                 ["Taqwa Fabrics Ltd (Bangladesh)", "Ananta Apparels Ltd (Bangladesh)", "Echotex Ltd (Bangladesh)", "AKM Knit Wear Limited (Bangladesh)", "Square Fashions Ltd (Bangladesh)", "Utah Fashions Ltd (Bangladesh)", "Tusuka Trousers & Jeans Ltd (Bangladesh)"],
     "Dresses":               ["Ananta Apparels Ltd (Bangladesh)", "Liz Fashion Industry Ltd (Bangladesh)", "Shahi Exports (India, Bengaluru)"],
     "Jeans":                 ["Tusuka Trousers & Jeans Ltd (Bangladesh)", "Arvind Mills (India, Ahmedabad)", "Artistic Milliners (Pakistan)"],
@@ -216,6 +216,9 @@ const VERIFIED_VENDORS = {
     "Casual Shirts":         ["Orient Craft Limited (India, Gurgaon) — woven casualwear shirts, M&S confirmed", "Sapphire Textile Mills (Pakistan, Lahore) — woven apparel/shirts, vertically integrated", "Gul Ahmed Textile Mills (Pakistan, Karachi) — woven shirts"],
   },
   "john lewis": {
+    // Update: JLP Factory List End Jan 2026 (johnlewispartnership.co.uk — JLP-Factory-List-Jan-2026.pdf) re-confirms
+    //         AKH Knitting, AKH Fashions, Aman Graphics, Energypac, Cotton Web, Fullcharm, First Steps, Boutique
+    //         International, B K Fashions, Ambertex, DAG Apparel, Dewhirst, AW Cashmere as active sites (checked July 2026).
     // Source: John Lewis Partnership (JLP) Factory List July 2025 (johnlewispartnership.co.uk — ES-reporting/JLP-Factory-List.pdf)
     //         1,711 total sites (Home, Fashion & Food) confirmed July 2025.
     //         AKH Knitting and Dyeing Ltd (Bangladesh, 6,159 workers), Aman Graphics & Designs Ltd (Bangladesh, 4,380 workers)
@@ -247,9 +250,16 @@ const VERIFIED_VENDORS = {
     "Casual Shirts":         ["Boutique International (India)", "B K Fashions (India)", "Aman Graphics & Designs Ltd (Bangladesh)"],
   },
   "charles tyrwhitt": {
-    // Source: Charles Tyrwhitt does NOT publish a public factory/supplier list.
-    //         No downloadable list, no OS Hub disclosure, no public CSR factory registry as of 2025-2026.
-    default:                 ["Factory list not publicly available — Charles Tyrwhitt does not publish its supplier/factory list"],
+    // Source: Charles Tyrwhitt does not publish a public factory/supplier list.
+    //         US customs bill-of-lading records (ImportGenius, updated 2026-07-13):
+    //         Silver Crest Clothing Pvt Ltd (Bengaluru) — active, latest shipment 2026-07-13 (men's suit-type jackets/trousers)
+    //         Silver Spark Apparel Ltd (Sri Lanka, Raymond Group) — active 2026 (wool jackets/trousers/waistcoats, shipments Jan–Jul 2026)
+    //         Laguna Clothing Pvt Limited (Sri Lanka) — top trading partner, 137 containers, men's woven shirts, latest 2026-01-27
+    //         Vietnam Garments Mfg Ltd — last US shipment 2024-02; retained (no exit confirmation)
+    default:                 ["Silver Crest Clothing Pvt Ltd (India, Bengaluru)", "Vietnam Garments Mfg Ltd (Vietnam, Vinh Phuc)", "Laguna Clothing Pvt Ltd (Sri Lanka)", "Silver Spark Apparel Ltd (Sri Lanka)"],
+    "Formal Shirts":         ["Vietnam Garments Mfg Ltd (Vietnam, Vinh Phuc)", "Silver Crest Clothing Pvt Ltd (India, Bengaluru)", "Laguna Clothing Pvt Ltd (Sri Lanka)"],
+    "Casual Shirts":         ["Vietnam Garments Mfg Ltd (Vietnam, Vinh Phuc)", "Silver Crest Clothing Pvt Ltd (India, Bengaluru)", "Laguna Clothing Pvt Ltd (Sri Lanka)"],
+    "Blazers & Suits":       ["Silver Spark Apparel Ltd (Sri Lanka)", "Silver Crest Clothing Pvt Ltd (India, Bengaluru)"],
   },
   "reiss": {
     // Source: Reiss does NOT publish a public factory/supplier list.

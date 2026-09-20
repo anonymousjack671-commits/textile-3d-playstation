@@ -4,22 +4,22 @@
 //
 // Serves the latest UK brand fabric intelligence data.
 // This file is updated by the weekly scheduled Claude task.
-// Last data refresh: June 2026
+// Last data refresh: July 2026
 // ============================================================
 
 // ── Current market intelligence data ────────────────────────
-// Updated: June 2026. Sources: brand PDPs, sustainability reports, CMA guidance.
+// Updated: July 2026. Sources: brand PDPs, sustainability reports, CMA guidance.
 const MARKET_DATA = {
-  lastUpdated: "2026-06-23",
-  researchNote: "Data sourced from UK brand PDPs, annual sustainability reports, and industry publications. Updated weekly via automated task. Jun 2026 update: Primark cert updated to reflect Primark Cotton Project (renamed from PSCP, Oct 2024) as primary cotton sourcing programme; 57% of cotton clothing units certified via organic/recycled/Primark Cotton Project as of 2025 report (target 100% by 2027). Charles Tyrwhitt now holds Planet Mark certification (5th consecutive year, 2025). CMA DMCC Act enforcement powers active from April 2025; CMA Supply Chain Guidance issued early 2026 — greenwash fines up to 10% of global turnover now enforceable. H&M 89% of materials recycled or sustainably sourced in 2024; new Circ® partnership debuting Spring 2026 TENCEL™ | Circ® denim. Next CR Report to Jan 2026 confirms RWS wool target: 50% by 2025, 75% by 2028, 100% by 2030.",
+  lastUpdated: "2026-07-20",
+  researchNote: "Data sourced from UK brand PDPs, annual sustainability reports, and industry publications. Updated weekly via automated task. Jul 2026 update: H&M 2025 Annual Report (published March 2026) confirms 91% of materials recycled or sustainably sourced (up from 89% in 2024), with 32% recycled materials — surpassing H&M's 30% recycled target; 94% recycled polyester used in FY2024 vs 100% target for 2025. Primark 2024/25 Progress Report (Nov 2025): 74% of clothes now made from recycled or more sustainably sourced fibres (up from 66% in 2023/24); 39% of clothes now contain recycled fibres; 57% of cotton clothing certified via organic/recycled/Primark Cotton Project (Cotton Made in Africa® also confirmed as preferred source); Primark's updated Circular Product Standard (2026) reports 5% of items now circular by design overall, with jersey at 20% and denim at 8%. Primark has deepened its partnership with recycled-cotton innovator Recover™, scaling Recover™'s RCotton2 range across 33% of jersey, denim and casual trousers categories, and in 2026 launched its first circular denim collection made with a minimum of 20% Recover™ recycled cotton blended with Primark Cotton Project cotton (initial rollout: 49 stores, 8 countries). Charles Tyrwhitt Sustainably Smart collection confirmed: 55% Cotton / 45% TENCEL™ x REFIBRA™ blend for shirts, with TENCEL™-cotton blends also expanding into trousers. M&S: 100% recycled polyester target for 2025/26 confirmed; 70% achieved in 2023/24, all GRS/RCS certified; wool sourcing target remains 100% from RWS/preferred sources by 2030. CMA DMCC Act enforcement powers active from April 2025; CMA Supply Chain Guidance (published 22 January 2026, building on the Sept 2024 Green Claims Code Fashion Supplement) confirms liability now extends across the whole supply chain — manufacturers, suppliers and distributors can face exposure alongside retailers, who may need to reconsider trading relationships where supplier evidence is insufficient; greenwash fines up to 10% of global turnover enforceable. Next CR Report to Jan 2026 confirms RWS wool target: 50% by 2025, 75% by 2028, 100% by 2030. Industry-wide: Better Cotton (BCI) has completed its transition to a formal certification scheme — the 31 May 2026 deadline for retiring mass-balance on-product BCI claims (packaging, hangtags, PDPs) has now passed; only Physical/Traceable Better Cotton qualifies for on-product labelling via the new BCI Cotton Label (launched 7 Oct 2025), and ginners, suppliers, manufacturers, retailers and brands must be certified to process/sell Physical Better Cotton (mass-balance sourcing continues but is not eligible for the label). Jul 20 2026 verification pass: Primark target confirmed — by 2027 all cotton in its clothing to be organic, recycled or Primark Cotton Project, with Textile Takeback expanding to USA and Romania in 2026; Next cotton policy confirmed — 100% responsible-source cotton (Better Cotton, recycled, organic, organic-in-conversion, US cotton) with only non-mulesed Merino wool; M&S confirmed on track for 100% verified recycled polyester by end 2025/26; Charles Tyrwhitt Sustainably Smart (Cotton / TENCEL™ x REFIBRA™ shirts, Cotton-TENCEL™ stretch trousers) confirmed current. No brand fabric composition changes detected this week; garment-level data unchanged from 13 Jul 2026 refresh.",
 
   garments: {
     'Dresses': {
-      summary: 'Viscose and ECOVERO™ dominate mid-market. TENCEL™ Lyocell now standard at premium. Primark shifting to responsibly sourced cotton via own Primark Cotton Project (57% certified as of 2025, target 100% by 2027).',
+      summary: 'Viscose and ECOVERO™ dominate mid-market. TENCEL™ Lyocell now standard at premium. Primark 74% of clothing now from recycled or more sustainably sourced fibres (up from 66% in 2023/24, Nov 2025 report). H&M 91% recycled or sustainably sourced materials in FY2025 (2025 Annual Report, March 2026).',
       brands: [
         { name: 'Primark', tier: 'budget', fabrics: ['100% Cotton Jersey (casual/jersey styles)', 'Standard Viscose Challis (printed dresses)', '100% Polyester Georgette (occasionwear)'], cert: 'Primark Cotton Project', gsm: '90–150', icon: '🟠' },
         { name: "Sainsbury's TU", tier: 'budget', fabrics: ['100% Viscose Challis (daywear)', 'Cotton-Viscose 55/45 blend (jersey dresses)', 'BCI Cotton Jersey (casual)'], cert: 'BCI Cotton', gsm: '90–140', icon: '🟠' },
-        { name: 'H&M', tier: 'mid', fabrics: ['LENZING™ ECOVERO™ Viscose Challis (printed)', 'OCS Organic Cotton Jersey (basics)', 'rPET Woven (transitional styles)'], cert: 'FSC® / OCS', gsm: '80–140', icon: '🟡' },
+        { name: 'H&M', tier: 'mid', fabrics: ['LENZING™ ECOVERO™ Viscose Challis (printed)', 'OCS Organic Cotton Jersey (basics)', 'rPET Woven (transitional styles)'], cert: 'FSC® / OCS / GRS', gsm: '80–140', icon: '🟡' },
         { name: 'Next', tier: 'mid', fabrics: ['Viscose Challis BCI (daywear)', 'Cotton-Viscose Jersey blend (jersey dresses)', 'Crepe de Chine (occasionwear)'], cert: 'BCI', gsm: '90–140', icon: '🟡' },
         { name: 'ASOS', tier: 'mid', fabrics: ['LENZING™ ECOVERO™ Viscose (Responsible Edit)', 'TENCEL™ Modal blend (occasion)', 'GRS rPET Satin (formal)'], cert: 'FSC® / GRS', gsm: '100–160', icon: '🟡' },
         { name: 'M&S', tier: 'premium', fabrics: ['TENCEL™ Lyocell Crepe (OEKO-TEX® certified)', 'OCS Organic Cotton Jersey (everyday)', 'Acetate-Viscose blend (occasionwear)'], cert: 'FSC® / OEKO-TEX®', gsm: '110–180', icon: '🟢' },
@@ -108,7 +108,7 @@ const MARKET_DATA = {
         { name: "Sainsbury's TU", tier: 'budget', fabrics: ['60% BCI Cotton / 40% Poly Poplin (standard)', 'BCI Cotton Twill (smart casual)'], cert: 'BCI', gsm: '120–140', icon: '🟠' },
         { name: 'Next', tier: 'mid', fabrics: ['100% BCI Cotton Non-Iron Poplin (standard)', '100% BCI Cotton Oxford (casual-smart)', 'Cotton-Linen blend (summer range)'], cert: 'BCI', gsm: '110–140', icon: '🟡' },
         { name: 'M&S', tier: 'premium', fabrics: ['100% Non-Iron Cotton Fine Twill 60s–80s (formal)', '2-ply BCI Cotton Poplin (premium)', 'Cotton-Modal blend (comfort)'], cert: 'BCI / OEKO-TEX®', gsm: '100–130', icon: '🟢' },
-        { name: 'Charles Tyrwhitt', tier: 'premium', fabrics: ['2-ply 100% Cotton Twill (formal)', '2-ply Cotton Oxford (casual)', 'Sea Island Cotton (luxury)'], cert: 'Planet Mark', gsm: '90–120', icon: '🟢' },
+        { name: 'Charles Tyrwhitt', tier: 'premium', fabrics: ['2-ply 100% Cotton Twill (formal)', '2-ply Cotton Oxford (casual)', '55% Cotton / 45% TENCEL™ x REFIBRA™ (Sustainably Smart range)', 'Sea Island Cotton (luxury)'], cert: 'Planet Mark', gsm: '90–120', icon: '🟢' },
       ],
       upgrade: {
         from: '65/35 Poly-Cotton Poplin (easy-care)',
@@ -174,7 +174,7 @@ const MARKET_DATA = {
       upgrade: {
         from: '50/50 Cotton-Poly French Terry (280 GSM)',
         to: '80% OCS Cotton / 20% rPET Fleece (320–360 GSM)',
-        why: 'ASOS and Next now use OCS or GRS certified fleece. Pure poly fleece faces greenwash scrutiny under CMA fashion guidance (Sept 2024) and DMCC Act direct enforcement powers (April 2025), with CMA Supply Chain Guidance extending scrutiny to supplier claims in early 2026. Fines up to 10% of global turnover now enforceable.',
+        why: 'ASOS and Next now use OCS or GRS certified fleece. Pure poly fleece faces greenwash scrutiny under CMA fashion guidance (Sept 2024) and DMCC Act direct enforcement powers (April 2025), with CMA Supply Chain Guidance (22 Jan 2026) extending scrutiny to supplier claims across the whole chain. Fines up to 10% of global turnover now enforceable.',
         costDelta: '+15–22%',
         premium: '100% OCS Organic Cotton (380–420 GSM) brushed loopback',
         premiumDelta: '+28–38%',
@@ -184,9 +184,9 @@ const MARKET_DATA = {
     },
 
     'Jeans': {
-      summary: 'Stretch denim standard at all tiers. Sustainable denim credentials (BCI, waterless dyeing, recycled cotton) now table stakes at mid.',
+      summary: 'Stretch denim standard at all tiers. Sustainable denim credentials (BCI, waterless dyeing, recycled cotton) now table stakes at mid. Primark launched its first circular denim collection in 2026 using Recover™ recycled cotton.',
       brands: [
-        { name: 'Primark', tier: 'budget', fabrics: ['99% Cotton / 1% Elastane 3/1 Twill Denim (standard)', 'Stretch Denim 98/2 (skinny fits)', 'OE Cotton Denim (rigid)'], cert: 'Primark Cotton Project', gsm: '300–380', icon: '🟠' },
+        { name: 'Primark', tier: 'budget', fabrics: ['99% Cotton / 1% Elastane 3/1 Twill Denim (standard)', 'Stretch Denim 98/2 (skinny fits)', 'Recover™ RCotton2 recycled cotton denim, min. 20% recycled content blended with Primark Cotton Project cotton (2026 circular denim collection, initial rollout 49 stores/8 countries)'], cert: 'Primark Cotton Project / Recover™ RCotton2', gsm: '300–380', icon: '🟠' },
         { name: "Sainsbury's TU", tier: 'budget', fabrics: ['BCI Cotton Denim + 1% Elastane (standard)', 'BCI Cotton + REPREVE® rPET Stretch Denim (eco)'], cert: 'BCI', gsm: '300–380', icon: '🟠' },
         { name: 'Next', tier: 'mid', fabrics: ['98% BCI Ring-Spun Cotton / 2% Elastane (standard)', 'BCI Cotton Non-Stretch (rigid)', 'BCI Cotton Bull Denim (heavyweight)'], cert: 'BCI', gsm: '320–400', icon: '🟡' },
         { name: 'ASOS', tier: 'mid', fabrics: ['BCI Stretch Denim 98/2 (standard)', 'Recycled Cotton Denim (Circular Edit)', 'rPET-Cotton blend Denim (eco range)'], cert: 'GRS / BCI', gsm: '300–400', icon: '🟡' },
@@ -195,7 +195,7 @@ const MARKET_DATA = {
       upgrade: {
         from: 'Standard BCI Cotton Denim 3/1 Twill',
         to: 'BCI Cotton + REPREVE® rPET blend Stretch Denim',
-        why: 'M&S and Sainsbury\'s actively seeking waterless-dye and rPET denim suppliers. Indigo shortlisting to natural or low-impact alternatives.',
+        why: 'M&S and Sainsbury\'s actively seeking waterless-dye and rPET denim suppliers. Indigo shortlisting to natural or low-impact alternatives. Recycled-cotton denim is no longer premium-only: Primark\'s 2026 circular denim collection (min. 20% Recover™ RCotton2) shows recycled-content denim reaching budget tier.',
         costDelta: '+12–18%',
         premium: '100% Organic Cotton Selvedge or Tencel™-Cotton Denim blend',
         premiumDelta: '+35–55%',
@@ -205,7 +205,7 @@ const MARKET_DATA = {
     },
 
     'Activewear': {
-      summary: 'rPET almost universal at mid-premium. Nylon-elastane remains performance standard. ECONYL growing in swimwear/activewear crossover.',
+      summary: 'rPET almost universal at mid-premium. Nylon-elastane remains performance standard. ECONYL growing in swimwear/activewear crossover. H&M at 94% recycled polyester in FY2024 (2025 Annual Report); M&S targeting 100% verified recycled polyester by 2025/26 (GRS/RCS certified).',
       brands: [
         { name: 'Primark', tier: 'budget', fabrics: ['87% Virgin Polyester / 13% Elastane (standard)', 'Cotton-Poly blend (yoga/casual)', 'rPET transitioning range (eco)'], cert: 'BCI Cotton (main range)', gsm: '160–200', icon: '🟠' },
         { name: 'Next', tier: 'mid', fabrics: ['rPET / Nylon performance knit (activewear)', 'GRS rPET Jersey (casual)', 'Nylon-Elastane (leggings)'], cert: 'GRS', gsm: '160–220', icon: '🟡' },

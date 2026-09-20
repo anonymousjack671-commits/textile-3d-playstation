@@ -245,6 +245,9 @@ const BRAND_PROFILES = {
     sustainability: "Enforces strict worker welfare and ethical sourcing standards across 1,711 verified sites (July 2025). Focuses on durability, circularity, and GOTS/RWS certified fibres throughout the supply chain.",
     sourcingInsight: "John Lewis Partnership's July 2025 factory list confirms Bangladesh as the dominant Fashion sourcing hub (AKH, Aman Graphics, Ananta, Energypac), supported by Pakistan cotton fabric mills, Sri Lanka intimate/lingerie, India babywear and tailoring, and Cambodia for outerwear.",
     upgradeAdvice: "John Lewis sets the gold standard for premium retail. Match them by using fully certified GOTS organic cotton, RWS certified wool, or fine Egyptian/Pima cotton, backed by transparent mill-to-shelf traceability. Strong presence in Hosur (Tamil Nadu) babywear and Gurgaon tailoring.",
+    // Update: JLP Factory List End Jan 2026 (johnlewispartnership.co.uk — JLP-Factory-List-Jan-2026.pdf) re-confirms
+    //         AKH Knitting, AKH Fashions, Aman Graphics, Energypac, Cotton Web, Fullcharm, First Steps, Boutique
+    //         International, B K Fashions, Ambertex, DAG Apparel, Dewhirst, AW Cashmere as active sites (checked July 2026).
     // Source: John Lewis Partnership (JLP) Factory List July 2025 (johnlewispartnership.co.uk — ES-reporting/JLP-Factory-List.pdf)
     //         1,711 total sites (Home, Fashion & Food) confirmed July 2025.
     //         AKH Knitting and Dyeing Ltd (Bangladesh, 6,159 workers), Aman Graphics & Designs Ltd (Bangladesh, 4,380 workers)
@@ -283,11 +286,19 @@ const BRAND_PROFILES = {
     sustainability: "Holds Planet Mark certification (5th consecutive year, 2025). Transitioning to BCI and OCS cotton across core shirt lines. Non-iron finishes are OEKO-TEX® Standard 100 certified to eliminate formaldehyde concerns.",
     sourcingInsight: "Primary sourcing from India (Delhi NCR, Jaipur) for cotton poplin and twill shirting, with supplementary production in China and Portugal for premium weaves. Long-term mill partnerships preferred over spot buying.",
     upgradeAdvice: "To win Charles Tyrwhitt business, supply 2-ply 100s-count Egyptian or Giza cotton poplin with OEKO-TEX® Standard 100 certification and a non-iron finish. Delhi NCR and Jaipur shirting clusters are well-positioned; Planet Mark and BCI cotton certification will satisfy their sustainability audit requirements.",
-    // Source: Charles Tyrwhitt does NOT publish a public factory/supplier list.
-    //         No downloadable list, no OS Hub disclosure, no public CSR factory registry as of 2025-2026.
-    vendors: ["Factory list not publicly available — Charles Tyrwhitt does not publish its supplier/factory list"],
-    vendorsByCategory: {},
-    coo: "India, China, Portugal"
+    // Source: Charles Tyrwhitt does not publish a public factory/supplier list.
+    //         US customs bill-of-lading records (ImportGenius, updated 2026-07-13):
+    //         Silver Crest Clothing Pvt Ltd (Bengaluru) — active, latest shipment 2026-07-13 (men's suit-type jackets/trousers)
+    //         Silver Spark Apparel Ltd (Sri Lanka, Raymond Group) — active 2026 (wool jackets/trousers/waistcoats, shipments Jan–Jul 2026)
+    //         Laguna Clothing Pvt Limited (Sri Lanka) — top trading partner, 137 containers, men's woven shirts, latest 2026-01-27
+    //         Vietnam Garments Mfg Ltd — last US shipment 2024-02; retained (no exit confirmation)
+    vendors: ["Silver Crest Clothing Pvt Ltd (India, Bengaluru)", "Vietnam Garments Mfg Ltd (Vietnam, Vinh Phuc)", "Laguna Clothing Pvt Ltd (Sri Lanka)", "Silver Spark Apparel Ltd (Sri Lanka)"],
+    vendorsByCategory: {
+      "Formal Shirts": ["Vietnam Garments Mfg Ltd (Vietnam, Vinh Phuc)", "Silver Crest Clothing Pvt Ltd (India, Bengaluru)", "Laguna Clothing Pvt Ltd (Sri Lanka)"],
+      "Casual Shirts":  ["Vietnam Garments Mfg Ltd (Vietnam, Vinh Phuc)", "Silver Crest Clothing Pvt Ltd (India, Bengaluru)", "Laguna Clothing Pvt Ltd (Sri Lanka)"],
+      "Blazers & Suits": ["Silver Spark Apparel Ltd (Sri Lanka)", "Silver Crest Clothing Pvt Ltd (India, Bengaluru)"],
+    },
+    coo: "India, Vietnam, Sri Lanka, China, Portugal"
   },
   reiss: {
     overviewStance: "Reiss is a premium British fashion brand (majority-owned by Next Plc since 2021). Sourcing leans on Next's established supply chain relationships while maintaining a higher design premium. Key fabrics include Italian-sourced wool blends, OEKO-TEX® certified viscose, and premium cotton poplin.",
