@@ -52,7 +52,7 @@ export default async function handler(req, res) {
 
   try {
     const geminiRes = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -85,7 +85,7 @@ export default async function handler(req, res) {
     const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
     if (!text) throw new Error('Empty response from Gemini');
 
-    return res.status(200).json({ response: text, engine: 'gemini-2.0-flash' });
+    return res.status(200).json({ response: text, engine: 'gemini-3.6-flash' });
   } catch (err) {
     console.error('[texai-chat] Gemini error:', err.message);
     // Return quota_exceeded for any unhandled error so client falls back gracefully
