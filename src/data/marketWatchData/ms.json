@@ -1,20 +1,20 @@
 {
-  "lastUpdated": "2026-07-20T06:40:48Z",
-  "weekOf": "Week of 13–20 July 2026",
+  "lastUpdated": "2026-09-26T09:36:54Z",
+  "weekOf": "Week of 19–26 September 2026",
   "sections": {
     "vendors": null,
-    "sustainability": "M&S reaffirmed its 'Trusted Value' strategy with hard sustainability targets attached: all cotton in clothing now comes from more responsible sources, and it aims to source 100% of polyester from verified recycled materials by end of 2026, up from 91% currently. No new Plan A, GOTS, OEKO-TEX or RWS announcements surfaced this week.",
+    "sustainability": null,
     "sourcing": null,
-    "strategy": "M&S confirmed its first-ever London Fashion Week runway slot for 18 September — a 'see now, buy now' womenswear and menswear collection timed to the 100th anniversary of M&S fashion, shown alongside Burberry and Mulberry. Store transformation continues: its biggest-ever standalone Foodhall (22,000 sq ft, Godalming, Surrey) opened 16 July, and the refurbished Pantheon Oxford Street flagship is now the testing ground for future store design.",
-    "pricing": "M&S cut prices on over 65 shopping-list essentials as part of a £30m investment to help families 'eat well for less', and expanded the Remarksable Value range to 175 products with 29 new everyday staples added this week, alongside further additions to Family Value Lines.",
-    "launches": "Fashion launch momentum is high: the 'Dress To Thrill' collection dropped as the second instalment of the 'Summer of Love' campaign, following the Silverstone pit-lane fashion show ahead of the F1 British Grand Prix (50 models, building on an Ibiza show seen by 26m). M&S also launched an 'Autograph Performance' menswear line and extended Amazon availability into the Netherlands.",
-    "gossip": "City sentiment remains strongly positive: shares around 378p, up ~16% YTD (more than double the FTSE 100), with 16 buy ratings, zero sells, and an average 12-month price target of 431p (high 500p). Executives added shares via the Dividend Reinvestment Plan on 10 July at ~375p. Analysts continue to flag that fashion-relevance progress must be sustained across multiple seasons.",
+    "strategy": "M&S made its first-ever London Fashion Week appearance on 19 September, marking 100 years of M&S fashion with a runway show spanning Collection, Per Una and Autograph; all 59 looks shown were available to buy immediately online across the UK and Europe and in 10 flagship stores. Store transformation continued with the reopened Chiswick shop (75% larger at 15,200 sq ft, adding a bakery, flower shop, sushi counter and barista coffee) and a £7m tripling of the Wheatley store, both part of the wider format-upgrade programme alongside newer Foodhall-led openings.",
+    "pricing": "Shares traded around 371p (24 September), with the average 12-month analyst price target at 432.50p and a 'Moderate Buy' consensus (6 buy, 2 hold across 8 brokerages). Berenberg reissued a Buy rating with a 480p target citing the Fashion Week appearance, while Goldman Sachs trimmed its target to 470p from 490p; Peel Hunt separately flagged that food sales are 'flying' but fashion remains 'hungover' from last year's cyberattack.",
+    "launches": "The London Fashion Week collection functioned as this week's headline launch — a 'see now, buy now' capsule across Collection, Per Una and Autograph timed to the fashion-week slot rather than a standard seasonal drop.",
+    "gossip": "City commentary this week centred on the widening gap between M&S's food performance (strong, gaining share) and fashion (still working through the cyberattack's 'long tail'), with analysts split between rewarding the Fashion Week publicity push (Berenberg) and trimming targets on execution risk (Goldman Sachs).",
     "soWhat": [
-      "The 'see now, buy now' London Fashion Week format (18 Sept) means M&S will demand faster speed-to-market from its supply base — suppliers who can compress lead times for runway-to-store drops will be favoured.",
-      "The 100% verified recycled polyester target by end-2026 (currently 91%) makes verified-recycled/GRS certification effectively mandatory for polyester-based suppliers wanting M&S business this year.",
-      "Heavy investment in fashion credibility (LFW debut, Silverstone, Autograph Performance) plus unanimous City buy ratings points to growing Clothing & Home volumes — a pitch window for premium and performance fabric capability, especially around Autograph.",
-      "No supplier-map or sourcing-mix changes surfaced — the India/Sri Lanka/Bangladesh/Turkey/China balance appears stable, with no signal of imminent reallocation."
+      "The 'see now, buy now' Fashion Week format — 59 looks live for purchase same-day — signals M&S wants suppliers who can compress runway-to-shelf lead times further; speed-to-market capability is becoming a differentiator for vendor selection.",
+      "Analysts still describe fashion as 'hungover' from the cyberattack even as food outperforms — near-term clothing order volumes may stay cautious until the division demonstrates a clean quarter, a signal worth watching for order-book pacing.",
+      "No supplier-map, Plan A, or sourcing-mix news surfaced this week — the India/Sri Lanka/Bangladesh/Turkey/China balance and OSH disclosure remain unchanged, consistent with M&S's twice-yearly review cadence rather than continuous updates.",
+      "Continued capital going into store format (Chiswick, Wheatley) is food-and-format-led rather than fashion-specific, suggesting near-term M&S investment priority remains grocery footprint over incremental clothing floor space."
     ],
-    "quietWeeks": ["vendors", "sourcing"]
+    "quietWeeks": ["vendors", "sustainability", "sourcing"]
   }
 }
