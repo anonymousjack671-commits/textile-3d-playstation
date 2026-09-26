@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-07-20T06:08:00Z",
-  "weekOf": "Week of 13–19 July 2026",
+  "lastUpdated": "2026-09-26T09:37:19Z",
+  "weekOf": "Week of 20–26 September 2026",
   "sections": {
     "vendors": null,
-    "sustainability": "No new sustainability announcements this week. Next's Corporate Responsibility Report to January 2026 remains the current reference: it reiterates the Preferred Materials ambition (100% of main raw materials via traceable, certified routes by 2030), the cotton ban on Uzbekistan, Turkmenistan and Xinjiang, ZDHC MMCF wastewater guidelines for mills, and the ongoing Arvind organic cotton conversion programme with ~1,500 farmers in India.",
-    "sourcing": "No Next-specific sourcing shifts reported this week, but the backdrop is moving: Bangladesh saw further permanent garment factory closures (~1,800 workers affected) amid order shortages and rising production costs, while India is pushing to win apparel share from Bangladesh and Vietnam on tariff dynamics. Worth monitoring for knock-on effects on Next's Tier 1 base in Bangladesh and India.",
-    "strategy": "The dominant story remains Next's reported interest in bidding for Harvey Nichols (Sky News, 4 July); the approach is still described as early-stage and no fresh development emerged this week. A deal would extend Next's multi-brand roll-up (Reiss, FatFace, Joules, Cath Kidston, plus the January 2026 Russell & Bromley acquisition) into luxury retail, most likely via the TOTAL Platform playbook.",
-    "pricing": null,
+    "sustainability": null,
+    "sourcing": null,
+    "strategy": "Next's first-half 2026 results (reported 17 September, still driving City commentary into this week) showed pre-tax profit up 10.5% to £569m and full-price sales up 7.7% to 1 August, with full-year profit guidance nudged up £12m to £1.255bn — the fourth upgrade this year. Management credited hot weather and international growth for offsetting continued softness in UK store sales; no new brand, TOTAL Platform partner, or acquisition news surfaced this week.",
+    "pricing": "Shares traded in a 14,000–14,780p range through the week, dipping below the 50-day moving average around 20 September before recovering to c.14,575p by 25 September (+1.2% on the day) on continued digestion of the H1 upgrade. Analyst consensus held at Hold (3 Buy, 5 Hold) with an average price target of £153.55 (range £140–187); Citigroup reiterated a neutral stance, and the stock remains below most price targets.",
     "launches": null,
-    "gossip": "City desks spent the week positioning ahead of the Q2 trading statement due 5 August. Consensus sits at Buy/Hold with mid-single to low-double-digit implied upside; shares trade near record London levels after June's guidance nudge on resilient online and international sales. UBS and Goldman Sachs continue to flag subdued UK apparel demand as the key macro headwind.",
+    "gossip": null,
     "soWhat": [
-      "A Harvey Nichols acquisition would add a luxury assortment to Next's stable — a potential opening for higher-spec fabric suppliers if Next migrates it onto TOTAL Platform and rationalises its supply base.",
-      "Bangladesh factory closures alongside India's tariff-driven push could shift Next's Tier 1 allocation between the two countries; India-based suppliers may see incremental order flow.",
-      "The Q2 trading statement on 5 August is the near-term catalyst — expect full-price sales data and possibly autumn/winter order-book commentary that signals volume direction for suppliers."
+      "A fourth guidance upgrade this year signals resilient full-price sell-through despite UK softness — suppliers should expect steady-to-growing replenishment volumes rather than order cutbacks heading into autumn/winter.",
+      "City sentiment is cautious (Hold consensus, price targets clustered near or below the current share price) — no signal yet of an aggressive expansion or supply-base build-out driven by the upgrade.",
+      "No supplier list, sustainability, sourcing, or TOTAL Platform announcements this week means no new compliance, certification, or onboarding requirements for Tier 1 vendors — an operationally quiet week worth noting as 'no change' rather than a monitoring gap."
     ],
-    "quietWeeks": ["vendors", "pricing", "launches"]
+    "quietWeeks": ["vendors", "sustainability", "sourcing", "launches", "gossip"]
   }
 }
