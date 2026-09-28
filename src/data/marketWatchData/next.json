@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-09-26T09:37:19Z",
-  "weekOf": "Week of 20–26 September 2026",
+  "lastUpdated": "2026-09-28T09:00:00Z",
+  "weekOf": "Week of 22–28 September 2026",
   "sections": {
-    "vendors": null,
-    "sustainability": null,
-    "sourcing": null,
-    "strategy": "Next's first-half 2026 results (reported 17 September, still driving City commentary into this week) showed pre-tax profit up 10.5% to £569m and full-price sales up 7.7% to 1 August, with full-year profit guidance nudged up £12m to £1.255bn — the fourth upgrade this year. Management credited hot weather and international growth for offsetting continued softness in UK store sales; no new brand, TOTAL Platform partner, or acquisition news surfaced this week.",
-    "pricing": "Shares traded in a 14,000–14,780p range through the week, dipping below the 50-day moving average around 20 September before recovering to c.14,575p by 25 September (+1.2% on the day) on continued digestion of the H1 upgrade. Analyst consensus held at Hold (3 Buy, 5 Hold) with an average price target of £153.55 (range £140–187); Citigroup reiterated a neutral stance, and the stock remains below most price targets.",
+    "vendors": "No update to Next's Tier 1 Manufacturing Sites list surfaced this week. The H1 2026/27 report (17 Sept) does say product teams are spending more time on mill and factory visits 'looking at new suppliers for what they can add… not just for capacity or price', and working more closely with mills, yarn suppliers, dye plants and wash houses to lift fabric quality. That is an open door for textile suppliers who can pitch on fabric innovation rather than price.",
+    "sustainability": "The H1 report's ESG section, not covered last week, shows the supply-chain grievance mechanism now spans 12 territories: 172 grievances were logged in H1 and nearly 35,000 workers trained. The Gender Empowerment Programme expanded from a Morocco pilot into Bangladesh and India, and Next held ZDHC 'Champion' status for a fourth year. Next is also backing a Bangladesh grid-decarbonisation needs assessment with ATTI, and three of its factories joined an ETI decarbonisation/renewables roadmap project. There were no new BCI/GOTS/GRS announcements.",
+    "sourcing": "NEXT Sourcing's H1 sales rose 3% to $399m, with operating profit of $20.8m (5.2% margin) on higher intercompany purchases. Full-year NS profit is guided at about £39m (+6%). Next also flagged a £2m refund of US tariffs paid last year. There was no announced country shift, but bought-in gross margin beat target and is guided to add £37m (with overseas price increases) to full-year profit, so cost-price discipline on suppliers remains tight.",
+    "strategy": "No new brand, acquisition or TOTAL Platform announcement came this week. The H1 report confirms TOTAL Platform added no new clients in the past year: client GTV rose 21% to £122m and TP services profit rose 23% to £8m (19.6% margin). Growth is being driven by wholly-owned brands and licences (WOBL, 18.8% online net margin) and international online, where direct-to-consumer sales grew 24% on marketing spend of £51m (+63%). On 22 September senior executives received vested shares under the 2023–2026 LTIP.",
+    "pricing": "The shares opened at about £146 on 25 September, below the 50-day average (~£151) but above the 200-day (~£140). Consensus remains Hold (3 Buy / 5 Hold) with an average target of £153.55. Post-results, Berenberg reaffirmed Buy at £187 and Shore Capital reaffirmed Buy at £175. On product, Next cut WOBL international selling prices after judging last year's 24.1% net margin uncompetitive, and UK online benefited from higher average selling prices.",
     "launches": null,
-    "gossip": null,
+    "gossip": "Wolfson's H1 commentary keeps its cautious tone on the UK: H2 UK sales guidance was trimmed (to about 2% from 2.8%), with rising inflation, mortgage costs, energy and fuel bills cited as headwinds before Christmas. The report also stresses human-led design over AI for prints and artwork. It recaps Next's 7 September Employment Appeal Tribunal win on basic pay in its long-running equal pay case.",
     "soWhat": [
-      "A fourth guidance upgrade this year signals resilient full-price sell-through despite UK softness — suppliers should expect steady-to-growing replenishment volumes rather than order cutbacks heading into autumn/winter.",
-      "City sentiment is cautious (Hold consensus, price targets clustered near or below the current share price) — no signal yet of an aggressive expansion or supply-base build-out driven by the upgrade.",
-      "No supplier list, sustainability, sourcing, or TOTAL Platform announcements this week means no new compliance, certification, or onboarding requirements for Tier 1 vendors — an operationally quiet week worth noting as 'no change' rather than a monitoring gap."
+      "Next is explicitly scouting new mills and fabric suppliers for quality and newness rather than just capacity or price, so this is a good window to pitch differentiated fabrics, yarns and finishes, especially for premium and wholly-owned brand ranges.",
+      "Grievance mechanisms in 12 territories, gender-empowerment work in Bangladesh and India, and ETI/ATTI decarbonisation projects mean suppliers in those countries should expect more social-compliance and energy/carbon data requests.",
+      "Softer UK H2 guidance plus reliance on bought-in margin gains points to firm cost negotiations on UK-bound volume. International online (+24%) is the growth engine, so programmes suited to overseas assortments may win incremental volume."
     ],
-    "quietWeeks": ["vendors", "sustainability", "sourcing", "launches", "gossip"]
+    "quietWeeks": ["launches"]
   }
 }
