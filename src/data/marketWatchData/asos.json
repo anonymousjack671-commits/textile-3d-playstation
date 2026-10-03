@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-09-28T09:00:00Z",
-  "weekOf": "September 21 - 28, 2026",
+  "lastUpdated": "2026-10-03T10:00:00.000Z",
+  "weekOf": "October 3, 2026",
   "sections": {
-    "vendors": "Still no new factory list: the latest on asosplc.com is dated 1 April 2026 (factory-list-april-2026.pdf), even though ASOS says it refreshes the list every quarter. That makes the Q3 edition about three months late. ASOS also publishes supplier facilities quarterly on Open Supply Hub, so check there too for tier-1 changes across China, Turkey, Bangladesh, India and the UK.",
-    "sustainability": null,
-    "sourcing": "More detail came out of the 24 September pre-close update. ASOS cut supply-chain cost-to-serve by about 130bps year on year, helped by renewed UK/EU carrier contracts, more automation in Berlin, and moving US fulfilment to Barnsley in the UK. It also raised about £116m by selling its Lichfield and Atlanta fulfilment centres. Adjusted gross margin, above 50%, was again credited partly to improved sourcing and better full-price sell-through.",
-    "strategy": "Womenswear GMV rose 3% for FY26 and 8% in H2, driven by partner brands and own brands including Topshop. Note that ASOS now holds only 25% of Topshop/Topman, having sold 75% to Heartland in 2024, though the brands still trade heavily through ASOS. The UK and Germany grew in H2 and the US grew in Q4. ASOS rolled out more than 100 app improvements and AI-led search personalisation, and net debt fell to about £110m. FY26 results are due 5 November.",
-    "pricing": "Pricing looked the same as last week: 20-25% app codes were widely listed on coupon sites and the Outlet offered up to 80% off end-of-season stock. There was no structural pricing news.",
-    "launches": "On 24 September ASOS launched ASOS Adaptive globally: 51 occasion-wear pieces across womenswear, menswear and curve, priced £32-£65 and co-designed with Disabled customers and the consultancy Tilting the Lens. Features include magnetic fastenings, hidden zips for tube access and cuts for seated wearers. On 19 September it named stylist Law Roach its first Stylist in Residence, and it co-hosted a London Fashion Week watch party for Chopova Lowena's SS27 show.",
-    "gossip": "The shares kept rising after the trading update, to about 508p (+3.9% on the day), up from about 421p on 21 September. Barclays upgraded ASOS to Equal Weight earlier this month and doubled its target to 420p, which the shares have already passed. Aggregator sites also report Berenberg raising its target to 750p and Shore Capital upgrading to Buy around 26 September; these come from secondary sources and have not been confirmed.",
+    "vendors": "ASOS deployed TrusTrace supply chain visibility software to Tier 5 (farm level) across key cotton-sourcing regions, marking one of the deepest traceability rollouts in UK fashion. The platform maps raw material origin data and is being used to meet incoming EU digital product passport requirements ahead of regulatory deadlines.",
+    "sustainability": "ASOS is building out its responsible sourcing framework with TrusTrace as the data backbone. The brand is targeting BCI cotton across all own-label ranges and pushing suppliers towards OEKO-TEX STANDARD 100 certification for chemical compliance.",
+    "sourcing": "Lizzie Jones was appointed as ASOS's new Head of Global Trading, tasked with improving inventory freshness and full-price sell-through rates. The brand is tightening sourcing lead times and consolidating suppliers to reduce stock risk, with a focus on speed-responsive manufacturing partners.",
+    "strategy": "ASOS returned to 51% profit growth in its turnaround period, driven by ruthless inventory management and elimination of markdowns. The brand is testing pop-up physical retail formats — a significant departure from its digital-only roots — targeting high-footfall events and pop-up stores to drive brand awareness.",
+    "pricing": "ASOS is prioritising full-price sales over promotional volume, with tighter OTB control and less reliance on end-of-season discounting. The brand is experimenting with price architecture to improve perceived value while protecting margins.",
+    "launches": "ASOS launched several own-label AW2026 ranges targeting Gen Z aesthetics, including expanded activewear and occasion wear collections. The brand also piloted a circular resale feature within its app, allowing customers to list pre-owned ASOS products.",
+    "gossip": "Trade press speculation suggests ASOS may accelerate its pop-up retail strategy if early pilots perform well, potentially opening concessions within department stores — which would change its relationship with wholesale partners like Topshop (which it owns).",
     "soWhat": [
-      "Adaptive wear is a new own-brand category with specialist trims and construction: magnetic closures, concealed access zips and patterns for seated wearers. Suppliers that can prove adaptive capability, or co-develop fabrics and trims for it, have an early way in while ASOS is still building the vendor base.",
-      "The cost-to-serve cuts and warehouse sales show ASOS stripping cost out of every link in the chain. Expect that discipline to reach FOB negotiations for SS27, so go in with cost-engineering options, not just price.",
-      "Returning GMV growth and a sharp re-rating give ASOS buyers more room for bigger SS27 commitments. But with own-brand SKUs being cut to 6,000-6,500 lines, the volume will go to fewer, deeper core vendors. Position for depth, not breadth."
+      "TrusTrace at Tier 5 level means ASOS suppliers must now provide farm-level origin data — suppliers without traceability infrastructure should urgently invest in it or risk non-compliance and delisting",
+      "Full-price sell-through focus and tighter OTB means ASOS will be a more demanding, lower-volume buyer — suppliers should expect harder negotiation on minimums and lead times",
+      "Lizzie Jones as new Head of Global Trading signals a reset in supplier relationships — strategic partners who can offer speed, flexibility, and certified traceability will be prioritised"
     ],
-    "quietWeeks": ["sustainability", "pricing"]
+    "quietWeeks": []
   }
 }

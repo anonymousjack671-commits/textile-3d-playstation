@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-09-28T09:00:00Z",
-  "weekOf": "Week of 21–28 September 2026",
+  "lastUpdated": "2026-10-03T10:00:00.000Z",
+  "weekOf": "October 3, 2026",
   "sections": {
-    "vendors": null,
-    "sustainability": null,
-    "sourcing": "Q3 commentary flagged global supply-chain disruption — Middle East shipping issues delayed goods, squeezed air-freight capacity and pushed some Q4 deliveries forward — alongside European warehouse consolidation, including closing a Belgian DC serving Southern Europe. Higher year-on-year freight costs were the main external drag on Q3. Bangladesh remains the largest single sourcing base (~188 factories on the latest list), with LDC graduation in November 2026 adding duty exposure outside the EU (EU grace period runs to 2029).",
-    "strategy": "Q3 FY2026 (Jun–Aug, reported 24 Sept): operating profit up 23% to SEK 6.04bn, margin 10.6% vs 8.6%, on net sales of SEK 57.2bn (+1% in local currencies) with ~2% fewer stores. Gross margin reached 54.0%, but ~1.6pp came from one-off tariff/import effects that won't recur. CEO Daniel Ervér cited purchasing gains, cost control and a new simplified organisation, and said H&M is 'gradually increasing the proportion of in-season purchasing'.",
-    "pricing": "H&M expects somewhat higher Q4 markdowns than last year, citing Cyber Monday falling in November, inventory timing tied to supply-chain delays, and freight costs. September sales are guided +1% in local currencies. The shares fell despite the profit beat as investors focused on stalled growth.",
-    "launches": "Elie Saab x H&M confirmed: a 54-piece womenswear, menswear, accessories and footwear collection launching 22 October in selected stores and online, priced roughly $39.99–$429. Kelly Wearstler x H&M (29-piece interiors plus an 8-piece fashion capsule) has been live since 3 September, and the H&M Studio AW26 collection launched 24 September.",
-    "gossip": "Analysts called the quarter 'good if not spectacular'. The margin beat was widely read as cost- and tariff-driven rather than demand-driven, with Western Europe still weak. The UK head-office consultation (up to ~250 roles) is still being discussed in trade press.",
+    "vendors": "H&M Group signed a multi-year supply agreement with Recover (RCotton) for recycled cotton fibre sourced from post-industrial textile waste. The brand also deepened its Circulose partnership for MMCF (man-made cellulosic fibre) made from recycled cotton blends. Both partnerships signal a shift from virgin cotton towards closed-loop fibre supply.",
+    "sustainability": "H&M Group reported 91% of materials sourced through more sustainable routes, tracking towards its 2030 100% target. The group continues to push supplier compliance on Higg MSI scores and has introduced new minimum thresholds for chemical management under its ZDHC commitment.",
+    "sourcing": "H&M is consolidating its supplier base to work with fewer, larger strategic partners amid geopolitical disruptions. The group is accelerating nearshoring to Turkey and reshoring of some European production for speed-sensitive fast-fashion lines, while retaining Bangladesh and India for volume basics.",
+    "strategy": "H&M Group streamlined its corporate structure in 2026, reducing management layers to improve speed-to-market. The group is doubling down on full-price sell-through rates after years of margin pressure from markdown dependency, targeting improved inventory management and tighter open-to-buy discipline.",
+    "pricing": "H&M raised prices modestly on sustainable material lines to partially offset the green premium on certified fibres. The group is testing value-anchored pricing architecture to protect its mid-market position against Shein and Primark at the bottom.",
+    "launches": "H&M launched a new Conscious Exclusive capsule using Circulose and recycled cashmere for AW2026. The group's & Other Stories and COS brands introduced elevated sustainable ranges targeting premium segments.",
+    "gossip": "Industry sources suggest H&M Group is under continued pressure from activist shareholders to accelerate climate commitments. Some analysts flagged that 91% sustainable materials still includes BCI cotton, which carries weaker guarantees than GOTS or organic certification.",
     "soWhat": [
-      "More in-season buying plus freight and Middle East disruption favour near-market and fast-turn capacity (Turkey, and Bangladesh/India vendors that can fly or split shipments). Pitch short lead times and small-batch flexibility.",
-      "Higher Q4 markdowns and the fading tariff one-off mean H&M will lean on buying margin into SS27, so expect firm FOB pressure and cautious bulk volumes.",
-      "The Elie Saab capsule (22 Oct) signals demand for embellished, occasionwear and tailoring fabrics. Suppliers of sequins, satins and suiting should target the next designer-collab and holiday-party programmes."
+      "Recover/RCotton multi-year deal signals growing H&M demand for recycled cotton — suppliers in Bangladesh and India with recycled blended fabric capability should pitch certified GRS recycled cotton constructions",
+      "Supplier base consolidation means fewer new vendors will gain entry — existing H&M approved suppliers need to invest in certifications and scale to stay on the list",
+      "Nearshoring to Turkey for speed-to-market lines creates opportunity for Turkish fabric mills to pitch faster replenishment programmes with shorter lead times"
     ],
-    "quietWeeks": ["vendors", "sustainability"]
+    "quietWeeks": []
   }
 }

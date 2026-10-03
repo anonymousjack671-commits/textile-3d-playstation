@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-09-28T07:00:00.000Z",
-  "weekOf": "September 28, 2026",
+  "lastUpdated": "2026-10-03T10:00:00.000Z",
+  "weekOf": "October 3, 2026",
   "sections": {
-    "vendors": null,
-    "sustainability": null,
-    "sourcing": "No new country shifts, nearshoring moves or supplier renegotiations were reported this week. The standing picture is unchanged: China remains the largest base, with India, Bangladesh and Turkey next, and all clothing, textile and footwear suppliers are now onboarded to Primark's traceability programme. BGMEA's recent push for Primark to source more higher-value product from Bangladesh (and help fund the new minimum wage through pricing) is still open.",
-    "strategy": "International expansion was the main news this week. Primark opened its first Bahrain store on 23 September (43,000 sq ft at City Centre Bahrain, run by franchise partner Alshaya, its 20th market), and its 48th US store at Augusta Mall, Georgia, on 24 September. Qatar (Doha Festival City, 29 October) and Saudi Arabia (March 2027) come next. In the background: UK home delivery is still being set up, the ABF demerger is targeted for December 2027, and new Chief Commercial Officer Filip Ekvall (formerly of H&M) started on 1 September under CEO Eoin Tonge.",
-    "pricing": "The 'Iconic Value' price cuts (up to 29% on hundreds of lines, e.g. jeans at £9 and hoodies from £9) run throughout AW26 and are backed by marketing. Competition in the value segment is getting tougher: Inditex's Lefties now has a UK store in Liverpool, with Newcastle and Essex to follow, and trade press says Primark has narrowed its price gap with Shein.",
-    "launches": "Primark Form, a performance activewear sub-brand launched in the UK on 8 September, is still being pushed with a campaign in gyms and along marathon routes. Its AW collection covers womenswear, menswear and kidswear, split into four lines: Smooth Support, Buttery Soft, Running (shower-resistant, reflective) and Seam Free. The 'By Coleen' AW26 range and the Rita Ora capsule are still rolling out. No new tie-up was announced this week.",
-    "gossip": "Analysts are still split on home delivery. AJ Bell calls it necessary, while others see it as a defensive move against Lefties and Shein that could eat into Primark's roughly 10% operating margin through fulfilment costs. Investors are wary after the 10 September update (Q4 like-for-like sales down about 3%, Continental Europe down 4.3%, US up 11%), with some calling the digital pivot a reaction to weaker trading.",
+    "vendors": "Primark confirmed a multi-year recycled fibre partnership with Circ, which uses textile-to-textile recycling technology to process blended cotton-polyester garments into reusable fibres. The Circ facility (built with $500M investment) is targeting commercial-scale recycled polyester supply to Primark from 2029 onwards.",
+    "sustainability": "Primark reported 74% of fibres sourced from more sustainable routes as part of Primark Cares targets. The brand is actively reviewing its Primark Cares sustainability strategy in response to incoming EU textile regulations, particularly around extended producer responsibility (EPR) and digital product passports.",
+    "sourcing": "Bangladesh and India remain Primark's primary sourcing hubs. The brand is evaluating nearshoring options in response to geopolitical pressures on Asian supply chains, though no formal shift has been announced. Primark Cares mandates all Tier 1 suppliers undergo annual social audits.",
+    "strategy": "Primark continues its selective store expansion across the US and continental Europe. The brand is investing in digital tools for supply chain transparency while maintaining its no-online-sales model to keep prices low. New store formats with integrated 'Primark Cares' sustainability messaging are being rolled out.",
+    "pricing": "Primark remains committed to its value positioning, with no major price increases signalled despite cost pressures from energy, logistics and sustainable material premiums. The brand's scale (ABF group buying power) gives it leverage to absorb sustainable fibre cost premiums.",
+    "launches": "Primark launched several licensed collaborations for Autumn/Winter 2026, including character-based ranges and an expanded athletic-leisure line. The school uniform range saw elevated sustainable materials content with BCI cotton and recycled polyester blends.",
+    "gossip": "Trade press commentary suggests Primark is under pressure to accelerate its digital product passport rollout ahead of EU mandates. Some sourcing analysts note Primark's recycled polyester 2029 target from the Circ partnership may be optimistic given scale-up challenges in textile recycling.",
     "soWhat": [
-      "Primark Form points to more demand for technical knits: four-way-stretch, moisture-wicking, brushed 'buttery' jersey and seamless fabrics. Suppliers with that capability and competitive pricing should pitch now for SS27 and AW27 activewear.",
-      "Iconic Value prices are permanent and Lefties is now in the UK, so expect steady FOB pressure. Offer cost-engineering ideas (fabric weight, trim simplification, yield) up front rather than waiting to be asked to cut price.",
-      "Volume growth is coming from the US and the Middle East (Qatar, then Saudi Arabia in 2027), and UK home delivery will need e-commerce-ready packaging and labelling. Suppliers that can handle flexible, multi-market shipments are best placed for extra orders."
+      "The Circ partnership signals long-term demand for recycled polyester at scale — suppliers investing in GRS-certified recycled polyester production are well positioned for Primark contracts from 2028-29",
+      "74% sustainable fibre sourcing target creates near-term procurement pressure — suppliers without BCI, GRS, GOTS, or OEKO-TEX certification risk delisting from Primark's Tier 1 approved list",
+      "No nearshoring movement yet, but EU EPR regulations monitoring is creating pressure — Bangladesh and India vendors should prepare digital traceability documentation and scope 3 reporting capability"
     ],
-    "quietWeeks": ["vendors", "sustainability"]
+    "quietWeeks": []
   }
 }

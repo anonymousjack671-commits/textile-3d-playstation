@@ -1,20 +1,19 @@
 {
-  "lastUpdated": "2026-09-28T05:20:32Z",
-  "weekOf": "Week of 21–28 September 2026",
+  "lastUpdated": "2026-10-03T10:00:00.000Z",
+  "weekOf": "October 3, 2026",
   "sections": {
-    "vendors": "M&S and Levi Strauss & Co. are inviting their shared and wider supplier bases into the new Fashion Renewable Collaborative, which will onboard factories via Schneider Electric's Resource Advisor+ for Supply Chain platform for education, readiness assessments and progress tracking. The FRC builds on existing M&S and Levi's supplier energy programmes that together have already registered nearly 500 supplier facilities.",
-    "sustainability": "On 22 September (New York Climate Week), M&S and Levi Strauss launched the Fashion Renewable Collaborative with SE Advisory Services (Schneider Electric) to help garment and textile suppliers procure renewable electricity through coordinated brand engagement and practical implementation support. The group is actively recruiting additional brands as sponsors, signalling a pre-competitive push on Scope 3 factory emissions rather than a retailer-only programme.",
-    "sourcing": null,
-    "strategy": "The post-London Fashion Week 'see now, buy now' push continues to frame fashion strategy, while M&S's broader 2026/27 agenda remains supply chain modernisation, technology transformation and store rotation, including a monthly capsule-drop programme run through a streamlined supplier model (next drops October, November, December). Store rotation stays food-led, with Bell Green (Sydenham) confirmed for September and Elephant & Castle slated for autumn/winter 2026.",
-    "pricing": "Shares rose 1.84% to 374.88p on 22 September and 1.21% to 375.50p on 25 September, with some broker targets now above 480p. Recent results commentary highlighted better clothing & home margin mix from tighter inventory and fewer markdowns, though Peel Hunt says fashion remains 'hungover' from the 2025 cyberattack, citing manual ordering and a lack of newness.",
-    "launches": "Autograph's autumn 2026 edit is being pushed online — womenswear in ivory, caramel and grey neutrals with wool-rich tailoring and leather jackets; menswear anchored by cashmere/merino knitwear, tailored coats and a suede trucker jacket. The LFW runway pieces (Collection, Per Una, Autograph; half priced under £50) remain on sale online and in 10 flagship stores.",
-    "gossip": "The City narrative is unchanged: food is 'flying' and gaining share while fashion lags. Peel Hunt still argues the market is not pricing in a fully recovered M&S capable of £1bn+ adjusted PBT, which is keeping analyst sentiment constructive despite soft clothing trading.",
+    "vendors": "M&S published its Plan A ESG Report 2026, confirming 100% of clothing cotton is now from more responsible sources (BCI, organic, or recycled). The RE:Spark programme was launched to support fashion supply chain decarbonisation, focusing on helping key manufacturing partners transition to renewable energy.",
+    "sustainability": "M&S is on track to replace all virgin polyester with recycled polyester by end of 2026 — a landmark commitment for the brand's owned label clothing. Plan A 2026 shows 100% of textiles in fashion and home from preferred alternatives (excluding trims). Scope 1 and 2 emissions have fallen 38% vs the 2016/17 baseline.",
+    "sourcing": "M&S sources from India, Sri Lanka, Turkey, Bangladesh, and China. Key strategic suppliers include Shahi Exports, Arvind Mills, Brandix Lanka, MAS Holdings, and Eastman Exports. The brand is deepening its long-term strategic partnerships rather than expanding its supplier base.",
+    "strategy": "M&S made its London Fashion Week debut in 2026, signalling elevated brand positioning ambitions. The brand is investing in premium own-label ranges (Autograph, Per Una) alongside its everyday value staples. Store transformation programme continues with enhanced clothing departments.",
+    "pricing": "M&S has successfully repositioned on price quality perception, with clothing seen as offering strong value for quality at its price points. The brand has benefited from trade-down from premium brands and trade-up from supermarket clothing — occupying a sweet spot in the market.",
+    "launches": "M&S AW2026 collections featured heavily recycled polyester outerwear and knitwear, with Autograph debuting GOTS organic cotton lines. The brand launched a kids' clothing expansion with enhanced sustainable material content across school wear.",
+    "gossip": "M&S's London Fashion Week debut was met with mixed industry reaction — some observers praised its ambition, others questioned the brand's credibility in a fashion-week context versus its traditional positioning. The RE:Spark supply chain programme is seen as one of the most substantive decarbonisation initiatives by a UK retailer.",
     "soWhat": [
-      "The Fashion Renewable Collaborative means renewable-electricity readiness is becoming a live supplier-scorecard item at M&S — mills and factories should expect onboarding requests via Schneider's Resource Advisor+ platform and should prepare energy-use and PPA/rooftop-solar data now.",
-      "Because Levi's and M&S are running this jointly and recruiting more brands, investing in renewable capacity serves multiple buyers at once — a stronger commercial case than a single-retailer compliance ask.",
-      "Peel Hunt's 'lack of newness' critique plus the monthly capsule model point to more, smaller, faster orders; suppliers with short fabric lead times and in-stock base fabrics (wool blends, merino, premium cotton for Autograph) are best placed.",
-      "No supplier map (OSH ID 10061) or country-mix changes surfaced this week — India/Sri Lanka/Bangladesh/Turkey/China balance appears unchanged."
+      "Virgin polyester replacement with recycled by end 2026 is a hard deadline — any M&S supplier still supplying virgin polyester fabrics must immediately transition to GRS-certified recycled alternatives or risk contract termination",
+      "RE:Spark renewable energy programme means M&S will actively support suppliers in solar/renewable transitions — strategic suppliers in India and Sri Lanka should engage with RE:Spark now to access potential co-investment support",
+      "100% responsible cotton sourced opens the question of certification mix (BCI vs GOTS vs recycled) — suppliers offering GOTS organic or recycled cotton can differentiate themselves above the baseline BCI minimum"
     ],
-    "quietWeeks": ["sourcing"]
+    "quietWeeks": []
   }
 }

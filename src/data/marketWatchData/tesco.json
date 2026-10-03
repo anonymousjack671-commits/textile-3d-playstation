@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-09-28T09:00:00Z",
-  "weekOf": "September 28, 2026",
+  "lastUpdated": "2026-10-03T10:00:00.000Z",
+  "weekOf": "October 3, 2026",
   "sections": {
-    "vendors": null,
-    "sustainability": null,
-    "sourcing": null,
-    "strategy": "No new F&F announcements surfaced for 21–28 September; the brand is still bedding in its revamped F&F Online experience (refreshed web/app design, curated styling inspiration, a new Wishlist and better search), with Tesco saying more launches, sizes and online-exclusive ranges are coming. It builds on F&F clothing sales rising 5.1% to over £1.2bn in FY25/26, led by womenswear, activewear and the curated F&F Edit.",
-    "pricing": "No F&F-specific price changes this week. The value-tier backdrop remains competitive: Primark's recent 'Iconic Value' cuts of up to 29% keep pressure on entry prices, while Sainsbury's Tu is moving upmarket with its 'most elevated' AW26 collection (4x the premium knitwear options, including cashmere, mohair and alpaca). F&F continues to lean on Clubcard-exclusive pricing to stand out.",
-    "launches": "No new F&F drops were confirmed this week. The latest activity remains the 400 new online styles launched on 17 September (funnel-neck track jackets, co-ords, leopard-print skirts) and the AW26 pop-up at Frameless Gallery, Marble Arch, on 18 September during London Fashion Week.",
-    "gossip": null,
+    "vendors": "Tesco F&F works with supply chain partners across Bangladesh, India, China, and Turkey. The brand is increasing supply chain transparency with a stepped-up effort to disclose second-tier (fabric/processing) suppliers. Tesco published its Progress Sustainability Report 2026 covering key supply chain metrics.",
+    "sustainability": "Tesco F&F continues its Detox chemical management programme, aligning with ZDHC Foundation standards for wet processing suppliers. The brand is targeting 100% more sustainable cotton sourcing (achieved for most lines by 2025) and 100% responsibly sourced fabrics by 2030.",
+    "sourcing": "Tesco is working collaboratively with supplier partners to create 'planet plans' — ESG roadmaps aligned with Tesco's own sustainability targets. This top-down ESG alignment strategy means F&F suppliers need to demonstrate credible decarbonisation and water management plans.",
+    "strategy": "F&F continues to perform as a key clothing destination within Tesco's superstore estate. The brand leverages Tesco's Clubcard data for personalised clothing promotions. Tesco's broader sustainability report 2026 shows clothing as a key focus area for circular economy initiatives.",
+    "pricing": "F&F competes in the supermarket clothing segment alongside George and TU. Pricing remains anchored at everyday value levels, with seasonal promotional events driving volume. No significant pricing shifts signalled.",
+    "launches": "F&F launched AW2026 ranges with expanded sustainable materials content, including organic cotton childrenswear and recycled polyester outerwear. The brand's school uniform range maintained its market-leading position in the supermarket segment.",
+    "gossip": "Tesco's move to ask suppliers to co-develop 'planet plans' is seen as an ambitious but resource-intensive approach. Smaller suppliers without dedicated ESG teams may struggle to produce the level of reporting Tesco is requesting, creating a potential tier-of-supply bifurcation.",
     "soWhat": [
-      "F&F's online assortment is still growing, with more sizes and online-exclusive ranges promised. That favours suppliers who can run small, fast-turn style drops and extended size runs, rather than only large replenishment volumes.",
-      "The value tier is splitting: Primark is cutting prices while Tu adds premium fibres. Expect F&F buyers to push hard on cost for core lines while testing higher-spec knitwear and outerwear, so get quotes ready for both.",
-      "With no F&F sourcing or sustainability news this week, check Tesco's 2026 Sustainability Report (six new or updated commitments, including circularity and supply-chain decarbonisation) for clothing-specific requirements ahead of AW27/SS27 vendor reviews."
+      "Tesco's supplier 'planet plan' requirement means F&F suppliers need formalised ESG documentation — suppliers without scope 1/2 emissions data and a decarbonisation plan should develop one urgently",
+      "ZDHC chemical management alignment means all wet processors supplying F&F must work towards ZDHC Gateway compliance — this is now a threshold requirement, not a nice-to-have",
+      "100% responsible fabrics by 2030 target gives a 4-year runway — suppliers should develop a certified fibre roadmap now and present it proactively to Tesco buyers as a partnership asset"
     ],
-    "quietWeeks": ["vendors", "sustainability", "sourcing", "gossip", "launches"]
+    "quietWeeks": []
   }
 }

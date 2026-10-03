@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-09-28T09:00:00.000Z",
-  "weekOf": "September 28, 2026",
+  "lastUpdated": "2026-10-03T10:00:00.000Z",
+  "weekOf": "October 3, 2026",
   "sections": {
-    "vendors": null,
-    "sustainability": "Coverage of 'The Circuit' kept building this week (Retail Gazette, WWD, edie, FashionUnited, Fibre2Fashion). Sainsbury's/Tu, M&S, New Look and Oxfam launched it with Circle-8 on 23 September to test fibre-to-fibre recycling in the UK. Phase one starts January 2027 at Oxfam's Batley site and covers automated sorting, traceability reporting and commercial models for non-reusable post-consumer textiles, which make up roughly half of the UK's ~1.4m tonnes a year. Tu's A/W26 range also includes its first recycled down-and-feather puffer (£85).",
-    "sourcing": null,
-    "strategy": "Tu is still pushing premiumisation with its A/W26 womenswear, which Sainsbury's calls its 'most elevated' yet, led by Head of Womenswear Buying Mel Evans. Premium knitwear options are up fourfold (cashmere, mohair and alpaca join merino and lambswool), and outerwear is the lead category. The context is softer trading: Q1 FY26/27 Tu sales fell 2.1% against a tough comparison, after FY25/26 grew 4.8%. The spring buying/merchandising restructure has still not been publicly concluded.",
-    "pricing": "Tu keeps an 'accessible premium' price structure. 86% of A/W26 womenswear is under £30 and 65% under £25, with entry prices from £5. Premium fibres start at £34 (lambswool), £45 (mohair) and £69 (cashmere), and hero outerwear sits at £55–£85. Back-to-school prices were held flat for a fourth year running, so value anchors stay intact against Primark, George and F&F.",
-    "launches": "The phased A/W26 womenswear drops continue. September's warm neutrals and orange/brown edit is in store now. October brings green shades, frogging details and the main coat launch, then November brings red, statement florals and embellished occasionwear, with more product in December. The Christmas gifting and partywear hub is live on tu.co.uk, and the Morris & Co collaboration continues.",
-    "gossip": "Trade press still frames Tu as a supermarket brand trying to reset perceptions of 'supermarket fashion'. Attention is now on whether premiumisation can reverse the Q1 sales dip. The next hard data point is Sainsbury's interim results (28 weeks to mid-September), expected in early November.",
+    "vendors": "TU Clothing works with over 300 production sites across 15 sourcing countries globally. Sainsbury's conducts annual third-party ethical audits on all TU supplier sites. No major supplier additions or exits have been publicly announced this period.",
+    "sustainability": "97.4% of TU's cotton is now sourced through the Better Cotton Initiative (BCI), delivering significant water and pesticide savings (9.7 billion litres and 5,976kg respectively in FY2023-24). TU is driving ongoing use of recycled polyester throughout clothing ranges as part of its circular fibre strategy.",
+    "sourcing": "TU sources from 15 countries with a mix of Bangladesh, India, and other Asian markets for volume lines. Sainsbury's is targeting a 30% reduction in the aggregate water footprint of new textile products by 2030, requiring supplier-level water data and efficiency commitments.",
+    "strategy": "Tu unveiled its high summer 2026 womenswear collection with expanded sustainable materials content. Sainsbury's preliminary results to February 2026 showed stable clothing performance. The brand is leveraging its grocery superstore footprint to drive clothing accessibility and convenience.",
+    "pricing": "TU operates as a value clothing brand within the supermarket clothing segment, competing directly with George and F&F. No major price changes signalled beyond inflation-aligned adjustments.",
+    "launches": "Tu's high summer 2026 womenswear range was launched with elevated sustainable fibres content. The brand also eliminated plastic babywear hangers in favour of cardboard — a packaging sustainability initiative with supply chain implications for hanger sourcing.",
+    "gossip": "The Higg Index measurement framework used by TU is under ongoing industry scrutiny following a Norwegian ruling against its use in marketing claims. Sainsbury's will need to carefully manage how it communicates sustainability credentials on TU lines.",
     "soWhat": [
-      "The October coat launch and the fourfold premium knitwear expansion mean current-season demand for wool-blend, double-faced and premium natural-fibre fabrics. Suppliers with lambswool, mohair or cashmere-blend capability should be pitching for SS27/AW27 repeats now, while the buying team is in expansion mode.",
-      "The Circuit (from January 2027) and Tu's first recycled-down puffer show recycled-content and traceability credentials becoming commercial differentiators at Tu. Get GRS/RCS documentation and fibre-origin traceability ready before the next range reviews.",
-      "Q1's 2.1% sales dip, the unresolved buying/merchandising restructure and flat headline price points point to tight cost negotiations. Expect margin pressure on basics even as premium lines grow, and prepare cost-engineering options ahead of the early-November interims."
+      "97.4% BCI cotton coverage means suppliers to TU must be BCI members or source BCI-credited cotton — non-BCI suppliers should join the BCI programme immediately to retain or gain TU approval",
+      "30% water footprint reduction target by 2030 requires Tier 1 suppliers to implement water efficiency measures and share verified water usage data — investing in water stewardship certifications now will be advantageous",
+      "Plastic packaging phase-out (starting with hangers) will flow through to packaging specifications across all categories — suppliers should review their packaging compliance against TU's recyclability requirements"
     ],
-    "quietWeeks": ["vendors", "sourcing"]
+    "quietWeeks": []
   }
 }
