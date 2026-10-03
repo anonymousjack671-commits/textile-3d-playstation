@@ -135,19 +135,21 @@ const VERIFIED_VENDORS = {
     // Source: Next PLC Tier 1 Manufacturing Sites February 2026 (nextplc.co.uk — PLC LIST FEB 2026 - TIER1.pdf)
     //         Taqwa Fabrics, Tusuka, Echotex, AKM Knit Wear, Utah Fashions, Square Fashions,
     //         Liz Fashion Industry, Best Shirts, Ananta all re-confirmed on Feb 2026 list (checked July 2026)
-    default:                 ["Taqwa Fabrics Ltd (Bangladesh)", "Ananta Apparels Ltd (Bangladesh)", "Echotex Ltd (Bangladesh)", "AKM Knit Wear Limited (Bangladesh)", "Square Fashions Ltd (Bangladesh)", "Utah Fashions Ltd (Bangladesh)", "Tusuka Trousers & Jeans Ltd (Bangladesh)"],
+    //         Oct 2026 OSH update: Next Manufacturing Limited NMA 3 (Sri Lanka) confirmed as Next-owned facility;
+    //         Indochine Apparel (Cambodia) confirmed as Next ladies' clothing supplier (opensupplyhub.org)
+    default:                 ["Taqwa Fabrics Ltd (Bangladesh)", "Ananta Apparels Ltd (Bangladesh)", "Echotex Ltd (Bangladesh)", "AKM Knit Wear Limited (Bangladesh)", "Square Fashions Ltd (Bangladesh)", "Utah Fashions Ltd (Bangladesh)", "Tusuka Trousers & Jeans Ltd (Bangladesh)", "Next Manufacturing Limited NMA 3 (Sri Lanka)", "Indochine Apparel (Cambodia)"],
     "Dresses":               ["Ananta Apparels Ltd (Bangladesh)", "Liz Fashion Industry Ltd (Bangladesh)", "Shahi Exports (India, Bengaluru)"],
     "Jeans":                 ["Tusuka Trousers & Jeans Ltd (Bangladesh)", "Arvind Mills (India, Ahmedabad)", "Artistic Milliners (Pakistan)"],
     "Hoodies & Sweatshirts": ["Taqwa Fabrics Ltd (Bangladesh)", "AKM Knit Wear Limited (Bangladesh)", "Echotex Ltd (Bangladesh)"],
     "Tops & T-Shirts":       ["Taqwa Fabrics Ltd (Bangladesh)", "Echotex Ltd (Bangladesh)", "Ananta Apparels Ltd (Bangladesh)"],
     "Activewear":            ["Eclat Textile (Taiwan)", "Pacific Textiles (HK/China)", "MAS Kreeda (Sri Lanka)"],
     "School Uniform":        ["Echotex Ltd (Bangladesh)", "AKM Knit Wear Limited (Bangladesh)", "Taqwa Fabrics Ltd (Bangladesh)"],
-    "Coats & Jackets":       ["Youngone Corp (Bangladesh)", "Kipas Holding (Turkey)", "Nien Hsing Textile (Vietnam/Cambodia)"],
+    "Coats & Jackets":       ["Youngone Corp (Bangladesh)", "Kipas Holding (Turkey)", "Nien Hsing Textile (Vietnam/Cambodia)", "Indochine Apparel (Cambodia)"],
     "Formal Shirts":         ["Best Shirts Limited (Bangladesh)", "Arvind Lifestyle (India)", "Kipas Holding (Turkey)"],
     "Knitwear & Jumpers":    ["AKM Knit Wear Limited (Bangladesh)", "Echotex Ltd (Bangladesh)", "KPR Mill Ltd (India)"],
     "Pyjamas & Nightwear":   ["KPR Mill Ltd (India)", "Ananta Apparels Ltd (Bangladesh)", "Taqwa Fabrics Ltd (Bangladesh)"],
     "Sleepsuits & Bodysuits":["SP Apparels Ltd (India)", "Ananta Apparels Ltd (Bangladesh)", "Taqwa Fabrics Ltd (Bangladesh)"],
-    "Lingerie & Intimates":  ["MAS Holdings (Sri Lanka)", "Brandix Lanka (Sri Lanka)", "Z & Z Intimates Ltd (Bangladesh)"],
+    "Lingerie & Intimates":  ["MAS Holdings (Sri Lanka)", "Brandix Lanka (Sri Lanka)", "Z & Z Intimates Ltd (Bangladesh)", "Next Manufacturing Limited NMA 3 (Sri Lanka)"],
     "Swimwear":              ["MAS Kreeda (Sri Lanka)", "Pacific Textiles (HK/China)", "Eclat Textile (Taiwan)"],
     "Blazers & Suits":       ["Kipas Holding (Turkey)", "Arvind Lifestyle (India)", "Ananta Apparels Ltd (Bangladesh)"],
     "Chinos & Trousers":     ["Arvind Mills (India, Ahmedabad)", "Utah Fashions Ltd (Bangladesh)", "Liz Fashion Industry Ltd (Bangladesh)"],
@@ -206,7 +208,7 @@ const VERIFIED_VENDORS = {
     "Knitwear & Jumpers":    ["Dekko Knitwears Ltd (Bangladesh, Dhaka) — T-shirts/polo/knitwear, Epyllion Group", "Epyllion Knitwears Limited (Bangladesh, Narayanganj) — circular knitwear pullovers", "KPR Mill Limited Unit II (India, Tirupur) — knit tops/cardigans"],
     "Pyjamas & Nightwear":   ["SP Apparels Ltd (India, Tirupur) — babies' & children's knitwear specialist, 50M garments/yr", "Hela Intimates Lanka Pvt Ltd (Sri Lanka) — sleepwear/intimates, PVH/Michael Kors tier", "Brandix Lanka Limited (Sri Lanka) — M&S/Next confirmed, intimate & casual"],
     "Sleepsuits & Bodysuits":["SP Apparels Ltd (India, Tirupur) — babywear specialist: bodysuits/sleepsuits/infant knitwear", "Courtaulds Clothing Lanka (Pvt) Ltd (Sri Lanka) — babies' & children's garments", "Brandix Lanka Limited (Sri Lanka) — intimate/baby garments"],
-    "Lingerie & Intimates":  ["MAS Holdings — MAS Intimates Thurulie (Sri Lanka) — M&S DEDICATED factory, world's first carbon-neutral apparel plant, LEED Platinum", "Hela Intimates Lanka Pvt Ltd (Sri Lanka) — bras/shapewear/sleepwear, Calvin Klein/Tommy Hilfiger tier", "Slimline Pvt Ltd (Sri Lanka) — MAS Holdings subsidiary, ladies' & men's intimate apparel", "Courtaulds Clothing Lanka (Pvt) Ltd (Sri Lanka) — lingerie/sportswear"],
+    "Lingerie & Intimates":  ["MAS Holdings — MAS Intimates Thurulie (Sri Lanka) — M&S DEDICATED factory, world's first carbon-neutral apparel plant, LEED Platinum", "Hela Intimates Lanka Pvt Ltd (Sri Lanka) — bras/shapewear/sleepwear, Calvin Klein/Tommy Hilfiger tier", "Slimline Pvt Ltd (Sri Lanka) — MAS Holdings subsidiary, ladies' & men's intimate apparel", "Courtaulds Clothing Lanka (Pvt) Ltd (Sri Lanka) — lingerie/sportswear", "Intimate Fashions (India) Pvt Ltd (India) — confirmed OSH March 2026"],
     "Swimwear":              ["MAS Kreeda Pvt Ltd (Sri Lanka) — performance swimwear/athletic, Nike tier", "MAS Active (Pvt) Limited — Linea Intimo (Sri Lanka) — swimwear/beachwear/athleisure", "Hirdaramani Clothing (Private) Limited (Sri Lanka) — swimwear"],
     "Blazers & Suits":       ["Aydinli Group (Türkiye, Istanbul) — licensed menswear/womenswear (Pierre Cardin, Cacharel, US Polo Assn.), 672 stores", "Gokaldas Exports Ltd (India, Bengaluru) — suits/blazers/jackets", "Orient Craft Limited (India, Gurgaon) — woven tailored garments"],
     "Chinos & Trousers":     ["Artistic Milliners Pvt Ltd (Pakistan, Karachi) — woven bottoms/chinos alongside denim", "Arvind Limited — Denim Division (India, Ahmedabad) — woven & denim bottoms", "Gokaldas Exports Ltd (India, Bengaluru) — woven trousers/shorts"],
