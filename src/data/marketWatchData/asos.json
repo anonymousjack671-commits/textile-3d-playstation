@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-10-03T10:00:00.000Z",
-  "weekOf": "October 3, 2026",
+  "lastUpdated": "2026-10-05T09:00:00.000Z",
+  "weekOf": "October 5, 2026",
   "sections": {
-    "vendors": "ASOS deployed TrusTrace supply chain visibility software to Tier 5 (farm level) across key cotton-sourcing regions, marking one of the deepest traceability rollouts in UK fashion. The platform maps raw material origin data and is being used to meet incoming EU digital product passport requirements ahead of regulatory deadlines.",
-    "sustainability": "ASOS is building out its responsible sourcing framework with TrusTrace as the data backbone. The brand is targeting BCI cotton across all own-label ranges and pushing suppliers towards OEKO-TEX STANDARD 100 certification for chemical compliance.",
-    "sourcing": "Lizzie Jones was appointed as ASOS's new Head of Global Trading, tasked with improving inventory freshness and full-price sell-through rates. The brand is tightening sourcing lead times and consolidating suppliers to reduce stock risk, with a focus on speed-responsive manufacturing partners.",
-    "strategy": "ASOS returned to 51% profit growth in its turnaround period, driven by ruthless inventory management and elimination of markdowns. The brand is testing pop-up physical retail formats — a significant departure from its digital-only roots — targeting high-footfall events and pop-up stores to drive brand awareness.",
-    "pricing": "ASOS is prioritising full-price sales over promotional volume, with tighter OTB control and less reliance on end-of-season discounting. The brand is experimenting with price architecture to improve perceived value while protecting margins.",
-    "launches": "ASOS launched several own-label AW2026 ranges targeting Gen Z aesthetics, including expanded activewear and occasion wear collections. The brand also piloted a circular resale feature within its app, allowing customers to list pre-owned ASOS products.",
-    "gossip": "Trade press speculation suggests ASOS may accelerate its pop-up retail strategy if early pilots perform well, potentially opening concessions within department stores — which would change its relationship with wholesale partners like Topshop (which it owns).",
+    "vendors": null,
+    "sustainability": null,
+    "sourcing": null,
+    "strategy": "No new strategic announcements this week; the story is still the 24 Sept FY26 pre-close update. GMV grew low-single-digits in Q4 after a multi-quarter decline (full year still -5%), adjusted gross margin came in above 50%, and net debt fell to about £110m after selling the Lichfield and Atlanta warehouses for roughly £116m. Full FY26 results are due 5 November.",
+    "pricing": "October promotions on asos.com are running at up to 25% off, including first-app-order codes. That is normal seasonal activity, and management is still prioritising gross margin (now above 50%) over discount-led volume.",
+    "launches": "The last product launch was the Adaptive occasionwear collection on 24 Sept, co-created with Disabled customers and Tilting the Lens across womenswear, menswear and Curve. Law Roach was named ASOS's first Stylist in Residence on 19 Sept. ASOS plc posted no new launches from 28 Sept to 5 Oct.",
+    "gossip": "Goldman Sachs filed a TR-1 holdings notification on 2 Oct, and the ASOMY ADR hit a 12-month high around 28 Sept after Shore Capital upgraded the stock to Buy and Berenberg raised its target to 750p. Correction to earlier briefings: ASOS sold 75% of Topshop/Topman to Bestseller in 2024 and now holds only 25%, so Topshop's John Lewis concessions and its return to physical retail are Bestseller-led.",
     "soWhat": [
-      "TrusTrace at Tier 5 level means ASOS suppliers must now provide farm-level origin data — suppliers without traceability infrastructure should urgently invest in it or risk non-compliance and delisting",
-      "Full-price sell-through focus and tighter OTB means ASOS will be a more demanding, lower-volume buyer — suppliers should expect harder negotiation on minimums and lead times",
-      "Lizzie Jones as new Head of Global Trading signals a reset in supplier relationships — strategic partners who can offer speed, flexibility, and certified traceability will be prioritised"
+      "With gross margin above 50% and net debt falling, ASOS is unlikely to give up margin on intake. Expect firm cost-price pressure going into SS27 negotiations, and lead with value-engineering ideas rather than straight price cuts.",
+      "Returning to GMV growth in the UK, Germany and the US means modest volume upside for own-brand ASOS Design. Suppliers with speed-to-market capacity (UK, Turkey) are best placed for repeat orders on proven lines such as occasionwear and outerwear.",
+      "Topshop and Topman buying now sits mainly with Bestseller, not ASOS. Suppliers targeting those brands should go to Bestseller's sourcing teams, and should watch the 5 Nov FY26 results for any update to ASOS's factory list or Fashion with Integrity reporting."
     ],
-    "quietWeeks": []
+    "quietWeeks": ["vendors", "sustainability", "sourcing"]
   }
 }
