@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-10-03T10:00:00.000Z",
-  "weekOf": "October 3, 2026",
+  "lastUpdated": "2026-10-05T02:32:00.000Z",
+  "weekOf": "October 5, 2026",
   "sections": {
-    "vendors": "Asda announced in January 2026 it is outsourcing George clothing buying and design functions, putting over 1,000 jobs at risk according to the GMB union. This structural change may shift George's sourcing strategy and supplier relationships as buying operations transition to an outsourced model.",
-    "sustainability": "George operates a five-pillar sustainability strategy covering responsibly sourced fibres, sustainable manufacturing, supply chain transparency, packaging reduction, and circularity. 75% of George's total cotton footprint is responsibly sourced, with all man-made cellulosic fibres targeted for FSC/PEFC certification.",
-    "sourcing": "George sources from Bangladesh, India, and China for volume lines. All George school uniforms are made with responsibly sourced fibres. The brand is a signatory to WRAP's Textiles 2030 initiative, committing to carbon, water, and circular textile targets across its supply chain.",
-    "strategy": "The outsourcing of George's buying and design functions represents a significant structural shift. This move could result in buying decisions being made by a third-party sourcing house, altering the direct supplier relationship model. The change is being contested by the GMB union.",
-    "pricing": "George remains one of the UK's most price-competitive supermarket clothing brands, positioned directly against Primark and TU. The outsourcing of buying operations may eventually allow for more aggressive cost negotiation if specialist sourcing houses are engaged.",
-    "launches": "George has continued to expand its school uniform and basics ranges with sustainability messaging. Recycled plastic clothing lines remain a focus, with Asda having previously committed to selling George clothing made from recycled plastic bottles.",
-    "gossip": "The 1,000+ job losses at George's buying/design function is the biggest George news of 2026. Trade commentators are watching whether outsourced buying will improve or harm George's speed-to-market and trend responsiveness — a critical issue for a brand competing in the value fast-fashion space.",
+    "vendors": null,
+    "sustainability": null,
+    "sourcing": null,
+    "strategy": "George opened its standalone concept store at Parkgate Shopping, Rotherham on 1 October. It is the seventh former Asda Living site converted to the George format and the last standalone opening of 2026, following Barnsley in August. The store carries much bigger womenswear and menswear ranges and an expanded George Home offer. Asda's stated ambition is 100 standalone George stores over five years, under incoming CEO Helen Connolly (ex-New Look, appointed July 2026).",
+    "pricing": "Competitive pressure keeps building. Primark's 'Iconic Value' cuts (up to 29% on hundreds of lines, e.g. £9 jeans and hoodies) run through AW26. Sainsbury's Tu has launched its 'most elevated' AW26 range (cashmere from £69). Tesco relaunched a dedicated F&F website in mid-September. George is answering with a 'high-end fashion at high-street value' message rather than announcing price cuts.",
+    "launches": "George's AW26 marketing push is still live. The 'If You Know, You Know' womenswear campaign (Lucky Generals, styled by Sinead McKeefry; launched 22 Sept) features tweed, tartan, wool coats and faux-fur jackets. Alongside it is the Micah Richards menswear collaboration, now stocked in the new standalone stores.",
+    "gossip": "Correction to last week's note: Asda's January 2026 announcement was about outsourcing George online distribution to DHL Derby from January 2027 (about 1,200 jobs at risk), not buying or design. Karl Doyle is fronting store openings as George commercial director while the trade watches for Helen Connolly's start date and first strategic moves.",
     "soWhat": [
-      "Outsourcing of George's buying function creates uncertainty for existing suppliers — approved vendors should proactively engage with both Asda and any newly appointed sourcing house to protect their position",
-      "If a specialist sourcing house takes over George buying, there may be a rationalisation of the supplier base — suppliers relying heavily on George volume should diversify their buyer portfolio now",
-      "75% responsibly sourced cotton target means ~25% of George's cotton is still uncertified — BCI-member suppliers in Bangladesh and India have a clear pitch to convert remaining conventional cotton volume"
+      "The standalone rollout (7 stores now, 100 targeted) means more SKUs per store, especially womenswear, menswear and home textiles. Suppliers should pitch range-extension depth, not just core basics.",
+      "Wool-blend, tweed and tartan wovens, faux fur and structured outerwear are the AW26 hero stories. Mills and makers with these capabilities should position for AW27 development now.",
+      "A new CEO from New Look, plus price pressure from Primark, Tu and F&F, points to a possible supplier-base and cost review in 2027. Get cost-reduction and speed-to-market proposals ready before Connolly's first range reviews."
     ],
-    "quietWeeks": []
+    "quietWeeks": ["vendors", "sustainability", "sourcing"]
   }
 }
