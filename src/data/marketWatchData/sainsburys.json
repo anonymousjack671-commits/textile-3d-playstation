@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-10-03T10:00:00.000Z",
-  "weekOf": "October 3, 2026",
+  "lastUpdated": "2026-10-05T09:00:00.000Z",
+  "weekOf": "October 5, 2026",
   "sections": {
-    "vendors": "TU Clothing works with over 300 production sites across 15 sourcing countries globally. Sainsbury's conducts annual third-party ethical audits on all TU supplier sites. No major supplier additions or exits have been publicly announced this period.",
-    "sustainability": "97.4% of TU's cotton is now sourced through the Better Cotton Initiative (BCI), delivering significant water and pesticide savings (9.7 billion litres and 5,976kg respectively in FY2023-24). TU is driving ongoing use of recycled polyester throughout clothing ranges as part of its circular fibre strategy.",
-    "sourcing": "TU sources from 15 countries with a mix of Bangladesh, India, and other Asian markets for volume lines. Sainsbury's is targeting a 30% reduction in the aggregate water footprint of new textile products by 2030, requiring supplier-level water data and efficiency commitments.",
-    "strategy": "Tu unveiled its high summer 2026 womenswear collection with expanded sustainable materials content. Sainsbury's preliminary results to February 2026 showed stable clothing performance. The brand is leveraging its grocery superstore footprint to drive clothing accessibility and convenience.",
-    "pricing": "TU operates as a value clothing brand within the supermarket clothing segment, competing directly with George and F&F. No major price changes signalled beyond inflation-aligned adjustments.",
-    "launches": "Tu's high summer 2026 womenswear range was launched with elevated sustainable fibres content. The brand also eliminated plastic babywear hangers in favour of cardboard — a packaging sustainability initiative with supply chain implications for hanger sourcing.",
-    "gossip": "The Higg Index measurement framework used by TU is under ongoing industry scrutiny following a Norwegian ruling against its use in marketing claims. Sainsbury's will need to carefully manage how it communicates sustainability credentials on TU lines.",
+    "vendors": null,
+    "sustainability": "Tu is a founding retailer in The Circuit (announced 23 Sept with New Look, M&S, Oxfam and Circle-8), a UK post-consumer textile recovery and automated-sorting initiative feeding fibre-to-fibre recyclers. Phase one starts January 2027 at Oxfam's Batley site; Tu MD Ben Smith framed it as 'learning and testing practical solutions'. AW26 also carries Tu's first recycled down-and-feather puffer (£85). No new Plan for Better clothing targets were published in the past 7 days.",
+    "sourcing": null,
+    "strategy": "No Tu-specific corporate announcements in the past 7 days (latest Sainsbury's press releases, 22–28 Sept, cover Nectar, Sainsbury's Money and graduates). Ongoing direction under MD Ben Smith remains 'stretch up' premiumisation plus digital-first: trade press (Retail Gazette, 21 Sept) reports Tu womenswear digital sales are 1.5x two years ago, online up 20%+ and seven consecutive quarters of market outperformance, with phased monthly online drops replacing big seasonal launches. Next catalyst: H1 interim results, expected early November.",
+    "pricing": "AW26 price architecture (announced 9 Sept) holds value anchors — 86% of womenswear under £30 and 65% under £25, entry from £5 — while stretching the top end: lambswool from £34, mohair from £45, cashmere from £69, wool-blend coat and down puffer at £85. This is a deliberate good-better-best ladder aimed at M&S at the top while defending against George and F&F at the core.",
+    "launches": "October is the peak coat drop of AW26 womenswear: green hues, frogging detail and the main outerwear launch (Double-Faced Wool Blend Coat £85, waterproof parka £55, Denim Military Jacket £30). Knitwear range is 4x larger in premium fibres (merino, lambswool, cashmere, mohair, alpaca). November's drop moves to red, statement florals and embellished partywear.",
+    "gossip": "Trade press frames the supermarket fashion race as shifting online: Tesco is expanding F&F Online with more styles, sizes and online-exclusive edits, and George is leaning on influencer/ambassador partnerships, raising pressure on Tu's digital proposition. Consumer and YouTube haul coverage of Tu's AW26 'new in' is positive on the elevated look. No analyst notes specific to Tu surfaced this week.",
     "soWhat": [
-      "97.4% BCI cotton coverage means suppliers to TU must be BCI members or source BCI-credited cotton — non-BCI suppliers should join the BCI programme immediately to retain or gain TU approval",
-      "30% water footprint reduction target by 2030 requires Tier 1 suppliers to implement water efficiency measures and share verified water usage data — investing in water stewardship certifications now will be advantageous",
-      "Plastic packaging phase-out (starting with hangers) will flow through to packaging specifications across all categories — suppliers should review their packaging compliance against TU's recyclability requirements"
+      "Tu's AW26 stretch into cashmere, mohair, alpaca, wool-blend and recycled down means premium-fibre knit and outerwear capability is now a buying criterion — suppliers with RWS/RAS/RDS and GRS-certified premium yarn or down supply chains should pitch SS27/AW27 programmes now, ahead of the post-interims buying cycle.",
+      "Monthly phased drops (Sept–Dec) and a digital-led model favour suppliers who can deliver smaller, staggered flows with reliable on-time-in-full performance; offering split shipments and shorter repeat lead times is a differentiator versus pure volume players.",
+      "The Circuit (live Jan 2027) signals future demand for recycled post-consumer fibre content and traceability reporting — suppliers should start building fibre-to-fibre recycled content options and material-level traceability data. Macro note: Bangladesh apparel exports to the UK rose 10.5% YoY in August, so Bangladesh capacity competition for UK programmes remains strong."
     ],
-    "quietWeeks": []
+    "quietWeeks": ["vendors", "sourcing"]
   }
 }
