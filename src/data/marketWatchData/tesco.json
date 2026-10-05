@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-10-03T10:00:00.000Z",
-  "weekOf": "October 3, 2026",
+  "lastUpdated": "2026-10-05T03:18:12.000Z",
+  "weekOf": "October 5, 2026",
   "sections": {
-    "vendors": "Tesco F&F works with supply chain partners across Bangladesh, India, China, and Turkey. The brand is increasing supply chain transparency with a stepped-up effort to disclose second-tier (fabric/processing) suppliers. Tesco published its Progress Sustainability Report 2026 covering key supply chain metrics.",
-    "sustainability": "Tesco F&F continues its Detox chemical management programme, aligning with ZDHC Foundation standards for wet processing suppliers. The brand is targeting 100% more sustainable cotton sourcing (achieved for most lines by 2025) and 100% responsibly sourced fabrics by 2030.",
-    "sourcing": "Tesco is working collaboratively with supplier partners to create 'planet plans' — ESG roadmaps aligned with Tesco's own sustainability targets. This top-down ESG alignment strategy means F&F suppliers need to demonstrate credible decarbonisation and water management plans.",
-    "strategy": "F&F continues to perform as a key clothing destination within Tesco's superstore estate. The brand leverages Tesco's Clubcard data for personalised clothing promotions. Tesco's broader sustainability report 2026 shows clothing as a key focus area for circular economy initiatives.",
-    "pricing": "F&F competes in the supermarket clothing segment alongside George and TU. Pricing remains anchored at everyday value levels, with seasonal promotional events driving volume. No significant pricing shifts signalled.",
-    "launches": "F&F launched AW2026 ranges with expanded sustainable materials content, including organic cotton childrenswear and recycled polyester outerwear. The brand's school uniform range maintained its market-leading position in the supermarket segment.",
-    "gossip": "Tesco's move to ask suppliers to co-develop 'planet plans' is seen as an ambitious but resource-intensive approach. Smaller suppliers without dedicated ESG teams may struggle to produce the level of reporting Tesco is requesting, creating a potential tier-of-supply bifurcation.",
+    "vendors": null,
+    "sustainability": null,
+    "sourcing": "No F&F-specific sourcing moves this week, but the backdrop for its main supply base is strong: Bangladesh's garment exports rose 8.8% year on year to $3.08bn in September 2026. Shipments to the UK were $915.6m in July–August of FY27, up from $882.6m a year earlier. Bangladesh remains the largest supplier to the UK by volume, which supports F&F's reliance on Dhaka-based knit and sweater mills.",
+    "strategy": "On 28 September Tesco started a one-store trial of AIUTA's AI virtual try-on at its Sandhurst Extra. Shoppers can try on about 1,500 F&F womenswear and menswear items by uploading a photo to an in-store screen. This adds to the September relaunch of F&F online (web and app). Investors will look for clothing commentary in the H1 2026/27 interim results on 8 October, after F&F grew 5.1% to more than £1.2bn in FY25/26.",
+    "pricing": "The F&F autumn promotion ended on 4 October. Key AW items were priced at £16 (stirrup leggings), £22.50 (pencil midi skirt), £45 (faux suede funnel-neck jacket) and £55 (faux fur aviator jacket). That keeps F&F above Sainsbury's Tu, which has basics from £5, denim at £20 and hero outerwear under £40, and clearly above Primark on entry price.",
+    "launches": "F&F's AW26 online range is still being rolled out after 400 new styles, extra sizes and online-only ranges launched on 17 September. Tesco has said more styles are 'launching soon'. We found no separate collection drop dated this week.",
+    "gossip": "Most of the industry focus is on Thursday's interim results (8 October). An IG preview frames the question as whether Tesco can protect its market share gains while absorbing higher costs. F&F's online relaunch and the virtual try-on pilot are seen as Tesco challenging George's renewed push in clothing, though Tesco has not confirmed a wider try-on rollout.",
     "soWhat": [
-      "Tesco's supplier 'planet plan' requirement means F&F suppliers need formalised ESG documentation — suppliers without scope 1/2 emissions data and a decarbonisation plan should develop one urgently",
-      "ZDHC chemical management alignment means all wet processors supplying F&F must work towards ZDHC Gateway compliance — this is now a threshold requirement, not a nice-to-have",
-      "100% responsible fabrics by 2030 target gives a 4-year runway — suppliers should develop a certified fibre roadmap now and present it proactively to Tesco buyers as a partnership asset"
+      "F&F's online expansion (more styles, extended sizes, online-only ranges) points to more SKUs in smaller, faster-turning orders. Suppliers should prepare to bid on short-run online-exclusive capsules and expect more demand for extended sizing.",
+      "Virtual try-on relies on accurate digital garment assets. Vendors that can supply clean product imagery or 3D/digital twins with each style will be easier for Tesco to onboard as the pilot grows, which is a direct opportunity for Textile3D-type capability.",
+      "Watch the 8 October interims. If clothing like-for-like sales come in strong, expect bigger SS27 buys and a fight for Bangladesh knit capacity, so lock in mill slots before Q4 negotiations."
     ],
-    "quietWeeks": []
+    "quietWeeks": ["vendors", "sustainability"]
   }
 }
