@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-10-03T10:00:00.000Z",
-  "weekOf": "October 3, 2026",
+  "lastUpdated": "2026-10-05T09:00:00.000Z",
+  "weekOf": "October 5, 2026",
   "sections": {
-    "vendors": "H&M Group signed a multi-year supply agreement with Recover (RCotton) for recycled cotton fibre sourced from post-industrial textile waste. The brand also deepened its Circulose partnership for MMCF (man-made cellulosic fibre) made from recycled cotton blends. Both partnerships signal a shift from virgin cotton towards closed-loop fibre supply.",
-    "sustainability": "H&M Group reported 91% of materials sourced through more sustainable routes, tracking towards its 2030 100% target. The group continues to push supplier compliance on Higg MSI scores and has introduced new minimum thresholds for chemical management under its ZDHC commitment.",
-    "sourcing": "H&M is consolidating its supplier base to work with fewer, larger strategic partners amid geopolitical disruptions. The group is accelerating nearshoring to Turkey and reshoring of some European production for speed-sensitive fast-fashion lines, while retaining Bangladesh and India for volume basics.",
-    "strategy": "H&M Group streamlined its corporate structure in 2026, reducing management layers to improve speed-to-market. The group is doubling down on full-price sell-through rates after years of margin pressure from markdown dependency, targeting improved inventory management and tighter open-to-buy discipline.",
-    "pricing": "H&M raised prices modestly on sustainable material lines to partially offset the green premium on certified fibres. The group is testing value-anchored pricing architecture to protect its mid-market position against Shein and Primark at the bottom.",
-    "launches": "H&M launched a new Conscious Exclusive capsule using Circulose and recycled cashmere for AW2026. The group's & Other Stories and COS brands introduced elevated sustainable ranges targeting premium segments.",
-    "gossip": "Industry sources suggest H&M Group is under continued pressure from activist shareholders to accelerate climate commitments. Some analysts flagged that 91% sustainable materials still includes BCI cotton, which carries weaker guarantees than GOTS or organic certification.",
+    "vendors": null,
+    "sustainability": "No new targets were announced this week. The baseline from the 2025 report still holds: 32% recycled materials (target was 30%; 50% by 2030) and 91% recycled or 'more sustainably sourced', with the multi-year Recover recycled-cotton deal still the main fibre-supply move. After the Q3 report, H&M said it is working with suppliers in Bangladesh and elsewhere to switch to renewable energy as fuel prices there rise.",
+    "sourcing": "In the Q3/nine-month report (24–25 Sept), H&M blamed higher stock levels on more goods in transit, caused by global supply-chain disruption and its European warehouse consolidation (including closing a Belgian warehouse). It repeated that it is buying with shorter lead times from factories closer to its main markets, aiming for six weeks from concept to customer. The Feb 2026 factory list still shows China as the largest apparel base (230+ factories, about 29.5%), with Bangladesh, India, Turkey, Pakistan and Cambodia making up the rest of the core.",
+    "strategy": "Q3 (Jun–Aug) operating profit rose about 23% to SEK 6.0bn on net sales of SEK 57.2bn. Operating margin was 10.6% (vs 8.6%) and gross margin 54.0%, about 1.6pp of which came from one-off tariff effects. Sales grew only 1% in local currencies with about 2% fewer stores, and September is guided at +1%. CEO Daniel Ervér credited purchasing efficiency and cost control, which means margin gains are coming partly from the supply base. Shares fell about 2.4% to SEK 162 on the weak sales trend.",
+    "pricing": "Profit is coming from purchasing efficiency rather than higher retail prices, so expect continued pressure on cost prices in AW27 buying rounds. An autumn promotion of 20–40% off selected categories was reported for 1–8 October in some markets; this comes from a low-reliability, market-specific source, and the UK has not been confirmed.",
+    "launches": "Heavy collaboration calendar: H&M Studio AW26 landed on 24 Sept; H&M Kids x Morris & Co ('Strawberry Thief' heritage prints) launches 8 Oct; No Fear (90s skate graphics) launches 14 Oct; ELIE SAAB launches 22 Oct after a Paris preview with a bridal gown. A Stella McCartney reunion collection using certified, largely recycled materials and a WARDROBE.NYC minimalist capsule are also slated for autumn.",
+    "gossip": "Investors are focused on a top line that has barely moved (nine-month sales flat in local currencies) despite the profit beat, and the gap with Inditex/Zara keeps widening. Some coverage described the sales and store analysis as pointing to a bleak outlook, with sales shrinking across key regions. Nothing was found on COS, Arket or & Other Stories this week beyond seasonal editorial coverage.",
     "soWhat": [
-      "Recover/RCotton multi-year deal signals growing H&M demand for recycled cotton — suppliers in Bangladesh and India with recycled blended fabric capability should pitch certified GRS recycled cotton constructions",
-      "Supplier base consolidation means fewer new vendors will gain entry — existing H&M approved suppliers need to invest in certifications and scale to stay on the list",
-      "Nearshoring to Turkey for speed-to-market lines creates opportunity for Turkish fabric mills to pitch faster replenishment programmes with shorter lead times"
+      "H&M's margin recovery depends on 'purchasing efficiencies'. Expect hard cost-price negotiations for AW27, and prepare open-book costing and fabric-saving engineering (yield, width, construction swaps) rather than flat price cuts.",
+      "The push for shorter lead times and closer-to-market buying, along with in-transit stock problems, favours suppliers with greige or stock-fabric programmes and Turkey/Europe finishing capacity. Pitch quick-response and replenishment options with committed lead times.",
+      "The collaboration pipeline (Stella McCartney using recycled materials, ELIE SAAB eveningwear, Morris & Co prints) points to demand for certified recycled (GRS/RCS) fabrics and higher-value print and embellishment capability. Have GRS/OCS/GOTS certificates and print/jacquard swatches ready for the next capsule cycle."
     ],
-    "quietWeeks": []
+    "quietWeeks": ["vendors"]
   }
 }
